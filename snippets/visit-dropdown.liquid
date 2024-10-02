@@ -1,0 +1,45 @@
+{% assign portlandImg = 'https://cdn.shopify.com/s/files/1/0549/3738/7174/files/GW_VENICE_bw_2x_77fea314-b218-4bfe-af56-758313fa3212.png?v=1616456969' %}
+{% assign losAngelesImg = 'https://cdn.shopify.com/s/files/1/0549/3738/7174/files/GW_VENICE_bw_2x_77fea314-b218-4bfe-af56-758313fa3212.png?v=1616456969' %}
+
+
+<div class="bottom_nav--dropdown visit">
+  <div class="container">
+    <div class="row">
+      <div class="col-md visit-nav-left">
+        <img src="{{ portlandImg }}" class="portland-cafes-img visit-hover-img" alt="Portland Location">
+        <img src="{{ losAngelesImg }}" class="la-cafes-img visit-hover-img hide" alt="Los Angeles Location">
+      </div>
+      <div class="col-md visit-nav-right">
+        <ul>
+          {% for childlink in link.links %}
+            <li class="bottom_nav--dropdown-li">
+              <a href="{{ childlink.url }}" class="loc-hover {% if childlink.active %}active{% endif %}" data-location="{{ childlink.handle }}">
+                {{ childlink.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="icon-flowers">
+      {% include "icon-flowers" %}
+    </div>
+  </div>
+
+
+
+  <script type="text/javascript">
+
+    $( ".loc-hover" )
+      .mouseenter(function() {
+        $('.visit-hover-img').addClass('hide');
+        var location = $(this).attr('data-location');
+        $('.'+location + '-img').removeClass('hide');
+      })
+      .mouseleave(function() {
+        // $('.visit-hover-img').addClass('hide');
+
+      });
+  </script>
+
+</div>

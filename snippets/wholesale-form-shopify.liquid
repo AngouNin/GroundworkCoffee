@@ -1,0 +1,170 @@
+<div class="wholesale_form" >
+    <div class="container">
+        {% if section.settings.form_title != blank %}
+            <h2 class="wholesale_form--title">{{ section.settings.form_title }}</h2>
+        {% endif %}
+    
+        {% if section.settings.form_desc != blank %}
+            <div class="wholesale_form--desc">{{ section.settings.form_desc }}</div>
+        {% endif %}
+
+
+    {% form 'contact' %}
+
+      {% if form.posted_successfully? %}
+        <p class="form-success">
+          {{ 'contact.form.post_success' | t }}
+        </p>
+      {% endif %}
+            
+      {{ form.errors | default_errors }}
+      <label class="label-hidden" for="ContactFormForm">Form name</label>
+      <input type="text"
+        class="label-hidden"
+        name="contact[form]"
+        id="ContactFormForm"
+        value="Wholesale Form"
+      >
+      
+      <div class="row input-container">
+        <div class="col-md first">
+          <label class="label-hidden" for="ContactFormName">{{ 'contact.form.name' | t }}</label>
+          <input type="text"
+            name="contact[name]"
+            id="ContactFormName"
+            placeholder="Full Name"
+            value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
+            required>
+        </div>
+        <div class="col-md">
+          <label class="label-hidden" for="ContactFormEmail">{{ 'contact.form.email' | t }}</label>
+          <input type="email"
+            name="contact[email]"
+            id="ContactFormEmail"
+            placeholder="{{ 'contact.form.email' | t }}"
+            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+            spellcheck="false"
+            autocomplete="off"
+            autocapitalize="off"
+            required>
+        </div>
+      </div>
+            <div class="input-container">
+              <label class="label-hidden" for="ContactFormPhone">{{ 'contact.form.phone' | t }}</label>
+              <input type="tel"
+                name="contact[phone]"
+                id="ContactFormPhone"
+                placeholder="{{ 'contact.form.phone' | t }} (Optional)"
+                value="{% if form[phone] %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                pattern="[0-9\-]*">
+            </div>
+            <div class="input-container">
+              <label class="label-hidden" for="ContactFormBusiness">Business</label>
+              <input type="text"
+                name="contact[business]"
+                id="ContactFormBusiness"
+                placeholder="Business Name"
+                value="{{ form[business] }}"
+                required>
+            </div>
+            <div class="input-container">
+                <label class="label-hidden" for="ContactFormAddress">Street Address</label>
+                <input type="text"
+                  name="contact[address]"
+                  id="ContactFormAddress"
+                  placeholder="Street Address"
+                  value=""
+                  required>
+              </div>
+            
+              <div class="row input-container">
+                <div class="col-md first">
+                    <label class="label-hidden" for="ContactFormCityState">City/State</label>
+                    <input type="text"
+                      name="contact[City/State]"
+                      id="ContactFormCityState"
+                      placeholder="City/State"
+                      value=""
+                      required>
+                </div> 
+                <div class="col-md">
+                  <label class="label-hidden" for="ContactFormBusinessType">Business Type</label>
+                  <select id="ContactFormBusinessType" class="" name="contact[Business Type]">
+                    <option value="" disabled selected>Type of business </option>
+                    <option value="Cafe/Bakery">Cafe/Bakery</option>
+                    <option value="Restaurant">Restaurant</option>
+                    <option value="Office">Office</option>
+                    <option value="Grocery">Grocery</option>
+                    <option value="Online">Online</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+            
+              <div class="row input-container">
+                <div class="col-md first">
+                  <label class="label-hidden" for="ContactFormService">Form Service</label>
+                    <select id="ContactFormService" class="" name="contact[Service]">
+                      <option value="" disabled selected>What are you looking to serve?</option>
+                      <option value="Drip">Drip</option>
+                      <option value="Espresso">Espresso</option>
+                      <option value="Tea">Tea</option>
+                      <option value="Cold Brew">Cold Brew</option>
+                    </select>
+                  </div>
+                  <div class="col-md">
+                    <label class="label-hidden" for="ContactFormColdBrew">Cold Brew</label>
+                    <select id="ContactFormColdBrew" class="" name="contact[Cold Brew]">
+                      <option value="" disabled selected>Are you interested in serving Cold Brew on Draft?</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                  </div>
+              </div>
+            
+            
+              <div class="input-container row">
+                <div class="col-md first">
+                  <label class="label-hidden" for="ContactFormEquipment">Equipment</label>
+                  <select id="ContactFormEquipment" class="" name="contact[Equipment]">
+                    <option value="" disabled selected>Are you looking to purchase equipment?</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+                <div class="col-md">
+                  <label class="label-hidden" for="ContactFormDistributor">Distributor</label>
+                  <select id="ContactFormDistributor" class="" name="contact[Distributor]">
+                    <option value="" disabled selected>Do you currently use a distributor? If so, who?</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+              </div>
+            
+            
+            <div class="input-container">
+              <label class="label-hidden" for="ContactFormMessage">{{ 'contact.form.message' | t }}</label>
+              <textarea rows="5"
+                name="contact[body]"
+                id="ContactFormMessage"
+                placeholder="{{ 'contact.form.message' | t }}">
+                {%- if form.body -%}
+                  {{- form.body -}}
+                {%- endif -%}
+              </textarea>
+            </div>
+            
+            <button type="submit" name="button" aria-label="Wholesale Form Submit">
+              SUBMIT
+            </button>
+    
+    
+    
+    {% endform %}
+  
+    </div>
+
+    
+
+</div>

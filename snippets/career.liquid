@@ -1,0 +1,48 @@
+{% assign show = false %}
+{% assign class = '' %}
+{%- if article.tags.size > 0 -%}
+  {%- for tag in article.tags -%}
+    {% assign handle = tag | handle %}
+    {% assign class = class | append: ' ' | append: handle %}
+    {%- if activeTag == tag -%}
+      {% assign show = true %}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
+
+<div class="career-post col-md {% unless show %} hide {% endunless %} {{ class }}">
+  {% if image %}
+    <div class="lazyload career-post--image" data-bgset="{% include 'responsive-bg-image', image: image %}" alt="{{  location | escape }}"></div>
+  {% else %}  
+    <div class="career-post--no-img d-flex justify-content-center align-items-center">
+      {% include "icon-flower" %}
+    </div>
+  {% endif %}
+
+  {% if location != blank %}
+    <h4 class="career-post--location">{{ location | escape }}</h4>
+  {% endif %}
+
+  {% if title != blank %}
+    <h2 class="career-post--title">
+      {{ title }}
+    </h2>
+  {% endif %}
+
+  {% if desc != blank %}
+    <div class="career-post--desc">
+      {{ desc }}
+    </div>
+  {% endif %}
+
+  {% if link != blank %}
+    <div class="underlined">
+      <a href="{{ link }}" target="_blank" title="opens in a new window" aria-label="LEARN MORE & APPLY Link">
+        LEARN MORE & APPLY
+      </a>
+    </div>
+  {% endif %}
+
+
+</div>

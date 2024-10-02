@@ -1,0 +1,1 @@
+{"version":3,"file":"custom-script.js","sources":["./src/ts/main.ts"],"sourcesContent":["console.log('Hello Shopify!');\n"],"names":[],"mappings":";;;AAAA,QAAQ,GAAG,CAAC"}

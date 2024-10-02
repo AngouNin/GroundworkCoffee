@@ -1,0 +1,12 @@
+
+
+{% if page.handle contains 'our-kitchen' %}
+  {% section "page-kitchen-heading" %}
+  {% section "page-kitchen-content" %}
+{% elsif page.handle contains 'locations' %}
+  {% section "page-locations-heading" %}
+  {% section "page-locations-content" %}
+  {% section "page-locations-bottom-content" %}
+{% endif %}
+
+{% section 'custom-fields-pages' %}

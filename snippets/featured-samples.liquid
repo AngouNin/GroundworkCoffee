@@ -1,0 +1,40 @@
+{%- assign coffee_sample = all_products["2oz-coffee-sample"] -%}
+{%- assign sample_variants = coffee_sample.variants -%}
+{%- assign sample_variant_id = coffee_sample.variants[0].id -%}
+
+<div>
+    <h3 class="sample_title">
+        Add a Sample
+    </h3>
+</div>
+<div class="d-md-flex" style="width: 100%;">
+    <select name="Select Sample" id="select-sample">
+        {%- for variant in sample_variants -%}
+            <option value="{{ variant.id }}">{{ variant.title }}</option>      
+        {%- endfor -%}
+    </select>
+
+    <button class="quick-add-samples" type="button" name="button"  aria-label="QUICK ADD - {{ coffee_sample.price }}" data-variant-id="{{ sample_variant_id }}" data-product-id="{{ coffee_sample.id }}">
+        QUICK ADD - {{ coffee_sample.price | money_without_trailing_zeros }}
+    </button>
+</div>
+
+<script type="text/javascript">
+    $(function() {
+      $('select').selectric();
+    });
+</script>
+  
+<style media="screen">
+    .selectric .button:before {
+        content: url('{{ "arrow-down.svg" | asset_url }}') !important;
+        position: absolute;
+        top: 40%;
+        right: 9px;
+    }
+
+    .selectric .button:after {
+        display: none;
+    }
+</style>
+  

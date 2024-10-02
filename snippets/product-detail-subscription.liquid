@@ -1,0 +1,50 @@
+
+{% if isSub %}
+      <div class="subscription-selector-container">
+        <div>
+            <div class="d-flex">
+                <div data-selector-onetime="" class="rc_widget__option__selector active">
+                    <input id="product_onetime" type="radio" name="subscriptionRadio" value="onetime" data-radio-onetime="" class="rc-radio__input rc_widget__option__input rc_widget__option__input--onetime" checked> 
+                    <label for="product_onetime" data-label-onetime="" class="rc-radio__label rc_widget__option__label"><span data-label-text-onetime="" class="rc-option__text">ONE-TIME PURCHASE</span> 
+                </div>
+            </div>
+           
+
+            <div class="d-flex">
+                <div data-selector-subsave="" class="rc_widget__option__selector">
+                    <input id="product_subscription" type="radio" name="subscriptionRadio" value="subsave" data-radio-subsave="" class="rc-radio__input rc_widget__option__input rc_widget__option__input--subsave"> 
+                    <label for="product_subscription" data-label-subsave="" class="rc-radio__label rc_widget__option__label">
+                    <span data-label-text-subsave="" class="rc-option__text">SUBSCRIBE</span> 
+                </div>
+                <div class="d-flex align-items-center frequency-selectors hide">  
+                    {% for group in productMetafields.selling_plan_groups %}
+                      {% for selling_plan in group.selling_plans %}
+                          <div class="product_sub_btn {% if forloop.first %} active {% endif %}" data-plan-id="{{ selling_plan.id }}" data-index="{{ index }}" data-variant-id="{{ item.variant_id }}">
+                            {% if selling_plan.name contains '1 Week' %}
+                              Weekly
+                            {% elsif selling_plan.name contains '2 Weeks' or selling_plan.name contains '15 Days'  %}
+                              Biweekly
+                            {% elsif selling_plan.name contains '4 Weeks' or selling_plan.name contains '30 Days'  %}
+                              Monthly
+                            {% else %} 
+                              {{ selling_plan.name }}
+                            {% endif %}
+                          </div>
+                      {% endfor %}
+                    {% endfor %}   
+                </div>
+            </div>
+            
+        </div>
+        
+      </div>
+      <script>
+        var subscriptionProduct = {{ productMetafields.variants | json }};
+        var isSub = true;
+      </script>
+    {% endif %}
+
+
+    <script>
+      var activeVariant = {{ current_variant | json }};
+    </script>

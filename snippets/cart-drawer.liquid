@@ -1,0 +1,96 @@
+
+  <section data-cart-view="data-cart-view" class="cart-drawer" rv-show="cart.item_count | gt 0">
+    <div class="inner">
+
+        <div class="cart-item " rv-each-item="cart.items" >
+          <div class="cart-row line-item-row">
+            <div class="d-flex">
+              <div class="cart-image"><img rv-src="item.image | productImageSize '100x'" alt="Product Image"></div>
+              <div class="title-col">
+                <p class="cart-title" rv-text="item.product_title"></p>
+                <p class="cart-variant-title" rv-text="item.variant_title"></p>
+                <div class="cart-quantity">
+                  <a href="#" rv-data-cart-quantity="item.quantity | minus 1" rv-data-cart-update="index | plus 1" class="drawer-minus">-</a>
+                  <span rv-text="item.quantity"></span>
+                  <a href="#" rv-data-cart-quantity="item.quantity | plus 1" rv-data-cart-update="index | plus 1" class="drawer-plus">+</a>
+                </div>
+
+
+              </div>
+            </div>
+
+            <div class="add-remove d-flex flex-column justify-content-between">
+              <p class="cart-price cart-price-drawer" rv-html="item.line_price | money Currency.currentCurrency"></p>
+              <div class="">
+                <a href="#" rv-data-cart-remove="index | plus 1" aria-label="Remove Link" class="cart-remove">
+                  Remove
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <p class="empty-cart" rv-show="cart.item_count | lt 1">
+          Your cart is empty
+        </p>
+
+        <div data-cart-view="data-cart-view" rv-show="cart.item_count | gt 0">
+          <div class="cart-total-row cart-row hide">
+            <p>Subtotal</p>
+            <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total" style="display:none !important;"></span>
+
+            <p class="drawer-total-price" rv-html="cart.total_price | money"></p>
+          </div>
+        </div>
+        <div class="button-container">
+          <a href="/cart" class="button" aria-label="View Cart Drawer Button Link" >
+            <!-- <button class="" role="button" aria-label="View Cart" type="button" name="button"> -->
+              View Cart
+            <!-- </button> -->
+          </a>
+
+        </div>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    // CART DROPDOWN
+    var path = window.location.pathname;
+    if (path != "/cart") {
+      $('.nav-wrapper .js-view-cart').on('mouseover', function() {
+          $('.cart-drawer').addClass('show-cart-drawer');
+      });
+
+      $('.nav-wrapper .cart-trigger, .cart-drawer').on('mouseout', function(e) {
+        closeCart(e);
+      });
+
+      $('body').on('click', function (e) {
+        closeCart(e);
+      });
+    }
+
+
+    $(document).on('click', '.drawer-plus, .drawer-minus, .cart-remove ', function() {
+      $.get('/cart.js', '', function(data) {
+         $('.cart-count').html(data.item_count);
+       }, 'json');
+    });
+
+
+  function closeCart (e) {
+    const targetIsCartTrigger = $(e.relatedTarget).closest('.cart-trigger').length > 0;
+    const targetIsDropdown = $(e.relatedTarget).closest('.cart-drawer').length > 0;
+    if (!targetIsCartTrigger && !targetIsDropdown) {
+      $('.cart-drawer').removeClass('show-cart-drawer');
+    }
+  }
+
+    $('.cart-drawer').on('click', function (e) {
+      var clickedEl = $(e.target);
+      if (clickedEl.closest('.add-remove').length == 0 && clickedEl.closest('.cart-remove').length == 0 ) {
+        // window.location.replace('/cart');
+      }
+    });
+  </script>

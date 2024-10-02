@@ -1,0 +1,204 @@
+
+
+<section class="section_swiper-text" style="background-color: {{ block.settings.bg_color }};">
+  <div class="container">
+
+        <div class="swiper-container section_swiper-text-{{ index }}">
+          <div class="swiper-wrapper">
+            {% if block.settings.image != blank %}
+              <div class="swiper-slide">
+                <div class="cols-2">
+                  <div class="section_swiper-text--img-container">
+                    {% assign image = block.settings.image %}
+                    <div class="lazyload section_swiper-text--img" data-bgset="{% include 'responsive-bg-image', image: image, %}" alt="{{ block.settings.title }}"></div>
+                  </div>
+                  <div class="section_swiper-text--txt-container d-md-flex align-items-center">
+                    <div class="section_swiper-text--txt-inner-container">
+                      {% if block.settings.title != blank %}
+                        <h2 class="section_swiper-text--title">{{ block.settings.title }}</h2>
+                      {% endif %}
+                      {% if block.settings.desc != blank %}
+                        <div class="section_swiper-text--desc">
+                          {{ block.settings.desc }}
+                        </div>
+                      {% endif %}
+
+                      <div class="swiper-pagination swiper-pagination-{{index}} mobile-hide"></div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            {% endif %}
+
+
+            {% if block.settings.image_2 != blank %}
+              {% assign image_2 = block.settings.image_2 %}
+              <div class="swiper-slide">
+                <div class="cols-2">
+                  <div class="section_swiper-text--img-container">
+
+                    <div class="lazyload section_swiper-text--img" data-bgset="{% include 'responsive-bg-image', image: image, %}" alt="{{ block.settings.title_2 }}"></div>
+                  </div>
+                  <div class="section_swiper-text--txt-container d-md-flex align-items-center">
+                    <div class="section_swiper-text--txt-inner-container">
+                      {% if block.settings.title_2 != blank %}
+                        <h2 class="section_swiper-text--title">{{ block.settings.title_2 }}</h2>
+                      {% endif %}
+                      {% if block.settings.desc_2 != blank %}
+                        <div class="section_swiper-text--desc">
+                          {{ block.settings.desc_2 }}
+                        </div>
+                      {% endif %}
+                      <div class="swiper-pagination swiper-pagination-{{index}} mobile-hide"></div>
+
+
+                    </div>
+
+                  </div>
+                </div>
+
+
+              </div>
+            {% endif %}
+            {% if block.settings.image_3 != blank %}
+              {% assign image_3 = block.settings.image_3 %}
+              <div class="swiper-slide">
+                <div class="cols-2">
+                  <div class="section_swiper-text--img-container">
+
+                    <div class="lazyload section_swiper-text--img" data-bgset="{% include 'responsive-bg-image', image: image, %}" alt="{{ block.settings.title_3 }}"></div>
+                  </div>
+                  <div class="section_swiper-text--txt-container d-md-flex align-items-center">
+                    <div class="section_swiper-text--txt-inner-container">
+                      {% if block.settings.title_3 != blank %}
+                        <h2 class="section_swiper-text--title">{{ block.settings.title_3 }}</h2>
+                      {% endif %}
+                      {% if block.settings.desc_3 != blank %}
+                        <div class="section_swiper-text--desc">
+                          {{ block.settings.desc_3 }}
+                        </div>
+                      {% endif %}
+                      <div class="swiper-pagination swiper-pagination-{{index}} mobile-hide"></div>
+
+
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            {% endif %}
+            {% if block.settings.image_4 != blank %}
+              {% assign image_4 = block.settings.image_4 %}
+              <div class="swiper-slide">
+                <div class="cols-2">
+                  <div class="section_swiper-text--img-container">
+
+                    <div class="lazyload section_swiper-text--img" data-bgset="{% include 'responsive-bg-image', image: image, %}" alt="{{ block.settings.title_4 }}"></div>
+                  </div>
+                  <div class="section_swiper-text--txt-container d-md-flex align-items-center">
+                    <div class="section_swiper-text--txt-inner-container">
+                      {% if block.settings.title_4 != blank %}
+                        <h2 class="section_swiper-text--title">{{ block.settings.title_4 }}</h2>
+                      {% endif %}
+                      {% if block.settings.desc_4 != blank %}
+                        <div class="section_swiper-text--desc">
+                          {{ block.settings.desc_4 }}
+                        </div>
+                      {% endif %}
+                      <div class="swiper-pagination swiper-pagination-{{index}} mobile-hide"></div>
+
+
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            {% endif %}
+            {% if block.settings.image_5 != blank %}
+              {% assign image_5 = block.settings.image_5 %}
+              <div class="swiper-slide">
+                <div class="cols-2">
+                  <div class="section_swiper-text--img-container">
+                    <div class="lazyload section_swiper-text--img" data-bgset="{% include 'responsive-bg-image', image: image, %}" alt="{{ block.settings.title_5 }}"></div>
+                  </div>
+                  <div class="section_swiper-text--txt-container d-md-flex align-items-center">
+                    <div class="section_swiper-text--txt-inner-container">
+                      {% if block.settings.title_5 != blank %}
+                        <h2 class="section_swiper-text--title">{{ block.settings.title_5 }}</h2>
+                      {% endif %}
+                      {% if block.settings.desc_5 != blank %}
+                        <div class="section_swiper-text--desc">
+                          {{ block.settings.desc_5 }}
+                        </div>
+                      {% endif %}
+                      <div class="swiper-pagination swiper-pagination-{{index}} mobile-hide"></div>
+
+
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            {% endif %}
+          </div>
+
+          {% if block.settings.image_2 != blank %}
+
+          <!-- If we need navigation buttons -->
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev" aria-label="Button Previous">
+            {% include "icon-arrow-left" %}
+          </div>
+          <div class="swiper-button-next" aria-label="Button Next">
+            {% include "icon-arrow-right" %}
+          </div>
+          <div class="swiper-pagination swiper-pagination-{{index}} desktop-hide"></div>
+          {% endif %}
+
+        </div>
+
+      </div>
+</section>
+
+
+<script type="text/javascript">
+  var settings = {
+
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+        speed: 400,
+        allowTouchMove: true,
+        setWrapperSize: true,
+        loop: false,
+        autoHeight: true,
+        // spaceBetween: 10,
+         pagination: {
+           el: '.swiper-pagination',
+           clickable: true
+
+         },
+         breakpoints: {
+             // when window width is >= 640px
+             768: {
+               effect: 'fade',
+               fadeEffect: {
+                 crossFade: true
+               },
+               spaceBetween: 20
+             }
+           }
+    }
+
+    var costumeSwiper = new Swiper('.section_swiper-text-{{ index }}', settings);
+</script>

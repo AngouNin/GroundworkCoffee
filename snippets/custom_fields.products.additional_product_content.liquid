@@ -1,0 +1,160 @@
+{% if product.metafields.custom_fields["additional_product_content"] != blank %}
+  <div class="custom-field custom-field__additional-product-content custom-field__type--field-collection-json">
+    <h3 class="custom-field--title">Additional Product Content</h3>
+    <div class="custom-field--value">
+      {% for item in product.metafields.custom_fields["additional_product_content"] %}
+        <div class="fc-item fc-index--{{ forloop.index0 }}">
+           {% if item["section_title"] != blank %}
+             <div class="fc-field field__section-title field-type--text">
+               <h4 class="custom-field--title">Section Title</h4>
+               <div class="custom-field--value">
+                 {{ item["section_title"] }}
+               </div>
+             </div>
+           {% endif %}
+           {% if item["section_with_icons"] != blank %}
+             <div class="fc-field field__section-with-icons field-type--field-collection-json">
+               <h4 class="custom-field--title">Section With Icons</h4>
+               <div class="custom-field--value">
+                 {% for section_with_icons_item in item["section_with_icons"] %}
+                   <div class="child-fc-item">
+                     {% if section_with_icons_item["title"] != blank %}
+                       <div class="fc-field field__title field-type--text">
+                         <h4 class="custom-field--title">Title</h4>
+                         <div class="custom-field--value">
+                           {{ section_with_icons_item["title"] }}
+                         </div>
+                       </div>
+                     {% endif %}
+                     {% if section_with_icons_item["description"] != blank %}
+                       <div class="fc-field field__description field-type--html">
+                         <h4 class="custom-field--title">Description</h4>
+                         <div class="custom-field--value">
+                           {{ section_with_icons_item["description"] }}
+                         </div>
+                       </div>
+                     {% endif %}
+                     {% if section_with_icons_item["icon_title"] != blank %}
+                       <div class="fc-field field__icon-title field-type--text">
+                         <h4 class="custom-field--title">Icon Title</h4>
+                         <div class="custom-field--value">
+                           {{ section_with_icons_item["icon_title"] }}
+                         </div>
+                       </div>
+                     {% endif %}
+                     {% if section_with_icons_item["icon"] != blank %}
+                       <div class="fc-field field__icon field-type--image-repeater">
+                         <h4 class="custom-field--title">Icon</h4>
+                         <div class="custom-field--value">
+                           {% for repeater_item in section_with_icons_item["icon"] %}
+                             <div class="repeater-item repeater-item--image">
+                               {{ repeater_item["icon"] }}
+                             </div>
+                           {% endfor %}
+                         </div>
+                       </div>
+                     {% endif %}
+                     {% if section_with_icons_item["icon_labels"] != blank %}
+                       <div class="fc-field field__icon-labels field-type--text-repeater">
+                         <h4 class="custom-field--title">Icon Labels</h4>
+                         <div class="custom-field--value">
+                           {% for repeater_item in section_with_icons_item["icon_labels"] %}
+                             <div class="repeater-item repeater-item--text">
+                               {{ repeater_item["icon_labels"] }}
+                             </div>
+                           {% endfor %}
+                         </div>
+                       </div>
+                     {% endif %}
+                     {% if section_with_icons_item["image"] != blank %}
+                       <div class="fc-field field__image field-type--image">
+                         <h4 class="custom-field--title">Image</h4>
+                         <div class="custom-field--value">
+                           {{ section_with_icons_item["image"] }}
+                         </div>
+                       </div>
+                     {% endif %}
+                   </div>
+                 {% endfor %}
+               </div>
+             </div>
+           {% endif %}
+           {% if item["slide_show"] != blank %}
+             <div class="fc-field field__slide-show field-type--field-collection-json">
+               <h4 class="custom-field--title">Slide Show</h4>
+               <div class="custom-field--value">
+                 {% for slide_show_item in item["slide_show"] %}
+                   <div class="child-fc-item">
+                     {% if slide_show_item["title"] != blank %}
+                       <div class="fc-field field__title field-type--text">
+                         <h4 class="custom-field--title">Title</h4>
+                         <div class="custom-field--value">
+                           {{ slide_show_item["title"] }}
+                         </div>
+                       </div>
+                     {% endif %}
+                     {% if slide_show_item["description"] != blank %}
+                       <div class="fc-field field__description field-type--html">
+                         <h4 class="custom-field--title">Description</h4>
+                         <div class="custom-field--value">
+                           {{ slide_show_item["description"] }}
+                         </div>
+                       </div>
+                     {% endif %}
+                     {% if slide_show_item["button"] != blank %}
+                       <div class="fc-field field__button field-type--link">
+                         <h4 class="custom-field--title">Button</h4>
+                         <div class="custom-field--value">
+                           {{ slide_show_item["button"] }}
+                         </div>
+                       </div>
+                     {% endif %}
+                     {% if slide_show_item["image"] != blank %}
+                       <div class="fc-field field__image field-type--image">
+                         <h4 class="custom-field--title">Image</h4>
+                         <div class="custom-field--value">
+                           {{ slide_show_item["image"] }}
+                         </div>
+                       </div>
+                     {% endif %}
+                   </div>
+                 {% endfor %}
+               </div>
+             </div>
+           {% endif %}
+           {% if item["steps"] != blank %}
+             <div class="fc-field field__steps field-type--field-collection-json">
+               <h4 class="custom-field--title">Steps</h4>
+               <div class="custom-field--value">
+                 {% for steps_item in item["steps"] %}
+                   <div class="child-fc-item">
+                     {% if steps_item["step"] != blank %}
+                       <div class="fc-field field__step field-type--html-repeater">
+                         <h4 class="custom-field--title">Step</h4>
+                         <div class="custom-field--value">
+                           {% for repeater_item in steps_item["step"] %}
+                             <div class="repeater-item repeater-item--html">
+                               {{ repeater_item["step"] }}
+                             </div>
+                           {% endfor %}
+                         </div>
+                       </div>
+                     {% endif %}
+                     {% if steps_item["image"] != blank %}
+                       <div class="fc-field field__image field-type--image">
+                         <h4 class="custom-field--title">Image</h4>
+                         <div class="custom-field--value">
+                           {{ steps_item["image"] }}
+                         </div>
+                       </div>
+                     {% endif %}
+                   </div>
+                 {% endfor %}
+               </div>
+             </div>
+           {% endif %}
+         </div>
+       {% endfor %}
+    </div>
+  </div>
+{% endif %}

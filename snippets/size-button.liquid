@@ -1,0 +1,43 @@
+  <!-- Render a simple text button to selector the product's
+
+  Receives "size" and "productID" strings -->
+  <!-- TODO: will probably have to pass in more stuff like availability -->
+
+  {% capture id %}size-{{ productID }}-{{ size  | handleize  }}
+  {% endcapture %}
+
+  <!-- Make sure there are no leading and trailing spaces so that we can use these variable inside HTML parameters like class and id -->
+  {% assign id = id | strip %}
+  {% assign size = size | strip %}
+  {% assign productID = productID | strip %}
+  {% assign index = index | strip %}
+  {% assign index1 = index1 | strip %}
+  {% assign optionName = optionName | strip %}
+
+  {% assign availabilityClass = "" %}
+  {% if available == "available" %}
+      {% assign availabilityClass = "available" %}
+  {% endif %}
+
+  <div class="size-button size-button-{{ index }} {{availabilityClass}}" data-value="{{ size }}">
+      <!-- <label class="label-hidden" for="{{ optionName }}">{{ optionName }}</label>  -->
+      
+      <input
+        {% if optionName == 'Size' %}
+          onchange="handleChangedProductSize('{{productID}}', '{{size}}', {{ index }})"
+        {% endif %}
+        aria-label="{{ id }} Size Button"
+        class="size-button__input label-hidden"
+        value="{{ size }}"
+        id="{{ size }}-{{ id }}"
+        type="radio" 
+        name="options[{{ optionName }}]"
+        {% if index1 == '0' %}checked{% endif %}
+        >
+
+      <label class="product_form--option-label size-button__icon" for="{{size}}-{{ id }}">
+          <div class="text-wrapper">
+              {{size}}
+          </div>
+      </label>
+  </div>

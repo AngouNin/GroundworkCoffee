@@ -1,0 +1,83 @@
+
+{{ product.metafields.custom_fields["subscription_reference"] }}
+{% if product.metafields.custom_fields["subscription_reference"] != blank %}
+  {%- assign subRef = product.metafields.custom_fields["subscription_reference"] | escape -%}
+  
+  <script>
+      window.location.href = "/products/{{ subRef }}";
+  </script>
+{% endif %}
+<script>
+  var isSub = false;
+  var subscriptions = {{ product.metafields.subscriptions | json }}; 
+</script>
+
+
+
+{% if product.metafields.custom_fields["subscription_page_title"] != blank %}
+  {% assign subtitle = product.metafields.custom_fields["subscription_page_title"] %}
+{% else %}
+  {% assign subtitle = '' %}
+{% endif %}
+
+
+{% include "page-title" with title: product.title, subtitle: subtitle, desc: product.description %}
+
+{% if product.metafields.custom_fields["subscriptions_how_it_works"] != blank %}
+  <section class="how_it_works {{ product.handle }}">
+    <div class="container">
+      <div class="row">
+        {% for item in product.metafields.custom_fields["subscriptions_how_it_works"] %}
+           {% if item["steps"] != blank %}
+            <div class="col-md">
+              {% if item["image"] != blank %}
+               <div class="how_it_works--bg-img" style="background-image: url({{ item['image'] }})"></div>
+              {% else %}
+               <div class="how_it_works--bg-img" style="background-image: url({{ product.featured_image | img_url: '540x' }})"></div>
+
+             {% endif %}
+            </div>
+            <div class="col-md d-flex flex-column justify-content-center product_desc--txt-container">
+              <div class="how_it_works--txt">
+                <h2 class="how_it_works--title">Here’s how it works.</h2>
+                {% for steps_item in item["steps"] %}
+                  <div class="how_it_works--desc step-{{ forloop.index }} d-flex">
+                    <div class="">
+                      {% include 'icon-step', step: forloop.index %}
+                    </div>
+                    <div class="how_it_works--step">
+                      {% if steps_item["title"] != blank %}
+                        <h3 class="how_it_works--step-title">{{ steps_item["title"] }}</h3>
+                      {% endif %}
+
+                      {% if steps_item["description"] != blank %}
+                        <div class="how_it_works--step-desc">{{ steps_item["description"] }}</div>
+                      {% endif %}
+
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+
+{% include 'subscription-form' %}
+
+{% if product.handle contains 'office' %}
+  {% include 'office-party-form' %}
+{% endif %}
+
+
+<script type="text/javascript">
+  var json = {{ product | json }};
+  var x = {{ product | json }};
+  json = encodeURIComponent(JSON.stringify(json));
+  $('.store-json-{{ product.id }}').attr('data-obj', json);
+</script>
+

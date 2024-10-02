@@ -1,0 +1,35 @@
+{% case media.media_type %}
+  {% when 'image' %}
+    {% include 'responsive-image' with
+      image: media,
+      max_width: 700,
+      max_height: 800,
+      image_attributes: "data-product-featured-image",
+      wrapper_class: wrapper_class,
+      wrapper_attributes: "data-product-image-wrapper",
+    %}
+  {% when 'external_video' %}
+    <div class="product-single__media" style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100}}%;" data-media-id="{{ media.id }}">
+      {{ media | external_video_tag }}
+    </div>
+  {% when 'video' %}
+    <div class="product-single__media" data-media-id="{{ media.id }}">
+      {{ media | autoplay  }}
+
+      {{ media }}
+
+      <video width="100%" class="vid" playsinline="" autoplay="" muted="" loop="" style="position: relative; ">
+        <source type="video/mp4" src="https://player.vimeo.com/external/365669200.hd.mp4?s=7abab263f9779d1a0f93d7054bb296e82be96210&amp;profile_id=174">
+      </video>
+
+
+    </div>
+  {% when 'model' %}
+    <div class="product-single__media" style="padding-top: 100%" data-media-id="{{ media.id }}">
+      {{ media | model_viewer_tag }}
+    </div>
+  {% else %}
+    <div class="product-single__media" style="padding-top: 100%;" data-media-id="{{ media.id }}">
+      {{ media | media_tag }}
+    </div>
+{% endcase %}

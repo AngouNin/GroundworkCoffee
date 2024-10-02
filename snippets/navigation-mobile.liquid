@@ -1,0 +1,68 @@
+<!-- NAVIGATION -->
+<div class="navigation-container-dropdown navigation-mobile">
+
+  <div class="mobile-heading">
+    <div class="close-container">
+      <div class="close-nav">
+        {% include "icon-close" %}
+      </div>
+    </div>
+    <div class="search-container">
+      <form action="/search" method="get" role="search">
+        <input type="hidden" name="type" value="product,collections,article">
+
+        <label for="Search-{{ section.id }}-mobile" class="label-hidden">
+          {{ 'general.search.placeholder' | t }}
+        </label>
+
+        <input type="search"
+          name="q"
+          id="Search-{{ section.id }}-mobile"
+          value="{{ search.terms | escape }}"
+          placeholder="{{ 'general.search.placeholder' | t }}">
+
+        <button aria-label="Submit Search Button" type="submit" class="button">
+          {% include 'icon-flower-black' %}
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+  {% assign shopLeftMenu = linklists.shop-dropdown-left %}
+  {% assign shopRightMenu = linklists.shop-dropdown-right %}
+
+  <nav class="bottom_nav" role="navigation">
+    <ul class="bottom_nav--ul">
+      {% for link in linklists[section.settings.menu].links %}
+        {% if link.links != blank %}
+          <li class="bottom_nav--li dropdown-trigger">
+            <a href="{{ link.url }}" class="link-with-dropdown {% if link.active %} active {% endif %} {{ link.handle }}" aria-label="{{ link.title }} Link">
+              {{ link.title }}
+              {% include "icon-arrow-down" %}
+            </a>
+            {% include "mobile-dropdown" %}
+          </li>
+        {% else %}
+          <li class="bottom_nav--li {% if link.handle == 'shop' %}dropdown-trigger{% endif %}">
+            {% if pageUrl contains 'collection' or pageUrl contains 'products' %}
+              {% assign shopActive = 'active' %}
+            {% else %}
+              {% assign shopActive = '' %}
+            {% endif %}
+            <a href="{{ link.url }}" class="link-with-dropdown {% if link.active %} active {% endif %} {% if link.handle == 'shop' %} {{ shopActive }} {% endif %} {{ link.handle }}" aria-label="{{ link.title }} Link">
+              {{ link.title }}
+              {% if link.handle == 'shop' %}
+                {% include "icon-arrow-down" %}
+              {% endif %}
+            </a>
+            {% if link.handle == 'shop' %}
+              {% include "mobile-shop-dropdown" %}
+            {% endif %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+
+</div>

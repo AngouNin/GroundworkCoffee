@@ -1,0 +1,42 @@
+{% if product.metafields.custom_fields["subscription_branded_content"] != blank %}
+
+
+<section class="image_text" style="">
+  {% for item in product.metafields.custom_fields["subscription_branded_content"] %}
+    <div class="container">
+      <div class="cols-2">
+        <div class="col-md">
+
+          {% if item["image"] != blank %}
+            <div class="image_text--image-container ">
+              <img src="{{ item['image'] }}" alt="" class="image_text--image">
+            </div>
+          {% endif %}
+        </div>
+        <div class="col-md d-flex justify-content-center flex-column">
+          {% if item["title"] != blank %}
+            <h2 class="image_text--title">{{ item["title"] }}</h2>
+          {% endif %}
+
+          {% if item["description"] != blank %}
+            <div class="image_text--desc">
+              {{ item["description"] }}
+            </div>
+          {% endif %}
+
+          <div class="btn-container d-flex align-items-center">
+            {% if item["button"] != blank %}
+              {{ item["button"] }}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  {% endfor %}
+
+</section>
+
+
+
+{% endif %}

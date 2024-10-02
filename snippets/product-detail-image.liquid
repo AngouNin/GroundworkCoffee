@@ -1,0 +1,72 @@
+
+
+
+
+
+<div class="row product_image">
+  <!--===============
+    Product Image Selector
+  ===================-->
+
+  {% include 'product-image-selector' %}
+
+  {% if product.images.size > 1 %}
+  {%- comment -%}
+  <div class="col-sm-2 mobile-hide">
+      <ul class="product_image--thumb-ul">
+        {% for image in product.images %}
+          <li class="product_image--thumb-li">
+            <a href="{{ image.src | img_url: '480x480' }}" data-thumbnail-id="{{ image.id }}" data-product-single-thumbnail{% if featured_image == image %} aria-current="true"{% endif %}>
+              <!-- <img class="product_image--thumb" src="{{ image.src | img_url: '160x160' }}" alt="{{ image.alt | escape }}"> -->
+              <div class="lazyload product_image--thumb" data-bgset="{% include 'responsive-bg-image', image: image.src %}"></div>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div> 
+  {%- endcomment -%}  
+  
+  {% endif %}
+  <!--===============
+    Product Images
+  ===================-->
+  <div class="col-sm-10 mobile-hide">
+    {% for image in product.images %}
+      {% capture wrapper_class %}
+        {%- unless featured_image == image -%}
+          hide
+        {%- endunless -%}
+      {% endcapture %}
+
+      {% include 'responsive-image' with
+        image: image,
+        max_width: 700,
+        max_height: 800,
+        image_attributes: "data-product-featured-image",
+        wrapper_class: wrapper_class,
+        wrapper_attributes: "data-product-image-wrapper",
+      %}
+    {% endfor %}
+  </div>
+
+  <div class="swiper-container product-image-swiper desktop-hide">
+    <div class="swiper-wrapper">
+      {% for image in product.images %}
+        <div class="swiper-slide">
+          {% include 'responsive-image' with
+            image: image.src,
+            max_width: 400,
+            max_height: 800,
+            wrapper_class: '',
+            image_attributes: "data-product-featured-image",
+            wrapper_attributes: "data-product-image-wrapper",
+          %}
+          <!-- <img src="{{ image.src }}" alt=""> -->
+        </div>
+
+      {% endfor %}
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>

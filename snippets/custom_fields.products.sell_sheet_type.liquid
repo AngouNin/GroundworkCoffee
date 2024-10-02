@@ -1,0 +1,8 @@
+{% if product.metafields.custom_fields["sell_sheet_type"] != blank %}
+  <div class="custom-field custom-field__sell-sheet-type custom-field__type--text">
+    <h3 class="custom-field--title">Sell Sheet Type</h3>
+    <div class="custom-field--value">
+      {{ product.metafields.custom_fields["sell_sheet_type"] }}
+    </div>
+  </div>
+{% endif %}

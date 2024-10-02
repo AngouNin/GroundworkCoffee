@@ -1,0 +1,47 @@
+{% assign whyOrganic = 'https://cdn.shopify.com/s/files/1/0549/3738/7174/files/computer_2x_f71d44a5-45d2-4376-a018-476649d46147.png?v=1621973518' %}
+{% assign ourStory = 'https://cdn.shopify.com/s/files/1/0549/3738/7174/files/computer_2x_f71d44a5-45d2-4376-a018-476649d46147.png?v=1621973518' %}
+{% assign faq = 'https://cdn.shopify.com/s/files/1/0549/3738/7174/files/computer_2x_f71d44a5-45d2-4376-a018-476649d46147.png?v=1621973518' %}
+
+
+<div class="bottom_nav--dropdown about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md about-nav-left">
+        <img src="{{ whyOrganic }}" class="why-organic-img about-hover-img" alt="Why Organic">
+        <img src="{{ ourStory }}" class="our-story-img about-hover-img hide" alt="Our Story">
+        <img src="{{ faq }}" class="faq-img about-hover-img hide" alt="FAQ">
+      </div>
+      <div class="col-md about-nav-right">
+        <ul>
+          {% for childlink in link.links %}
+            <li class="bottom_nav--dropdown-li">
+              <a href="{{ childlink.url }}" class="about-hover {% if childlink.active %}active{% endif %} " data-location="{{ childlink.handle }}" aria-label="{{ childlink.title }} Dropdown Link">
+                {{ childlink.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="icon-flowers">
+      {% include "icon-flowers" %}
+    </div>
+  </div>
+
+
+
+  <script type="text/javascript">
+
+    $( ".about-hover" )
+      .mouseenter(function() {
+        $('.about-hover-img').addClass('hide');
+        var location = $(this).attr('data-location');
+        $('.'+location + '-img').removeClass('hide');
+      })
+      .mouseleave(function() {
+        // $('.about-hover-img').addClass('hide');
+
+      });
+  </script>
+
+</div>

@@ -1,0 +1,145 @@
+<section class="img_txt_slider">
+  <div class="container">
+    <div class="swiper-container swiper-container-1">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'slide' %}
+              <div class="swiper-slide">
+                <!-- <div class="row"> -->
+                <div class="cols-2">
+                  
+                  {% if block.settings.layout == 'left' %}
+                    <div class="col-md">
+                      {% if block.settings.image %}
+                        {% assign image = block.settings.image %}
+                        {% include 'responsive-image' with image: image, image_class: "css-class", wrapper_class: "wrapper-css-class", max_width: 700, max_height: 800 %}
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                 
+                  <div class="img_txt_slider--txt-container col-md d-md-flex justify-content-center flex-column">
+                    <div class="img_txt_slider--txt">
+                      {% if block.settings.title %}
+                        
+                        {% if forloop.index0 == 0 %}
+                          <h1>{{ block.settings.title }}</h1>
+                        {% else %}
+                           <h2 class="h1">{{ block.settings.title }}</h2>
+
+                        {% endif %}
+                      {% endif %}
+                      {% if block.settings.desc %}
+                        <div class="desc">
+                          {{ block.settings.desc }}
+                        </div>
+                      {% endif %}
+
+                      {% if block.settings.button_label %}
+                        {%- assign label = block.settings.button_label -%}
+                      {% else %}
+                        {%- assign label = 'Learn More' -%}
+                      {% endif %}
+
+                      {% if block.settings.button_link %}
+                        <div class="img_txt_slider--btn-container">
+                          <a href="{{ block.settings.button_link }}" aria-label="{{ label }} about {{ block.settings.title }} link" class="button btn-white">
+                            {{ label }}
+                          </a>
+                        </div>    
+                      {% endif %}
+
+                      <!-- If we need navigation buttons -->
+
+                      <!-- If we need pagination -->
+                      <div class="swiper-pagination"></div>
+                    </div>
+
+                  </div>
+
+                  {% if block.settings.layout == 'right' %}
+                    <div class="col-md">
+                      {% if block.settings.image %}
+                        {% assign image = block.settings.image %}
+                        {% include 'responsive-image' with image: image, image_class: "css-class", wrapper_class: "wrapper-css-class", max_width: 700, max_height: 800 %}
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+
+
+      </div>
+
+
+
+
+    </div>
+
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Image with text slider",
+    "blocks": [
+      {
+        "type": "slide",
+        "name": "Slide",
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "desc",
+            "label": "Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "Recommended Dimensions: 660x730"
+          },
+          {
+            "type": "select",
+            "id": "layout",
+            "label": "Image alignment",
+            "default": "left",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button label"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image with text slider",
+        "category": "Slide Show"
+      }
+    ]
+  }
+{% endschema %}

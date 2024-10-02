@@ -1,0 +1,127 @@
+{
+  "wrapper": "div#regen.regen-page[attribute-one=regen]",
+  "sections": {
+    "85443ad4-111f-4d24-b415-76fbab0cd47e": {
+      "type": "page-regen-header",
+      "settings": {
+        "title": "",
+        "subtitle": "Help save the future of coffee.",
+        "text": "<p>We’re leading the way to a more sustainable earth with the world’s first Regenerative Organic Certified® line.<\/p>",
+        "image": "shopify:\/\/shop_images\/regen-icon.svg",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "8a73bb8a-5631-4220-a917-bf6167cfe359": {
+      "type": "content-section",
+      "settings": {
+        "title": "<p>Why regenerative?<\/p>",
+        "desc": "<p>Research indicates that the impacts of climate change could cut the areas where coffee thrives in half by 2050. That means, in less than three decades, your daily cup of joe and the livelihoods of smallholder farmers worldwide are in serious jeopardy. <br\/><br\/>The most effective step we can take to secure the future of coffee is to reduce greenhouse gas emissions, as well as promote, purchase, and encourage the expansion of regenerative organic farming. <br\/><\/p>",
+        "image": "shopify:\/\/shop_images\/Asset_2-100.jpg",
+        "layout": "left",
+        "button_label": "",
+        "button_link": "",
+        "background_color": "#c6bea5",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "main": {
+      "type": "product",
+      "disabled": true,
+      "settings": {
+        "show_share_buttons": true
+      }
+    },
+    "a5068d77-cbcf-4726-b217-e6a2ab37c287": {
+      "type": "content-columns",
+      "blocks": {
+        "2ba08812-697d-4c72-b6fd-704dee87368b": {
+          "type": "content",
+          "settings": {
+            "title": "Soil Health",
+            "content": "<p>Use of cover crops, crop rotation, and conservation tillage. Builds organic matter and promotes biodiversity with no synthetic inputs. <\/p>",
+            "icon": "shopify:\/\/shop_images\/Layer_1.svg"
+          }
+        },
+        "1c934559-2ec1-4f9c-8c1b-03b8d27a4d68": {
+          "type": "content",
+          "settings": {
+            "title": "ANIMAL WELFARE",
+            "content": "<p>Protects the “Five Freedoms,” grass-fed & pasture-raised, no CAFOs or extensive transport, suitable shelter.<\/p>",
+            "icon": "shopify:\/\/shop_images\/11.svg"
+          }
+        },
+        "a66a8af6-ef2a-4388-9a63-2a9851deb598": {
+          "type": "content",
+          "settings": {
+            "title": "Social Fairness",
+            "content": "<p>Ensures fair payments and living wages for farmers and farmworkers, safe working conditions, capacity building and freedom of association.<\/p>",
+            "icon": "shopify:\/\/shop_images\/222.svg"
+          }
+        }
+      },
+      "block_order": [
+        "2ba08812-697d-4c72-b6fd-704dee87368b",
+        "1c934559-2ec1-4f9c-8c1b-03b8d27a4d68",
+        "a66a8af6-ef2a-4388-9a63-2a9851deb598"
+      ],
+      "settings": {
+        "title": "The Three Pillars Of  Regenerative Organic Certified®",
+        "sub_title": "CORE",
+        "btn_url": "https:\/\/regenorganic.org\/#",
+        "btn_text": "LEARN MORE",
+        "background_color": "#f1eeea",
+        "padding_top": 50,
+        "padding_bottom": 25
+      }
+    },
+    "70e19861-d4c6-43c7-820d-164a39d9c5f7": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "sub_title": "TRY",
+        "collection": "regenerative-organic-certified",
+        "products_to_show": 4,
+        "custom_dark_bg": true
+      }
+    },
+    "5043905e-9cd4-4a1f-b76e-7f6597bb6a61": {
+      "type": "content-section",
+      "settings": {
+        "title": "<p>Committed to<\/p><p>a better world.<\/p>",
+        "desc": "<p>Research indicates that the impacts of climate change could cut the areas where coffee thrives in half by 2050. That means, in less than three decades, your daily cup of joe and the livelihoods of smallholder farmers worldwide are in serious jeopardy. <br\/><br\/>The most effective step we can take to secure the future of coffee is to reduce greenhouse gas emissions, as well as promote, purchase, and encourage the expansion of regenerative organic farming. <br\/><\/p>",
+        "image": "shopify:\/\/shop_images\/Frame_4.png",
+        "layout": "left",
+        "button_label": "",
+        "button_link": "",
+        "background_color": "#f1eeea",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "bcc580f4-fd49-4335-95b3-a82b564a55f4": {
+      "type": "footer-tree-section",
+      "settings": {
+        "title": "",
+        "subtitle": "Join the\u2028movement.",
+        "text": "<p>As environmental changes challenge the future of coffee, it’s our responsibility to change that. Let’s do it together. If you’re interested in learning more about the Regenerative Organic Certification®, learn more or donate on their website.<\/p>",
+        "btn_text": "DONATE TO REGENERATIVE ORGANIC ALLIANCE",
+        "btn_link": "https:\/\/interland3.donorperfect.net\/weblink\/weblink.aspx?name=E350693&id=3",
+        "image": "shopify:\/\/shop_images\/Layer_1_d8193d43-f3b0-4ca4-82eb-39a9a042a959.svg",
+        "background_color": "#aa8069",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "85443ad4-111f-4d24-b415-76fbab0cd47e",
+    "8a73bb8a-5631-4220-a917-bf6167cfe359",
+    "main",
+    "a5068d77-cbcf-4726-b217-e6a2ab37c287",
+    "70e19861-d4c6-43c7-820d-164a39d9c5f7",
+    "5043905e-9cd4-4a1f-b76e-7f6597bb6a61",
+    "bcc580f4-fd49-4335-95b3-a82b564a55f4"
+  ]
+}

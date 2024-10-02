@@ -1,0 +1,172 @@
+{%- comment -%}
+
+  Liquid by Jason @ freakdesign.
+  Questions? Ping me on twitter: @freakdesign
+
+  Relates to blog post:
+  http://freakdesign.com.au/blogs/news/get-the-url-querystring-values-with-liquid-in-shopify
+
+  Example:
+  https://jasons-experiments.myshopify.com/collections/all/products/3-4-sleeve-kimono-dress-coral-1?ref=freakdesign&cache=false
+
+{%- endcomment -%}
+
+{%- comment -%} Capture the content for header containing the tracking data {%- endcomment -%}
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+
+{% comment %} Use string splitting to pull the value from content_for_header and apply some string clean up {% endcomment %}
+{%- assign pageUrl = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first | split:'.myshopify.com' | last |
+   replace:'\/','/' |
+   replace:'%20',' ' |
+   replace:'\u0026','&'
+-%}
+
+{% assign active = 'LA' %}
+
+{% if pageUrl contains 'los_angeles' %}
+  {% assign active = 'LA' %}
+{% elsif pageUrl contains 'portland' %}
+  {% assign active = 'PORTLAND' %}
+{% endif %}
+
+
+
+
+<section class="location_selection">
+  <div class="container-md">
+    <div class="d-flex align-items-center justify-content-center location_selection--options">
+      <div class="location_selection--option location-select" data-location="los_angeles">
+        <a href="/pages/locations-1" class="" aria-label="Los Angeles Link">
+          Los Angeles
+        </a>
+      </div>
+      <div class="location_selection--option location-select" data-location="portland">
+        <a href="/pages/locations-1?location=portland" aria-label="Portland Link">
+          Portland
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="location_list">
+  <div class="container-sm">
+    <div id="los_angeles" class="hide">
+      <div class="cols-3" style="grid-row-gap: 7rem; grid-column-gap: 10rem;">
+        {% for block in section.blocks %}
+          {% case block.settings.city %}
+            {% when 'los_angeles' %}
+            {% assign location = 'Los Angeles' %}
+              {% include "location" %}
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+
+
+    <div id="portland" class="hide">
+      <div class="cols-3" style="grid-row-gap: 7rem; grid-column-gap: 10rem;">
+        {% for block in section.blocks %}
+          {% case block.settings.city %}
+            {% when 'portland' %}
+            {% assign location = 'Portland' %}
+              {% include "location" %}
+          {% endcase %}
+        {% endfor %}
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+  var search = window.location.search;
+  var substr = '?location=';
+  var la = '?location=los_angeles';
+  var portland = '?location=portland';
+  // var location;
+
+  if(search.indexOf(substr) !== -1) {
+    if(search == la) {
+      $('.location-select[data-location="los_angeles"]').addClass('active');
+      $('#los_angeles').removeClass('hide');
+    } else {
+      $('.location-select[data-location="portland"]').addClass('active');
+      $('#portland').removeClass('hide');
+    }
+  } else {
+    $('.location-select[data-location="los_angeles"]').addClass('active');
+      $('#los_angeles').removeClass('hide');
+  }
+
+
+
+</script>
+
+{% schema %}
+  {
+    "name": "Locations",
+    "blocks": [
+      {
+        "type": "location",
+        "name": "Location",
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+          },
+          {
+            "id": "service",
+            "type": "text",
+            "label": "Service"
+          },
+          {
+            "type": "checkbox",
+            "id": "flagship",
+            "label": "Flagship",
+            "info": "Check if flagship",
+            "default": false
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Order Button"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Order Link"
+          },
+          {
+            "type": "richtext",
+            "id": "store_details",
+            "label": "Store Details"
+          },
+          {
+             "type": "select",
+             "id": "city",
+             "label": "City",
+             "options": [
+               {
+                 "value": "los_angeles",
+                 "label": "Los Angeles"
+               },
+               {
+                 "value": "portland",
+                 "label": "Portland"
+               }
+             ]
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,107 @@
+
+
+    {% unless product.has_only_default_variant %}
+
+
+    <!-- STARTING HERE -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {% comment %}
+
+      {% for option in product.options_with_values %}
+
+
+        <div class="js product_form--options-container">
+
+
+          <fieldset class="row" id="ProductSelect-option-{{ forloop.index0 }}" name="{{ option.name | handleize }}">
+            <legend class="col product_form--label">
+              {{ option.name }}
+            </legend>
+            <div class="col {% if option.name == 'Size' %} d-md-flex {% endif %} ">
+              {%- for value in option.values -%}
+                <!-- Check to see if there's a product size option. If there is a size, check to see if there's any availble for purchase. If not, set the variat control in a "disabled" state. -->
+                {%- assign variant_label_state = true -%}
+
+                {%- if product.options.size == 1 -%}
+                  {%- unless product.variants[forloop.index0].available -%}
+                    {%- assign variant_label_state = false -%}
+                  {%- endunless -%}
+                {%- endif -%}
+
+                <div class="">
+                  <input type="radio"
+                    {% if option.selected_value == value %} checked="checked"{% endif %}
+                    {% unless variant_label_state %} disabled="disabled"{% endunless %}
+                    value="{{ value | escape }}"
+                    data-index="option{{ forloop.index }}"
+                    name="options[{{ option.name }}]"
+                    class="label-hidden"
+                    id="ProductSelect-option-{{ option.name | handleize }}-{{ value | escape }}">
+                  <label for="ProductSelect-option-{{ option.name | handleize }}-{{ value | escape }}" class="product_form--option-label">
+                    {{ value | escape }}
+                  </label>
+                </div>
+
+              {%- endfor -%}
+            </div>
+            <div class="col">
+              {% if forloop.index0 == 0 %}
+                <div class="number-input-wrapper">
+                  <input type="number" id="Quantity" name="quantity" value="1" min="1">
+                  <a href="#" class="subtract-one-prod" data-product-id="{{ product.variants.first.id }}" data-operation="subtract">-</a>
+                  <span class="placeholder">1</span>
+                  <a href="#" class="add-one-prod" data-product-id="{{ product.variants.first.id }}" data-operation="add">+</a>
+                </div>
+              {% endif %}
+            </div>
+          </fieldset>
+
+
+
+          <div class="row">
+            <div class="col">
+              <label class="product_form--label" for="Option{{ option.position }}">
+                {{ option.name }}
+              </label>
+            </div>
+
+            <div class="col {% if option.name == 'Size' %} d-md-flex {% endif %} ">
+              {% for value in option.values %}
+                <div class="Option{{ option.position }}-{{ value | downcase | replace: ' ', '-' }}-container">
+                  <input class="label-hidden option-input" type="radio" id="Option{{ option.position }}-{{ value | downcase | replace: ' ', '-' }}" name="options[{{ option.name }}]" value="{{ value }}"{% if option.selected_value == value %} checked{% endif %}>
+                  <label class="product_form--option-label" for="Option{{ option.position }}-{{ value | downcase | replace: ' ', '-' }}">{{ value }}</label>
+                </div>
+              {% endfor %}
+            </div>
+
+            <div class="col">
+              {% if forloop.index0 == 0 %}
+                <div class="number-input-wrapper">
+                  <input type="number" id="Quantity" name="quantity" value="1" min="1">
+                  <a href="#" class="subtract-one-prod" data-product-id="{{ product.variants.first.id }}" data-operation="subtract">-</a>
+                  <span class="placeholder">1</span>
+                  <a href="#" class="add-one-prod" data-product-id="{{ product.variants.first.id }}" data-operation="add">+</a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+
+        </div>
+      {% endfor %}
+      {% endcomment %}
+
+
+    {% endunless %}

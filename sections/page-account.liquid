@@ -1,0 +1,94 @@
+
+{% include 'account-title' %}
+{% include "account-navigation" %}
+
+
+
+
+<section>
+  <div class="container">
+    {% paginate customer.orders by 20 %}
+      {% if customer.orders.size != 0 %}
+        <table class="responsive-table">
+          <thead>
+            <tr>
+              <th>{{ 'customer.orders.order_number' | t }}</th>
+              <th>{{ 'customer.orders.date' | t }}</th>
+              <th>{{ 'customer.orders.payment_status' | t }}</th>
+              <th>{{ 'customer.orders.total' | t }}</th>
+              <th>{{ 'customer.orders.fulfillment_status' | t }}</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for order in customer.orders %}
+              {% assign orderBtn = 'VIEW ORDER' %}
+              <tr class="responsive-table-row">
+                <td data-label="{{ 'customer.orders.order_number' | t }}">{{ order.name }}</td>
+                <td data-label="{{ 'customer.orders.date' | t }}">{{ order.created_at | date: '%m/%d/%Y' }}</td>
+                <td data-label="{{ 'customer.orders.payment_status' | t }}">{{ order.financial_status_label }}</td>
+                <td data-label="{{ 'customer.orders.total' | t }}">{{ order.total_price | money }}</td>
+                <td data-label="{{ 'customer.orders.fulfillment_status' | t }}">{{ order.fulfillment_status_label }}</td>
+                <td data-label="{{ 'customer.orders.order_number' | t }}">
+                  <div class="underlined">
+                    {{ orderBtn | link_to: order.customer_url }}
+                  </div>
+                </td>
+              </tr>
+              {% for line_item in order.line_items %}
+                <tr id="{{ line_item.key }}" class="responsive-table-row hide">
+                  <td data-label="{{ 'customer.order.product' | t }}">
+                    {{ line_item.title | link_to: line_item.product.url }}
+                    {% if line_item.fulfillment %}
+                      <dl>
+                        <dt>{{ 'customer.order.fulfilled_at' | t }}</dt>
+                        <dd>{{ line_item.fulfillment.created_at | date: format: 'month_day_year' }}</dd>
+
+                        {% if line_item.fulfillment.tracking_url %}
+                          <dt>{{ 'customer.order.tracking_url' | t }}</dt>
+                          <dd>
+                            <a href="{{ line_item.fulfillment.tracking_url }}"  aria-label="{{ 'customer.order.track_shipment' | t }} Link">
+                              {{ 'customer.order.track_shipment' | t }}
+                            </a>
+                          </dd>
+                        {% endif %}
+
+                        <dt>{{ 'customer.order.tracking_company' | t }}</dt>
+                        <dd>{{ line_item.fulfillment.tracking_company }}</dd>
+
+                        {% if line_item.fulfillment.tracking_number %}
+                          <dt>{{ 'customer.order.tracking_number' | t }}</dt>
+                          <dd>{{ line_item.fulfillment.tracking_number }}</dd>
+                        {% endif %}
+                      </dl>
+                    {% endif %}
+                  </td>
+                  <td data-label="{{ 'customer.order.sku' | t }}">{{ line_item.sku }}</td>
+                  <td data-label="{{ 'customer.order.price' | t }}">{{ line_item.price | money }}</td>
+                  <td data-label="{{ 'customer.order.quantity' | t }}">{{ line_item.quantity }}</td>
+                  <td data-label="{{ 'customer.order.total' | t }}">{{ line_item.quantity | times: line_item.price | money }}</td>
+                </tr>
+              {% endfor %}
+            {% endfor %}
+          </tbody>
+        </table>
+      {% else %}
+        <p style="text-align: center; padding-top: 15px;">{{ 'customer.orders.none' | t }}</p>
+      {% endif %}
+
+      {% if paginate.pages > 1 %}
+        {% include 'pagination' %}
+      {% endif %}
+
+    {% endpaginate %}
+  </div>
+</section>
+
+<section>
+  <div class="container" style=" margin-top: 25px; text-align: center;">
+    <a href="/account/logout" class="button" aria-label="Logout Link">
+        LOGOUT
+    </a>
+   
+  </div>
+</section>

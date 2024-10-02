@@ -1,0 +1,96 @@
+
+<section class="sell-sheet">
+    <div class="container">
+      <div class="d-md-flex justify-content-center align-items-center">
+          <ul class="d-flex justify-content-between sell-sheet__ul">
+            {% for block in section.blocks %}
+                {% case block.type %}
+                    {% when 'collection' %}
+                        {%- assign collectionHandle = block.settings.collection -%}
+                        {%- assign collection = collections[collectionHandle] -%}
+                        {%- assign collectionTitle = collection.title | remove: "Sell Sheet" -%}
+                        <li class="sell-sheet__li {% if forloop.first %} active {% endif %}" data-collection="{{ collectionHandle }}">
+                            {{ collectionTitle }}
+                        </li>
+                {% endcase %}
+            {% endfor %}
+          </ul>
+      </div>
+
+      <div class="sell-sheet__button-container">
+        {% for block in section.blocks %}
+            {% case block.type %}
+                {% when 'collection' %}
+                {%- assign collectionHandle = block.settings.collection -%}
+                {%- assign collection = collections[collectionHandle] -%}
+                {%- assign collectionTitle = collection.title -%}
+                {% if collection.metafields.custom_fields["pdf"] != blank %}
+                    <div class="sell-sheet__button sell-sheet-{{ collectionHandle }} {% unless forloop.first %} hide {% endunless %}">
+                        <a href="{{ collection.metafields.custom_fields["pdf"] }}" aria-label="DOWNLOAD {{ collectionTitle }}" class="button" target="_blank">
+                            DOWNLOAD {{ collectionTitle }}
+                        </a>
+                    </div>
+                {% endif %}
+            {% endcase %}
+        {% endfor %}
+      </div>
+        
+    </div>
+  </section>
+
+
+  
+
+  <section class="sell-sheet-products">
+    <div class="container">
+      <div class="cols-3 sell-sheet-products__list-container">
+        {% for block in section.blocks %}
+            {% case block.type %}
+                {% when 'collection' %}
+                    {%- assign collectionHandle = block.settings.collection -%}
+                    {%- assign collection = collections[collectionHandle] -%}
+                    {%- assign class = "product-" | append: collectionHandle  -%}
+                    {% unless forloop.first %}
+                        {%- assign class = class | append: ' hide'  -%}
+                    {% endunless %}
+                    {% for product in collection.products %}
+                        {% include "product-content" with
+                            hide_buttons: true,
+                            sell_sheet: true,
+                            class: class
+                        %}
+                    {% endfor %}
+            {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+{% schema %}
+    {
+        "name": "Sell Sheet Content",
+        "settings": [
+            {
+                "id": "title",
+                "type": "text",
+                "label": "Title"
+            }
+        ],
+        "blocks": [
+            {
+                "name": "Collection",
+                "type": "collection",
+                "settings": [
+                    {
+                        "type": "collection",
+                        "id": "collection",
+                        "label": "Collection"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}

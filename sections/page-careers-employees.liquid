@@ -1,0 +1,89 @@
+<section class="employees">
+  <div class="container">
+
+    <h2 class="employees--title">{{ section.settings.title }}</h2>
+
+    <div class="{% if section.blocks.size > 2 %}cols-3{% else %}cols-2{% endif%}">
+      {% for block in section.blocks %}
+        {% case block.type %}
+
+          {% when 'employee' %}
+            <div class="employee col col-md">
+              <div class="employee--container">
+                {% if block.settings.image != blank %}
+                  {% include 'responsive-image' with image: block.settings.image, image_class: "employee--img", wrapper_class: "employee--img-container", max_width: 332, max_height: 728 %}
+                {% endif %}
+
+                {% if block.settings.title != blank %}
+                  <h4 class="employee--title">{{ block.settings.title }}</h4>
+                {% endif %}
+
+                {% if block.settings.name != blank %}
+                  <h2 class="employee--name">{{ block.settings.name }}</h2>
+                {% endif %}
+
+                {% if block.settings.fun_fact != blank %}
+                  <div class="employee--fun_fact">{{ block.settings.fun_fact }}</div>
+                {% endif %}
+
+                {% if block.settings.quote != blank %}
+                  <div class="employee--quote">
+                    <p>&ldquo;{{ block.settings.quote | strip_html }}&rdquo;</p>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+
+
+{% schema %}
+  {
+    "name": "Employee Spotlights",
+    "settings": [
+      {
+        "id": "title",
+        "type": "text",
+        "label": "Title"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "employee",
+        "name": "Employees",
+        "settings": [
+          {
+            "id": "name",
+            "type": "text",
+            "label": "Name"
+          },
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "fun_fact",
+            "label": "Fun Fact"
+          },
+          {
+            "type": "richtext",
+            "id": "quote",
+            "label": "Quote"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

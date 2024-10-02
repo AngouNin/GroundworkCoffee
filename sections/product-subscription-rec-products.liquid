@@ -1,0 +1,92 @@
+<section class="slide_with_scroll">
+  <div class="container">
+    <div class="row">
+      <aside class="col-md-1 rela">
+        <h2 class="rotated-title slide_with_scroll--sub-title">SHOP</h2>
+      </aside>
+      <div class="col-md-11">
+          <h3 class="slide_with_scroll--title h3-title">Need anything else with your first subscription order?</h3>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            {% for product in collections['all'].products limit: 8 %}
+              
+              {% unless product.tags contains 'hide' %}
+                <div class="swiper-slide">
+                  <div class="">
+                      {%- assign current_variant = product.selected_or_first_available_variant -%}
+                      {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
+                      <a href="{{ product.url | within: collection }}" class="featured-collection-item" aria-label="{{product.title}} Link">
+                        <div class="slide_with_scroll--hover-container">
+                          {% if product.featured_image != blank %}
+                            <div class="lazyload slide_with_scroll--image" data-bgset="{% include 'responsive-bg-image', image: product.featured_image %}" alt="{{ product.title }}"></div>
+                          {% endif %}
+
+                          {% if product.metafields.custom_fields["hide_hover_photo"] != blank %}
+                            {% unless product.metafields.custom_fields["hide_hover_photo"] == 1 %}
+                              {% if product.images[1] != blank %}
+                                <div class="lazyload slide_with_scroll--hover-image" data-bgset="{% include 'responsive-bg-image', image: product.images[1] %}" alt="{{ product.title }}" ></div>
+                              {% endif %}
+                            {% endunless %}
+                          {% else %}
+                            {% if product.images[1] != blank %}
+                              <div class="lazyload slide_with_scroll--hover-image" data-bgset="{% include 'responsive-bg-image', image: product.images[1] %}" alt="{{ product.title }}" ></div>
+                            {% endif %}
+                          {% endif %}                  
+                        </div>
+
+                        <h2 class="slide_with_scroll--item-title">{{ product.title | escape }}</h2>
+                      </a>
+                      <a href="#" class="button" aria-label="QUICK ADD - {{ product.price | money_without_trailing_zeros }} {{product.title}} Button Link">
+                        <!-- <button role="button" aria-label="button" type="button" name="button"> -->
+                          QUICK ADD - {{ product.price | money_without_trailing_zeros }}
+                        <!-- </button> -->
+                      </a>
+                  </div>
+                </div>
+              {% endunless %}  
+            {% endfor %}
+            <div class="swiper-slide mobile-hide"></div>
+          </div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+// @start Scroll Swiper
+var scrollSwiper = new Swiper('.slide_with_scroll .swiper-container', {
+
+
+      // autoHeight: true,
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+      },
+      spaceBetween: 50,
+      loop: false,
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+     breakpoints: {
+       // when window width is >= 640px
+         320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+        768: {
+            slidesPerView: 1,
+            spaceBetween: 10
+         },
+         950: {
+           slidesPerView: 3,
+           spaceBetween: 30
+         }
+     }
+
+
+});
+// @end Hero image Swiper
+</script>

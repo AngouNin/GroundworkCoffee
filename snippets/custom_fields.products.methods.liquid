@@ -1,0 +1,85 @@
+{% if product.metafields.custom_fields["methods"] != blank %}
+  <div class="custom-field custom-field__methods custom-field__type--field-collection-json">
+    <h3 class="custom-field--title">Methods</h3>
+    <div class="custom-field--value">
+      {% for item in product.metafields.custom_fields["methods"] %}
+        <div class="fc-item fc-index--{{ forloop.index0 }}">
+           {% if item["coffee"] != blank %}
+             <div class="fc-field field__coffee field-type--field-collection-json">
+               <h4 class="custom-field--title">Coffee</h4>
+               <div class="custom-field--value">
+                 {% for coffee_item in item["coffee"] %}
+                   <div class="child-fc-item">
+                     {% if coffee_item["title"] != blank %}
+                       <div class="fc-field field__title field-type--text">
+                         <h4 class="custom-field--title">Title</h4>
+                         <div class="custom-field--value">
+                           {{ coffee_item["title"] }}
+                         </div>
+                       </div>
+                     {% endif %}
+                     {% if coffee_item["desc"] != blank %}
+                       <div class="fc-field field__desc field-type--html">
+                         <h4 class="custom-field--title">Desc</h4>
+                         <div class="custom-field--value">
+                           {{ coffee_item["desc"] }}
+                         </div>
+                       </div>
+                     {% endif %}
+                     {% if coffee_item["button"] != blank %}
+                       <div class="fc-field field__button field-type--link">
+                         <h4 class="custom-field--title">Button</h4>
+                         <div class="custom-field--value">
+                           {{ coffee_item["button"] }}
+                         </div>
+                       </div>
+                     {% endif %}
+                     {% if coffee_item["image"] != blank %}
+                       <div class="fc-field field__image field-type--image">
+                         <h4 class="custom-field--title">Image</h4>
+                         <div class="custom-field--value">
+                           {{ coffee_item["image"] }}
+                         </div>
+                       </div>
+                     {% endif %}
+                   </div>
+                 {% endfor %}
+               </div>
+             </div>
+           {% endif %}
+           {% if item["tea"] != blank %}
+             <div class="fc-field field__tea field-type--field-collection-json">
+               <h4 class="custom-field--title">Tea</h4>
+               <div class="custom-field--value">
+                 {% for tea_item in item["tea"] %}
+                   <div class="child-fc-item">
+                     {% if tea_item["step"] != blank %}
+                       <div class="fc-field field__step field-type--html-repeater">
+                         <h4 class="custom-field--title">Step</h4>
+                         <div class="custom-field--value">
+                           {% for repeater_item in tea_item["step"] %}
+                             <div class="repeater-item repeater-item--html">
+                               {{ repeater_item["step"] }}
+                             </div>
+                           {% endfor %}
+                         </div>
+                       </div>
+                     {% endif %}
+                     {% if tea_item["image"] != blank %}
+                       <div class="fc-field field__image field-type--image">
+                         <h4 class="custom-field--title">Image</h4>
+                         <div class="custom-field--value">
+                           {{ tea_item["image"] }}
+                         </div>
+                       </div>
+                     {% endif %}
+                   </div>
+                 {% endfor %}
+               </div>
+             </div>
+           {% endif %}
+         </div>
+       {% endfor %}
+    </div>
+  </div>
+{% endif %}

@@ -1,0 +1,124 @@
+<div class="custom-fields-section">
+  
+    {% if resource_type == "products" %}
+    <div class="custom-fields-section__products">
+      {% for block in blocks %}
+      {% if block.type contains "cf_" %}
+      <div class="custom-fields-section__item custom-fields-section__item--{{ block.type }} custom-fields-section__item--{{ block.type }}--{{ block.settings.key }}" {{ block.shopify_attributes }}>
+        {% case block.settings.key %}
+        
+          {% when "additional_product_content" %}
+            {% render "custom_fields.products.additional_product_content" %}
+        
+          {% when "external_buttons" %}
+            {% render "custom_fields.products.external_buttons" %}
+        
+          {% when "featured_text" %}
+            {% render "custom_fields.products.featured_text" %}
+        
+          {% when "hide_hover_photo" %}
+            {% render "custom_fields.products.hide_hover_photo" %}
+        
+          {% when "our_commitment" %}
+            {% render "custom_fields.products.our_commitment" %}
+        
+          {% when "sell_sheet_pricing" %}
+            {% render "custom_fields.products.sell_sheet_pricing" %}
+        
+          {% when "sell_sheet_type" %}
+            {% render "custom_fields.products.sell_sheet_type" %}
+        
+          {% when "subscriptions_how_it_works" %}
+            {% render "custom_fields.products.subscriptions_how_it_works" %}
+        
+          {% when "subscription_branded_content" %}
+            {% render "custom_fields.products.subscription_branded_content" %}
+        
+          {% when "subscription_form_title" %}
+            {% render "custom_fields.products.subscription_form_title" %}
+        
+          {% when "subscription_page_title" %}
+            {% render "custom_fields.products.subscription_page_title" %}
+        
+          {% when "subscription_reference" %}
+            {% render "custom_fields.products.subscription_reference" %}
+        
+          {% when "variant_subscription_label" %}
+            {% render "custom_fields.products.variant_subscription_label" %}
+        
+        {% endcase %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  
+    {% if resource_type == "pages" %}
+    <div class="custom-fields-section__pages">
+      {% for block in blocks %}
+      {% if block.type contains "cf_" %}
+      <div class="custom-fields-section__item custom-fields-section__item--{{ block.type }} custom-fields-section__item--{{ block.type }}--{{ block.settings.key }}" {{ block.shopify_attributes }}>
+        {% case block.settings.key %}
+        
+          {% when "cold_brew" %}
+            {% render "custom_fields.pages.cold_brew" %}
+        
+        {% endcase %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  
+    {% if resource_type == "articles" %}
+    <div class="custom-fields-section__articles">
+      {% for block in blocks %}
+      {% if block.type contains "cf_" %}
+      <div class="custom-fields-section__item custom-fields-section__item--{{ block.type }} custom-fields-section__item--{{ block.type }}--{{ block.settings.key }}" {{ block.shopify_attributes }}>
+        {% case block.settings.key %}
+        
+          {% when "location" %}
+            {% render "custom_fields.articles.location" %}
+        
+        {% endcase %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  
+    {% if resource_type == "collections" %}
+    <div class="custom-fields-section__collections">
+      {% for block in blocks %}
+      {% if block.type contains "cf_" %}
+      <div class="custom-fields-section__item custom-fields-section__item--{{ block.type }} custom-fields-section__item--{{ block.type }}--{{ block.settings.key }}" {{ block.shopify_attributes }}>
+        {% case block.settings.key %}
+        
+          {% when "pdf" %}
+            {% render "custom_fields.collections.pdf" %}
+        
+        {% endcase %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  
+    {% if resource_type == "shop" %}
+    <div class="custom-fields-section__shop">
+      {% for block in blocks %}
+      {% if block.type contains "cf_" %}
+      <div class="custom-fields-section__item custom-fields-section__item--{{ block.type }} custom-fields-section__item--{{ block.type }}--{{ block.settings.key }}" {{ block.shopify_attributes }}>
+        {% case block.settings.key %}
+        
+          {% when "product" %}
+            {% render "custom_fields.shop.product" %}
+        
+        {% endcase %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  
+</div>

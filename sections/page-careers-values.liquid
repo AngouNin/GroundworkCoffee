@@ -1,0 +1,62 @@
+{% include "page-title" with  subtitle: section.settings.title, desc: section.settings.desc, no_h1: true %}
+
+<section class="values">
+  <div class="container">
+    <div class="row ">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'values' %}
+            <div class="col col-md value">
+              <div class="value--icon">
+                {% if block.settings.image != blank %}
+                  {% include 'responsive-image' with image: block.settings.image, image_class: "css-class", wrapper_class: "wrapper-css-class", max_width: 75, max_height: 60 %}
+
+                {% else %}
+                  {% include 'icon-step', step: forloop.index %}
+                {% endif %}
+              </div>
+              <p class="value--title">{{ block.settings.title }}</p>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Core Values",
+    "settings": [
+      {
+        "id": "title",
+        "type": "text",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "desc",
+        "label": "Description"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "values",
+        "name": "Values",
+        "limit": 6,
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

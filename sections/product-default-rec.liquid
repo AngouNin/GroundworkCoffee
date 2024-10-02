@@ -1,0 +1,115 @@
+
+
+{% if template != "product"%}
+  {% assign cart_handles = ''  %}
+  {% for item in cart.items %}
+    {% assign cartItems = item.title | replace: " ", "-" %}
+    {% assign cart_handles = cart_handles | append: item.product.handle | append: ',' | downcase %}
+  {% endfor %}
+
+  {% assign product_handles = ''  %}
+
+  {% assign index = 'now' | date: '%S' %}
+  {% assign index = index | times: collections.all.products.size %}
+  {% assign index = index | divided_by: 60 %}
+
+  {% for product in collections.all.products offset: index  %}
+    {% assign product_handles = product_handles | append: product.handle | append: ',' %}
+
+  {% endfor %}
+
+  {% assign cart_handles = cart_handles | split: ',' %}
+  {% assign product_handles = product_handles | split: ',' %}
+{% endif %}
+
+
+
+{% assign count = 0 %}
+
+   <section class="featured_collection">
+     <div class="container">
+       <div class="row">
+            <aside class="col-md-1 rela">
+              <h2 class="rotated-title">TRY</h2>
+            </aside>
+            <article class="col-md-11">
+              <h3 class="featured_collection--title h3-title">A few more of our bestsellers.</h3>
+              <div class="cols-3 mobile-hide">
+                {% for product_handle in product_handles limit: 3 %}
+
+
+
+                {% assign product = all_products[product_handle] %}
+                {% include 'product-content' %}
+                  {% if cart_handles contains product_handle %}
+                  {% else %}
+
+
+
+
+
+
+                  {% endif %}
+                {% endfor %}
+              </div>
+
+              <div class="swiper-container swiper-recommendations desktop-hide">
+                <div class="swiper-wrapper">
+
+                  {% assign count = 0 %}
+
+
+
+                      {% for product_handle in product_handles limit: 3 %}
+                      {% assign product = all_products[product_handle] %}
+                      {% include "product-content", with class: 'swiper-slide' %}
+                        {% if cart_handles contains product_handle %}
+                        {% else %}
+
+
+
+
+
+
+
+                        {% endif %}
+                      {% endfor %}
+
+
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </article>
+
+
+
+
+        </div>
+     </div>
+
+   </section>
+
+   <script type="text/javascript">
+     var settings = {
+
+           navigation: {
+             nextEl: '.swiper-button-next',
+             prevEl: '.swiper-button-prev',
+           },
+           observer: true,
+           observeParents: true,
+           observeSlideChildren: true,
+           speed: 400,
+           allowTouchMove: true,
+           setWrapperSize: true,
+           spaceBetween: 40,
+           loop: false,
+           autoHeight: true,
+
+       }
+
+       var featuredCollection = new Swiper('.featured_collection .swiper-container', settings);
+   </script>

@@ -1,0 +1,59 @@
+{% if product.metafields.custom_fields["description"] != blank %}
+  <div class="custom-field custom-field__description custom-field__type--field-collection-json">
+    <h3 class="custom-field--title">Description</h3>
+    <div class="custom-field--value">
+      {% for item in product.metafields.custom_fields["description"] %}
+        <div class="fc-item fc-index--{{ forloop.index0 }}">
+           {% if item["desc_title"] != blank %}
+             <div class="fc-field field__desc-title field-type--text">
+               <h4 class="custom-field--title">Desc Title</h4>
+               <div class="custom-field--value">
+                 {{ item["desc_title"] }}
+               </div>
+             </div>
+           {% endif %}
+           {% if item["desc"] != blank %}
+             <div class="fc-field field__desc field-type--html">
+               <h4 class="custom-field--title">Desc</h4>
+               <div class="custom-field--value">
+                 {{ item["desc"] }}
+               </div>
+             </div>
+           {% endif %}
+           {% if item["icon"] != blank %}
+             <div class="fc-field field__icon field-type--image-repeater">
+               <h4 class="custom-field--title">Icon</h4>
+               <div class="custom-field--value">
+                 {% for repeater_item in item["icon"] %}
+                   <div class="repeater-item repeater-item--image">
+                     {{ repeater_item["icon"] }}
+                   </div>
+                 {% endfor %}
+               </div>
+             </div>
+           {% endif %}
+           {% if item["icon_labels"] != blank %}
+             <div class="fc-field field__icon-labels field-type--text-repeater">
+               <h4 class="custom-field--title">Icon Labels</h4>
+               <div class="custom-field--value">
+                 {% for repeater_item in item["icon_labels"] %}
+                   <div class="repeater-item repeater-item--text">
+                     {{ repeater_item["icon_labels"] }}
+                   </div>
+                 {% endfor %}
+               </div>
+             </div>
+           {% endif %}
+           {% if item["image"] != blank %}
+             <div class="fc-field field__image field-type--image">
+               <h4 class="custom-field--title">Image</h4>
+               <div class="custom-field--value">
+                 {{ item["image"] }}
+               </div>
+             </div>
+           {% endif %}
+         </div>
+       {% endfor %}
+    </div>
+  </div>
+{% endif %}

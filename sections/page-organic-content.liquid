@@ -1,0 +1,175 @@
+
+{% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'intro-section' %}
+      {% include "section--intro" %}
+
+    {% when 'image-slide' %}
+      {% include "section-swiper-text", with index: forloop.index %}
+
+    {% when 'secondary-section' %}
+      {% include "section-secondary" %}
+
+    {% when 'image-text-section' %}
+      {% include "section-image-text" %}
+  {% endcase %}
+{% endfor %}
+
+
+
+{% schema %}
+  {
+    "name": "Why Organic Content",
+    "blocks": [
+      {
+        "type": "intro-section",
+        "name": "Intro Section",
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "desc",
+            "label": "Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "url",
+            "id": "video_url",
+            "label": "Floating Video"
+          },
+          {
+            "type": "richtext",
+            "id": "desc_2",
+            "label": "Second Description"
+          }
+        ]
+      },
+      {
+        "type": "image-slide",
+        "name": "Image Slider",
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title",
+            "default": "Image Title"
+          },
+          {
+            "type": "richtext",
+            "id": "desc",
+            "label": "Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "id": "title_2",
+            "type": "text",
+            "label": "Title",
+            "default": "Image Title"
+          },
+          {
+            "type": "richtext",
+            "id": "desc_2",
+            "label": "Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_2",
+            "label": "Image"
+          },
+          {
+            "id": "title_3",
+            "type": "text",
+            "label": "Title",
+            "default": "Image Title"
+          },
+          {
+            "type": "richtext",
+            "id": "desc_3",
+            "label": "Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_3",
+            "label": "Image"
+          },
+          {
+            "id": "title_4",
+            "type": "text",
+            "label": "Title",
+            "default": "Image Title"
+          },
+          {
+            "type": "richtext",
+            "id": "desc_4",
+            "label": "Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_4",
+            "label": "Image"
+          },
+          {
+            "id": "title_5",
+            "type": "text",
+            "label": "Title",
+            "default": "Image Title"
+          },
+          {
+            "type": "richtext",
+            "id": "desc_5",
+            "label": "Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_5",
+            "label": "Image"
+          },
+          {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#C9BFA2"
+          }
+        ]
+      },
+      {
+        "type": "secondary-section",
+        "name": "Secondary Section",
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "desc",
+            "label": "Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "richtext",
+            "id": "desc_2",
+            "label": "Second Description"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,35 @@
+{% if product.metafields.custom_fields["our_commitment"] != blank %}
+  <div class="custom-field custom-field__our-commitment custom-field__type--field-collection-json">
+    <h3 class="custom-field--title">Our Commitment</h3>
+    <div class="custom-field--value">
+      {% for item in product.metafields.custom_fields["our_commitment"] %}
+        <div class="fc-item fc-index--{{ forloop.index0 }}">
+           {% if item["title"] != blank %}
+             <div class="fc-field field__title field-type--text">
+               <h4 class="custom-field--title">Title</h4>
+               <div class="custom-field--value">
+                 {{ item["title"] }}
+               </div>
+             </div>
+           {% endif %}
+           {% if item["subtitle"] != blank %}
+             <div class="fc-field field__subtitle field-type--text">
+               <h4 class="custom-field--title">Subtitle</h4>
+               <div class="custom-field--value">
+                 {{ item["subtitle"] }}
+               </div>
+             </div>
+           {% endif %}
+           {% if item["description"] != blank %}
+             <div class="fc-field field__description field-type--html">
+               <h4 class="custom-field--title">Description</h4>
+               <div class="custom-field--value">
+                 {{ item["description"] }}
+               </div>
+             </div>
+           {% endif %}
+         </div>
+       {% endfor %}
+    </div>
+  </div>
+{% endif %}

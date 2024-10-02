@@ -1,0 +1,9 @@
+<ul class="dropdown-ul">
+  {% for childlink in link.links %}
+    <li class="bottom_nav--dropdown-li">
+      <a href="{{ childlink.url }}"  class="about-hover {% if childlink.active %} active {% endif %}"  data-location="{{ childlink.handle }}">
+        {{ childlink.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

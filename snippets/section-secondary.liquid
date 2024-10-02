@@ -1,0 +1,35 @@
+<section class="section_secondary">
+  <div class="container">
+
+    {% if page.handle contains 'wholesale' %}
+      <div class="section_secondary--flowers">
+        {% include "icon-flowers-large" %}
+      </div>
+    {% endif %}
+
+    {% if block.settings.title != blank %}
+      <h2 class="section_secondary--title">{{ block.settings.title }}</h2>
+    {% endif %}
+    <div class="section_secondary--content">
+      {% if block.settings.desc != blank %}
+        <div class="section_secondary--desc">
+          {{ block.settings.desc }}
+        </div>
+      {% endif %}
+
+      {% if block.settings.image != blank %}
+        <div class="section_secondary--image">
+          {% include 'responsive-image' with image: block.settings.image, image_class: "css-class", wrapper_class: "wrapper-css-class", max_width: 700, max_height: 800 %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.desc_2 != blank %}
+        <div class="section_secondary--desc">
+          {{ block.settings.desc_2 }}
+        </div>
+      {% endif %}
+
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,96 @@
+<section data-section-id="{{ section.id }}" data-section-type="product">
+  <div class="container">
+    {%- assign current_variant = product.selected_or_first_available_variant -%}
+    {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
+
+    <div class="cols-2 product-img-detail-container">
+      <div class="col-md">
+        {% include "product-detail-image" %}
+      </div>
+      <div class="col-md">
+        {% include "product-detail-form" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="">
+    {% if product.metafields.custom_fields["additional_product_content"] != blank %}
+      <section class="product_info_selection">
+        <div class="container-md">
+          <div class="d-flex align-items-center justify-content-center product_info_selection--options">
+            {% for item in product.metafields.custom_fields["additional_product_content"] %}
+                
+              {% if item["section_title"] != blank %}
+                {%- assign class = item['section_title'] | downcase -%}
+                {%- assign class = class | replace: ' ', '-' -%}
+                <div class="product_info_selection--option type-select {% if forloop.index0 == 0 %} active {% endif %}" data-type="{{ class }}">
+                  <a href="#" class="" aria-label="{{ item['section_title']  }}">
+                    {{ item["section_title"] }}
+                  </a>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    {% endif %}
+
+
+    {% include "product-detail-description" %}
+
+  </div>
+</section>
+
+
+<script type="text/javascript">
+
+
+
+  // setTimeout(function(){
+  //   $(function() {
+  //     $('select').selectric();
+  //   });
+
+  //   $('.rc-widget-injection-parent').fadeIn();
+
+  //   setTimeout(function(){
+  //     var selectContainer = $('.selectric-scroll ul li');
+  //     var html;
+  //     for(var i = 0; i < selectContainer.length; i++) {
+  //       html = $(selectContainer[i]).html().split(/\s/).join('').toLowerCase();
+  //       console.log(html);
+  //       if(html == 'deliveryevery1week') {
+  //         $(selectContainer[i]).html('Weekly');
+  //       } else if(html == 'deliveryevery2weeks') {
+  //         $(selectContainer[i]).html('Biweekly');
+  //       } else if(html == 'deliveryevery4weeks') {
+  //         $(selectContainer[i]).html('Monthly');
+  //       }
+  //     }
+  //   }, 1000);
+
+  // }, 3000);
+
+
+
+
+</script>
+
+
+
+
+{% schema %}
+  {
+    "name": "Product pages",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_share_buttons",
+        "label": "Show social sharing buttons",
+        "default": true
+      }
+    ]
+  }
+{% endschema %}

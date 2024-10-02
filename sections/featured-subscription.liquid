@@ -1,0 +1,158 @@
+
+<section class="featured_subscriptions">
+  <div class="container">
+    <div class="row">
+      <aside class="col-md-1 rela">
+        {% if section.settings.sub_title != blank %}
+          <h2 class="rotated-title">{{ section.settings.sub_title }}</h2>
+        {% endif %}
+      </aside>
+      <div class="col-md-11">
+        {% if section.settings.title != blank %}
+          <h3 class="featured_subscriptions--title h3-title">{{ section.settings.title | escape }}</h3>
+        {% endif %}
+        {%- assign collection = collections[section.settings.collection] -%}
+        <div class="cols-2 mobile-hide">
+          {% for product in collection.products limit: 4 %}
+          
+            <div class="col-md featured_subscriptions--item {% if product.handle == 'greatest-gift' %} disabled {% endif %}">
+                {% if product.images[1] != blank %}
+                  <div class="featured_subscriptions--hover-container">
+                    <a href="{{ product.url }}"  aria-label="{{ product.title }} Link">
+                      <div class="featured_subscriptions--item-image">
+                        {% include 'responsive-image' with
+                          image: product.images[1],
+                          max_width: 480,
+                          max_height: 480
+                        %}
+                      </div>
+                      {% if product.images[1] != blank %}
+                      <!-- <div class="lazyload featured_subscriptions--hover-image" data-bgset="{% include 'responsive-bg-image', image: product.images[1] %}"></div> -->
+                      {% endif %}
+                    </a>
+                  </div>
+                {% endif %}
+                <h2 class="featured_subscriptions--item-title">{{ product.title | escape }}</h2>
+                <div class="featured_subscriptions--item-desc">
+                  {% if product.metafields.custom_fields["featured_text"] != blank %}  
+                      <p>{{ product.metafields.custom_fields["featured_text"] }}</p>
+                    {% else %}
+                      <p>{{ product.description | strip_html }}</p>
+                    {% endif %} 
+                </div>
+                <a href="{{ product.url }}" class="button btn-white" aria-label="SUBSCRIBE to {{ product.title }} Button">
+                  <!-- <button type="button" name="button" class="btn-white"> -->
+                    SUBSCRIBE
+                  <!-- </button> -->
+                </a>
+            </div>
+            {% if forloop.index == 2 %}
+              <!-- <div class="w-100"></div> -->
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="swiper-container desktop-hide">
+          <div class="swiper-wrapper">
+            {% for product in collection.products limit: 4 %}
+              <div class="swiper-slide featured_subscriptions--item">
+                  {% if product.images[1] != blank %}
+                    <div class="featured_subscriptions--item-image">
+                      {% include 'responsive-image' with
+                        image: product.images[1],
+                        max_width: 480,
+                        max_height: 480
+                      %}
+                    </div>
+                  {% endif %}
+                  <h2 class="featured_subscriptions--item-title">{{ product.title | escape }}</h2>
+                  <div class="featured_subscriptions--item-desc">
+                    {% if product.metafields.custom_fields["featured_text"] != blank %}  
+                      <p>{{ product.metafields.custom_fields["featured_text"] }}</p>
+                    {% else %}
+                      <p>{{ product.description | strip_html }}</p>
+                    {% endif %}    
+                  </div>
+                  <a href="{{ product.url }}" class="button btn-white" aria-label="{{product.title}} button">
+                    <!-- <button type="button" name="button" class="btn-white"> -->
+                      SUBSCRIBE
+                    <!-- </button> -->
+                  </a>
+              </div>
+              {% if forloop.index == 2 %}
+                <!-- <div class="w-100"></div> -->
+              {% endif %}
+            {% endfor %}
+          </div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"  aria-label="swiper button">
+            {% include "icon-arrow-left" %}
+          </div>
+          <div class="swiper-button-next"  aria-label="swiper button">
+            {% include "icon-arrow-right" %}
+          </div>
+        </div>
+      
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+  var settings = {
+
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+        speed: 400,
+        allowTouchMove: true,
+        setWrapperSize: true,
+        spaceBetween: 40,
+        loop: false,
+        autoHeight: true,
+
+    }
+
+    var featuredCollection = new Swiper('.featured_subscriptions .swiper-container', settings);
+</script>
+
+{% schema %}
+  {
+    "name": "Featured subscriptions",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Featured collection"
+      },
+      {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Subtitle"
+      },
+      {
+        "type": "text",
+        "id": "floating_note",
+        "label": "Floating Note"
+      },
+      {
+        "id": "collection",
+        "type": "collection",
+        "label": "Collection"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured subscriptions",
+        "category": "Collection"
+      }
+    ]
+  }
+{% endschema %}

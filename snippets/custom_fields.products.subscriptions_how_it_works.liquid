@@ -1,0 +1,46 @@
+{% if product.metafields.custom_fields["subscriptions_how_it_works"] != blank %}
+  <div class="custom-field custom-field__subscriptions-how-it-works custom-field__type--field-collection-json">
+    <h3 class="custom-field--title">Subscriptions How It Works</h3>
+    <div class="custom-field--value">
+      {% for item in product.metafields.custom_fields["subscriptions_how_it_works"] %}
+        <div class="fc-item fc-index--{{ forloop.index0 }}">
+           {% if item["steps"] != blank %}
+             <div class="fc-field field__steps field-type--field-collection-json">
+               <h4 class="custom-field--title">Steps</h4>
+               <div class="custom-field--value">
+                 {% for steps_item in item["steps"] %}
+                   <div class="child-fc-item">
+                     {% if steps_item["title"] != blank %}
+                       <div class="fc-field field__title field-type--text">
+                         <h4 class="custom-field--title">Title</h4>
+                         <div class="custom-field--value">
+                           {{ steps_item["title"] }}
+                         </div>
+                       </div>
+                     {% endif %}
+                     {% if steps_item["description"] != blank %}
+                       <div class="fc-field field__description field-type--html">
+                         <h4 class="custom-field--title">Description</h4>
+                         <div class="custom-field--value">
+                           {{ steps_item["description"] }}
+                         </div>
+                       </div>
+                     {% endif %}
+                   </div>
+                 {% endfor %}
+               </div>
+             </div>
+           {% endif %}
+           {% if item["image"] != blank %}
+             <div class="fc-field field__image field-type--image">
+               <h4 class="custom-field--title">Image</h4>
+               <div class="custom-field--value">
+                 {{ item["image"] }}
+               </div>
+             </div>
+           {% endif %}
+         </div>
+       {% endfor %}
+    </div>
+  </div>
+{% endif %}

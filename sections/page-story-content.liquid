@@ -1,0 +1,95 @@
+{% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'intro-section' %}
+      {% include "section--intro" %}
+
+    {% when 'img-txt-section' %}
+      {% include "section-content-grid" %}
+
+    {% when 'outro-section' %}
+      {% include "section-outro" %}
+
+  {% endcase %}
+{% endfor %}
+
+
+{% schema %}
+  {
+    "name": "Our Story Content",
+    "blocks": [
+      {
+        "type": "intro-section",
+        "name": "Intro Section",
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "desc",
+            "label": "Description"
+          },
+          {
+            "type": "url",
+            "id": "video_url",
+            "label": "Floating Video"
+          }
+        ]
+      },
+      {
+        "type": "img-txt-section",
+        "name": "Image Text Section",
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "desc",
+            "label": "Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "type": "outro-section",
+        "name": "Outro Section",
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "desc",
+            "label": "Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button label"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button link"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

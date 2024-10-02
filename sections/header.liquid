@@ -1,0 +1,220 @@
+{%- comment -%}
+  This is a required section for the Shopify Theme Store.
+  It is available in the "Header" section in the theme editor.
+
+  Theme Store required settings
+  - Show announcement
+  - Text: message to announce
+  - Link: link of the announcement bar
+
+  Theme Store optional settings
+  - Home page only: only shows on the home page
+{%- endcomment -%}
+
+<section class="{%- if section.settings.announcement_bar_enabled -%}announcement-enabled{%- endif -%}" data-section-id="{{ section.id }}" data-section-type="header">
+
+  {%- if section.settings.announcement_bar_enabled -%}
+    <div class="announcement-bar">
+      <div class="container">
+        <div class="swiper-container swiper-container-announcement-bar">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'announcement' %}
+                  <div class="swiper-slide">
+                      {{ block.settings.desc }}
+                      {%- comment -%}
+                      {%- if block.settings.announcement_bar_link != blank -%}
+                        <a href="{{ block.settings.announcement_bar_link }}" aria-label="{{ block.settings.desc | strip_html }}">
+                          {{ block.settings.desc  }}
+                        </a>
+                      {%- else -%}
+                        {{ block.settings.desc }}
+                      {%- endif -%}
+                      {%- endcomment -%}
+                      
+                  </div>
+              {% endcase %}
+            {% endfor %}
+          </div>
+        </div>
+
+      </div>
+      <div class="icon-close-container">
+        <div class="icon-close-announcement">
+          {% include "icon-close" %}
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $('body').addClass('announcement-bar-enabled');
+    </script>
+  {%- endif -%}
+
+
+  <header role="banner">
+    <div class="container">
+      <div class="d-md-flex justify-content-between align-items-center">
+
+        <!-- LOGO CONTAINER -->
+        <div class="logo-container">
+
+            <div class="">
+
+              <a href="/" class="logo-image" aria-label="Main Logo Link to Home Page">
+                {% include "logo" %}
+              </a>
+
+            </div>
+
+        </div>
+
+        {% include "navigation-desktop" %}
+        <div class="navigation-mobile mobile-header">
+          <div class="">
+            <a href="/account"  aria-label="Account Link">
+              {% include "icon-account" %}
+            </a>
+          </div>
+          <div class="cart-link cart-hover">
+            <a href="/cart"  aria-label="Cart Link">
+              {% include "icon-cart" %}
+              <span class="cart-count">{{cart.item_count}}</span>
+            </a>
+            {%- comment -%}
+              {% include "cart-drawer" %}
+            {%- endcomment -%}
+          </div>
+          <div class="burger-container">
+            <button class="burger" type="button" name="button" role="button" aria-label="Hamburger Button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+        {% include "navigation-mobile" %}
+
+
+
+      </div>   <!-- END OF FLEX -->
+
+    </div>
+
+  </header>
+
+
+</section>
+
+{% if section.settings.logo != blank %}
+  <style>
+    .logo-image {
+      display: block;
+    }
+  </style>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Announcement bar"
+      },
+      {
+        "type": "checkbox",
+        "id": "announcement_bar_enabled",
+        "label": "Show announcement",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Header"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo image"
+      },
+      {
+        "type": "range",
+        "id": "logo_max_width",
+        "min": 50,
+        "max": 450,
+        "step": 10,
+        "unit": "px",
+        "label": "Custom logo width",
+        "default": 250
+      },
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Menu",
+        "default": "main-menu"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "announcement",
+        "name": "Announcement",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Announcement bar"
+          },
+          {
+            "type": "richtext",
+            "id": "desc",
+            "label": "Announcement Text Box"
+          },
+          {
+            "type": "url",
+            "id": "announcement_bar_link",
+            "label": "Announcement link",
+            "info": "Optional"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "{{ shop.name }}",
+  {% if section.settings.logo %}
+    {% assign image_size = section.settings.logo.width | append:'x' %}
+    "logo": "https:{{ section.settings.logo | img_url: image_size }}",
+  {% endif %}
+  "sameAs": [
+    "{{ settings.social_twitter_link }}",
+    "{{ settings.social_facebook_link }}",
+    "{{ settings.social_pinterest_link }}",
+    "{{ settings.social_instagram_link }}",
+    "{{ settings.social_tumblr_link }}",
+    "{{ settings.social_snapchat_link }}",
+    "{{ settings.social_youtube_link }}",
+    "{{ settings.social_vimeo_link }}"
+  ],
+  "url": "{{ shop.url }}{{ page.url }}"
+}
+</script>
+
+{% if template.name == 'index' %}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": "{{ shop.name }}",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ shop.url }}/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "url": "{{ shop.url }}{{ page.url }}"
+    }
+  </script>
+{% endif %}

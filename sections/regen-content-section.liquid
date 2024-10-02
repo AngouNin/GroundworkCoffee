@@ -1,0 +1,151 @@
+<section id="content-section" class="content-section">
+  <div class="container-lg">
+    <div class="cols-2">
+                {% if section.settings.layout == 'left' %}
+                    <div class="col-md">
+                      {% if section.settings.image %}
+                        {% assign image = section.settings.image %}
+                        {% include 'responsive-image' with image: image, image_class: "css-class", wrapper_class: "wrapper-css-class", max_width: 700, max_height: 800 %}
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                 
+                  <div class="content-section--txt-container col-md d-md-flex justify-content-center flex-column" style="max-width: 500px;">
+                    <div class="content-section--txt">
+                      {% if section.settings.title %}
+                        {% if forloop.index0 == 0 %}
+                          <h1>{{ section.settings.title }}</h1>
+                        {% else %}
+                           <h2 class="h1">{{ section.settings.title }}</h2>
+                        {% endif %}
+                      {% endif %}
+                      {% if section.settings.desc %}
+                        <div class="desc">
+                          {{ section.settings.desc }}
+                        </div>
+                      {% endif %}
+
+                      {% if section.settings.button_label %}
+                        {%- assign label = section.settings.button_label -%}
+                      {% else %}
+                        {%- assign label = 'Learn More' -%}
+                      {% endif %}
+
+                      {% if section.settings.button_link %}
+                        <div class="content-section--btn-container">
+                          <a href="{{ section.settings.button_link }}" aria-label="{{ label }} about {{ section.settings.title }} link" class="button btn-white">
+                            {{ label }}
+                          </a>
+                        </div>    
+                      {% endif %}
+
+                  
+                    </div>
+
+                  </div>
+
+                  {% if section.settings.layout == 'right' %}
+                    <div class="col-md">
+                      {% if section.settings.image %}
+                        {% assign image = section.settings.image %}
+                        {% include 'responsive-image' with image: image, image_class: "css-class", wrapper_class: "wrapper-css-class", max_width: 700, max_height: 800 %}
+                      {% endif %}
+                    </div>
+                  {% endif %}
+     </div>
+  </div>
+</section>
+
+<style>
+  #content-section {
+    background-color: {{ section.settings.background_color }};
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+</style>
+
+
+{% schema %}
+{
+  "name": "Content Section",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+            "id": "title",
+            "type": "inline_richtext",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "desc",
+            "label": "Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "Recommended Dimensions: 660x730"
+          },
+          {
+            "type": "select",
+            "id": "layout",
+            "label": "Image alignment",
+            "default": "left",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button label"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button link"
+          },
+          {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background color",
+            "default": "#C6BEA5"
+          },
+          {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding top",
+        "default": 50
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding bottom",
+        "default": 50
+      }
+    ],
+    "presets": [
+    {
+      "name": "Content Section"
+    }
+  ]
+}
+{% endschema %}

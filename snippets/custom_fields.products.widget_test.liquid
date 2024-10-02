@@ -1,0 +1,39 @@
+{% if product.metafields.custom_fields["widget_test"] != blank %}
+{% assign data_attr = shop.metafields._cf_products["widget_test"].data_attr %}
+<div class="cf-widget-widget-test cf-widget__image-slider cf-auto-init" {{ data_attr }}>
+  <div class="cf-widget-items-wrapper cf-slider">
+    <div class="cf-slides-wrapper">
+      {% for item in product.metafields.custom_fields["widget_test"] %}
+      <div class="cf-widget-item cf-slide cf-text-pos--{{ item.text_pos }} cf-light-text--{{ item.light_text }}">
+        <div class="slide-image" style="background-image:url('{% render "cf-image" with image: item.image, crop: "center", print: "url", size: "1920x1080" %}');"></div>
+        <div class="inner">
+          <div class="inner-padding">
+            <div class="inner-maxwidth">
+              
+                {% if item.title != blank %}
+                <div class="cf-widget-field cf-widget-field__title cf-widget-field--text">
+                  {{ item.title }}
+                </div>
+                {% endif %}
+              
+                {% if item.body != blank %}
+                <div class="cf-widget-field cf-widget-field__body cf-widget-field--html">
+                  {{ item.body }}
+                </div>
+                {% endif %}
+              
+                {% if item.link != blank %}
+                <div class="cf-widget-field cf-widget-field__link cf-widget-field--link">
+                  {{ item.link }}
+                </div>
+                {% endif %}
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}

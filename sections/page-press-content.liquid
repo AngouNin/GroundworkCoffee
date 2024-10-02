@@ -1,0 +1,91 @@
+<section class="press">
+    <div class="container">
+        <div class="cols-2">
+            {% for block in section.blocks %}
+                {% case block.type %}
+                    {% when 'press_item' %}
+                    {% assign logo = block.settings.logo %}
+                    {% assign img = block.settings.img %}
+                    {% assign title = block.settings.ref %}
+                    {% assign desc = block.settings.desc %}
+                    {% assign url = block.settings.url %}
+                    <div class="press__item d-flex flex-column justify-content-between">
+                        <div class="press__txt">
+                            {%- if img != blank -%}
+                              <div class="press__img-container">
+                                <a href="{{ url }}" class="" aria-label="READ MORE {{ block.settings.title }} {{ img.alt | escape }}" target="_blank">
+                                  <img src="{{ img | img_url: '1000x' }}" alt="{{ img.alt | escape }}" class="press__img">
+                                </a>
+                              </div>
+                            {%- endif -%}
+                            {%- if logo != blank -%}
+                              <div class="press__logo-container">
+                                <img src="{{ logo | img_url: '300x' }}" alt="{{ logo.alt | escape }}" class="press__logo">
+                              </div>
+                      
+                            {%- endif -%}
+                            {%- if title != blank -%}
+                                <h3 class="press__title">{{ title }}</h3>
+                            {%- endif -%}
+                            {%- if desc != blank -%}
+                                <div class="press__desc">{{ desc }}</div>
+                            {%- endif -%}
+                        </div>
+                        <div class="press__button-container">
+                            {%- if url != blank -%}
+                                <a href="{{ url }}" class="press__button button" aria-label="READ MORE {{ block.settings.title }}" target="_blank">READ MORE</a>
+                            {%- endif -%}
+                        </div>
+                        
+                        
+                    </div>
+                {% endcase %}
+            {% endfor %}
+        </div>   
+    </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Press Content",
+    "blocks": [
+      {
+        "type": "press_item",
+        "name": "Press Item",
+        "settings": [
+            {
+            "id": "title",
+            "type": "text",
+            "label": "Reference"
+          },
+         {
+            "id": "ref",
+            "type": "text",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "desc",
+            "label": "Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Image"
+          }, 
+          {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo"
+          },     
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Url"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

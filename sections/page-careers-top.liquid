@@ -1,0 +1,52 @@
+<section class="working-at" style="background-color: {{ section.settings.bg_color }}; margin-top: 5rem;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 working-at--img-container">
+        {% assign image = section.settings.image %}
+        <div class="lazyload working-at--img" data-bgset="{% include 'responsive-bg-image', image: image, %}" alt="{{ section.settings.title }}"></div>
+      </div>
+      <div class="col-md-6 working-at--txt-container d-md-flex align-items-center">
+        <div class="working-at--txt-inner-container">
+          {% if section.settings.title != empty %}
+            <h2 class="working-at--title">{{ section.settings.title }}</h2>
+          {% endif %}
+          {% if section.settings.desc != empty %}
+            <div class="working-at--desc">
+              {{ section.settings.desc }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Careers Top Section",
+    "settings": [
+      {
+        "id": "title",
+        "type": "text",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "desc",
+        "label": "Description"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color",
+        "default": "#E2D9BE"
+      }
+    ]
+  }
+{% endschema %}

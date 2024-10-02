@@ -1,0 +1,104 @@
+
+{% for block in section.blocks %}
+  {% case block.type %}
+
+    {% when 'section-text' %}
+      {% include "section-image-text" %}
+
+    {% when 'call_us' %}
+
+    <section class="call_us">
+      <div class="container">
+        {% if block.settings.title != blank %}
+          <h2 class="call_us--title">{{ block.settings.title }}</h2>
+        {% endif %}
+
+        {% if block.settings.desc != blank %}
+          <div class="call_us--desc">
+            {{ block.settings.desc }}
+          </div>
+        {% endif %}
+
+        {% if block.settings.note != blank %}
+          <div class="call_us--note">
+            {{ block.settings.note }}
+          </div>
+        {% endif %}
+
+
+      </div>
+    </section>
+
+
+  {% endcase %}
+{% endfor %}
+
+
+{% schema %}
+  {
+    "name": "Catering Content",
+    "blocks": [
+      {
+        "type": "section-text",
+        "name": "Section w/ Text",
+        "limit": 1,
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "desc",
+            "label": "Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button label"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button link"
+          },
+          {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#E2D9BE"
+          }
+        ]
+      },
+      {
+        "type": "call_us",
+        "name": "Call Us",
+        "limit": 1,
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "desc",
+            "label": "Description"
+          },
+          {
+            "type": "richtext",
+            "id": "note",
+            "label": "Note"
+          }
+        ]
+      }
+
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,53 @@
+<div class="bottom_nav--dropdown">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 shop-menu-left">
+        <ul>
+          {% for childlink in shopLeftMenu.links %}
+            <li class="bottom_nav--dropdown-li">
+              <a href="{{ childlink.url }}" class="{% if childlink.active %}active{% endif %}" aria-label="{{ childlink.title }} Link">
+                {{ childlink.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+        <div class="icon-flowers">
+          {% include "icon-flowers" %}
+        </div>
+
+      </div>
+
+      <div class="col-md-9 shop-menu-right">
+        <ul class="d-flex justify-content-between">
+          {% for childlink in shopRightMenu.links %}
+            <li class="bottom_nav--dropdown-li">
+              <a href="{{ childlink.url }}" aria-label="{{childlink.title}} Link">{{ childlink.title }}</a>
+              {% if childlink.links != blank %}
+                <ul class="bottom_nav--dropdown-child-ul">
+                  {% for grandlink in childlink.links %}
+                    <li class="bottom_nav--dropdown-child-li">
+                      {%- unless grandlink.title contains 'No Title' or grandlink.title contains 'no' -%}
+                        {{ grandlink.title }}
+                      {%- endunless -%}
+                      {% if grandlink.links != blank %}
+                        <ul class="bottom_nav--dropdown-grand-ul">
+                          {% for grandgrandlink in grandlink.links %}
+                            <li class="bottom_nav--dropdown-grand-li">
+                              <a href="{{ grandgrandlink.url }}" aria-label="{{ childlink.title }} {{ grandgrandlink.title }} Link" class="{% if grandgrandlink.active %}active{% endif %}">
+                                {{ grandgrandlink.title }}
+                              </a>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

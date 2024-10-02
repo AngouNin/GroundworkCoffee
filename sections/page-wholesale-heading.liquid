@@ -1,0 +1,78 @@
+{% include "page-title" with title: section.settings.title, subtitle: section.settings.subtitle, desc: section.settings.desc %}
+
+
+<!-- {% include "wholesale-form" with list_id: section.settings.list_id, success: section.settings.success %} -->
+{% include "wholesale-form-shopify" %}
+
+<section class="wholesale_call_us">
+  <div class="container">
+    {% if section.settings.call_us_desc %}
+    <div class="wholesale_call_us--or">
+      <span>OR</span>
+    </div>
+    {% endif %}
+    {% if section.settings.call_us_title %}
+      <h2 class="wholesale_call_us--title">{{ section.settings.call_us_title }}</h2>
+    {% endif %}
+    {% if section.settings.call_us_desc %}
+      <div class="wholesale_call_us--desc">{{ section.settings.call_us_desc }}</div>
+    {% endif %}
+  </div>
+</section>
+
+
+
+{% schema %}
+  {
+    "name": "Wholesale Heading",
+    "settings": [
+      {
+        "id": "title",
+        "type": "text",
+        "label": "Title"
+      },
+      {
+        "id": "subtitle",
+        "type": "text",
+        "label": "Subtitle"
+      },
+      {
+        "type": "richtext",
+        "id": "desc",
+        "label": "Description"
+      },
+      {
+        "id": "form_title",
+        "type": "text",
+        "label": "Form Title"
+      },
+      {
+        "type": "richtext",
+        "id": "form_desc",
+        "label": "Form Description"
+      },
+      {
+        "id": "call_us_title",
+        "type": "text",
+        "label": "Call Us Title"
+      },
+      {
+        "type": "richtext",
+        "id": "call_us_desc",
+        "label": "Call Us Description"
+      },
+      {
+        "type": "text",
+        "id": "list_id",
+        "label": "List ID",
+        "info": "[Find your list ID](https://help.klaviyo.com/hc/en-us/articles/115005078647-Find-a-List-ID)"
+      },
+      {
+        "type": "textarea",
+        "id": "success",
+        "label": "Success message",
+        "default": "Thank you for subscribing! Check your email for a confirmation message."
+      }
+    ]
+  }
+{% endschema %}

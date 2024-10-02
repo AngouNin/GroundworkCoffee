@@ -1,0 +1,170 @@
+{%- comment -%}
+
+  Liquid by Jason @ freakdesign.
+  Questions? Ping me on twitter: @freakdesign
+
+  Relates to blog post:
+  http://freakdesign.com.au/blogs/news/get-the-url-querystring-values-with-liquid-in-shopify
+
+  Example:
+  https://jasons-experiments.myshopify.com/collections/all/products/3-4-sleeve-kimono-dress-coral-1?ref=freakdesign&cache=false
+
+{%- endcomment -%}
+
+{%- comment -%} Capture the content for header containing the tracking data {%- endcomment -%}
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+
+{% comment %} Use string splitting to pull the value from content_for_header and apply some string clean up {% endcomment %}
+{%- assign pageUrl = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first | split:'.myshopify.com' | last |
+   replace:'\/','/' |
+   replace:'%20',' ' |
+   replace:'\u0026','&'
+-%}
+
+{% assign active = 'cafe' %}
+
+{% if pageUrl contains 'cafe' %}
+  {% assign active = 'cafe' %}
+{% elsif pageUrl contains 'admin' %}
+  {% assign active = 'admin' %}
+{% endif %}
+
+{%- assign blog = blogs[section.settings.blog] -%}
+
+
+<section   class="careers">
+  <div class="container">
+    <h2 class="careers--title">Seeking great people for the following positions:</h2>
+    {% if blog.all_tags.size > 0 %}
+      <section class="careers_selection">
+        <div class="container-md">
+          <div class="d-flex align-items-center justify-content-center careers_selection--options">
+            {% for tag in blog.all_tags %}
+              {%- if forloop.first -%}
+                {% assign activeTag = tag %}
+              {%- endif -%}
+              <div class="careers_selection--option careers-select {% if activeTag == tag %} active {% endif %}" data-careers="{{ tag | handle }}">
+                <a href="/pages/careers?careers=cafe"  aria-label="{{ tag }} link" data-careers="{{ tag | handle }}">
+                  {{ tag }}
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    {% endif %}
+
+
+
+
+
+    {%- if blog.articles_count > 0 -%}
+      <div class="careers--jobs">
+        <div class="cols-3">
+          {%- for article in blog.articles  -%}
+
+          {%- if article.excerpt.size > 0 -%}
+            {% assign desc = article.excerpt %}
+          {%- else -%}
+            {% assign desc = article.content | strip_html | truncate: 150 %}
+          {%- endif -%}
+          {% assign location = '' %}
+
+          {% if article.metafields.custom_fields["location"] != blank %}
+
+              {% assign location = article.metafields.custom_fields["location"] %}
+
+          {% endif %}
+
+            {% include "career" with
+            image: article.image,
+            title: article.title,
+            desc: desc,
+            link: article.url,
+            location: location,
+            tags: article.tags,
+            activeTag: activeTag %}
+
+
+          {%- endfor -%}
+
+        </div>
+      </div>
+    {%- endif -%}
+
+
+  </div>
+
+</section>
+
+
+{% schema %}
+  {
+    "name": "Job Postings",
+    "settings": [
+      {
+        "id": "blog",
+        "type": "blog",
+        "label": "Careers Blog"
+      },
+      {
+        "type": "range",
+        "id": "post_limit",
+        "label": "Posts",
+        "min": 3,
+        "max": 12,
+        "step": 3,
+        "default": 3
+      }
+    ],
+    "blocks": [
+      {
+        "type": "job",
+        "name": "Job Post",
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+          },
+          {
+            "id": "location",
+            "type": "text",
+            "label": "Location"
+          },
+          {
+            "type": "richtext",
+            "id": "desc",
+            "label": "Description"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Learn More Link"
+          },
+          {
+             "type": "select",
+             "id": "job_type",
+             "label": "Job Type",
+             "options": [
+               {
+                 "value": "cafe",
+                 "label": "Café & Kitchen"
+               },
+               {
+                 "value": "admin",
+                 "label": "Support & Administration"
+               }
+             ],
+             "default": "cafe"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

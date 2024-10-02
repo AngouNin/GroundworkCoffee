@@ -1,0 +1,51 @@
+
+
+<div class="step-container step-0 ">
+    <h2 class="product_subscription_form--option-name">We’re so excited to share our specialty teas with you each month. Ready to trust our tea specialists?</h2>
+    <div class="d-flex p-4 variant-select-container size-0 variant-select-container-0-{{ product.id }} " data-option-size="0" data-position="0" >
+        
+        <button class="product_content--quick-add-btn variant-select m-2 variant-select-position-{{ product_option.position }} variant-select-{{ forloop.index }}" data-option-size="{{ product.options_with_values.size }}" data-position="{{ product_option.position }}" data-value="{{ value }}" data-product-id="{{ product.id }}" data-index="{{ forloop.index }}" type="button" name="button" aria-label="Of Course Button">OF COURSE!</button>
+        
+        <a href="/collections/organic-tea" class="button product_content--quick-add-btn variant-select m-2" aria-label="Actually, I want to choose my own Button Link">
+            <!-- <button class="product_content--quick-add-btn variant-select m-2 variant-select-position-{{ product_option.position }} variant-select-{{ forloop.index }}" data-option-size="{{ product.options_with_values.size }}" data-position="{{ product_option.position }}" data-value="{{ value }}" data-product-id="{{ product.id }}" data-index="{{ forloop.index }}" type="button" name="button" role="button" aria-label="Actually, I want to choose my own Button"> -->
+              Actually, I want to choose my own
+            <!-- </button> -->
+
+        </a>
+    
+    </div>
+  </div>
+
+{% if product.selling_plan_groups[0].selling_plans.size != blank %}
+{% assign count = count | plus: 1 %}
+<div class="step-container step-sub hide">
+  <h2>Nice! What’s your ideal frequency?</h2>
+  <div class="d-flex p-4 variant-select-container size-{{ product_option.values.size }} variant-select-container-0-{{ product.id }}" data-option-size="{{ product.options_with_values.size }}" data-position="{{ product_option.position }}" >
+    {% for selling_plan in product.selling_plan_groups[0].selling_plans %}
+      <button class="product_content--quick-add-btn m-2 subscription-btn" type="button" name="button" aria-label="{{ selling_plan.name }} Subscription Button" data-id="{{ selling_plan.id }}" data-product-id="{{ product.id }}" >
+        {% if selling_plan.name == 'Delivery every 1 Week' %}
+          Weekly
+        {% elsif selling_plan.name == 'Delivery every 2 Weeks' %}
+          Biweekly
+        {% elsif selling_plan.name == 'Delivery every 4 Weeks' %}
+          Monthly
+        {% endif %}
+      </button>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+
+
+<div class="step-container step-qty hide">
+    <h2>Next, how many boxes per shipment would you like?</h2>
+    <div class="d-flex p-4 variant-select-container size-{{ product_option.values.size }} variant-select-container-0-{{ product.id }}"  >
+        <button class="product_content--quick-add-btn m-2 qty-selector" aria-label="Quantity 1 Button" type="button" name="button" data-qty="1" data-product-id="{{ product.id }}" >
+          1
+        </button>
+        <button class="product_content--quick-add-btn m-2 qty-selector" aria-label="Quantity 2 Button" type="button" name="button" data-qty="2" data-product-id="{{ product.id }}" >
+          2
+        </button>
+    </div>
+  </div>

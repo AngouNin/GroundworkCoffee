@@ -1,0 +1,129 @@
+{%- comment -%}
+  This is a required section for the Shopify Theme Store.
+  It is available in the "Featured Collection" section in the theme editor.
+
+  Theme Store required settings
+  - Collection
+
+  Theme Store optional settings
+  - Heading: title of the featured collection section
+{%- endcomment -%}
+<section class="featured_collection {% if section.settings.custom_dark_bg %}dark-bg{% endif %}" {% if section.settings.custom_dark_bg %}style="margin-top: 50px;"{% endif %}>
+  <div class="container">
+    <div class="row">
+      <aside class="col-md-1 rela">
+        {% if section.settings.sub_title != blank %}
+          <h2 class="rotated-title">{{ section.settings.sub_title }}</h2>
+        {% endif %}
+      </aside>
+      <article class="col-md-11">
+        {% if section.settings.title != blank %}
+          <h3 class="featured_collection--title h3-title">{{ section.settings.title | escape }}</h3>
+        {% endif %}
+
+        {%- assign collection = collections[section.settings.collection] -%}
+        <div class="cols-3 mobile-hide">
+          {% for product in collection.products limit: section.settings.products_to_show %}
+              {% include "product-content" %}
+          {% endfor %}
+        </div>
+
+        <div class="swiper-container  desktop-hide">
+          <div class="swiper-wrapper">
+            {% for product in collection.products limit: section.settings.products_to_show %}
+              {% include "product-content", with class: 'swiper-slide' %}
+            {% endfor %}
+          </div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev">
+            {% include "icon-arrow-left" %}
+          </div>
+          <div class="swiper-button-next">
+            {% include "icon-arrow-right" %}
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  {% if section.settings.custom_dark_bg %}
+    <div class="featured_collection--dark-bg">
+      {% include "featured-dark-bg" %}
+
+    </div>
+  {% else %}
+    <div class="featured_collection--border">
+      {% include "featured-collection-border" %}
+    </div>
+  {% endif %}
+ 
+
+</section>
+
+<script type="text/javascript">
+  var settings = {
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+        speed: 400,
+        allowTouchMove: true,
+        setWrapperSize: true,
+        loop: false,
+        spaceBetween: 40,
+        autoHeight: true
+
+    }
+
+    var featuredCollection = new Swiper('.featured_collection .swiper-container', settings);
+</script>
+
+{% schema %}
+  {
+    "name": "Featured collection",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Featured collection"
+      },
+      {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Subtitle"
+      },
+      {
+        "id": "collection",
+        "type": "collection",
+        "label": "Collection"
+      },
+      {
+        "id": "products_to_show",
+        "type": "range",
+        "label": "Products to show",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "default": 6
+      },
+      {
+        "type": "checkbox",
+        "id": "custom_dark_bg",
+        "default": false,
+        "info": "Use dark background instead of default homepage background for this section",
+        "label": "Use dark background"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured collection",
+        "category": "Collection"
+      }
+    ]
+  }
+{% endschema %}

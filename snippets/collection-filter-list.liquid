@@ -1,0 +1,88 @@
+
+{% assign show = false %}
+
+<li class="title title-{{ taghandle }}-{{ handleClass }} no-items">
+  <div class="d-flex collection-filter--subfilter-trigger">
+    <p class="collection-filter--subfilter-title d-flex">{{ title }}</p>
+    <div class="collection-filter--subfilter-arrow show-on-mobile">
+      {% include "icon-arrow-down" %}
+    </div>
+  </div>
+
+  <ul class="collection-filter--subfilter-ul hide-on-mobile">
+
+    {% if handleClass contains 'subscription' %}
+      {% assign tagText = tag %}
+      {% assign replaceTxt = taghandle | contact: '-' %}
+      {% assign tagText = tagText | replace: replaceTxt, '' %}
+      {% assign tagText = tagText | replace: '-', ' ' %}
+      {% assign tagFilter = 'sub'  %}
+      {% assign show = true %}
+      <li>
+        <a href="/products/roasters-choice" aria-label="Roaster's Choice Link" data-collection="{{ handleClass }}" data-tag="{{ tagFilter }}" data-filter="{{ tagFilter }}" data-collection-handle="{{ filterCollection.handle }}" data-tag-handle="{{ taghandle }}" class=" links-{{ filterCollection.handle }}-{{ taghandle }} collection-filter-link {{ tagFilter }}-link linked" title="Remove tag {{ tag }}">
+          Roaster's Choice
+        </a>
+      </li>
+      <li>
+        <a href="/products/blenders-choice" aria-label="Blender's Choice Link" data-collection="{{ handleClass }}" data-tag="{{ tagFilter }}" data-filter="{{ tagFilter }}" data-collection-handle="{{ filterCollection.handle }}" data-tag-handle="{{ taghandle }}" class=" links-{{ filterCollection.handle }}-{{ taghandle }} collection-filter-link {{ tagFilter }}-link linked" title="Remove tag {{ tag }}">
+          Blender's Choice
+        </a>
+      </li>
+      <li>
+        <a href="/products/office-party" aria-label="Office Party Link" data-collection="{{ handleClass }}" data-tag="{{ tagFilter }}" data-filter="{{ tagFilter }}" data-collection-handle="{{ filterCollection.handle }}" data-tag-handle="{{ taghandle }}" class=" links-{{ filterCollection.handle }}-{{ taghandle }} collection-filter-link {{ tagFilter }}-link linked" title="Remove tag {{ tag }}">
+          Office Party
+        </a>
+      </li>
+      <li>
+        <a href="/products/greatest-gift" aria-label="Greatest Gift Link" data-collection="{{ handleClass }}" data-tag="{{ tagFilter }}" data-filter="{{ tagFilter }}" data-collection-handle="{{ filterCollection.handle }}" data-tag-handle="{{ taghandle }}" class=" links-{{ filterCollection.handle }}-{{ taghandle }} collection-filter-link {{ tagFilter }}-link linked" title="Remove tag {{ tag }}">
+          Greatest Gift
+        </a>
+      </li>
+    {% else %}
+      {% for tag in all_tags %}
+        {% if tag contains taghandle %}
+          {% assign tagText = tag %}
+          {% assign replaceTxt = taghandle | contact: '-' %}
+          {% assign tagText = tagText | replace: replaceTxt, '' %}
+          {% assign tagText = tagText | replace: '-', ' ' %}
+          {% assign tagFilter = tag | replace: '&-', ''  %}
+          {% assign tagUrl = tag | replace: ' ', '-' %}
+    
+          {% assign show = true %}
+
+
+          {% if current_tags contains tag %}
+            <li class="active">
+              <a href="/collections/{{ handleClass }}/{{ tagUrl }}" aria-label="{{ handleClass }} {{tagText}} Link" class="links-{{ filterCollection.handle }}-{{ taghandle }} collection-filter-link  active {{ tagFilter }}-link" data-collection-handle="{{ filterCollection.handle }}" data-tag-handle="{{ taghandle }}" data-collection="{{ handleClass }}" data-tag="{{ tagFilter }}" data-filter="{{ tagFilter }}" title="Remove tag {{ tag }}">
+                {{ tagText | capitalize }}
+              </a>
+            </li>
+          {% else %}
+            <li>
+              <a href="/collections/{{ handleClass }}/{{ tagUrl }}" aria-label="{{ handleClass }} {{tagText}} Link" data-collection="{{ handleClass }}" data-tag="{{ tagFilter }}" data-filter="{{ tagFilter }}" data-collection-handle="{{ filterCollection.handle }}" data-tag-handle="{{ taghandle }}" class=" links-{{ filterCollection.handle }}-{{ taghandle }} collection-filter-link {{ tagFilter }}-link" title="Remove tag {{ tag }}">
+                {{ tagText | capitalize }}
+              </a>
+            </li>
+          {% endif %}
+        {% else %}
+    
+        {% endif %}
+
+
+
+      {% endfor %}
+    {% endif %}
+
+  
+
+  </ul>
+  {% if show %}
+    <script type="text/javascript">
+        var el = document.querySelectorAll(".title-{{ taghandle }}-{{ handleClass }}");
+        // el.classList.remove("no-items");
+        Array.prototype.forEach.call(el, function(item) {
+          item.classList.remove("no-items");
+        });
+    </script>
+  {% endif %}
+</li>

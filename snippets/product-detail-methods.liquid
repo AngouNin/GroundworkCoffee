@@ -1,0 +1,79 @@
+{% if product.metafields.custom_fields["methods"] != blank %}
+  <div class="product_method more-info hide">
+    {% for item in product.metafields.custom_fields["methods"] %}
+      <div class="fc-index--{{ forloop.index0 }}">
+         {% if item["coffee"] != blank %}
+           <div class="row">
+             <div class="swiper-container">
+               <div class="swiper-wrapper">
+                 {% for coffee_item in item["coffee"] %}
+                   <div class="swiper-slide row">
+                     <div class="col-md">
+                       {% if coffee_item["image"] != blank %}
+                        <div class="product_method--bg-img" style="background-image: url({{ coffee_item["image"] }})"></div>
+                      {% endif %}
+                     </div>
+                     <div class="col-md d-flex flex-column justify-content-center product_desc--txt-container">
+                      <div class="">
+                        {% if coffee_item["title"] != blank %}
+                          <h2 class="product_method--title">{{ coffee_item["title"] }}</h2>
+                        {% endif %}
+                        {% if coffee_item["desc"] != blank %}
+                          <div class="product_method--desc">
+                            {{ coffee_item["desc"] }}
+                          </div>
+                        {% endif %}
+                        {% if coffee_item["button"] != blank %}
+                         <div class="product_method--button">
+                           {{ coffee_item["button"] }}
+                         </div>
+                        {% endif %}
+                      </div>
+
+                     </div>
+                   </div>
+                 {% endfor %}
+               </div>
+             </div>
+           </div>
+         {% endif %}
+
+
+
+         {% if item["tea"] != blank %}
+            <div class="row">
+              {% for tea_item in item["tea"] %}
+                {% if tea_item["step"] != blank %}
+                  <div class="col-md">
+                    {% if tea_item["image"] != blank %}
+                     <div class="product_method--bg-img" style="background-image: url({{ tea_item["image"] }})"></div>
+                   {% endif %}
+                  </div>
+
+                  <div class="col-md d-flex flex-column justify-content-center product_desc--txt-container">
+                    <div class="">
+                      <h2 class="product_method--title">How to Brew</h2>
+                      {% for repeater_item in tea_item["step"] %}
+                        <div class="product_method--desc step-{{ forloop.index }} d-flex">
+                          <div class="">
+                            {% include 'icon-step', step: forloop.index %}
+
+                          </div>
+                          <div class="">
+                            {{ repeater_item["step"] }}
+                          </div>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+
+
+
+          {% endif %}
+       </div>
+     {% endfor %}
+  </div>
+{% endif %}

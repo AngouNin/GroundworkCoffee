@@ -1,0 +1,104 @@
+<section class="offices">
+    <div class="container">
+      <div class="row">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'office' %}
+              <div class="col-md p-5 offices--module">
+                {% include 'responsive-image' with image: block.settings.image, image_class: "offices--img", wrapper_class: "offices--img-container", max_width: 310, max_height: 800 %}
+                <h2 class="offices--title">{{ block.settings.title }}</h2>
+                <div class="offices--content">
+                  <div class="offices--address">
+                    {% if block.settings.address != blank %}
+                      {% if block.settings.address_link != blank %}
+                        <a href="{{ block.settings.address_link }}" target="_blank">
+                      {% endif %}
+                        {{ block.settings.address }}
+                      {% if block.settings.address_link != blank %}
+                        </a>
+                      {% endif %}
+                    {% endif %}
+                  </div>
+                  <div class="offices--contact">
+                    {% assign phone_link = block.settings.phone | replace: "(", "" %}
+                    {% assign phone_link = phone_link | replace: ")", "" %}
+                    {% assign phone_link = phone_link | replace: ")", "" %}
+                    {% assign phone_link = phone_link | replace: "-", "" %}
+                    {% assign phone_link = phone_link | replace: " ", "" %}
+
+                    <p><a href="tel:{{ phone_link }}" aria-label="{{ block.settings.phone }} Phone Link">{{ block.settings.phone }}</a></p>
+                    <p><a href="mailto:{{ block.settings.email }}"  aria-label="{{ block.settings.email }} email Link">{{ block.settings.email }}</a></p>
+                    <p>{{ block.settings.hours }}</p>
+                  </div>
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+
+        <div class="offices--desc col-md p-5">
+          {{ section.settings.desc }}
+        </div>
+      </div>
+    </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Contact Content",
+    "settings": [
+      {
+        "id": "title",
+        "type": "text",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "desc",
+        "label": "Description"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "office",
+        "name": "Office",
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "richtext",
+            "id": "address",
+            "label": "Address"
+          },
+          {
+            "type": "url",
+            "id": "address_link",
+            "label": "Google Map Link"
+          },
+          {
+            "id": "phone",
+            "type": "text",
+            "label": "Phone"
+          },
+          {
+            "id": "email",
+            "type": "text",
+            "label": "Email"
+          },
+          {
+            "id": "hours",
+            "type": "text",
+            "label": "Hours"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

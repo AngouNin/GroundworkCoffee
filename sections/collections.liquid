@@ -1,0 +1,143 @@
+<script type="text/javascript">
+  var collectionHandle = '{{ collection.handle }}';
+
+  
+</script>
+
+
+{% paginate collection.products by 12 %}
+
+
+  <header>
+    {% if collection.handle == 'all' %}
+      {% assign subtitle = section.settings.title %}
+      {% assign desc = section.settings.desc %}
+    {% else %}
+      {% assign subtitle = collection.title %}
+      {% assign desc = collection.description %}
+    {% endif %}
+
+    {% include "page-title" with subtitle: subtitle, desc: desc %}
+    <div class="container ">
+      <div class="d-flex justify-content-between">
+        <div class="mobile-filter-trigger show-on-mobile">
+          FILTER
+        </div>
+        <div class="hide-on-mobile">
+          {% include 'collection-filter' %}
+        </div>
+        {% include 'collection-sort-by' %}
+      </div>
+      <div class="">
+        <div class="show-on-mobile">
+          {% include 'collection-filter' %}
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container collection-list-main-container">
+    <div class="{% if collection.products.size > 0 %}cols-3{% endif %} collection-list-container">
+      {% if collection.products.size > 0 %}
+        {% for product in collection.products %}
+          
+          {% unless product.tags contains 'hide' %}
+            {% unless product.handle == 'greatest-gift-coffee' or product.handle == 'greatest-gift-tea'  %}
+              {% include "product-content" %}
+            {% endunless %}
+          {% endunless %}
+        {% endfor %}
+      {% else %}
+        <div class="no-products">
+          <h2 class="no-products__title">
+            Oh no!
+            <br>
+            We can’t find it.
+          </h2>
+          <img src="{{ 'basket.png' | asset_url }}" alt="" class="no-products__img">
+        </div>
+       
+      {% endif %}
+    </div>
+
+    {%- if paginate.pages > 1 -%}
+    <div class="pagination-container">
+      
+      <nav role="navigation">
+        <ol class="pagination">
+          {%- if paginate.previous-%}
+            <li class="prev">
+              <a href="{{ paginate.previous.url }}">
+                <strong>&#60;</strong>
+              </a>
+            </li>
+          {%- else -%}
+            <li class="prev disabled">
+              <strong>&#60;</strong>
+            </li>
+          {%- endif -%}
+  
+          {%- for part in paginate.parts -%}
+            {%- if part.is_link -%}
+              <li class="page">
+                <a href="{{ part.url }}">
+                  <strong>{{ part.title }}</strong>
+                </a>
+              </li>
+            {%- else -%}
+              {%- if part.title == paginate.current_page -%}
+                <li class="page current" aria-current="page">
+                  <strong>{{ part.title }}</strong>
+                </li>
+              {%- else -%}
+                <li class="deco">
+                  <strong>{{ part.title }}</strong>
+                </li>
+              {%- endif -%}
+            {%- endif -%}
+          {%- endfor -%}
+  
+          {%- if paginate.next -%}
+            <li class="next">
+              <a href="{{ paginate.next.url }}">
+                <strong>&#62;</strong>
+              </a>
+            </li>
+          {%- else -%}
+            <li class="next disabled">
+              <strong>&#62;</strong>
+            </li>
+          {%- endif -%}
+        </ol>
+      </nav>
+    </div>
+    
+  {%- endif -%}
+  </div>
+
+
+{% endpaginate %}
+
+
+{% schema %}
+  {
+    "name": "Collection",
+    "settings": [
+      {
+        "id": "title",
+        "type": "text",
+        "label": "Title"
+      },
+      {
+        "id": "desc",
+        "type": "richtext",
+        "label": "Desc"
+      },
+      {
+        "id": "sale_collection",
+        "type": "collection",
+        "label": "Sale Collection"
+      }
+    ]
+  }
+{% endschema %}

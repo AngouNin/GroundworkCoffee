@@ -1,0 +1,40 @@
+<section class="branded_content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        {% include 'responsive-image' with image: block.settings.image, image_class: "branded_content--img", wrapper_class: "branded_content--img-wrapper", max_width: 540, max_height: 690 %}
+      </div>
+      <div class="col-md">
+        <div class="txt-container">
+          {% if block.settings.title != blank %}
+            <h4 class="branded_content--subtitle">{{ block.settings.title }}</h4>
+          
+          {% endif %}
+
+          {% if block.settings.subtitle != blank %}
+            <h3 class="branded_content--title">{{ block.settings.subtitle }}</h3>
+          {% endif %}
+
+          {% if block.settings.desc != blank %}
+            <div class="branded_content--desc">
+              {{ block.settings.desc }}
+            </div>
+          {% endif %}
+          <div class="btn-container">
+            {% if block.settings.button_link %}
+              <a href="{{ block.settings.button_link }}" class="button" aria-label="{{ block.settings.button_label }} link">
+        
+                  {% if block.settings.button_label %}
+                    {{ block.settings.button_label }}
+                  {% else %}
+                    MORE DETAILS
+                  {% endif %}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

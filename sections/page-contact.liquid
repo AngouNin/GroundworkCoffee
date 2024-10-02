@@ -1,0 +1,88 @@
+<div class="container">
+  <section>
+    <h1 class="text-center mx-auto mb-5">{{ section.settings.title }}</h1>
+
+    {% form 'contact' %}
+
+      {% if form.posted_successfully? %}
+        <p class="form-success">
+          {{ 'contact.form.post_success' | t }}
+        </p>
+      {% endif %}
+
+      {{ form.errors | default_errors }}
+
+      <div class="row input-container">
+        <div class="col-md first">
+          <label class="label-hidden" for="ContactFormName">{{ 'contact.form.name' | t }}</label>
+          <input type="text"
+            name="contact[name]"
+            id="ContactFormName"
+            placeholder="{{ 'contact.form.name' | t }}"
+            value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+        </div>
+        <div class="col-md">
+          <label class="label-hidden" for="ContactFormEmail">{{ 'contact.form.email' | t }}</label>
+          <input type="email"
+            name="contact[email]"
+            id="ContactFormEmail"
+            placeholder="{{ 'contact.form.email' | t }}"
+            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+            spellcheck="false"
+            autocomplete="off"
+            autocapitalize="off">
+        </div>
+      </div>
+      <div class="input-container">
+        <label class="label-hidden" for="ContactFormPhone">{{ 'contact.form.phone' | t }}</label>
+        <input type="tel"
+          name="contact[phone]"
+          id="ContactFormPhone"
+          placeholder="{{ 'contact.form.phone' | t }}"
+          value="{% if form[phone] %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+          pattern="[0-9\-]*">
+      </div>
+      <div class="input-container">
+        <label class="label-hidden" for="ContactFormReason">Reason</label>
+        <input type="text"
+          name="contact[reason]"
+          id="ContactFormReason"
+          placeholder="Reason"
+          value="{{ form[reason] }}">
+      </div>
+      <div class="input-container">
+        <label class="label-hidden" for="ContactFormMessage">{{ 'contact.form.message' | t }}</label>
+        <textarea rows="5"
+          name="contact[body]"
+          id="ContactFormMessage"
+          placeholder="{{ 'contact.form.message' | t }}">
+          {%- if form.body -%}
+            {{- form.body -}}
+          {%- endif -%}
+        </textarea>
+      </div>
+
+      <button type="submit" name="button">
+        SUBMIT
+      </button>
+
+
+
+    {% endform %}
+
+  </section>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Contact Heading",
+    "settings": [
+      {
+        "id": "title",
+        "type": "text",
+        "label": "Title"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,61 @@
+<section class="image_text" style="background-color: {{ block.settings.bg_color }};">
+
+  <div class="container">
+
+    <div class="cols-2">
+      <div class="col-md img1">
+        {% if block.settings.image != blank %}
+          {% include 'responsive-image' with image: block.settings.image, image_class: "image_text--image ", wrapper_class: "image_text--image-container ", max_width: 800, max_height: 800 %}
+        {% endif %}
+      </div>
+      <div class="col-md d-flex justify-content-center flex-column">
+        {% if block.settings.title != blank %}
+          <h2 class="image_text--title">{{ block.settings.title }}</h2>
+        {% endif %}
+
+        {% if block.settings.desc != blank %}
+          <div class="image_text--desc">
+            {{ block.settings.desc }}
+          </div>
+        {% endif %}
+
+        <div class="btn-container d-flex align-items-center">
+          {% if block.settings.button_link != blank %}
+            <a href="{{ block.settings.button_link }}" class="{% if block.settings.external %}button btn-white{% endif%}" {% if block.settings.external %}target="_blank" title="opens in a new window" {% endif %} aria-label="{{ block.settings.button_label }} link">
+        
+                {% if block.settings.button_label %}
+                  {{ block.settings.button_label }}
+                {% else %}
+                  MORE DETAILS
+                {% endif %}
+        
+            </a>
+          {% endif %}
+
+          {% if block.settings.button_link_2 != blank %}
+            {% if block.settings.external_2 %}
+              <div class="underlined-link">
+            {% endif %}
+            <a href="{{ block.settings.button_link_2 }}" class="{% if block.settings.external_2 %}button btn-white{% endif%}" {% if block.settings.external_2 %}target="_blank"  title="opens in a new window" {% endif %} aria-label="{{ block.settings.button_label_2 }} link">
+   
+                {% if block.settings.button_label_2 %}
+                  {{ block.settings.button_label_2 }}
+                {% else %}
+                  MORE DETAILS
+                {% endif %}
+    
+
+            </a>
+            {% if block.settings.external_2 %}
+              </div>
+            {% endif %}
+
+          {% endif %}
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>

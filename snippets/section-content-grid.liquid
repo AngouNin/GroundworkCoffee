@@ -1,0 +1,43 @@
+{% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+{% if thecycle == 'even' %}
+
+{% endif %}
+
+<section class="content_grid">
+  <div class="container">
+    <div class="cols-2">
+
+      {% if thecycle == 'odd' %}
+        <div class="col-md">
+          {% if block.settings.image != blank%}
+            {% include 'responsive-image' with image: block.settings.image, image_class: "css-class", wrapper_class: "wrapper-css-class", max_width: 700, max_height: 800 %}
+          {% endif %}
+        </div>
+      {% endif %}
+
+      <div class="col-md d-flex flex-column justify-content-center content_grid--txt-container {{ thecycle }}">
+        <div class="content_grid--inner-txt-container">
+          {% if block.settings.title != blank%}
+            <h2 class="content_grid--title">{{ block.settings.title }}</h2>
+          {% endif %}
+
+          {% if block.settings.desc != blank%}
+            <div class="content_grid--desc">
+              {{ block.settings.desc }}
+            </div>
+          {% endif %}
+        </div>
+
+      </div>
+
+      {% if thecycle == 'even' %}
+        <div class="col-md">
+          {% if block.settings.image != blank%}
+            {% include 'responsive-image' with image: block.settings.image, image_class: "css-class", wrapper_class: "wrapper-css-class", max_width: 700, max_height: 800 %}
+          {% endif %}
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+</section>

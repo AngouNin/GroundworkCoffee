@@ -1,0 +1,144 @@
+
+
+<section class="wholesale_form">
+  <div class="container">
+    {% if section.settings.form_title != blank %}
+      <h2 class="wholesale_form--title">{{ section.settings.form_title }}</h2>
+    {% endif %}
+
+    {% if section.settings.form_desc != blank %}
+      <div class="wholesale_form--desc">{{ section.settings.form_desc }}</div>
+    {% endif %}
+
+    
+
+
+    <form id="wholesale_form" class="klaviyo_gdpr_embed_{{ list_id }}" action="//manage.kmail-lists.com/subscriptions/subscribe" data-ajax-submit="//manage.kmail-lists.com/ajax/subscriptions/subscribe" method="GET" target="_blank" novalidate="novalidate">
+      <input type="hidden" name="g" value="{{ list_id }}">
+      <input type="hidden" name="$fields" value="Business,Address,City State, Business Type,Service,Cold Brew, Equipment, Distributor, About">
+      <input type="hidden" name="$list_fields" value="$consent">
+      <input type="hidden" name="$consent" value="email">
+
+      <div class="form-actual ">
+        <div class="row input-container">
+          <div class="col-md first">
+            <label class="label-hidden" for="k_id_name">Your Name</label>
+            <input class="basic-textbox-underline" name="name" placeholder="Full Name" type="text" id="k_id_name" value="" required="">
+          </div>
+          <div class="col-md">
+            <label class="label-hidden" for="k_id_email">Email</label>
+            <input id="k_id_email" type="email" name="email" value="" placeholder="Email">
+          </div>
+        </div>
+
+        <div class="input-container">
+          <label class="label-hidden" for="k_id_phone_number">Phone Number</label>
+          <input id="k_id_phone_number" type="text" name="phone_number" value="" placeholder="Phone Number (Optional)">
+        </div>
+        <div class="input-container">
+          <label class="label-hidden" for="k_id_organization">Business</label>
+          <input id="k_id_organization" type="text" name="organization" value="" placeholder="Business Name">
+        </div>
+        <div class="input-container">
+          <label class="label-hidden" for="k_id_address">Address</label>
+          <input id="k_id_address" type="text" name="Address" value="" placeholder="Street Address">
+        </div>
+        <div class="row input-container">
+          <div class="col-md first">
+            <label class="label-hidden" for="k_id_city_state">City State</label>
+            <input id="k_id_city_state" type="text" name="City State" value="" placeholder="City/State">
+          </div> 
+          <div class="col-md">
+            <select id="k_id_type" class="" name="Business Type">
+              <option value="" disabled selected>Type of business </option>
+              <option value="Cafe/Bakery">Cafe/Bakery</option>
+              <option value="Restaurant">Restaurant</option>
+              <option value="Office">Office</option>
+              <option value="Grocery">Grocery</option>
+              <option value="Online">Online</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+       <div class="row input-container">
+          <div class="col-md first">
+            <select id="k_id_service"  class="" name="Service">
+              <option value="" disabled selected>What are you looking to serve?</option>
+              <option value="Drip">Drip</option>
+              <option value="Espresso">Espresso</option>
+              <option value="Tea">Tea</option>
+              <option value="Cold Brew">Cold Brew</option>
+            </select>
+          </div>
+          <div class="col-md">
+            <select id="k_id_cold_brew"  class="" name="Cold Brew">
+              <option value="" disabled selected>Are you interested in serving Cold Brew on Draft?</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+
+        </div>
+        <div class="input-container row">
+          <div class="col-md first">
+            <select id="k_id_equipment"  class="" name="Equipment">
+              <option value="" disabled selected>Are you looking to purchase equipment?</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+          <div class="col-md">
+            <select id="k_id_distributor"  class="" name="Distributor">
+              <option value="" disabled selected>Do you currently use a distributor? If so, who?</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-container">
+          <textarea id="k_id_about" name="About" rows="8" cols="80" placeholder="Please describe your business"></textarea>
+        </div> 
+
+        <div class="">
+          <button type="submit" name="button" class="">
+            SUBMIT
+          </button>
+        </div>
+        <div class="klaviyo_messages">
+          <div class="success_message alert alert-success" style="display:none;"></div>
+          <div class="error_message alert alert-danger" style="display:none;"></div>
+        </div>
+
+      </div>
+    </form>
+    <script type="text/javascript" src="//www.klaviyo.com/media/js/public/klaviyo_subscribe.js"></script>
+    <script type="text/javascript">
+      KlaviyoSubscribe.attachToForms('#wholesale_form', {
+        hide_form_on_success: true,
+        success_message: '{{ success | escape }}',
+        extra_fields: ["Business,Address,City State, Business Type,Service,Cold Brew, Equipment, Distributor, About"]
+      });
+    </script>
+
+  </div>
+</section>
+
+
+<script type="text/javascript">
+  $(function() {
+    $('select').selectric();
+  });
+</script>
+
+<style media="screen">
+  .selectric .button:before {
+    content: url('{{ "arrow-down.svg" | asset_url }}') !important;
+    position: absolute;
+top: 40%;
+right: 9px;
+  }
+
+  .selectric .button:after {
+    display: none;
+  }
+</style>

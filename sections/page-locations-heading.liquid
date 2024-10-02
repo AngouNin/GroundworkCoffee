@@ -1,0 +1,25 @@
+{% include "page-title" with title: section.settings.title, subtitle: section.settings.subtitle, desc: section.settings.desc %}
+
+
+{% schema %}
+  {
+    "name": "Our Kitchen Heading",
+    "settings": [
+      {
+        "id": "title",
+        "type": "text",
+        "label": "Title"
+      },
+      {
+        "id": "subtitle",
+        "type": "text",
+        "label": "Subtitle"
+      },
+      {
+        "type": "richtext",
+        "id": "desc",
+        "label": "Description"
+      }
+    ]
+  }
+{% endschema %}

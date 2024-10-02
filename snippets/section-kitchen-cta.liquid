@@ -1,0 +1,37 @@
+<section class="kitchen">
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        {% include 'responsive-image' with image: block.settings.image, image_class: "kitchen--img", wrapper_class: "kitchen--img-wrapper", max_width: 540, max_height: 690 %}
+      </div>
+      <div class="col-md">
+        <div class="txt-container">
+          <h4 class="kitchen--subtitle">KITCHEN</h4>
+          {% if block.settings.title != blank %}
+            <h3 class="kitchen--title">{{ block.settings.title }}</h3>
+          {% endif %}
+
+          {% if block.settings.desc != blank %}
+            <div class="kitchen--desc">
+              {{ block.settings.desc }}
+            </div>
+          {% endif %}
+          <div class="btn-container">
+            {% if block.settings.button_link %}
+              <a href="{{ block.settings.button_link }}" class="button btn-white" aria-label="{{ block.settings.button_label }} link">
+              
+                  {% if block.settings.button_label %}
+                    {{ block.settings.button_label }}
+                  {% else %}
+                    MORE DETAILS
+                  {% endif %}
+        
+              </a>
+            {% endif %}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

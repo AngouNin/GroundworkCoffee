@@ -1,0 +1,13 @@
+<script>
+  if(window.location.search == '' && window.location.pathname == '/collections/all') {
+    window.location.href = window.location.href + '?sort_by=best-selling';
+  }
+</script>
+{% section 'collections' %}
+
+
+{%- comment -%}
+<div class="show-rec-products {% if collection.products.size > 0 %}hide{% endif %}">
+  {% section 'product-default-rec' %}
+</div>
+{%- endcomment -%}

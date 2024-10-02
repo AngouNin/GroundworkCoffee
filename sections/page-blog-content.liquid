@@ -1,0 +1,204 @@
+{%- comment -%}
+
+  Liquid by Jason @ freakdesign.
+  Questions? Ping me on twitter: @freakdesign
+
+  Relates to blog post:
+  http://freakdesign.com.au/blogs/news/get-the-url-querystring-values-with-liquid-in-shopify
+
+  Example:
+  https://jasons-experiments.myshopify.com/collections/all/products/3-4-sleeve-kimono-dress-coral-1?ref=freakdesign&cache=false
+
+{%- endcomment -%}
+
+{%- comment -%} Capture the content for header containing the tracking data {%- endcomment -%}
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+
+{% comment %} Use string splitting to pull the value from content_for_header and apply some string clean up {% endcomment %}
+{%- assign pageUrl = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first | split:'.myshopify.com' | last |
+   replace:'\/','/' |
+   replace:'%20',' ' |
+   replace:'\u0026','&'
+-%}
+
+
+
+
+
+
+<section class="blog_filter">
+  <div class="container">
+    <div class="d-md-flex justify-content-center align-items-center">
+        <ul class="d-flex justify-content-between blog_filter--ul">
+          <li class="blog_filter--li active" data-blog="all">
+
+              All
+
+          </li>
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'blogs' %}
+                  {% assign blogHandle = block.settings.blog %}
+                  {% assign blog = blogs[blogHandle] %}
+                  <li class='blog_filter--li' data-blog="{{ blogHandle }}">
+  
+                      {{ blog.title }}
+         
+                  </li>
+            {% endcase %}
+          {% endfor %}
+        </ul>
+    </div>
+  </div>
+</section>
+
+
+
+
+{%- comment -%}
+
+
+  {% if current_tags %}
+    {% capture blog_title %}{{ blog.title | link_to: blog.url }} &mdash; {{ current_tags.first }}{% endcapture %}
+  {% endif %}
+
+  <section class="blog_filter">
+    <div class="container">
+      <div class="d-md-flex justify-content-center align-items-center">
+        {% if blog.all_tags.size > 0 %}
+          <ul class="d-flex justify-content-between blog_filter--ul">
+
+            <li class="blog_filter--li {% unless pageUrl contains 'tagged' %}active{% endunless %}">
+              <a href="{{ blog.url }}">
+                All
+              </a>
+            </li>
+            {% for tag in blog.all_tags %}
+              {% if current_tags contains tag %}
+                <li class="blog_filter--li active">{{ tag }}</li>
+              {% else %}
+                <li class='blog_filter--li'>{{ tag | link_to_tag: tag }}</li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+{%- endcomment -%}
+
+
+  {% comment %}
+
+  Featured Articles
+  ====================
+  {% endcomment %}
+
+  <section class="featured_articles image-text-slide-container">
+    <div class="container">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'featured-article' %}
+                {% assign article = articles[block.settings.article] %}
+                {% assign blogTitle = article.url | split: '/'  %}
+                {% assign subtitle = blogTitle[2] %}
+                {% assign title = article.title %}
+                {% assign image = article.image %}
+                {% assign url = article.url %}
+                {% assign buttonTxt = 'READ MORE' %}
+                {% if article.excerpt.size > 0 %}
+                  {% assign desc = article.excerpt  %}
+                {% else %}
+                  {% assign desc = article.content | strip_html | truncatewords: 20 %}
+                {% endif %}
+
+                {% include "image-text-slide" %}
+
+            {% endcase %}
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  {% comment %}
+
+  Article Previews
+  ====================
+  {% endcomment %}
+
+
+
+
+<section id="article-container" class="articles-container">
+  <div class="container">
+    <script>
+      var ARTICLE = [];
+    </script>
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'blogs' %}
+            {% assign blogHandle = block.settings.blog %}
+            {% assign blog = blogs[blogHandle] %}
+            {% for article in blog.articles %}
+              <script>      
+                ARTICLE = {{ article | json }};
+                ARTICLE.blog_handle = '{{blogHandle}}';
+                window.theme.articles.push(ARTICLE);
+              </script>
+          {% endfor %}
+      {% endcase %}
+    {% endfor %}
+
+    <div id="articles-list" class="row row-cols-3"></div>
+  </div>
+</section>
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Blog Landing Content",
+    "blocks": [
+      {
+        "type": "featured-article",
+        "name": "Featured Article",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Featured Article"
+          },
+          {
+            "id": "article",
+            "type": "article",
+            "label": "Article"
+          }
+        ]
+      },
+      {
+        "type": "blogs",
+        "name": "Blogs",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Blog"
+          },
+          {
+            "id": "blog",
+            "type": "blog",
+            "label": "Blog"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

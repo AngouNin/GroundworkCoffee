@@ -1,0 +1,170 @@
+<section class="visit">
+  <div class="container">
+    <div class="row">
+      <aside class="col-md-1 rela">
+        {% if section.settings.sub_title != blank %}
+          <h2 class="rotated-title">{{ section.settings.sub_title }}</h2>
+        {% endif %}
+      </aside>
+      <article class="col-md-11">
+        <div class=""></div>
+        <div class="">
+          <div class="d-md-flex justify-content-between">
+
+            <div class="d-md-flex flex-column justify-content-end">
+              {% if section.settings.title != blank %}
+                <h3 class="visit--title h3-title">{{ section.settings.title | escape }}</h3>
+              {% endif %}
+
+              <div class="button-container">
+                {% if section.settings.order_link %}
+                  <a href="{{ section.settings.order_link }}" class="button" aria-label="{{ section.settings.order_label }} Button Link">
+                    {% if section.settings.order_label %}
+                      {{ section.settings.order_label }}
+                    {% else %}
+                      ORDER AHEAD
+                    {% endif %}
+                  </a>
+                {% endif %}
+                {% if section.settings.find_link %}
+                  <span class="visit--split">OR</span>
+                  <div class="underlined">
+                    <a href="{{ section.settings.find_link }}" aria-label="{{ section.settings.find_label }} Link">
+                      {% if section.settings.find_label %}
+                        {{ section.settings.find_label }}
+                      {% else %}
+                        Learn More
+                      {% endif %}
+                    </a>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+
+
+            {% if section.settings.video_url != blank %}
+           
+            {% endif %}
+
+            {% if section.settings.floating_image != blank %}
+                {%- comment -%}
+                <div class="visit--floating-image">
+
+                  
+
+                  <img src="{{ section.settings.floating_image | img_url: '1000x' }}" alt="">
+                  <!-- {% include 'responsive-image' with
+                    image: section.settings.floating_image,
+                    max_width: 500,
+                    max_height: 500
+                  %} -->
+              </div>
+                {%- endcomment -%}
+               
+          
+             
+             
+             
+            {% endif %}
+          </div>
+
+
+          {% if section.settings.image != blank %}
+            <div class="visit--image d-md-flex justify-content-between">
+              {% include 'responsive-image' with
+                image: section.settings.image,
+                max_width: 906,
+                max_height: 605
+              %}
+              {% if section.settings.image_label %}
+                <div class="visit--image-label d-md-flex flex-column justify-content-end">
+                  {{ section.settings.image_label }}
+                </div>
+              {% endif %}
+
+            </div>
+          {% endif %}
+
+
+
+        </div>
+
+      </article>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Visit Groundwork",
+    "settings": [
+      {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Subtitle"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Featured collection"
+      },
+      {
+        "type": "richtext",
+        "id": "desc",
+        "label": "Description"
+      },
+      {
+        "type": "text",
+        "id": "order_label",
+        "label": "Order Button Label"
+      },
+      {
+        "type": "url",
+        "id": "order_link",
+        "label": "Order Button Link"
+      },
+      {
+        "type": "text",
+        "id": "find_label",
+        "label": "Find Link Label"
+      },
+      {
+        "type": "url",
+        "id": "find_link",
+        "label": "Find LinK"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Location Image"
+      },
+      {
+        "type": "text",
+        "id": "image_label",
+        "label": "Image Label"
+      },
+      {
+        "type": "url",
+        "id": "video_url",
+        "label": "Floating Video"
+      },
+      {
+        "type": "image_picker",
+        "id": "floating_image",
+        "label": "Floating Image"
+      },
+      {
+        "id": "rotating_txt",
+        "type": "text",
+        "label": "Rotating Text"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Visit Groundwork",
+        "category": "ADVANCED LAYOUT"
+      }
+    ]
+  }
+{% endschema %}

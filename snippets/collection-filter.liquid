@@ -1,0 +1,163 @@
+
+<div class="collection-filter">
+  <div class="">
+
+    <ul class="collection-filter--main-ul d-md-flex">
+      <li class="collection-filter--main-li {% if collection.handle == 'all' %} active {% else %} non-active {% endif %}">
+        <p class="collection-filter--collection-title ">
+            <a href="/collections/all">ALL</a>
+        </p>
+      </li>
+      {% for filterCollection in collections %}
+        {% if filterCollection.handle contains 'organic-coffee' or filterCollection.handle contains 'organic-tea' or filterCollection.handle == 'subscriptions' %}
+          {% if filterCollection.all_tags.size > 0 %}
+            <li class="collection-filter--main-li {% if filterCollection.handle == collection.handle %}active{% else %}non-active{% endif %}">
+              <div class="d-flex justify-content-between collection-filter--dropdown-trigger">
+                <p class="collection-filter--collection-title collection-filter--dropdown">
+                  <a href="{{filterCollection.url}}" class="" aria-label="{{ filterCollection.title }} Filter Link">{{ filterCollection.title }}</a>
+                  {% include "icon-arrow-down" %}
+                </p>
+
+                <!-- <p class="apply show-on-mobile hide">
+                  <a href="#" class="apply-link" data-handle="{{ filterCollection.handle }}">Apply</a>
+                </p> -->
+              </div>
+
+              <ul class="collection-filter--collection-ul ">
+
+              
+
+                {% assign all_tags = filterCollection.all_tags | sort %}
+                {% include 'collection-filter-list' with title: "Type", handleClass: filterCollection.handle, taghandle: "type-"  %}
+
+                {% unless filterCollection.handle contains 'tea' or filterCollection.handle contains 'subscriptions' %}
+                  {% include 'collection-filter-list' with title: "Roast", handleClass: filterCollection.handle, taghandle: "roast-"  %}
+                  {% include 'collection-filter-list' with title: "Size", handleClass: filterCollection.handle, taghandle: "size-"  %}
+                  {% include 'collection-filter-list' with title: "Origin", handleClass: filterCollection.handle, taghandle: "origin-"  %}
+                {% endunless %}
+                
+
+                <li class="apply hide-on-mobile">
+                  <!-- <a href="#" class="apply-link" data-handle="{{ filterCollection.handle }}">Apply</a> -->
+                </li>
+              </ul>
+              {% if filterCollection.handle == collection.handle %}
+                {% if current_tags %}
+                  <div class="collection-filter--readout-container">
+                    {% for tag in all_tags %}
+                      {% assign tagText = tag %}
+
+                      {% assign tagText = tagText | replace: 'type', '' %}
+                      {% assign tagText = tagText | replace: 'roast', '' %}
+                      {% assign tagText = tagText | replace: 'origin', '' %}
+                      {% assign tagText = tagText | replace: 'size', '' %}
+                      {% assign tagText = tagText | replace: '-', ' ' %}
+
+                      {% assign button = '<div class="remove-tag" data-tag="{{ tag }}" aria-label=" {{ tag }} div"></div>' %}
+
+                      {% assign tagText = tagText | append: button %}
+
+                      {% assign tagFilter = tag | replace: '&', 'and'  %}
+                      {% if current_tags contains tag %}
+                        <div class="collection-filter--readout">
+                          {{ tagText | link_to_remove_tag: tag }}
+                        </div>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+
+                {% endif %}
+              {% endif %}
+            </li>
+          {% else %}
+            <li class="collection-filter--main-li {% if filterCollection.handle == collection.handle %}active{% else %}non-active{% endif %}">
+              <p class="collection-filter--collection-title">
+                  <a href="{{filterCollection.url}}" aria-label="{{ filterCollection.title }} Link">{{ filterCollection.title }}</a>
+              </p>
+            </li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+
+      {% for filterCollection in collections %}
+        {% if filterCollection.handle == 'good-goods' %}
+          {% if filterCollection.all_tags.size > 0 %}
+            <li class="collection-filter--main-li {% if filterCollection.handle == collection.handle %}active{% else %}non-active{% endif %}">
+              <div class="d-flex justify-content-between collection-filter--dropdown-trigger">
+                <p class="collection-filter--collection-title collection-filter--dropdown">
+                  <a href="{{filterCollection.url}}" class="" aria-label="{{ filterCollection.title }} Filter Link">{{ filterCollection.title }}</a>
+                  {% include "icon-arrow-down" %}
+                </p>
+
+                <!-- <p class="apply show-on-mobile hide">
+                  <a href="#" class="apply-link" data-handle="{{ filterCollection.handle }}">Apply</a>
+                </p> -->
+              </div>
+
+              <ul class="collection-filter--collection-ul ">
+                {% assign all_tags = filterCollection.all_tags | sort %}
+                {% include 'collection-filter-list' with title: "Type", handleClass: filterCollection.handle, taghandle: "type"  %}
+                <!-- {% include 'collection-filter-list' with title: "Roast", handleClass: filterCollection.handle, taghandle: "roast"  %}
+                {% include 'collection-filter-list' with title: "Size", handleClass: filterCollection.handle, taghandle: "size"  %}
+                {% include 'collection-filter-list' with title: "Origin", handleClass: filterCollection.handle, taghandle: "origin"  %} -->
+
+                <li class="apply hide-on-mobile">
+                  <!-- <a href="#" class="apply-link" data-handle="{{ filterCollection.handle }}">Apply</a> -->
+                </li>
+              </ul>
+              {% if filterCollection.handle == collection.handle %}
+                {% if current_tags %}
+                  <div class="collection-filter--readout-container">
+                    {% for tag in all_tags %}
+                      {% assign tagText = tag %}
+
+                      {% assign tagText = tagText | replace: 'type', '' %}
+                      {% assign tagText = tagText | replace: 'roast', '' %}
+                      {% assign tagText = tagText | replace: 'origin', '' %}
+                      {% assign tagText = tagText | replace: 'size', '' %}
+                      {% assign tagText = tagText | replace: '-', ' ' %}
+
+                      {% assign button = '<div class="remove-tag" data-tag="{{ tag }}" aria-label="{{ tag }} div"></div>' %}
+
+                      {% assign tagText = tagText | append: button %}
+
+                      {% assign tagFilter = tag | replace: '&', 'and'  %}
+                      {% if current_tags contains tag %}
+                        <div class="collection-filter--readout">
+
+                          {{ tagText | link_to_remove_tag: tag }}
+                        </div>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+
+                {% endif %}
+              {% endif %}
+            </li>
+          {% else %}
+            <li class="collection-filter--main-li {% if filterCollection.handle == collection.handle %}active{% else %}non-active{% endif %}">
+              <p class="collection-filter--collection-title">
+                  <a href="{{filterCollection.url}}" aria-label="{{ filterCollection.title }} Link">{{ filterCollection.title }}</a>
+              </p>
+            </li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+
+      {% if section.settings.sale_collection != blank %}
+        {% assign saleCollection = section.settings.sale_collection %}
+      {% else %}
+        {% assign saleCollection = '/collections/sale' %}
+      {% endif %}
+
+
+      <li class="collection-filter--main-li">
+        <p class="collection-filter--collection-title sale">
+            <a href="{{ collections[section.settings.sale_collection].url }} " aria-label="Sale Link">SALE</a>
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>

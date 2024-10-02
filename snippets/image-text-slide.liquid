@@ -1,0 +1,36 @@
+<div class="swiper-slide image_text_slide">
+  <div class="row">
+    <div class="col-md lazyload image_text_slide--image" data-bgset="{% include 'responsive-bg-image', image: image %}" alt="{{ title }}"></div>
+    <div class="col-md d-flex justify-content-center align-items-center flex-column">
+      <div class="">
+        {% if subtitle != blank %}
+          <h4 class="image_text_slide--subtitle">{{ subtitle }}</h4>
+        {% endif %}
+        {% if title != blank %}
+          <h2 class="image_text_slide--title">{{ title }}</h2>
+        {% endif %}
+        {% if desc != blank %}
+          <div class="image_text_slide--desc">
+            <p>
+              {{ desc | strip_html }}
+            </p>
+          </div>
+        {% endif %}
+        {% if url != blank %}
+          <a href="{{ url }}" class="button btn-white" aria-label=" {{ buttonTxt }} button link">
+
+              {% if buttonTxt != blank %}
+                {{ buttonTxt }}
+              {% else %}
+                 READ MORE
+              {% endif %}
+  
+          </a>
+        {% endif %}
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+  </div>
+</div>

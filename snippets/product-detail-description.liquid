@@ -1,0 +1,240 @@
+
+{% if product.metafields.custom_fields["additional_product_content"] != blank %}
+  <div class="custom-field custom-field__additional-product-content custom-field__type--field-collection-json">
+    <div class="custom-field--value">
+      {% for item in product.metafields.custom_fields["additional_product_content"] %}
+        {%- assign class = item['section_title'] | downcase -%}
+        {%- assign class = class | replace: ' ', '-' -%}
+        <div class="fc-item fc-index--{{ forloop.index0 }}">
+           {% if item["section_with_icons"] != blank %}
+             <div class="product_desc more-info type-{{ class }} {% if forloop.index0 > 0 %}hide{% endif %} ">
+               <div class="custom-field--value">
+                 {% for section_with_icons_item in item["section_with_icons"] %}
+                   <div class="row product_desc--container fc-index--{{ forloop.index0 }}">
+                     <div class="col-md">
+                       {% if section_with_icons_item["image"] != blank %}
+                         <div class="product_desc--bg-img" style="background-image: url({{ section_with_icons_item['image'] }})"></div>
+                        {% endif %}
+                     </div>
+                     <div class="col-md d-flex flex-column justify-content-between product_desc--txt-container">
+                       <div class="mobile-container">
+                         <div class="marb">
+                           {% if  section_with_icons_item["title"] != blank %}
+                             <h2 class="product_desc--title">{{  section_with_icons_item["title"] }}</h2>
+                           {% endif %}
+                           {% if section_with_icons_item["description"] != blank %}
+                             <div class="product_desc--desc">
+                               {{ section_with_icons_item["description"] }}
+                             </div>
+                           {% endif %}
+                         </div>
+
+                         {% if section_with_icons_item["icon"] != blank %}
+                           <div class="d-flex rela">
+                             <div class="product_desc--taste-notes">
+                              {% if section_with_icons_item["icon_title"] != blank %}
+                                {{ section_with_icons_item["icon_title"] }}
+                              {% else %}
+                                 TASTE NOTES
+                               {% endif %}
+                             </div>
+                             <div class="d-flex product_desc--taste-icons">
+                               {% for repeater_item in section_with_icons_item["icon"] %}
+                                 <div class="d-flex flex-column align-items-center justify-content-between product_desc--taste-icon">
+                                   <div class="product_desc--icon">
+                                     <img src="{{ repeater_item["icon"] }}" alt="">
+                                   </div>
+
+                                   {% if section_with_icons_item["icon_labels"][forloop.index0]["icon_labels"] != blank %}
+                                     <div class="product_desc--icon-label">
+                                       {{ section_with_icons_item["icon_labels"][forloop.index0]["icon_labels"] }}
+                                     </div>
+                                   {% endif %}
+                                 </div>
+                               {% endfor %}
+                             </div>
+                           </div>
+                         {% endif %}
+                       </div>
+                     </div>
+                    </div>
+                  {% endfor %}
+               </div>
+             </div>
+           {% elsif item["slide_show"] != blank %}
+
+  
+            <div class="product_method more-info type-{{ class }} {% if forloop.index0 > 0 %}hide{% endif %}">
+              <div class="fc-index--{{ forloop.index0 }}">
+                <div class="">
+                    <div class="swiper-container">
+                      <div class="swiper-wrapper">
+                        {% for slide_show_item in item["slide_show"] %}
+                          <div class="swiper-slide ">
+                            <div class="cols-2">
+                              <div class="">
+                                {% if slide_show_item["image"] != blank %}
+                                <div class="">
+                                  <div class="product_method--bg-img" style="background-image: url({{ slide_show_item["image"] }})"></div>
+                                </div>
+                               {% endif %}
+                              </div>
+                              <div class=" d-flex flex-column justify-content-center product_desc--txt-container">
+                               <div class="pad">
+                                 {% if slide_show_item["title"] != blank %}
+                                   <h2 class="product_method--title">{{ slide_show_item["title"] }}</h2>
+                                 {% endif %}
+                                 {% if slide_show_item["description"] != blank %}
+                                   <div class="product_method--desc">
+                                     {{ slide_show_item["description"] }}
+                                   </div>
+                                 {% endif %}
+                                 {% if slide_show_item["button"] != blank %}
+
+                                    {%- assign button = slide_show_item["button"] -%}
+                                    {%- assign button_label = button | strip_html -%}
+                                   
+                                    {% assign icon = button | strip_html  %}
+                               
+
+                                    {% assign pieces = button | split: 'href="' %}
+                                    
+
+                                    {% assign extracted_urls = '' %}
+
+                                    {% for piece in pieces %}
+                                        {% unless forloop.first %}
+                                        
+                                            {% assign extracted_url = piece | replace_first: '">', ' ' | truncatewords: 1 | remove_first: '...' %}
+                                            {% assign extracted_urls = extracted_urls | append: ', ' | append: extracted_url %}
+                                        {% endunless %}
+                                    {% endfor %}
+
+
+                                    {% assign extracted_urls = extracted_urls | remove_first: ', ' | split: ', '  %} <!-- this will clean up the first comma and convert to an array -->
+
+                                    {% for extracted_url in extracted_urls %}
+                                     
+                                      {%- assign url = extracted_url | remove: '"' -%}
+                                    
+                                      <div class="product_method--button">
+                                        <a href="{{ url }} " target="_blank" title="opens in a new window" aria-label="{{ button_label }} about {{ slide_show_item["title"] }}">{{ button_label }}</a>
+                                      </div>
+                                    {% endfor %}
+
+                                 {% endif %}
+                               </div>
+
+                              </div>
+                            </div>
+
+                          </div>
+                        {% endfor %}
+                      </div>
+                      <div class="swiper-button-prev" aria-label="previous button">
+                        {% include "icon-arrow-left" %}
+                      </div>
+                      <div class="swiper-button-next" aria-label="next button">
+                        {% include "icon-arrow-right" %}
+                      </div>
+                    </div>
+
+
+                </div>
+              </div>
+            </div>
+
+
+
+           {% elsif item["steps"] != blank %}
+             <div class="product_method more-info type-{{ class }} {% if forloop.index0 > 0 %}hide{% endif %}">
+               <div class="fc-index--{{ forloop.index0 }}">
+                 <div class="row">
+                   {% for steps_item in item["steps"] %}
+                     {% if steps_item["step"] != blank %}
+                       <div class="col-md">
+                         {% if steps_item["image"] != blank %}
+                          <div class="product_method--bg-img" style="background-image: url({{ steps_item["image"] }})"></div>
+                        {% endif %}
+                       </div>
+
+                       <div class="col-md d-flex flex-column justify-content-center product_desc--txt-container">
+                         <div class="mobile-container">
+                           <h2 class="product_method--title">How to Brew</h2>
+                           {% for repeater_item in steps_item["step"] %}
+                             <div class="product_method--desc step-{{ forloop.index }} d-flex">
+                               <div class="">
+                                 {% include 'icon-step', step: forloop.index %}
+                               </div>
+                               <div class="">
+                                 {{ repeater_item["step"] }}
+                               </div>
+                             </div>
+                           {% endfor %}
+                         </div>
+                       </div>
+                     {% endif %}
+                   {% endfor %}
+                 </div>
+               </div>
+             </div>
+
+           {% endif %}
+         </div>
+       {% endfor %}
+  </div>
+  </div>
+{% endif %}
+
+
+
+<!-- {% if product.metafields.custom_fields["description"] != blank %}
+  <div class="product_desc more-info ">
+    <div class="custom-field--value">
+      {% for item in product.metafields.custom_fields["description"] %}
+        <div class="row product_desc--container fc-index--{{ forloop.index0 }}">
+          <div class="col-md">
+            {% if item["image"] != blank %}
+              <div class="product_desc--bg-img" style="background-image: url({{ item['image'] }})"></div>
+             {% endif %}
+          </div>
+          <div class="col-md d-flex flex-column justify-content-between product_desc--txt-container">
+            <div class="marb">
+              {% if item["desc_title"] != blank %}
+                <h2 class="product_desc--title">{{ item["desc_title"] }}</h2>
+              {% endif %}
+              {% if item["desc"] != blank %}
+                <div class="product_desc--desc">
+                  {{ item["desc"] }}
+                </div>
+              {% endif %}
+            </div>
+
+            {% if item["icon"] != blank %}
+              <div class="d-flex rela">
+                <div class="product_desc--taste-notes">
+                  TASTE NOTES
+                </div>
+                <div class="d-md-flex product_desc--taste-icons">
+                  {% for repeater_item in item["icon"] %}
+                    <div class="d-flex flex-column align-items-center justify-content-between product_desc--taste-icon">
+                      <div class="product_desc--icon">
+                        <img src="{{ repeater_item["icon"] }}" alt="">
+                      </div>
+                      {% if item["icon_labels"][forloop.index0]["icon_labels"] != blank %}
+                        <div class="product_desc--icon-label">
+                          {{ item["icon_labels"][forloop.index0]["icon_labels"] }}
+                        </div>
+                      {% endif %}
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+
+            {% endif %}
+          </div>
+         </div>
+       {% endfor %}
+    </div>
+  </div>
+{% endif %} -->

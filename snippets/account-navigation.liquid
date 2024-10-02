@@ -1,0 +1,29 @@
+
+
+
+<section class="account_navigation">
+  <div class="container">
+    <ul class="d-md-flex justify-content-center align-items-center">
+      <li class="order-history-link">
+        <a href="/account" aria-label="Account Link">ORDER HISTORY</a>
+      </li>
+      <li class="subs-link">
+        <a href="/tools/recurring/login " aria-label="Sub Link">SUBSCRIPTIONS</a>
+      </li>
+      <li class="addresses-link">
+        <a href="/account/addresses" aria-label="Addresses Link">ADDRESSES</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<script type="text/javascript">
+ 
+  if(window.location.pathname == '/account') {
+    $('.order-history-link').addClass('active');
+  } else if(window.location.pathname == '/account/addresses') {
+    $('.addresses-link').addClass('active');
+
+  }
+</script>

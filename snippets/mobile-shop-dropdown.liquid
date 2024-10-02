@@ -1,0 +1,9 @@
+<ul class="dropdown-ul">
+  {% for childlink in shopLeftMenu.links %}
+    <li class="bottom_nav--dropdown-li">
+      <a href="{{ childlink.url }}" class="{% if childlink.active %} active {% endif %}" aria-label="{{ childlink.title }} Link">
+        {{ childlink.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

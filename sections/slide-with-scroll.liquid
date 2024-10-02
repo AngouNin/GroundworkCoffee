@@ -1,0 +1,234 @@
+<section class="slide_with_scroll">
+  <div class="container">
+
+    <div class="row">
+      <aside class="col-md-1 rela">
+        {% if section.settings.sub_title != blank %}
+          <h2 class="rotated-title slide_with_scroll--sub-title">{{ section.settings.sub_title }}</h2>
+        {% endif %}
+      </aside>
+      <div class="col-md-11">
+        {% if section.settings.title != blank %}
+          <h3 class="slide_with_scroll--title h3-title">{{ section.settings.title | escape }}</h3>
+        {% endif %}
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'slide' %}
+                  <div class="swiper-slide">
+                    <div class="">
+                      {% if block.settings.article != blank %}
+                        {% assign article = articles[block.settings.article] %}
+
+                        {% if block.settings.image %}
+                          {% assign image = block.settings.image %}
+                          <div class="lazyload slide_with_scroll--image cover" data-bgset="{% include 'responsive-bg-image', image: image %}" alt="{{ article.title }}"  ></div>
+                        {% elsif article.image %}
+                          {% assign image = article.image %}
+                          <div class="lazyload slide_with_scroll--image cover" data-bgset="{% include 'responsive-bg-image', image: article.image %}" alt="{{ article.title }}" ></div>
+                        {% endif %}
+                        <div class="d-md-flex justify-content-between">
+                          {% if article.title %}
+                            <h4 class="slide_with_scroll--item-title">{{ article.title }}</h4>
+                          {% endif %}
+
+
+                          {% if article.url %}
+                            <div class="underlined">
+                              <a href="{{ article.url  }}" aria-label="Learn More about {{ article.title }}">
+                                  Learn More
+                              </a>
+                            </div>
+                          {% endif %}
+                        </div>
+                      {% elsif block.settings.product != blank%}
+                        {%- assign product = all_products[block.settings.product] -%}
+                        {%- assign current_variant = product.selected_or_first_available_variant -%}
+                        {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
+
+                        <a href="{{ product.url | within: collection }}" class="featured-collection-item">
+                          <div class="slide_with_scroll--hover-container">
+                            {% if product.featured_image != blank %}
+                              <div class="lazyload slide_with_scroll--image" data-bgset="{% include 'responsive-bg-image', image: product.featured_image %}" alt="{{ product.title }}" ></div>
+                            {% endif %}
+
+                            {% if product.metafields.custom_fields["hide_hover_photo"] != blank %}
+                                {% unless product.metafields.custom_fields["hide_hover_photo"] == 1 %}
+                                  {% if product.images[1] != blank %}
+                                    <div class="lazyload slide_with_scroll--hover-image" data-bgset="{% include 'responsive-bg-image', image: product.images[1] %}" alt="{{ product.title }}" ></div>
+                                  {% endif %}
+                                {% endunless %}
+                            {% else %}
+                              {% if product.images[1] != blank %}
+                                <div class="lazyload slide_with_scroll--hover-image" data-bgset="{% include 'responsive-bg-image', image: product.images[1] %}" alt="{{ product.title }}" ></div>
+                              {% endif %}
+                        
+                            {% endif %}
+                           
+                          </div>
+
+                          <h2 class="slide_with_scroll--item-title">{{ product.title | escape }}</h2>
+                        </a>
+
+
+                     
+
+                        <a href="#" class="slide_with_scroll--quick-add button btn-white" aria-label="QUICK ADD - {{ product.price | money_without_trailing_zeros }} {{ product.title }} {{ product.price | money_without_trailing_zeros }}" data-product-id="{{ product.id }}" data-id="{{product.variants[0].id}}"> 
+                            QUICK ADD - {{ product.price | money_without_trailing_zeros }}
+                        </a>
+                      {% else %}
+                        {% if block.settings.image %}
+                          {% assign image = block.settings.image %}
+                          <div class="lazyload slide_with_scroll--image" data-bgset="{% include 'responsive-bg-image', image: image %}" alt="{{ image.alt }}" ></div>
+                        {% endif %}
+                        <div class="d-flex justify-content-between">
+                          {% if block.settings.title %}
+                            <h4 class="slide_with_scroll--item-title">{{ block.settings.title }}</h4>
+                          {% endif %}
+
+                          {% if block.settings.button_link %}
+                            {% if block.settings.button_label %}
+                              {%- assign label = block.settings.button_label -%}
+                            {% else %}
+                              {%- assign label = 'Learn More' -%}
+                            {% endif %}
+
+                            <div class="underlined">
+                              <a href="{{ block.settings.button_link }}" aria-label="{{ label }} about {{ block.settings.title }}">
+                                {{ label }}
+                              </a>
+                            </div>
+                          {% endif %}
+                        </div>
+                      {% endif %}
+                    </div>
+                  </div>
+              {% endcase %}
+            {% endfor %}
+            <div class="swiper-slide mobile-hide mobile-delete"></div>
+          </div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+<style media="screen">
+  .swiper-container-scroll .swiper-slide {
+    max-width: 33.3%;
+  }
+</style>
+
+
+<script type="text/javascript">
+  // @start Scroll Swiper
+  var scrollSwiper = new Swiper('.slide_with_scroll .swiper-container', {
+
+    // autoHeight: true,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+    spaceBetween: 50,
+    loop: false,
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+    mousewheel: {
+      releaseOnEdges: true,
+    },
+   breakpoints: {
+     // when window width is >= 640px
+       320: {
+          slidesPerView: 1,
+          spaceBetween: 10
+        },
+      768: {
+          slidesPerView: 1,
+          spaceBetween: 10
+       },
+       950: {
+         slidesPerView: 3,
+         spaceBetween: 40
+       },
+       1500: {
+         slidesPerView: 3,
+         spaceBetween: 20
+       }
+   }
+
+
+  });
+  // @end Hero image Swiper
+</script>
+
+{% schema %}
+  {
+    "name": "Swiper Items with scroll",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Featured collection"
+      },
+      {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Subtitle"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "slide",
+        "name": "Slide",
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+          },
+          {
+            "type": "article",
+            "id": "article",
+            "label": "Article",
+            "info": "If article selected, other info won't show"
+          },
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product",
+            "info": "If product selected, other info won't show"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button label"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Slide with scroll",
+        "category": "Slide Show"
+      }
+    ]
+  }
+{% endschema %}

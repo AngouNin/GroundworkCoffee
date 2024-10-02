@@ -1,0 +1,100 @@
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+
+{% comment %} Use string splitting to pull the value from content_for_header and apply some string clean up {% endcomment %}
+{%- assign pageUrl = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first | split:'.myshopify.com' | last |
+   replace:'\/','/' |
+   replace:'%20',' ' |
+   replace:'\u0026','&'
+-%}
+
+
+
+<!-- NAVIGATION -->
+<div class="navigation-container navigation-desktop">
+  <nav class="upper_nav">
+    <ul class="upper_nav--ul d-md-flex justify-content-end">
+      <li class="upper_nav--li search-trigger">
+        <a href="/search" class="open-search" aria-label="Search Link">Search</a>
+        <a href="#" class="close-search" aria-label="Close Search Link">
+          {% include "icon-close" %}
+        </a>
+        <form action="/search" method="get" role="search">
+        <input type="hidden" name="type" value="product,collections,article">
+
+          <label for="Search-{{ section.id }}" class="label-hidden">
+            {{ 'general.search.placeholder' | t }}
+          </label>
+
+          <input type="search"
+            name="q"
+            aria-label="search input"
+            id="Search-{{ section.id }}"
+            value="{{ search.terms | escape }}"
+            placeholder="{{ 'general.search.placeholder' | t }}">
+
+          <button role="button" type="submit" class="button" aria-label="Submit Search Button">
+            {% include 'icon-flower-small' %}
+          </button>
+        </form>
+      </li>
+
+      <li class="upper_nav--li">
+        <a href="/pages/wholesale-info" aria-label="WholeSale Link">Wholesale</a>
+      </li>
+
+      {% if shop.customer_accounts_enabled %}
+        <li class="upper_nav--li">
+          <a href="/account" aria-label="Account Link">{{ 'layout.customer.account' | t }}</a>
+        </li>
+      {% endif %}
+
+      <li class="upper_nav--li cart-link cart-hover">
+        <a href="/cart" aria-label="Cart Link">
+          {% include "icon-cart" %}
+          <span class="cart-count">{{cart.item_count}}</span>
+        </a>
+        {% include "cart-drawer" %}
+      </li>
+    </ul>
+  </nav>
+
+  {% assign shopLeftMenu = linklists.shop-dropdown-left %}
+  {% assign shopRightMenu = linklists.shop-dropdown-right %}
+
+  <nav class="bottom_nav" role="navigation">
+    <ul class="bottom_nav--ul d-md-flex justify-content-end">
+      {% for link in linklists[section.settings.menu].links %}
+        {% if link.links != blank %}
+          <li class="bottom_nav--li dropdown-trigger">
+            <a href="{{ link.url }}" class="{% if link.active %}active{% endif %} desktop-link-with-dropdown {{ link.handle }}" aria-label="{{ link.title }} Link">
+              {{ link.title }}
+            </a>
+
+            {% if link.handle == 'visit' %}
+              {% include "visit-dropdown" %}
+            {% elsif link.handle == 'about' %}
+              {% include "about-dropdown" %}
+            {% endif %}
+
+          </li>
+        {% else %}
+        {% if pageUrl contains 'collection' or pageUrl contains 'products' %}
+          {% assign shopActive = 'active' %}
+        {% else %}
+          {% assign shopActive = '' %}
+        {% endif %}
+          <li class="bottom_nav--li {% if link.handle == 'shop' %}dropdown-trigger{% endif %}">
+            <a href="{{ link.url }}" aria-label="{{ link.title }} Link" class="{% if link.active %} active {% endif %} {% if link.handle == 'shop' %} desktop-link-with-dropdown {{ shopActive }} {% endif %} {{ link.handle }}">
+              {{ link.title }}
+            </a>
+            {% if link.handle == 'shop' %}
+              {% include "shop-dropdown" %}
+            {% endif %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+  </nav>
+
+</div>

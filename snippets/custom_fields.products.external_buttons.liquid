@@ -1,0 +1,15 @@
+{% if product.metafields.custom_fields["external_buttons"] != blank %}
+  <div class="custom-field custom-field__external-buttons custom-field__type--link-repeater">
+    <h3 class="custom-field--title">External Buttons</h3>
+    <div class="custom-field--value">
+      {% for item in product.metafields.custom_fields["external_buttons"] %}
+        <div class="fc-repeater-field-item fc-repeater-field-item--{{ forloop.index0 }} field__external-buttons field-type--link">
+           <h4 class="custom-field--title">External Buttons</h4>
+           <div class="custom-field--value">
+             {{ item["external_buttons"] }}
+           </div>
+        </div>
+       {% endfor %}
+    </div>
+  </div>
+{% endif %}

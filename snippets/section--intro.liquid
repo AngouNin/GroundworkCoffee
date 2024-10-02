@@ -1,0 +1,86 @@
+<section class="section_intro">
+  <div class="container">
+    {% if page.handle contains 'our-kitchen' %}
+        <div class="cols-2">
+          {% if block.settings.title != blank %}
+            <div class=" txt">
+              <h2 class="section_intro--title">{{ block.settings.title }}</h2>
+              {% if block.settings.desc != blank %}
+                <div class="section_intro--desc">
+                  {{ block.settings.desc }}
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+
+
+          {% if block.settings.video_url != blank %}
+            
+         
+          {% endif %}
+
+
+          {% if block.settings.floating_image != blank %}
+          {%- comment -%}
+             <div class="">
+                <div class="visit--floating-image">
+                 
+                  <img src="{{ block.settings.floating_image | img_url: '1000x' }}" alt="">
+
+                </div>
+              </div>
+          
+          {%- endcomment -%}
+           
+            
+          {% endif %}
+        </div>
+
+
+
+
+
+
+    {% elsif page.handle contains 'our-story' %}
+      <div class="">
+        {% if block.settings.title != blank %}
+          <div class="">
+            <h2 class="section_intro--title">{{ block.settings.title }}</h2>
+          </div>
+        {% endif %}
+      </div>
+      {% if block.settings.desc != blank %}
+        <div class="section_intro--desc">
+          {{ block.settings.desc }}
+        </div>
+      {% endif %}
+    {% else %}
+      <div class="cols-2">
+        {% if block.settings.title != blank %}
+          <div class="col-md">
+            <h2 class="section_intro--title">{{ block.settings.title }}</h2>
+          </div>
+        {% endif %}
+        {% if block.settings.image != blank %}
+          <div class="col-md">
+            {% include 'responsive-image' with image: block.settings.image, image_class: "css-class", wrapper_class: "wrapper-css-class", max_width: 700, max_height: 800 %}
+          </div>
+        {% endif %}
+      </div>
+      {% if block.settings.desc != blank %}
+        <div class="section_intro--desc">
+          {{ block.settings.desc }}
+        </div>
+      {% endif %}
+    {% endif %}
+
+
+  </div>
+
+  {% if page.handle contains 'our-story' %}
+    <div class="section_intro--border">
+      {% include "featured-collection-border" %}
+    </div>
+  {% endif %}
+
+</section>

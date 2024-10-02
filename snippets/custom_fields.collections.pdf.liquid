@@ -1,0 +1,8 @@
+{% if collection.metafields.custom_fields["pdf"] != blank %}
+  <div class="custom-field custom-field__pdf custom-field__type--file">
+    <h3 class="custom-field--title">PDF</h3>
+    <div class="custom-field--value">
+      {{ collection.metafields.custom_fields["pdf"] }}
+    </div>
+  </div>
+{% endif %}

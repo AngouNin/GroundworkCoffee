@@ -1,0 +1,62 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+    /* ---------------------------------------------
+    Number Input Wrapper
+    ------------------------------------------------ */
+
+    $('.cart_item--number-input-wrapper').find('input[type="number"]').hide();
+
+    $('.cart_item--number-input-wrapper .add-one-prod, .cart_item--number-input-wrapper .subtract-one-prod').on('click', function(e) {
+      e.preventDefault();
+
+      $('#addToCartBtn').removeClass('inactive');
+      var $clickedButton = $(this);
+      var $numberInputWrapper = $clickedButton.closest('.cart_item--number-input-wrapper');
+      var $numberInput = $numberInputWrapper.find('input');
+      var $placeholder = $numberInputWrapper.find('.placeholder');
+      var operation = $clickedButton.attr('data-operation')
+      var productId = $(this).attr('data-product-id');
+
+      var currentInputValue = parseInt($numberInput.val(), 10);
+
+
+      var addToCartData = {
+        updates: {}
+      };
+
+
+      if (operation == 'add') {
+        $('.subtract-one-prod').show();
+      }
+
+      if (operation == 'add' || operation == 'subtract') {
+        var newValue = operation == 'add' ? currentInputValue + 1 : currentInputValue - 1;
+        addToCartData.updates[productId] = newValue;
+        console.log(addToCartData);
+
+        $numberInput.val(newValue);
+        $placeholder.html(newValue);
+        if (newValue == 0) {
+          $('.subtract-one').hide();
+          $('#addToCartBtn').addClass('inactive');
+        }
+
+        
+        $.ajax({
+          type: "POST",
+          url: '/cart/update.js',
+          data: addToCartData,
+          dataType: 'json',
+          success: function (cart) {
+            location.reload();
+          }
+        });
+
+
+
+      }
+
+
+    });
+  });
+</script>

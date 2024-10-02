@@ -1,0 +1,33 @@
+<section class="outro">
+  <div class="container">
+    {% if block.settings.image != blank %}
+      {% include 'responsive-image' with image: block.settings.image, image_class: "outro--image", wrapper_class: "outro--image-wrapper", max_width: 1041, max_height: 565 %}
+    {% endif %}
+
+    <div class="outro--content">
+      {% if block.settings.title != blank %}
+        <h2 class="outro--title">{{ block.settings.title }}</h2>
+      {% endif %}
+
+      {% if block.settings.desc != blank %}
+        <div class="outro--desc">
+          {{ block.settings.desc }}
+        </div>
+      {% endif %}
+
+      {% if block.settings.button_link %}
+        <a href="{{ block.settings.button_link }}" {% if block.settings.external %}target="_blank" title="opens in a new window"{% endif %} class="button btn-white" aria-label="MORE DETAILS {{ block.settings.button_label }} button link">
+  
+            {% if block.settings.button_label %}
+              {{ block.settings.button_label }}
+            {% else %}
+              MORE DETAILS
+            {% endif %}
+     
+        </a>
+      {% endif %}
+    </div>
+
+
+  </div>
+</section>

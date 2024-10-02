@@ -1,0 +1,315 @@
+
+<div class="container">
+  <div class="row">
+    <aside class="col-md-2">
+      {% if section.settings.title != empty %}
+        <h1 class="rotated-title">{{ section.settings.title }}</h1>
+      {% endif %}
+    </aside>
+    <section class="col-md-10">
+
+      <article class="button-container">
+        {% if section.settings.desc != empty %}
+          <h2 class="h3-title">{{ section.settings.desc | strip_html }}</h2>
+        {% endif %}
+
+        <div class="row">
+          <div class="col-md">
+            <a href="#orders" class="button" aria-label="Orders & Returns Toggle Link">
+                Orders & Returns
+            </a>
+          </div>
+          <div class="col-md">
+            <a href="#products" class="button" aria-label="Our Products Toggle Link">   
+                Our Products
+            </a>
+          </div>
+          <div class="col-md">
+            <a href="#company"  class="button" aria-label="Our Company Toggle Link">
+              Our Company
+            </a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md">
+            <a href="#brew"  class="button" aria-label="Brew Better Toggle Link">
+              Brew Better
+            </a>
+          </div>
+          <div class="col-md">
+            <a href="#subscriptions" class="button" aria-label="Subscriptions Toggle Link">
+              Subscriptions
+            </a>
+          </div>
+          <div class="col-md">
+            <a href="#sustainability" class="button" aria-label="Sustainability Toggle Link">
+              Sustainability
+            </a>
+          </div>
+        </div>
+
+      </article>
+
+      <article id="orders" class="faq_article hide">
+        <h2 class="faq_article--title">Orders & Returns</h2>
+        {% for block in section.blocks %}
+          {% case block.settings.category %}
+            {% when 'orders_returns' %}
+              {% include "accordion" %}
+              <script type="text/javascript">
+                $('#orders').removeClass('hide');
+              </script>
+          {% endcase %}
+        {% endfor %}
+      </article>
+
+      <article id="products" class="faq_article hide">
+        <h2 class="faq_article--title">Our Products</h2>
+        {% for block in section.blocks %}
+          {% case block.settings.category %}
+            {% when 'our_products' %}
+              {% include "accordion" %}
+              <script type="text/javascript">
+                $('#products').removeClass('hide');
+              </script>
+          {% endcase %}
+        {% endfor %}
+      </article>
+
+
+      <article id="company" class="faq_article hide">
+        <h2 class="faq_article--title">Our Company</h2>
+        {% for block in section.blocks %}
+          {% case block.settings.category %}
+            {% when 'our_company' %}
+              {% include "accordion" %}
+              <script type="text/javascript">
+                $('#company').removeClass('hide');
+              </script>
+          {% endcase %}
+        {% endfor %}
+      </article>
+
+      <article id="brew" class="faq_article hide">
+        <h2 class="faq_article--title">Brew Better</h2>
+        {% for block in section.blocks %}
+          {% case block.settings.category %}
+            {% when 'brew_better' %}
+              {% include "accordion" %}
+              <script type="text/javascript">
+                $('#brew').removeClass('hide');
+              </script>
+          {% endcase %}
+        {% endfor %}
+      </article>
+
+      <article id="subscriptions" class="faq_article hide">
+        <h2 class="faq_article--title">Subscriptions</h2>
+        {% for block in section.blocks %}
+          {% case block.settings.category %}
+            {% when 'subscriptions' %}
+              {% include "accordion" %}
+              <script type="text/javascript">
+                $('#subscriptions').removeClass('hide');
+              </script>
+          {% endcase %}
+        {% endfor %}
+      </article>
+
+      <article id="sustainability" class="faq_article hide">
+        <h2 class="faq_article--title">Sustainability</h2>
+        {% for block in section.blocks %}
+          {% case block.settings.category %}
+            {% when 'sustainability' %}
+              {% include "accordion" %}
+              <script type="text/javascript">
+                $('#sustainability').removeClass('hide');
+              </script>
+          {% endcase %}
+        {% endfor %}
+      </article>
+
+
+      <article id="questions" class="faq_article hide">
+        <h2 class="faq_article--title">Questions regarding our coffee shops</h2>
+        {% for block in section.blocks %}
+          {% case block.settings.category %}
+            {% when 'coffee_shops' %}
+              {% include "accordion" %}
+              <script type="text/javascript">
+                $('#questions').removeClass('hide');
+              </script>
+          {% endcase %}
+        {% endfor %}
+      </article>
+    </section>
+  </div>
+</div>
+
+
+<section class="more_questions">
+  <div class="container">
+    <div class="row">
+      <aside class="col-md-2"></aside>
+      <div class="col-md-10">
+        {% if section.settings.more_title != blank %}
+          <h2 class="more_questions--title">{{ section.settings.more_title }}</h2>
+        {% endif %}
+        {% if section.settings.more_desc != blank %}
+          <div class="more_questions--desc">{{ section.settings.more_desc }}</div>
+        {% endif %}
+        {% if section.settings.button_link %}
+          <a href="{{ section.settings.button_link }}" {% if section.settings.external %}target="_blank"{% endif %} aria-label="{{ section.settings.button_label }} Link" class="button btn-white" >
+            <!-- <button class="button" role="button" type="button" name="button" class="btn-white"> -->
+              {% if section.settings.button_label %}
+                {{ section.settings.button_label }}
+              {% else %}
+                MORE DETAILS
+              {% endif %}
+            <!-- </button> -->
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+  // Select all links with hashes
+  $('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top - 100
+        }, 100, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+</script>
+
+
+
+{% schema %}
+  {
+    "name": "FAQ",
+    "settings": [
+      {
+        "id": "title",
+        "type": "text",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "desc",
+        "label": "Description"
+      },
+      {
+        "id": "more_title",
+        "type": "text",
+        "label": "More Questions Title"
+      },
+      {
+        "type": "richtext",
+        "id": "more_desc",
+        "label": "More Questions Description"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "More Button label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "MOre Button link"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "accordion",
+        "name": "Accordion",
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "desc",
+            "label": "Description"
+          },
+          {
+             "type": "select",
+             "id": "category",
+             "label": "Category",
+             "options": [
+               {
+                 "group": "orders_returns",
+                 "value": "orders_returns",
+                 "label": "Orders & Returns"
+               },
+               {
+                 "group": "our_products",
+                 "value": "our_products",
+                 "label": "Our Products"
+               },
+               {
+                 "group": "our_company",
+                 "value": "our_company",
+                 "label": "Our Company"
+               },
+               {
+                 "group": "brew_better",
+                 "value": "brew_better",
+                 "label": "Brew Better"
+               },
+               {
+                 "group": "subscriptions",
+                 "value": "subscriptions",
+                 "label": "Subscriptions"
+               },
+               {
+                 "group": "sustainability",
+                 "value": "sustainability",
+                 "label": "Sustainability"
+               },
+               {
+                 "group": "coffee_shops",
+                 "value": "coffee_shops",
+                 "label": "Questions Regarding Our Coffee Shops"
+               }
+             ]
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

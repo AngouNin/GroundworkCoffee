@@ -1,0 +1,112 @@
+<section class="section-icons" style="background-color: {{ block.settings.bg_color }};">
+  <div class="container">
+    <div class="section-icons--title-container">
+      {% if block.settings.title != blank %}
+        <h4 class="section-icons--title">{{ block.settings.title }}</h4>
+      {% endif %}
+    </div>
+
+    <div class="row">
+        {% if block.settings.image_1 != blank %}
+          <div class="col-md section-icons--container {% if block.settings.external_link_1 == blank %}d-md-flex justify-content-center align-items-center{% endif %}"> 
+              {% assign image_1 = block.settings.image_1 %}
+
+              {% if block.settings.external_link_1 != blank %}
+                <a href="{{ block.settings.external_link_1 }}" aria-label="{{ image_1.alt }} Link" target="_blank" title="opens in a new window" class="d-md-flex justify-content-center align-items-center"> 
+              {% endif %}
+
+                {% include 'responsive-image' with image: image_1, image_class: "section-icons--icon", wrapper_class: "section-icons--icon-wrapper", max_width: 200 %}
+
+              {% if block.settings.external_link_1 != blank %}
+                </a>
+              {% endif %}
+          </div>
+        {% endif %}
+
+        {% if block.settings.image_2 != blank %}
+          <div class="col-md section-icons--container {% if block.settings.external_link_2 == blank %}d-md-flex justify-content-center align-items-center{% endif %}"> 
+            {% assign image_2 = block.settings.image_2 %}
+
+            {% if block.settings.external_link_2 != blank %}
+              <a href="{{ block.settings.external_link_2 }}" aria-label="Link" target="_blank" title="opens in a new window" class="d-md-flex justify-content-center align-items-center"> 
+            {% endif %}
+
+              {% include 'responsive-image' with image: image_2, image_class: "section-icons--icon", wrapper_class: "section-icons--icon-wrapper", max_width: 200 %}
+
+            {% if block.settings.external_link_2 != blank %}
+              </a>
+            {% endif %}
+
+          </div>
+        {% endif %}
+
+        {% if block.settings.image_3 != blank %}
+          <div class="col-md section-icons--container {% if block.settings.external_link_3 == blank %}d-md-flex justify-content-center align-items-center{% endif %}"> 
+            {% assign image_3 = block.settings.image_3 %}
+
+            {% if block.settings.external_link_3 != blank %}
+              <a href="{{ block.settings.external_link_3 }}" aria-label="Link" target="_blank" title="opens in a new window" class="d-md-flex justify-content-center align-items-center"> 
+            {% endif %}
+
+              {% include 'responsive-image' with image: image_3, image_class: "section-icons--icon", wrapper_class: "section-icons--icon-wrapper", max_width: 200 %}
+
+            {% if block.settings.external_link_3 != blank %}
+              </a>
+            {% endif %}
+
+          </div>
+        {% endif %}
+
+
+        {% if block.settings.image_4 != blank %}
+          <div class="col-md section-icons--container {% if block.settings.external_link_4 == blank %}d-md-flex justify-content-center align-items-center{% endif %}"> 
+            {% assign image_4 = block.settings.image_4 %}
+
+            {% if block.settings.external_link_4 != blank %}
+              <a href="{{ block.settings.external_link_4 }}" aria-label="Link" target="_blank" title="opens in a new window" class="d-md-flex justify-content-center align-items-center"> 
+            {% endif %}
+
+              {% include 'responsive-image' with image: image_4, image_class: "section-icons--icon", wrapper_class: "section-icons--icon-wrapper", max_width: 200 %}
+
+            {% if block.settings.external_link_4 != blank %}
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if block.settings.image_5 != blank %}
+          <div class="col-md section-icons--container {% if block.settings.external_link_5 == blank %}d-md-flex justify-content-center align-items-center{% endif %}"> 
+            {% assign image_5 = block.settings.image_5 %}
+
+            {% if block.settings.external_link_5 != blank %}
+              <a href="{{ block.settings.external_link_5 }}" aria-label="Link" target="_blank" title="opens in a new window" class="d-md-flex justify-content-center align-items-center"> 
+            {% endif %}
+
+              {% include 'responsive-image' with image: image_5, image_class: "section-icons--icon", wrapper_class: "section-icons--icon-wrapper", max_width: 200 %}
+
+            {% if block.settings.external_link_5 != blank %}
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+
+
+        {% if block.settings.image_6 != blank %}
+          <div class="col-md section-icons--container {% if block.settings.external_link_6 == blank %}d-md-flex justify-content-center align-items-center{% endif %}"> 
+            {% assign image_6 = block.settings.image_6 %}
+
+            {% if block.settings.external_link_6 != blank %}
+              <a href="{{ block.settings.external_link_6 }}" aria-label="Link" target="_blank" title="opens in a new window" class="d-md-flex justify-content-center align-items-center"> 
+            {% endif %}
+
+              {% include 'responsive-image' with image: image_6, image_class: "section-icons--icon", wrapper_class: "section-icons--icon-wrapper", max_width: 200 %}
+
+            {% if block.settings.external_link_6 != blank %}
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+
+    </div>
+  </div>
+</section>

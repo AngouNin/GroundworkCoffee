@@ -1,0 +1,109 @@
+<section class="search">
+  <div class="container">
+    {% paginate search.results by 10 %}
+    <header class="search--header-container">
+      <h1 class="search--title">
+        {% if search.performed %}
+          <span class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}:</span>
+            {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
+        {% else %}
+          {{ 'general.search.title' | t }}
+        {% endif %}
+      </h1>
+
+      <form action="/search" method="get" role="search">
+        <input type="hidden" name="type" value="product,collections,article">
+
+        <label for="Search" class="label-hidden">
+          {{ 'general.search.placeholder' | t }}
+        </label>
+        <input type="search"
+               name="q"
+               id="Search"
+               value="{{ search.terms | escape }}"
+               placeholder="{{ 'general.search.placeholder' | t }}">
+              <button aria-label="Submit Search Button" type="submit" class="button">
+                {% include 'icon-flower-small' %}
+              </button>
+      </form>
+    </header>
+
+
+      {% if search.performed %}
+        {% if search.results_count == 0 %}
+          <div class="no-results">
+            <p>{{ 'general.search.no_results_html' | t: terms: search.terms }}</p>
+          </div>
+        {% else %}
+          <h2 class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}</h2>
+          <div class="cols-3">
+            {% for item in search.results %}
+        
+                  
+              <div class="col-md search_item {% if item.tags contains 'hide' %} hide {% endif %}">
+                <a href="{{ item.url | within: collection }}">
+                  {% assign featured_image = item.image | default: item.featured_image %}
+                  {% if featured_image != blank %}
+                    <div class="lazyload search_item--image" data-bgset="{% include 'responsive-bg-image', image: featured_image %}"></div>
+                  {% else %}
+                    <div class="search_item--no-img d-flex justify-content-center align-items-center">
+                      {% include "icon-flower" %}
+                    </div>
+                  {% endif %}
+                  <h3 class="search_item--title">{{ item.title }}</h3>
+                </a>
+                {% if item.object_type == 'product' %}
+     
+                  
+                 
+
+                  <p class="search_item--price">
+                    <script>
+                      console.log( {{ item | json }} );
+
+                    </script>
+
+                    {%- unless item.tags contains 'hide-price' -%}
+                      {% if item.compare_at_price > item.price %}
+                        {% if item.price_varies %}
+                          {% assign sale_price = item.price | money %}
+                          {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                        {% else %}
+                          {{ 'products.product.on_sale' | t }}
+                          <span>{{ item.price | money }}</span>
+                        {% endif %}
+                        <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+                        <s>{{ item.compare_at_price | money }}</s>
+                      {% else %}
+                        {% if item.price_varies %}
+                          {% assign price = item.price | money %}
+                          <span>{{ 'products.product.from_text_html' | t: price: price }}</span>
+                        {% else %}
+                          <span>{{ item.price | money }}</span>
+                        {% endif %}
+                      {% endif %}
+                      {% unless item.available %}
+                      {{ 'products.product.sold_out' | t }}
+                      {% endunless %}
+                    {%- endunless -%}
+
+                    
+                  </p>
+                {% else %}
+
+                {% endif %}
+
+              </div>
+            {% endfor %}
+          </div>
+
+          {% if paginate.pages > 1 %}
+            {% include 'pagination' %}
+          {% endif %}
+        {% endif %}
+      {% endif %}
+
+    {% endpaginate %}
+  </div>
+
+</section>

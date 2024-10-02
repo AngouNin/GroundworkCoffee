@@ -1,0 +1,132 @@
+<section id="content-columns-{{ section.id }}">
+  <div class="container">
+    <div class="row">
+      <aside class="col-md-1 rela">
+        {% if section.settings.sub_title != blank %}
+          <h2 class="rotated-title">{{ section.settings.sub_title }}</h2>
+        {% endif %}
+      </aside>
+      <article class="col-md-11">
+        {% if section.settings.title != blank %}
+          <h3 class="content-columns__title h3-title">{{ section.settings.title | escape }}</h3>
+        {% endif %}
+
+        <div class="cols-3">
+          {% for block in section.blocks %}
+            <div class="content-columns__col">
+              
+              <div class="content-columns__col-2">
+                <div class="content-columns__icon">
+                  {{ block.settings.icon | img_url: '100x100' | img_tag: block.settings.title }}
+                </div>
+                <h4>{{ block.settings.title }}</h4>
+              </div>
+              <div class="content-columns__content content-columns__col-3">
+                {{ block.settings.content }}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="content-columns__btn-container">
+          {% if section.settings.btn_text != blank %}
+            <a href="{{ section.settings.btn_url }}" class="button btn-white">{{ section.settings.btn_text }}</a>
+          {% endif %}
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<style>
+  #content-columns-{{ section.id }} {
+    background-color: {{ section.settings.background_color }};
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Content Columns",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+        "id": "title",
+        "label": "Title",
+        "default": "Featured collection"
+    },
+    {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Subtitle"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#F1EEEA"
+    },
+    {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding top",
+        "default": 50
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding bottom",
+        "default": 50
+      }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Content",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        }
+      ]
+    }
+  ],
+  "presets": [
+      {
+        "name": "Content Columns"
+      }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,61 @@
+{% include "page-title" with  subtitle: section.settings.title, desc: section.settings.desc, no_h1: true %}
+
+<section class="perks">
+  <div class="container">
+    <div class="row">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'perk' %}
+            <div class="col-md perk">
+              <div class="perk--icon">
+                {% if block.settings.image != blank %}
+
+                  {% include 'responsive-image' with image: block.settings.image, image_class: "css-class", wrapper_class: "wrapper-css-class", max_width: 75, max_height: 60 %}
+                {% else %}
+                  {% include 'icon-step', step: forloop.index %}
+                {% endif %}
+              </div>
+
+              <p class="perk--title">{{ block.settings.title }}</p>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Fresh Perks",
+    "settings": [
+      {
+        "id": "title",
+        "type": "text",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "desc",
+        "label": "Description"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "perk",
+        "name": "Perks",
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

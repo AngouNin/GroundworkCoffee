@@ -1,0 +1,50 @@
+<section id="map">
+
+    <div class="container">
+        <div class="row">
+            <aside class="col-md-1 rela">
+                
+                {% if section.settings.sub_title != blank %}
+                <h2 class="rotated-title">{{ section.settings.sub_title }}</h2>
+                {% endif %}
+            
+            </aside>
+            <div class="col-md-11">
+                
+                {% if section.settings.title != blank %}
+                <h3 class="featured_subscriptions--title h3-title">{{ section.settings.title | escape }}</h3>
+                {% endif %}
+            
+            <div id="storepoint-container" data-map-id="1613bab8bcf835"></div><script>(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="https://cdn.storepoint.co/api/v1/js/1613bab8bcf835.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);}());</script>
+            <!-- <a href='http://mapply.net'>Dealer Locator Powered By Mapply</a> -->
+            </div>
+        </div>
+      </div>
+</section>
+
+  
+
+  {% schema %}
+  {
+    "name": "Map",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Pick up at your local market."
+      },
+      {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Subtitle"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Map",
+        "category": "Map"
+      }
+    ]
+  }
+{% endschema %}

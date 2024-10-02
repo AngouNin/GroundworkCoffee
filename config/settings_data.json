@@ -1,0 +1,2052 @@
+{
+  "current": {
+    "favicon": "shopify:\/\/shop_images\/flower-01.png",
+    "sections": {
+      "header": {
+        "type": "header",
+        "blocks": {
+          "announcement_weHGfU": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "desc": "<p><strong>Happy National Coffee Day<\/strong>!  Take 20% Off All Coffees - Today Only! <strong>Use Code COFFEEDAY24 <\/strong>at checkout<\/p>",
+              "announcement_bar_link": ""
+            }
+          },
+          "announcement_TBmwqh": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "desc": "",
+              "announcement_bar_link": ""
+            }
+          },
+          "announcement_3TRBwt": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "desc": "",
+              "announcement_bar_link": ""
+            }
+          },
+          "09be9e14-15ac-4019-acc6-f8a9a3af0707": {
+            "type": "announcement",
+            "settings": {
+              "desc": "<p><strong>Seasonal Select<\/strong> <strong>Supernatural is BACK!<\/strong> But not for long.<strong> <\/strong><a href=\"https:\/\/www.groundworkcoffee.com\/products\/seasonal-select-supernatural\" title=\"https:\/\/www.groundworkcoffee.com\/products\/seasonal-select-supernatural\"><strong>Shop Now.<\/strong><\/a><\/p>",
+              "announcement_bar_link": "https:\/\/www.groundworkcoffee.com\/products\/seasonal-select-supernatural"
+            }
+          },
+          "announcement_bFF3mX": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "desc": "<p><strong>Stock Up for Back-to-School! <\/strong>Use code <strong>COOL4SCHOOL<\/strong> for 20% off. Valid until 8\/4.<\/p>",
+              "announcement_bar_link": "shopify:\/\/collections\/organic-coffee"
+            }
+          },
+          "013feca9-5b63-4139-b061-6c1cbf524b0b": {
+            "type": "announcement",
+            "settings": {
+              "desc": "<p><strong>New coffees are here. <\/strong>Join the Regenerative Revolution with us.<strong> <\/strong><a href=\"https:\/\/www.groundworkcoffee.com\/pages\/regenerative-organic\" target=\"_blank\" title=\"https:\/\/www.groundworkcoffee.com\/pages\/regenerative-organic\"><strong>Shop ROC<\/strong>®<\/a><\/p>",
+              "announcement_bar_link": "https:\/\/www.groundworkcoffee.com\/pages\/regenerative-organic"
+            }
+          },
+          "4f8ba383-0b96-44ca-8ed4-77addcec7ddd": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "desc": "<p><strong>BOGO Is BACK! <\/strong>Buy one, get one 50% off all 5lb bags. Use code <strong>BOGO5<\/strong> at checkout.<a href=\"https:\/\/www.groundworkcoffee.com\/collections\/organic-coffee\/size-5-lb\" title=\"https:\/\/www.groundworkcoffee.com\/collections\/organic-coffee\/size-5-lb\"> <strong>Shop Now.<\/strong><\/a><\/p>",
+              "announcement_bar_link": "https:\/\/www.groundworkcoffee.com\/collections\/organic-coffee\/size-5-lb"
+            }
+          },
+          "f33463c9-70d7-42da-af13-a46561cd7aea": {
+            "type": "announcement",
+            "settings": {
+              "desc": "<p>One and done.  <a href=\"https:\/\/www.groundworkcoffee.com\/collections\/subscriptions\" title=\"https:\/\/www.groundworkcoffee.com\/collections\/subscriptions\"><strong>Shop Subscriptions.<\/strong><\/a><\/p>",
+              "announcement_bar_link": "https:\/\/www.groundworkcoffee.com\/collections\/subscriptions"
+            }
+          },
+          "9ab742e7-35af-4283-b4de-d174e3c2e1f1": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "desc": "<p>We're so proud to announce the launch of the first<strong> Regenerative Organic Certified Coffee<\/strong>. <a href=\"https:\/\/www.groundworkcoffee.com\/products\/regenerative-organic-certified-nicaragua-cooperativa-sacacli\" target=\"_blank\" title=\"https:\/\/www.groundworkcoffee.com\/products\/regenerative-organic-certified-nicaragua\">Shop Now.<\/a><\/p>",
+              "announcement_bar_link": "https:\/\/www.groundworkcoffee.com\/pages\/launch-of-regenerative-organic-certified-coffee"
+            }
+          },
+          "a98210ed-4017-4ae5-968f-f5a5b66156f5": {
+            "type": "announcement",
+            "settings": {
+              "desc": "<p><strong>We're Certified B Corp!<\/strong> <a href=\"https:\/\/www.groundworkcoffee.com\/blogs\/learn\/groundwork-is-officially-a-certified-b-corp\" title=\"https:\/\/www.groundworkcoffee.com\/blogs\/learn\/groundwork-is-officially-a-certified-b-corp\">Learn More.<\/a><\/p>",
+              "announcement_bar_link": "https:\/\/www.groundworkcoffee.com\/blogs\/learn\/groundwork-is-officially-a-certified-b-corp"
+            }
+          },
+          "3f01f01d-0960-4e5a-976f-37f545f9273e": {
+            "type": "announcement",
+            "settings": {
+              "desc": "<p><strong>Free Shipping on Orders over $50.<\/strong> <\/p>",
+              "announcement_bar_link": "shopify:\/\/collections\/all"
+            }
+          }
+        },
+        "block_order": [
+          "announcement_weHGfU",
+          "announcement_TBmwqh",
+          "announcement_3TRBwt",
+          "09be9e14-15ac-4019-acc6-f8a9a3af0707",
+          "announcement_bFF3mX",
+          "013feca9-5b63-4139-b061-6c1cbf524b0b",
+          "4f8ba383-0b96-44ca-8ed4-77addcec7ddd",
+          "f33463c9-70d7-42da-af13-a46561cd7aea",
+          "9ab742e7-35af-4283-b4de-d174e3c2e1f1",
+          "a98210ed-4017-4ae5-968f-f5a5b66156f5",
+          "3f01f01d-0960-4e5a-976f-37f545f9273e"
+        ],
+        "settings": {
+          "announcement_bar_enabled": true,
+          "logo_max_width": 250,
+          "menu": "ludlow-main"
+        }
+      },
+      "newsletter": {
+        "type": "newsletter",
+        "settings": {
+          "section_title": "Meet you at your inbox!",
+          "subheading": "Exclusive discounts, first access to seasonal selects, and more!",
+          "image": "shopify:\/\/shop_images\/computer_2x_831x_c7e2b324-ac40-431b-b17b-f3123f533b80.png",
+          "list_id": "RQsWVe",
+          "success": "Thank you for subscribing! Check your email for a confirmation message."
+        }
+      },
+      "template-footer": {
+        "type": "template-footer",
+        "settings": {
+          "footer_linklist": "footer-menu-left",
+          "footer_linklist_right": "footer-menu-right"
+        }
+      },
+      "1622233552d8efa6f7": {
+        "type": "image-text-slider",
+        "blocks": {
+          "5496f49c-f7a8-4133-b2e5-1fd10701f313": {
+            "type": "slide",
+            "settings": {
+              "title": "Halloween Fav: Witches Brew",
+              "desc": "<p>Just in time for Halloween! A spooky variation of our most popular blend. <br\/><br\/>Available for a limited time.<\/p>",
+              "image": "shopify:\/\/shop_images\/TDAVIS_Groundwork761_copy.jpg",
+              "layout": "left",
+              "button_label": "Shop Witches Brew",
+              "button_link": "shopify:\/\/products\/witches-brew"
+            }
+          },
+          "aa2d9f56-8fa9-4d17-a948-16c30622f451": {
+            "type": "slide",
+            "settings": {
+              "title": "New Regenerative Organic Coffees",
+              "desc": "<p>As a part of our commitment to the planet's long-term health, we have embarked on an exciting initiative to source new Regenerative Organic Certified® coffees.<\/p>",
+              "image": "shopify:\/\/shop_images\/rocaquae.jpg",
+              "layout": "left",
+              "button_label": "Shop Regen Coffees",
+              "button_link": "https:\/\/www.groundworkcoffee.com\/collections\/organic-coffee\/type-Regenerative-Organic-Certified"
+            }
+          },
+          "bd17f355-e8b3-4bcd-b947-a438a0e47ccc": {
+            "type": "slide",
+            "settings": {
+              "title": "Best-Sellers Coffee Bundle",
+              "desc": "<p>Finally- our first bundle that includes three of our best-selling, Certified Organic coffees at a discounted price.<\/p>",
+              "image": "shopify:\/\/shop_images\/TDAVIS_Groundwork_June606_copy_1_-2.jpg",
+              "layout": "left",
+              "button_label": "Shop Now",
+              "button_link": "https:\/\/www.groundworkcoffee.com\/products\/best-sellers-coffee-bundle"
+            }
+          },
+          "9ffb74bd-3190-460d-b2b6-a15786149d7d": {
+            "type": "slide",
+            "disabled": true,
+            "settings": {
+              "title": "BOGO 50% off.",
+              "desc": "<p>Buy one, get one 50% off all 2lb bags! <\/p><p>Use promo code <strong>GWBOGO <\/strong>at checkout after adding two 2lb bags to your cart.<\/p><p>Valid until 8\/26.<\/p>",
+              "image": "shopify:\/\/shop_images\/Email_2310_BOGO_2LB_Bags-02.jpg",
+              "layout": "left",
+              "button_label": "Stock Up",
+              "button_link": "https:\/\/www.groundworkcoffee.com\/collections\/organic-coffee\/size-2-lb"
+            }
+          },
+          "ebc4a6c4-0da4-442d-8589-6041073f9bdb": {
+            "type": "slide",
+            "settings": {
+              "title": "Brewing Bundles",
+              "desc": "<p>Your home coffee brewing journey starts here. <\/p><p>Our bundles include everything you need to make a perfect cup at home.<\/p>",
+              "image": "shopify:\/\/shop_images\/Untitled_design_7.png",
+              "layout": "left",
+              "button_label": "Shop Brewing Bundles",
+              "button_link": "https:\/\/www.groundworkcoffee.com\/collections\/good-goods\/type-bundles"
+            }
+          },
+          "6f9ee298-edcf-4018-b3d4-a4345651df45": {
+            "type": "slide",
+            "disabled": true,
+            "settings": {
+              "title": "Free 2oz Coffee Sample",
+              "desc": "<p>Use code <strong>GWSAMPLE50<\/strong> to claim a free 2oz sample with every $50 purchase. Valid until 6\/27.<\/p><p>Cannot be combined with any other discounts.<\/p>",
+              "image": "shopify:\/\/shop_images\/sample_bags.jpg",
+              "layout": "left",
+              "button_label": "Explore Samples",
+              "button_link": "https:\/\/www.groundworkcoffee.com\/products\/2oz-coffee-sample"
+            }
+          },
+          "85dfa4c4-e67b-4a7a-a18e-de0256db7bde": {
+            "type": "slide",
+            "disabled": true,
+            "settings": {
+              "title": "20% off sitewide.",
+              "desc": "<p>Shop our biggest sale yet. Take 20% off with promo code <strong>MONDAY20<\/strong> at checkout. <\/p><p>Valid only until 5\/27.<\/p>",
+              "image": "shopify:\/\/shop_images\/TDAVIS_Groundwork_June403_copy.png",
+              "layout": "left",
+              "button_label": "Stock up",
+              "button_link": "shopify:\/\/collections\/organic-coffee"
+            }
+          },
+          "a19df98b-4e77-4b14-81c7-9938c6de7698": {
+            "type": "slide",
+            "disabled": true,
+            "settings": {
+              "title": "Golden Hour is here.",
+              "desc": "<p>Introducing Golden Hour, our Seasonal Select Coffee for summer. This medium roast boasts notes of brown sugar and white peach, delivering a refreshing taste that embodies the essence of the season. <\/p><p>Available while supplies last.<\/p>",
+              "image": "shopify:\/\/shop_images\/birthday_invitation-3.png",
+              "layout": "left",
+              "button_label": "Shop Golden Hour",
+              "button_link": "https:\/\/www.groundworkcoffee.com\/products\/seasonal-select-organic-golden-hour"
+            }
+          },
+          "faaa37a7-b161-4e95-a290-b5212df87495": {
+            "type": "slide",
+            "disabled": true,
+            "settings": {
+              "title": "Quality Award Winners",
+              "desc": "<p>A delicious, chocolatey Colombian coffee that balances the sweet tartness of a spring strawberry with a soft and smooth, full bodied finish.<\/p><p>Online Exclusive. While supplies last.<\/p>",
+              "image": "shopify:\/\/shop_images\/Untitled_design-6.png",
+              "layout": "left",
+              "button_label": "Shop Dos Granjeras",
+              "button_link": "https:\/\/www.groundworkcoffee.com\/products\/dos-granjeras-1"
+            }
+          },
+          "f15841a7-e78f-464d-8f75-88e0c9631528": {
+            "type": "slide",
+            "disabled": true,
+            "settings": {
+              "title": "Celebrating Women of AMUCC",
+              "desc": "<p>We're proud to announce our 2023 Quality Award Winning Dos Granjeras.<br\/><br\/>Available online only. While supplies last.<\/p>",
+              "image": "shopify:\/\/shop_images\/12OZ_SingleOrigin_Secondary_DosGranjeras_2.jpg",
+              "layout": "left",
+              "button_label": "Shop Dos Granjeras",
+              "button_link": "https:\/\/www.groundworkcoffee.com\/products\/dos-granjeras-1"
+            }
+          },
+          "c944cd3d-1cb9-4f11-8a46-48a30f816518": {
+            "type": "slide",
+            "disabled": true,
+            "settings": {
+              "title": "Regenerative Organic Certified®",
+              "desc": "<p>Regenerative Organic Certified®, builds upon the legacy of the organic movement by promoting holistic agriculture practices in an all-encompassing certification.<\/p>",
+              "image": "shopify:\/\/shop_images\/Groundwork_EarthMonth.png",
+              "layout": "left",
+              "button_label": "Shop Regenerative Organic Certified®",
+              "button_link": "https:\/\/www.groundworkcoffee.com\/products\/regenerative-organic-certified-nicaragua-cooperativa-sacacli"
+            }
+          },
+          "50cb236f-34b4-41a5-87ee-9e20542f9847": {
+            "type": "slide",
+            "disabled": true,
+            "settings": {
+              "title": "Limited Reserve Mexico",
+              "desc": "<p>Experience this year's crop of our most popular Limited Reserve Julia Ortega Carballo.<br\/>Available while supplies last.<\/p>",
+              "image": "shopify:\/\/shop_images\/TDAVIS_Groundworks724_copy-2.jpg",
+              "layout": "left",
+              "button_label": "Order Today",
+              "button_link": "https:\/\/www.groundworkcoffee.com\/products\/limited-reserve-organic-mexico-julia-ortega-carballo"
+            }
+          },
+          "1c25e952-f194-4d25-ac08-0210b776a3ee": {
+            "type": "slide",
+            "settings": {
+              "title": "A gift that keeps on giving.",
+              "desc": "<p>Be the best friend, family member, or coworker by giving a subscription to a pal. Choose the length of time, and we’ll make sure they love each Groundwork delivery.<\/p>",
+              "image": "shopify:\/\/shop_images\/4.png",
+              "layout": "left",
+              "button_label": "Gift Subscription",
+              "button_link": "https:\/\/www.groundworkcoffee.com\/products\/greatest-gift"
+            }
+          },
+          "c592af93-f580-4a9f-ba9c-de797076dc5d": {
+            "type": "slide",
+            "settings": {
+              "title": "We're Certified B Corp!",
+              "desc": "<p>B Corp™ Certification is a promise that a company is doing business in a way that meets rigorous standards of verified performance, transparency and accountability.<\/p>",
+              "image": "shopify:\/\/shop_images\/Digital_2209_Social_Posts-2.jpg",
+              "layout": "left",
+              "button_label": "Learn More",
+              "button_link": "https:\/\/www.groundworkcoffee.com\/blogs\/learn\/groundwork-is-officially-a-certified-b-corp"
+            }
+          },
+          "017ef908-8d3f-4371-aa56-9c8b7501f091": {
+            "type": "slide",
+            "settings": {
+              "title": "Organic Matters",
+              "desc": "<p>Clean products mean clean environments for farmers at origin—from the land they live on to the water they drink.<\/p>",
+              "image": "shopify:\/\/shop_images\/5_23e7e5ab-0b09-4ade-9276-7c5f67999c86.png",
+              "layout": "left",
+              "button_label": "Why Organic",
+              "button_link": "https:\/\/www.groundworkcoffee.com\/blogs\/learn\/organic-matters"
+            }
+          },
+          "e44460ab-b126-47c7-94e5-46622ab763de": {
+            "type": "slide",
+            "disabled": true,
+            "settings": {
+              "title": "Same great coffee. Brand new look.",
+              "desc": "<p>We’ve been working hard behind the scenes to bring you a whole new Groundwork experience that better reflects our Southern California roots, focus on sustainability, and commitment to community. <\/p>",
+              "image": "shopify:\/\/shop_images\/Groundwork_Bags1844-2.jpg",
+              "layout": "left",
+              "button_label": "More About Our Refresh",
+              "button_link": "shopify:\/\/blogs\/news\/a-refreshed-brand-to-match-our-best-in-class-coffee"
+            }
+          }
+        },
+        "block_order": [
+          "5496f49c-f7a8-4133-b2e5-1fd10701f313",
+          "aa2d9f56-8fa9-4d17-a948-16c30622f451",
+          "bd17f355-e8b3-4bcd-b947-a438a0e47ccc",
+          "9ffb74bd-3190-460d-b2b6-a15786149d7d",
+          "ebc4a6c4-0da4-442d-8589-6041073f9bdb",
+          "6f9ee298-edcf-4018-b3d4-a4345651df45",
+          "85dfa4c4-e67b-4a7a-a18e-de0256db7bde",
+          "a19df98b-4e77-4b14-81c7-9938c6de7698",
+          "faaa37a7-b161-4e95-a290-b5212df87495",
+          "f15841a7-e78f-464d-8f75-88e0c9631528",
+          "c944cd3d-1cb9-4f11-8a46-48a30f816518",
+          "50cb236f-34b4-41a5-87ee-9e20542f9847",
+          "1c25e952-f194-4d25-ac08-0210b776a3ee",
+          "c592af93-f580-4a9f-ba9c-de797076dc5d",
+          "017ef908-8d3f-4371-aa56-9c8b7501f091",
+          "e44460ab-b126-47c7-94e5-46622ab763de"
+        ],
+        "settings": {}
+      },
+      "16222336297b5b35dc": {
+        "type": "featured-collection",
+        "settings": {
+          "title": "Certified Organic. Always and forever.",
+          "sub_title": "SIP",
+          "collection": "best-sellers",
+          "products_to_show": 6,
+          "custom_dark_bg": false
+        }
+      },
+      "162223412033a2fd6b": {
+        "type": "visit-groundwork",
+        "settings": {
+          "sub_title": "VISIT",
+          "title": "Stop by a  neighborhood shop.",
+          "desc": "",
+          "order_label": "ORDER AHEAD",
+          "order_link": "https:\/\/order.toasttab.com\/online\/locations\/9bdc91af-51dd-4e2c-a687-34a2f294dabc#!\/",
+          "find_label": "Find a Cafe Near you",
+          "find_link": "https:\/\/www.groundworkcoffee.com\/pages\/locations-1",
+          "image": "shopify:\/\/shop_images\/visit_2x_900x_900x_6f9d3cc2-6ce4-4416-bf36-b9d9c2bf42aa.png",
+          "image_label": "Our Rose Ave.  Venice location",
+          "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1b2bbf3324f14a74bdde2ed2479c701e.mp4",
+          "floating_image": "shopify:\/\/shop_images\/GW-earth-graphic-loop-small.gif",
+          "rotating_txt": "talkin' 'bout the sea and the sky \/ and i'm talkin' bout' you and i \/ the sea, the sky \/ for you and i \/"
+        }
+      },
+      "1622234191c2bf9a2c": {
+        "type": "slide-with-scroll",
+        "blocks": {
+          "4c84c1c2-7e34-4463-8621-4a061d043405": {
+            "type": "slide",
+            "settings": {
+              "title": "",
+              "article": "brew-guides\/chemex",
+              "product": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "1d078c44-a0b9-47be-9c94-bb4dd080aa22": {
+            "type": "slide",
+            "settings": {
+              "title": "",
+              "article": "brew-guides\/hario-v60",
+              "product": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "bcc4db51-f13c-426d-a891-30472f80bbb4": {
+            "type": "slide",
+            "settings": {
+              "title": "",
+              "article": "brew-guides\/cold-brew",
+              "product": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "0124f6c9-2cbd-4b68-b659-a37c9cf4cf4b": {
+            "type": "slide",
+            "settings": {
+              "title": "",
+              "article": "brew-guides\/french-press",
+              "product": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "713eff54-22c7-467c-9e14-0860534f8d18": {
+            "type": "slide",
+            "settings": {
+              "title": "",
+              "article": "brew-guides\/aeropress",
+              "product": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "9d50e26a-45e4-4454-857b-b4680aec7cf8": {
+            "type": "slide",
+            "settings": {
+              "title": "",
+              "article": "brew-guides\/loose-leaf-tea",
+              "product": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "4c84c1c2-7e34-4463-8621-4a061d043405",
+          "1d078c44-a0b9-47be-9c94-bb4dd080aa22",
+          "bcc4db51-f13c-426d-a891-30472f80bbb4",
+          "0124f6c9-2cbd-4b68-b659-a37c9cf4cf4b",
+          "713eff54-22c7-467c-9e14-0860534f8d18",
+          "9d50e26a-45e4-4454-857b-b4680aec7cf8"
+        ],
+        "settings": {
+          "title": "Get started with these how-to coffee guides.",
+          "sub_title": "LEARN"
+        }
+      },
+      "1622234262199ae01c": {
+        "type": "featured-subscription",
+        "settings": {
+          "title": "Fresh roasts right to your door.",
+          "sub_title": "SUBSCRIBE",
+          "floating_note": "Stay home. Stay safe!",
+          "collection": "home-page-subscriptions"
+        }
+      },
+      "16222342969785edde": {
+        "type": "slide-with-scroll",
+        "blocks": {
+          "f1e4b5a6-7dda-4b4a-b1b4-9b2a0c99ab8c": {
+            "type": "slide",
+            "settings": {
+              "title": "",
+              "article": "",
+              "product": "bitches-brew",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "39df0468-e337-4cc4-9d69-a76943b60ead": {
+            "type": "slide",
+            "settings": {
+              "title": "",
+              "article": "",
+              "product": "ethiopia-heirloom-blend-organic-single-origin-coffee",
+              "button_label": "",
+              "button_link": "https:\/\/www.groundworkcoffee.com\/products\/ethiopia-heirloom-blend-organic-single-origin-coffee"
+            }
+          },
+          "ea620a4d-9e22-40a7-bca8-3445766ae8fb": {
+            "type": "slide",
+            "settings": {
+              "title": "",
+              "article": "",
+              "product": "black-gold",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "ce3cd1bf-6772-4009-b522-79d3b5afeb8c": {
+            "type": "slide",
+            "settings": {
+              "title": "",
+              "article": "",
+              "product": "cold-brew-blend",
+              "button_label": "",
+              "button_link": "https:\/\/www.groundworkcoffee.com\/products\/cold-brew-blend"
+            }
+          },
+          "639f8c0e-247a-403d-9c9d-5acb028580f0": {
+            "type": "slide",
+            "settings": {
+              "title": "",
+              "article": "",
+              "product": "angel-city",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "f1e4b5a6-7dda-4b4a-b1b4-9b2a0c99ab8c",
+          "39df0468-e337-4cc4-9d69-a76943b60ead",
+          "ea620a4d-9e22-40a7-bca8-3445766ae8fb",
+          "ce3cd1bf-6772-4009-b522-79d3b5afeb8c",
+          "639f8c0e-247a-403d-9c9d-5acb028580f0"
+        ],
+        "settings": {
+          "title": "Only the best",
+          "sub_title": "SHOP"
+        }
+      },
+      "collections": {
+        "type": "collections",
+        "settings": {
+          "title": "Same great coffee. Brand new look.",
+          "desc": "",
+          "sale_collection": "flash-sale"
+        }
+      },
+      "page-locations-heading": {
+        "type": "page-locations-heading",
+        "settings": {
+          "title": "LOCATIONS",
+          "subtitle": "Energizing the neighborhood.",
+          "desc": "<p>Stop by and experience the Groundwork difference IRL. <\/p><p><a href=\"https:\/\/www.groundworkcoffee.com\/pages\/catering\" target=\"_blank\" title=\"https:\/\/www.groundworkcoffee.com\/pages\/catering\">Need catering? <\/a>Groundwork has got you covered. <\/p>"
+        }
+      },
+      "page-locations-content": {
+        "type": "page-locations-content",
+        "blocks": {
+          "48dc3a3b-8036-4d97-916d-03966caefc34": {
+            "type": "location",
+            "settings": {
+              "title": "Venice",
+              "service": "BRUNCH + PASTRIES",
+              "flagship": true,
+              "image": "shopify:\/\/shop_images\/venice.png",
+              "button_label": "ORDER AHEAD",
+              "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-company-rose-671-rose-ave-ca",
+              "store_details": "<p><strong>Café Hours<\/strong><\/p><p>Mon - Fri: 6:00 a.m. - 4:00 p.m.<\/p><p>Sat - Sun: 6:00 a.m. - 5:00 p.m.<\/p><p><br\/><strong>Kitchen Hours<\/strong><\/p><p>Mon - Fri: 6:00 a.m. - 3:00 p.m.<\/p><p>Sat - Sun: 6:00 a.m. - 4:00 p.m.<\/p><p><strong>671 Rose Ave.<br\/>Venice, CA 90291<\/strong><br\/>(310) 664-8830<br\/>rose@groundworkcoffee.com<br\/><br\/>Legend has it that this turn-of-the-century brick building was constructed with a horse stable to accommodate L.A.'s thriving carriage trade. In the ’50s, the Wolff family purchased the property and started a catering business. In 1991, Groundwork leased the building and installed its first coffee roaster under an old oven hood. For the next ten years, we continued to roast coffee in the space.<br\/><br\/><\/p>",
+              "city": "los_angeles"
+            }
+          },
+          "858e196e-c487-476b-89e5-63437a001f04": {
+            "type": "location",
+            "settings": {
+              "title": "Noho Historic train depot",
+              "service": "BRUNCH + PASTRIES",
+              "flagship": false,
+              "image": "shopify:\/\/shop_images\/NOHO_360x_16b76fcc-ea36-4b7e-8fbb-f01e3e7c528a.png",
+              "button_label": "ORDER AHEAD",
+              "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-company-noho\/",
+              "store_details": "<p><strong>Café Hours<\/strong><\/p><p>6:30 a.m. - 4:00 p.m.<\/p><p><br\/><strong>Kitchen Hours<\/strong><\/p><p>7:00 a.m. - 2:00 p.m.<\/p><p><\/p><p><strong>11275 Chandler Blvd.,<br\/>North Hollywood, CA 91601<\/strong><br\/>(818) 423-2626<br\/>northhollywood@groundworkcoffee.com<br\/><br\/>Built into the North Hollywood Historic Train Depot as part of the restoration of this registered State Historic Landmark Building, this cafe brings back to life a longtime hub of the neighborhood. Built in the early 1890s, the depot is situated at the intersection of the Red Line and Orange Bus Line — two of the city’s most-traveled public transportation routes. It’s a warm, welcoming venue where residents and commuters can enjoy one of life’s simple pleasures: a delicious cup of coffee and good company.<br\/><br\/><\/p>",
+              "city": "los_angeles"
+            }
+          },
+          "6ac43df7-843b-4a51-a2d8-8d472b232217": {
+            "type": "location",
+            "settings": {
+              "title": "DTLA Arts District",
+              "service": "BRUNCH + PASTRIES",
+              "flagship": false,
+              "image": "shopify:\/\/shop_images\/TRACTION_360x_f73996a9-ff84-4bbb-bbf7-9ecc313d93ae.png",
+              "button_label": "Order Ahead",
+              "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-company-traction-811-traction-ave",
+              "store_details": "<p><strong>Café Hours<\/strong><\/p><p>6:00 a.m. - 3:00 p.m.<\/p><p><br\/><strong>Kitchen Hours<\/strong><\/p><p>7:00 a.m. - 3:00 p.m.<\/p><p><\/p><p><\/p><p><strong>811 Traction Ave.<br\/>Los Angeles, CA 90013<\/strong><br\/>(213) 626-6060<\/p><p>traction@groundworkcoffee.com<br\/><br\/>Groundwork is proud to be a part of the vibrant Downtown Arts District. Our Traction Ave. café offers all of your favorite handcrafted organic coffee drinks, plus an expanded food menu featuring wholesome and delicious house-made baked goods, salads, sandwiches, and more. Just as importantly, it’s within walking distance of the Metro Gold Line’s Little Tokyo\/Arts District stop and pretty much anything you’d want to do with your day or night.<br\/><br\/><\/p>",
+              "city": "los_angeles"
+            }
+          },
+          "493571eb-d00d-4eb7-b981-122dae0892ee": {
+            "type": "location",
+            "settings": {
+              "title": "Larchmont Village",
+              "service": "BRUNCH + PASTRIES",
+              "flagship": false,
+              "image": "shopify:\/\/shop_images\/larchmont_360x_6c53c6ae-9b34-45ed-bf29-08f0df68847f.png",
+              "button_label": "Order ahead",
+              "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-company-larchmont-150-n-larchmont-blvd\/v3",
+              "store_details": "<p><strong>Café Hours<\/strong><\/p><p>6:30 a.m. - 5:00 p.m.<br\/><\/p><p><strong>Kitchen Hours<\/strong><\/p><p>6:30 a.m. - 3:00 p.m.<\/p><p><\/p><p><\/p><p><strong>150 N Larchmont Blvd.<br\/>Los Angeles, CA 90004<\/strong><\/p><p>(323) 843-4920<\/p><p>larchmont@groundworkcoffee.com<\/p><p><\/p><p>Groundwork is proudly pouring coffee in one of L.A.'s most iconic neighborhoods, Larchmont Village. In addition to offering all of the handcrafted organic coffee drinks you've come to know and love, we're serving delicious house-made baked goods, nutritious grab & go items, plus a full made-to-order menu (Bitches Brew Hash, anyone?). When you're shopping and strolling your way through the area, stop by and treat yourself to an L.A. classic.<\/p><p><\/p><p><\/p>",
+              "city": "los_angeles"
+            }
+          },
+          "a408ca3b-24de-4ace-a68e-7b7d25afda8d": {
+            "type": "location",
+            "settings": {
+              "title": "Santa Monica",
+              "service": "Quick Bites",
+              "flagship": false,
+              "image": "shopify:\/\/shop_images\/MAIN-v2_360x_000735d6-6cd6-4a68-9bdd-9f15328ba17a.png",
+              "button_label": "Order Ahead",
+              "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-company-main-street-2908-main-street",
+              "store_details": "<p><strong>Café Hours<\/strong><\/p><p>6:30 a.m. - 4:00 p.m.<\/p><p><strong>Kitchen Hours<\/strong><\/p><p>Mon-Fri: 6:30 a.m. - 3:30 p.m.<\/p><p><strong>2908 Main St.<br\/>Santa Monica, CA 90405<\/strong><\/p><p>(310) 452-8925<\/p><p>mainstreet@groundworkcoffee.com<\/p><p><\/p><p>Measuring in at a mere 8 feet wide x 35 feet long, this improbable space is home to one of Groundwork’s most interesting coffeehouses — short on size, but big on charm. We packed every square-inch with organic coffees, teas, and house-made baked goods. Check out the art wall — you can’t help but get a close look.<\/p><p><\/p>",
+              "city": "los_angeles"
+            }
+          },
+          "0404d21f-f2c6-489c-8774-1469879b9c0f": {
+            "type": "location",
+            "settings": {
+              "title": "Hollywood",
+              "service": "BRUNCH + PASTRIES",
+              "flagship": false,
+              "image": "shopify:\/\/shop_images\/HOLLYWOOD_360x_b085eebb-c547-4699-b323-be20a3737580.png",
+              "button_label": "Order Ahead",
+              "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-company-hollywood-1501-n-cahuenga-blvd",
+              "store_details": "<p><strong>Café Hours<\/strong><\/p><p>7:00 a.m. - 4:00 p.m.<\/p><p><strong>Kitchen Hours<\/strong><\/p><p>7:30 a.m. - 3:00 p.m.<\/p><p><\/p><p><strong>1501 North Cahuenga Blvd.<br\/>Hollywood, CA 90028<\/strong><\/p><p>(323) 871-0143<\/p><p>hollywood@groundworkcoffee.com<\/p><p><\/p><p>Originally built for Wells Fargo Bank, this location is one of the oldest multistory buildings in Hollywood. At one time or another, it saw use as a hair salon, drugstore, and advertising agency, prior to its latest incarnation as a Groundwork coffeehouse. (Yes, we’re still looking for the vault. If you have any information, please contact us.)<\/p>",
+              "city": "los_angeles"
+            }
+          },
+          "f083538d-51ca-414e-b317-5f07aab528e6": {
+            "type": "location",
+            "settings": {
+              "title": "Venice Boardwalk",
+              "service": "Quick Bites",
+              "flagship": false,
+              "image": "shopify:\/\/shop_images\/ANNEX_360x_f63dbe14-b4cb-4c8a-bc32-4e2e0a0d77c7.png",
+              "button_label": "Order Ahead",
+              "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-annex-westminster-3-westminster",
+              "store_details": "<p><strong>Café Hours<\/strong><\/p><p>Mon - Sun: 7:00 a.m. - 4:00 p.m.<\/p><p><\/p><p><strong>3 Westminster Ave.<br\/>Venice, CA 90291<\/strong><\/p><p>(310) 450-4540<\/p><p>annex@groundworkcoffee.com<\/p><p><\/p><p>Fascinating tidbit: This historic structure houses one of the earliest elevators installed west of the Mississippi. The sliding-cage contraption is still in operation and carries tenants all the way up to three rooftop apartments, which offer incredible views of the beach and boardwalk.<\/p>",
+              "city": "los_angeles"
+            }
+          },
+          "b0abf02b-6bfc-49dd-ac8e-aa715ee2ba33": {
+            "type": "location",
+            "settings": {
+              "title": "Beverly Grove on 3rd",
+              "service": "Quick Bites",
+              "flagship": false,
+              "image": "shopify:\/\/shop_images\/groundwork_locations_photofilter.png",
+              "button_label": "Order Ahead",
+              "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-3rd-street-8121-w-3rd-street",
+              "store_details": "<p><strong>Café Hours<\/strong><\/p><p>Mon - Sun: 7:00 a.m. - 3:00 p.m.<\/p><p><\/p><p><strong>8121 W 3rd St.<\/strong><br\/><strong>Los Angeles, CA 90048<\/strong><\/p><p>(323) 892-0587<\/p><p>3rd@groundworkcoffee.com<\/p><p><\/p><p>We’re no strangers to the Beverly Grove area, but this time we’re not just serving up your favorite coffees and tea – we’re also offering our full made-to-order brunch menu every day of the week. Whether you’re cruising 3rd to do some shopping or Groundwork is your new daily coffee spot, we can’t wait for you to stop by.<\/p>",
+              "city": "los_angeles"
+            }
+          },
+          "334cf554-b891-49e8-bc33-b9843a4e3bfe": {
+            "type": "location",
+            "disabled": true,
+            "settings": {
+              "title": "North Hollywood Roastery",
+              "service": "Roastery",
+              "flagship": false,
+              "image": "shopify:\/\/shop_images\/groundwork_locations_Noho_Roasterpng.png",
+              "button_label": "",
+              "button_link": "",
+              "store_details": "<p><strong>Hours<\/strong><\/p><p>Mon - Fri: 9:30 a.m. - 4:00 p.m.<\/p><p>Sat - Sun: Closed<\/p><p><\/p><p><strong>5457 Cleon Ave.<\/strong><br\/><strong>North Hollywood, CA 91601<\/strong><\/p><p>(818) 506-6020<\/p><p>orders@groundworkcoffee.com<\/p><p><\/p><p>Our 5,000-square-foot headquarters sits inconspicuously among the parking lots, loading docks, and near-constant truck traffic of North Hollywood’s Cleon Avenue. A closer look, however, tells a more colorful story. Solar panels cover the structure’s roof, drawing enough energy to power the entire building. Pallets of freshly delivered green coffee appear briefly in the sunlight as they’re whisked into the building’s loading bay on the tines of whirring forklifts.<\/p><p>Inside, steel racks filled with cases stretch to the ceiling. The cases hold every imaginable product necessary to stock a well-run coffeehouse. Along one long wall, a row of towering silos hold more than 25 varieties of green coffee beans. And in the middle, two massive coffee roasters function as the beating heart of the entire building. These 70-kilo, low-emission machines are a marvel of old and new technology — a fitting blend of the traditional and the innovative.<\/p><p>This is the Groundwork Roastery, where every day a battalion of employees makes use of the building’s every conceivable nook and cranny to produce, pack, and ship coffee and tea for our customers. The cupping room does triple-duty as a training center and lunchroom. The tearoom presents a dizzying array of colors, scents, and textures as fragrant teas, herbs, and spices are blended by hand.<\/p><p>Coffee roasting can be a fairly violent process in which green coffee beans are exposed to temperatures approaching 500 degrees. There are flames and smoke, and noise, and a lot of sweat and, well . . . you get the picture. But at Groundwork the job is half the fun. The other half is drinking the fruit of our labor.<br\/><br\/>Please note the roastery does not have a café.<\/p>",
+              "city": "los_angeles"
+            }
+          },
+          "64dd1c37-2c55-4163-906a-1de56102dc46": {
+            "type": "location",
+            "settings": {
+              "title": "Whole Foods Market 365 Santa Monica",
+              "service": "Quick Bites",
+              "flagship": false,
+              "image": "shopify:\/\/shop_images\/PICO365_360x_ad823570-a614-48d5-b39f-09e256dec3fe.png",
+              "button_label": "Order Ahead",
+              "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-company-pico-2121-cloverfield-blvd",
+              "store_details": "<p><strong>Café Hours<\/strong><\/p><p>7:00 a.m. to 3:00 p.m.<\/p><p><\/p><p><strong>2121 Cloverfield Blvd.<br\/>Santa Monica, CA 90404<\/strong><\/p><p>424-216-3270<\/p><p>pico365@groundworkcoffee.com<\/p><p><\/p><p>We've gone back to our Westside roots with an awesome cafe at the <a href=\"https:\/\/www.365bywholefoods.com\/pages\/groundwork-coffee\" target=\"_blank\">Whole Foods Market 365<\/a> in Santa Monica. Not only are we serving up all of your favorite coffee, tea, and specialty drinks, but we're also offering a full line of house-made baked goods, grab & go items, and a full made-to-order menu.<\/p><p><\/p><p><\/p>",
+              "city": "los_angeles"
+            }
+          },
+          "3d1902e0-236b-46e8-a939-04fd38a57889": {
+            "type": "location",
+            "settings": {
+              "title": "Portland Roastery",
+              "service": "Roastery",
+              "flagship": false,
+              "image": "shopify:\/\/shop_images\/PDX_1.png",
+              "button_label": "",
+              "button_link": "",
+              "store_details": "<p><strong>539 SE Division Place<br\/>Portland, OR 97202<\/strong><\/p><p><br\/>Office: (503) 222-2302<\/p><p><br\/>pdxorders@groundworkcoffee.com<\/p><p><\/p><p>In 2016 Groundwork acquired Kobos Coffee, Portland’s original micro-roaster. We have since moved to a new 12,000-square-foot facility, located in the heart of Hosford Abernethy, can produce more than 5,000 pounds of coffee on a single shift (that’s 1.3 million pounds a year).<\/p>",
+              "city": "portland"
+            }
+          },
+          "e093cdd8-7387-48ff-be80-4491cf7f1694": {
+            "type": "location",
+            "disabled": true,
+            "settings": {
+              "title": "The Grove",
+              "service": "Limited Offerings",
+              "flagship": false,
+              "image": "shopify:\/\/shop_images\/GROVE_360x_3300432f-f9ce-41bc-90b6-2be49efeff6b.png",
+              "button_label": "Order Ahead",
+              "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-company-the-grove-189-the-grove-suite-c100\/v3\/",
+              "store_details": "<p><strong>Café Hours<\/strong><\/p><p>Sun - Thurs: 9:30 a.m. - 7:00 p.m.<\/p><p>Fri - Sat: 9:30 a.m. - 8:00 p.m.<\/p><p><\/p><p><\/p><p><strong>189 The Grove Dr.<br\/>Los Angeles, CA 90036<\/strong><br\/>(310)486-6645<\/p><p>thegrove@groundworkcoffee.com<br\/><br\/>Groundwork is thrilled to be at L.A.’s premier shopping destination, The Grove. Our kiosk, located right behind the park, serves up certified organic teas and delicious handcrafted drinks, which pair perfectly with foods and baked goods delivered daily from our kitchen in Venice. Come by, grab a cup of your favorite, and get busy shopping!<\/p>",
+              "city": "los_angeles"
+            }
+          },
+          "24071a8e-ebbc-4ade-95bb-a821880eae64": {
+            "type": "location",
+            "disabled": true,
+            "settings": {
+              "title": "Montgomery Park",
+              "service": "Quick Bites",
+              "flagship": false,
+              "image": "shopify:\/\/shop_images\/portland_cafe.png",
+              "button_label": "",
+              "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-company-vaughn-st-2355-nw-vaughn-st",
+              "store_details": "<p><strong>Café & Kitchen Hours<\/strong><\/p><p>Mon - Fri: 7:00 a.m. - 2:00 p.m.<\/p><p>Sat - Sun: CLOSED<\/p><p><\/p><p><strong>2701 NW Vaughn St. 2nd floor,<\/strong><\/p><p><strong>Portland, OR 97210<\/strong><\/p><p>Cafe: (503) 222-2181<\/p>",
+              "city": "portland"
+            }
+          }
+        },
+        "block_order": [
+          "48dc3a3b-8036-4d97-916d-03966caefc34",
+          "858e196e-c487-476b-89e5-63437a001f04",
+          "6ac43df7-843b-4a51-a2d8-8d472b232217",
+          "493571eb-d00d-4eb7-b981-122dae0892ee",
+          "a408ca3b-24de-4ace-a68e-7b7d25afda8d",
+          "0404d21f-f2c6-489c-8774-1469879b9c0f",
+          "f083538d-51ca-414e-b317-5f07aab528e6",
+          "b0abf02b-6bfc-49dd-ac8e-aa715ee2ba33",
+          "334cf554-b891-49e8-bc33-b9843a4e3bfe",
+          "64dd1c37-2c55-4163-906a-1de56102dc46",
+          "3d1902e0-236b-46e8-a939-04fd38a57889",
+          "e093cdd8-7387-48ff-be80-4491cf7f1694",
+          "24071a8e-ebbc-4ade-95bb-a821880eae64"
+        ],
+        "settings": {}
+      },
+      "page-locations-bottom-content": {
+        "type": "page-locations-bottom-content",
+        "blocks": {
+          "2a50674c-df59-435a-8e07-f10fff081414": {
+            "type": "kitchen-section",
+            "settings": {
+              "title": "Kitchen",
+              "subtitle": "Fresh-baked, scratch-made offerings just for you.",
+              "desc": "<p>Our dedicated kitchen team not only specializes in scratch-made pastries,  they also test new seasonal recipes and work with vendors to source local ingredients.<\/p>",
+              "image": "shopify:\/\/shop_images\/brKuzDpA_2x_540x_82b8cfe0-b489-454a-831d-277fe55785a1.jpg",
+              "button_label": "get the details",
+              "button_link": "https:\/\/www.groundworkcoffee.com\/pages\/our-kitchen-new",
+              "bg_color": "#e2d9be"
+            }
+          },
+          "25a53d88-c0fa-4cad-9db7-697d92ea1be0": {
+            "type": "image-text-section",
+            "settings": {
+              "title": "Need hot, fresh, organic coffee and bites catered?",
+              "desc": "<p>We've opened up our catering & delivery service to offer drip coffee and quick bites for small scale events in the LA area. <\/p>",
+              "button_label": "Catering",
+              "button_link": "shopify:\/\/pages\/catering",
+              "external": false,
+              "button_label_2": "",
+              "button_link_2": "",
+              "external_2": false,
+              "image": "shopify:\/\/shop_images\/HandNEWNEWNEWNEW.png",
+              "bg_color": "#b08574"
+            }
+          }
+        },
+        "block_order": [
+          "2a50674c-df59-435a-8e07-f10fff081414",
+          "25a53d88-c0fa-4cad-9db7-697d92ea1be0"
+        ],
+        "settings": {}
+      },
+      "page-kitchen-heading": {
+        "type": "page-kitchen-heading",
+        "settings": {
+          "title": "OUR KITCHEN",
+          "subtitle": "A coffee shop that takes food seriously.",
+          "desc": "<p>Our kitchen offerings are made with love from local, quality ingredients.<\/p>"
+        }
+      },
+      "page-kitchen-content": {
+        "type": "page-kitchen-content",
+        "blocks": {
+          "bf438141-ee9b-4678-83fe-010880f64e1f": {
+            "type": "intro-section",
+            "settings": {
+              "title": "We start our days early.",
+              "desc": "<p>It’s our pleasure to serve fresh-baked, scratch-made offerings each morning. Groundwork began with a mission of sourcing and sharing the very best coffee in the world, so when we developed our food program, we knew we had to apply that same standard of quality and excellence in the kitchen as well.<\/p>",
+              "floating_image": "shopify:\/\/shop_images\/GW-bread-graphic-loop-small.gif",
+              "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ba29f4f0e2644137809310023b60eaed.mp4",
+              "rotating_txt": ""
+            }
+          },
+          "d53b6b6c-d8dd-4ab7-9907-5d30e0549347": {
+            "type": "image-slide",
+            "settings": {
+              "title": "Image Slides",
+              "image": "shopify:\/\/shop_images\/About_Groundwork_-_Our_Kitchen_-_Option_1_-_Commisary_Images.jpg",
+              "image_2": "shopify:\/\/shop_images\/Q0OvA69w.jpg",
+              "image_3": "shopify:\/\/shop_images\/poached_eggs_and_lox__june_2017_1.jpg",
+              "image_4": "shopify:\/\/shop_images\/Breakfast_Burrito_1.jpg",
+              "image_5": "shopify:\/\/shop_images\/pastry_2.jpg"
+            }
+          },
+          "85e71a62-77bc-4e04-b0bb-b84cc2c4d12f": {
+            "type": "secondary-section",
+            "settings": {
+              "title": "Quality ingredients. Sustainable practices.",
+              "desc": "<p>Our dedicated kitchen team not only prepares over 4,000 scratch-made pastries each week, they test new seasonal recipes and work to promote sustainability through food by using sustainable packaging and sourcing local ingredients whenever possible.<\/p><p>Our approach to food is holistic and that means every ingredient matters. That’s why we source only hormone- and antibiotic-free meats and organic, pasture-raised eggs. It’s also why we work hard to offer a variety of vegan, vegetarian, and gluten-free menu items.<\/p><p><a href=\"https:\/\/www.groundworkcoffee.com\/pages\/our-story-new\" target=\"_blank\" title=\"Our Story\">Learn more about our story here.<\/a><\/p>"
+            }
+          },
+          "f074a6bc-0d77-440b-a063-06279f074a91": {
+            "type": "image-text-section",
+            "settings": {
+              "title": "Stop in and say hey.",
+              "desc": "<p>Whether you’re grabbing a quick bite to go, or stopping in for a full meal, you can trust that your food was mindfully made by someone who believes that food should be both good and good for you. To explore our menu, check out our cafe pages and click the Order Ahead button to see what’s on the menu each day. <\/p>",
+              "button_label": "Explore LA Cafes",
+              "button_link": "https:\/\/www.groundworkcoffee.com\/pages\/locations-1",
+              "external": false,
+              "button_label_2": "Explore Portland Roastery",
+              "button_link_2": "https:\/\/www.groundworkcoffee.com\/pages\/locations-1?location=portland",
+              "external_2": false,
+              "image": "shopify:\/\/shop_images\/Group_774_2x_622x_d52d1e46-76b9-4407-917e-6a88ca3fc5be.png",
+              "bg_color": "#e2d9be"
+            }
+          }
+        },
+        "block_order": [
+          "bf438141-ee9b-4678-83fe-010880f64e1f",
+          "d53b6b6c-d8dd-4ab7-9907-5d30e0549347",
+          "85e71a62-77bc-4e04-b0bb-b84cc2c4d12f",
+          "f074a6bc-0d77-440b-a063-06279f074a91"
+        ],
+        "settings": {}
+      },
+      "page-careers-heading": {
+        "type": "page-careers-heading",
+        "settings": {
+          "title": "Careers",
+          "subtitle": "Be part of something groundbreaking",
+          "desc": "<p>We strive to be the best place our employees have ever worked, and to produce the best coffee our customers have ever sipped. As a part of our team, you'll be working with people who are down-to-earth, friendly, and passionate in a casual, caffeinated, and fun environment.<br\/><\/p>"
+        }
+      },
+      "page-careers-top": {
+        "type": "page-careers-top",
+        "settings": {
+          "title": "Coffee lovers unite",
+          "desc": "<p>We believe in sustainably sourced coffee and tea, are committed to green operational practices, and place a high value on strengthening our ties to the communities in which our stores exist.<br\/><br\/>We strive to provide a safe, effective, and inspiring training and working environment that will support our team members in their journey to develop their skills. The ideal candidate should exhibit intelligence, focus, passion, dedication, and a commitment to their craft. The ability to relate to others skillfully and with authenticity, kindness and warmth, are also crucial attributes we look for in our team members.<br\/><\/p>",
+          "image": "shopify:\/\/shop_images\/Career_page.jpg",
+          "bg_color": "#e2d9be"
+        }
+      },
+      "page-careers-perks": {
+        "type": "page-careers-perks",
+        "blocks": {
+          "d1958b34-e901-4009-96fa-f26223d06e5b": {
+            "type": "perk",
+            "settings": {
+              "title": "Free Coffee & Tea",
+              "image": "shopify:\/\/shop_images\/Path_757_2x_53x_ba75bb1f-6ef2-4bbe-8656-38d51c8daa72.png"
+            }
+          },
+          "c2bc1b7e-5635-498f-9e53-60410faeb3a5": {
+            "type": "perk",
+            "settings": {
+              "title": "Medical, Dental & Vision Insurance",
+              "image": "shopify:\/\/shop_images\/Path_756_2x_63x_988dcde5-2f04-4751-8f94-7533d121595f.png"
+            }
+          },
+          "df75cacb-1b40-46fb-97bf-f6930b76432d": {
+            "type": "perk",
+            "settings": {
+              "title": "Subsidized Metro Pass",
+              "image": "shopify:\/\/shop_images\/Group_790_2x_72x_1b32990a-202c-4058-9b8a-e7c1932b22bc.png"
+            }
+          }
+        },
+        "block_order": [
+          "d1958b34-e901-4009-96fa-f26223d06e5b",
+          "c2bc1b7e-5635-498f-9e53-60410faeb3a5",
+          "df75cacb-1b40-46fb-97bf-f6930b76432d"
+        ],
+        "settings": {
+          "title": "Fresh Perks",
+          "desc": "<p>Here are just a few of the benefits we offer.<br\/><br\/><\/p>"
+        }
+      },
+      "page-careers-values": {
+        "type": "page-careers-values",
+        "blocks": {
+          "38d84301-4462-477f-88d9-6d192618f0b3": {
+            "type": "values",
+            "settings": {
+              "title": "Strong Work Ethic"
+            }
+          },
+          "fb6d2319-566f-4d16-ba78-8594d3f4d341": {
+            "type": "values",
+            "settings": {
+              "title": "Trustworthy"
+            }
+          },
+          "cb7d7c7c-5e57-418a-b92c-658a5a69bcd8": {
+            "type": "values",
+            "settings": {
+              "title": "Growth Mindset"
+            }
+          },
+          "4a624721-94db-4857-85f6-59005862f87f": {
+            "type": "values",
+            "settings": {
+              "title": "Emotional Intelligence"
+            }
+          },
+          "75e1d308-f255-4caa-8af4-fbe8fb68e697": {
+            "type": "values",
+            "settings": {
+              "title": "Initiative"
+            }
+          },
+          "993a1f9e-f764-4c1b-9e5a-b7922ad68b92": {
+            "type": "values",
+            "disabled": true,
+            "settings": {
+              "title": "Core Value"
+            }
+          }
+        },
+        "block_order": [
+          "38d84301-4462-477f-88d9-6d192618f0b3",
+          "fb6d2319-566f-4d16-ba78-8594d3f4d341",
+          "cb7d7c7c-5e57-418a-b92c-658a5a69bcd8",
+          "4a624721-94db-4857-85f6-59005862f87f",
+          "75e1d308-f255-4caa-8af4-fbe8fb68e697",
+          "993a1f9e-f764-4c1b-9e5a-b7922ad68b92"
+        ],
+        "settings": {
+          "title": "Our core values",
+          "desc": "<p>These five core values embody our culture, spirit and dedication to doing what’s right.<\/p>"
+        }
+      },
+      "page-careers-employees": {
+        "type": "page-careers-employees",
+        "blocks": {
+          "1e4b8bb3-2144-47c0-b842-1131e3a3cb7d": {
+            "type": "employee",
+            "settings": {
+              "name": "Robby",
+              "title": "Foodservice Sales Manager",
+              "fun_fact": "<p><strong>Favorite Brew <\/strong>- AMUCC and Ethiopia<\/p><p><br\/><strong>Fun Fact<\/strong> - Robby has been skateboarding since he was 7 years old. He’s retired from the tricks but it still remains as his main creative outlet.<\/p>",
+              "quote": "<p>I’ve been working in coffee since I was 19 years old. Over the years, I’ve made amazing relationships through coffee - I met my wife working as a barista. Personally for me, I think skateboarding and coffee are very similar. Learning a new trick vs dialing in a new coffee requires a lot of patience and trial and error but when you nail it, it’s a great feeling that can’t be explained.<\/p>",
+              "image": "shopify:\/\/shop_images\/Rob.png"
+            }
+          },
+          "e6861a6c-7c83-4cfc-9b5b-03c91a106381": {
+            "type": "employee",
+            "settings": {
+              "name": "Su",
+              "title": "Content + Community Specialist",
+              "fun_fact": "<p><strong>Favorite Brew <\/strong>- Beehive Matcha Latte<\/p><p><br\/><strong>Fun Fact<\/strong> - Su loves nothing more than her dogs, spicy food, and staying up late- in that order. When not at work, she loves trying new restaurants, playing tennis, and drawing.<\/p>",
+              "quote": "<p>I've always loved coffee, tea, and the community aspect of cafes. Not until I started working for Groundwork is when I truly appreciated the difference organic product makes for the final cup I drink in the morning. I'm always visiting our cafes, if you see me, please don't hesitate to say hello! Love my Groundwork fam!<\/p>",
+              "image": "shopify:\/\/shop_images\/Screen_Shot_2021-12-03_at_11.48.21_AM.png"
+            }
+          },
+          "a3abe10f-f126-4cb1-9977-380fccce2dda": {
+            "type": "employee",
+            "disabled": true,
+            "settings": {
+              "name": "John",
+              "title": "TITLE",
+              "fun_fact": "<p><strong>Lorem<\/strong> - ipsum dolor<br\/><strong>Lorem<\/strong> - ipsum dolor<\/p><p><br\/><br\/><\/p>",
+              "quote": "",
+              "image": "shopify:\/\/shop_images\/Mask_Group_14_2x_360x_360x_9ebd29bd-0306-41d0-9510-5c4d07be1e73.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "1e4b8bb3-2144-47c0-b842-1131e3a3cb7d",
+          "e6861a6c-7c83-4cfc-9b5b-03c91a106381",
+          "a3abe10f-f126-4cb1-9977-380fccce2dda"
+        ],
+        "settings": {
+          "title": "Employee Spotlights"
+        }
+      },
+      "page-careers-content": {
+        "type": "page-careers-content",
+        "settings": {
+          "blog": "now-hiring",
+          "post_limit": 3
+        }
+      },
+      "page-catering-heading": {
+        "type": "page-catering-heading",
+        "settings": {
+          "title": "Catering",
+          "subtitle": "Need hot, fresh, organic coffee and bites catered?",
+          "desc": "<p>We've opened up our catering & delivery service to offer drip coffee and quick bites for small scale events in the LA area.<\/p>"
+        }
+      },
+      "page-catering-content": {
+        "type": "page-catering-content",
+        "blocks": {
+          "4495d70c-837d-4c58-8a38-5747d2a12667": {
+            "type": "section-text",
+            "settings": {
+              "title": "Your favorite Groundwork items catered to you!",
+              "desc": "<p>Drip Coffee, hand-crafted food menu items, fresh baked goods, & small bites. <\/p><p>Delivery options available at select Groundwork Coffee locations.<\/p>",
+              "image": "shopify:\/\/shop_images\/About-Groundwork---Catering---Option-3---Iced-Coffee_2048x_23a05bf2-7b48-465a-aa5b-ddccd5d06d1f.jpg",
+              "button_label": "",
+              "button_link": "",
+              "bg_color": "#8ea6ae"
+            }
+          },
+          "155bf04b-4dfb-42d3-adb3-c8651f33c410": {
+            "type": "call_us",
+            "settings": {
+              "title": "For catering inquiries, contact your local Groundwork Cafe",
+              "desc": "<p><strong>Venice<\/strong> <br\/><a href=\"mailto:catering@groundworkcoffee.com\" title=\"mailto:rose@groundworkcoffee.com\">rose@groundworkcoffee.com<\/a><\/p><p><strong>-<\/strong><\/p><p><strong>North Hollywood<\/strong><\/p><p><a href=\"mailto:northhollywood@groundworkcoffee.com\" title=\"mailto:northhollywood@groundworkcoffee.com\">northhollywood@groundworkcoffee.com<\/a><\/p><p>-<\/p><p><strong>DTLA Arts District<\/strong><\/p><p><\/p><p><a href=\"mailto:traction@groundworkcoffee.com\" title=\"mailto:traction@groundworkcoffee.com\">traction@groundworkcoffee.com<\/a><\/p><p>-<\/p><p><strong>Larchmont Village<\/strong><\/p><p><a href=\"mailto:larchmont@groundworkcoffee.com\" title=\"mailto:larchmont@groundworkcoffee.com\">larchmont@groundworkcoffee.com<\/a><\/p><p>-<\/p><p><strong>Santa Monica<\/strong><\/p><p><a href=\"mailto:mainstreet@groundworkcoffee.com\" title=\"mailto:mainstreet@groundworkcoffee.com\">mainstreet@groundworkcoffee.com<\/a><\/p><p>-<\/p><p><strong>Hollywood<\/strong><\/p><p><a href=\"mailto:mainstreet@groundworkcoffee.com\" title=\"mailto:mainstreet@groundworkcoffee.com\">hollywood@groundworkcoffee.com<\/a><\/p><p>-<\/p><p><strong>Venice Boardwalk<\/strong><\/p><p><a href=\"mailto:annex@groundworkcoffee.com\" title=\"mailto:annex@groundworkcoffee.com\">annex@groundworkcoffee.com<\/a><\/p><p>-<\/p><p><strong>Beverly Grove<\/strong><\/p><p><a href=\"mailto:3rd@groundworkcoffee.com\" title=\"mailto:3rd@groundworkcoffee.com\">3rd@groundworkcoffee.com<\/a><\/p><p><\/p>",
+              "note": "<p>Note that we need a minimum of 48 hours before expected delivery.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "4495d70c-837d-4c58-8a38-5747d2a12667",
+          "155bf04b-4dfb-42d3-adb3-c8651f33c410"
+        ],
+        "settings": {}
+      },
+      "page-contact": {
+        "type": "page-contact",
+        "settings": {
+          "title": "Say hi!"
+        }
+      },
+      "page-contact-content": {
+        "type": "page-contact-content",
+        "blocks": {
+          "f51ac369-85dd-4ae6-a796-f992e0cf0231": {
+            "type": "office",
+            "settings": {
+              "title": "Los Angeles Office",
+              "image": "shopify:\/\/shop_images\/groundwork_locations_Noho_Roasterpng-2.png",
+              "address": "<p>5457 Cleon Ave.<br\/>North Hollywood, CA 91601<\/p>",
+              "address_link": "https:\/\/www.google.com\/maps\/place\/5457+Cleon+Ave,+North+Hollywood,+CA+91601\/@34.1702188,-118.3710738,17z\/data=!3m1!4b1!4m5!3m4!1s0x80c29592af9635ef:0x51693872bf070b23!8m2!3d34.1702188!4d-118.3688851",
+              "phone": "(818) 506-6020",
+              "email": "orders@groundworkcoffee.com",
+              "hours": "9:30 AM - 4:00 PM (PST)"
+            }
+          },
+          "fe5c99d7-47e4-4697-adbc-34508c889073": {
+            "type": "office",
+            "settings": {
+              "title": "Portland Office",
+              "image": "shopify:\/\/shop_images\/PDX_1.png",
+              "address": "<p>539 SE Division Pl. <\/p><p>Portland, OR 97202<\/p>",
+              "address_link": "https:\/\/www.google.com\/maps?q=2355+NW+Vaughn+St.+Portland,+OR+97210&rlz=1C5CHFA_enUS941US941&um=1&ie=UTF-8&sa=X&ved=2ahUKEwi9z7v12tHxAhVQsZ4KHYSfDQwQ_AUoAXoECAEQAw",
+              "phone": "(503) 796-9363",
+              "email": "pdxorders@groundworkcoffee.com",
+              "hours": "8:30 AM - 4:30 PM (PST)"
+            }
+          }
+        },
+        "block_order": [
+          "f51ac369-85dd-4ae6-a796-f992e0cf0231",
+          "fe5c99d7-47e4-4697-adbc-34508c889073"
+        ],
+        "settings": {
+          "title": "Test",
+          "desc": "<p>See contact information for individual cafe’s on <a href=\"https:\/\/www.groundworkcoffee.com\/pages\/locations-1\" target=\"_blank\" title=\"Groundwork Cafe Locations\">our locations page<\/a><\/p><p>For large orders and wholesale accounts, visit <a href=\"https:\/\/www.groundworkcoffee.com\/pages\/wholesale-info\" target=\"_blank\" title=\"Groundwork Wholesale\">our wholesale page<\/a><\/p><p>Want to join this amazing team? Check out <a href=\"\/pages\/careers\" title=\"Careers\">our career page<\/a><\/p>"
+        }
+      },
+      "page-faq-content": {
+        "type": "page-faq-content",
+        "blocks": {
+          "4e091b7c-a885-4711-9e4a-8fe036d569a2": {
+            "type": "accordion",
+            "settings": {
+              "title": "How long will it take to receive my order?",
+              "desc": "<p>Thank you for your purchase! You can expect your Groundwork Coffee order to arrive typically within 3-6 business days.<\/p>",
+              "category": "orders_returns"
+            }
+          },
+          "e5f4571f-b502-42e4-8074-efdfb86bf7a8": {
+            "type": "accordion",
+            "settings": {
+              "title": "Where are your products shipped from?",
+              "desc": "<p>All of our organic coffee, tea, and merchandise is shipped directly from our roasting facility in North Hollywood, CA.<\/p>",
+              "category": "our_products"
+            }
+          },
+          "1be1c6ce-1be6-4fd1-a301-cb12feb495d9": {
+            "type": "accordion",
+            "settings": {
+              "title": "Where can I see my order status?",
+              "desc": "<p>Once your order is placed, we send out a confirmation email which includes a link to track your order, and also the ability to receive order updates by text. It won’t be long until you’re reunited with your favorite coffee or tea!<br\/><\/p><p>Didn’t get a confirmation email? Contact us at <a><span style=\"text-decoration:underline\">orders@groundworkcoffee.com<\/span><\/a>, and we’ll make sure it gets sent out!<\/p>",
+              "category": "orders_returns"
+            }
+          },
+          "238f3b7c-7d39-4e68-8f03-f3f477380434": {
+            "type": "accordion",
+            "settings": {
+              "title": "What is Certified Organic?",
+              "desc": "<p>Organic is at the forefront of all we do at Groundwork Coffee, from buying only certified organic (i.e. pesticide-, herbicide-, fungicide-free) coffees to roasting those same coffees using our industry-leading, solar-powered technology. As one of the first Certified Organic coffee roasters in Southern California, we've been pioneering organic, relationship-based, and sustainable coffee sourcing since the early '90s. When it comes to pesticides, herbicides, and fungicides, coffee is the third-most sprayed agricultural crop in the world. Most major coffee producers coat their crops with a witches’ brew of toxic chemicals to fight intruders and increase crop yields. That said, the question is not whether these chemicals make their way into your morning cup. At peak temperatures above 450 degrees, the roasting process will most likely burn off any residual chemicals. The real question is, what do these chemicals do to the environment and communities where they are sprayed? The data is clear; the effects on groundwater, nearby crops, and people’s health are well documented. <\/p><p>In addition to being better for those growing our coffee, we believe that a commitment to organic simply produces better coffee. Without the advantage of herbicides, pesticides, and fungicides, coffee farmers have to take better care of their trees to experience the same quality and crop yields per tree as their non-organic competitors. Organic farmers have to choose viable soil and water sources in order to avoid adding synthetic nutrients later. They have to grow their coffee at higher altitudes, which dissuades many insects and parasitic plants, resulting in a slower-developing, more complex-flavored coffee bean. Organic farmers have to accept a trade-off of lower overall yield in exchange for a more biodiverse habitat. In return, coffee roasters and their customers pay them a premium to continue the practice. We think it’s money well spent..<\/p>",
+              "category": "our_products"
+            }
+          },
+          "bfda533d-3843-4d60-af86-09e7627f6c67": {
+            "type": "accordion",
+            "disabled": true,
+            "settings": {
+              "title": "How often can my Groundwork Coffee be delivered?",
+              "desc": "<p>blah blah<\/p>",
+              "category": "subscriptions"
+            }
+          },
+          "07ea245e-855c-423b-8377-c92a8d97eceb": {
+            "type": "accordion",
+            "settings": {
+              "title": "What’s Groundwork Coffee’s Return Policy?",
+              "desc": "<p>Returns are handled on a case-by-case basis with the goal of making our customers happy and meeting their needs.<\/p><p><strong>Return Policy: Coffee and Tea<\/strong><br\/>We do not accept returns on coffee and tea due to its perishable nature. However, we are quite willing to resolve problems as they arise. If you have any issues with your coffee, or if there are errors in your order, please contact us at <a href=\"mailto:orders@groundworkcoffee.com\" target=\"_blank\" title=\"mailto:orders@groundworkcoffee.com\">orders@groundworkcoffee.com<\/a> or 818-506-6020 within two days of receiving your order. We will do our best to ensure that you are satisfied.<\/p><p><strong>Return Policy: Merchandise<\/strong> (non-coffee items)<br\/>We would like you to be satisfied with your purchase. All Returns or Exchanges on merchandise (non-coffee) items must be done within 30 days of the purchase date. Items purchased online can be returned only to our Headquarters; they can’t be returned to our café locations. Please email your order number, name, reason for a Return\/Exchange, and the item and quantity you wish to Return\/Exchange to <a href=\"mailto:orders@groundworkcoffee.com\" target=\"_blank\" title=\"mailto:orders@groundworkcoffee.com\">orders@groundworkcoffee.com<\/a> (or call us at 818-506-6020). We will contact you with information on how your return will be processed. We will not refund the price of shipping.<\/p><p><strong>All returns should be sent to:<\/strong><br\/>Groundwork Coffee Roasters<br\/>Attn: Customer Service<br\/>5457 Cleon Ave<br\/>North Hollywood, CA<br\/>91601<br\/>USA<\/p>",
+              "category": "orders_returns"
+            }
+          },
+          "4552ba10-eee8-4364-a452-acb03b828894": {
+            "type": "accordion",
+            "settings": {
+              "title": "What is the recommended form of brewing?",
+              "desc": "<p>Brewing a great cup of coffee is a craft that takes time and patience to learn, but no matter what brew method you choose, we have some <a href=\"https:\/\/www.groundworkcoffee.com\/blogs\/brew-guides\/brewing-coffee-101\" target=\"_blank\" title=\"Coffee Brewing 101\"><span style=\"text-decoration:underline\">tips that will help you<\/span> on your way to becoming a coffee expert.<\/a><\/p>",
+              "category": "brew_better"
+            }
+          },
+          "0bdc8efd-0805-4ab8-afa9-4f7da8adede7": {
+            "type": "accordion",
+            "disabled": true,
+            "settings": {
+              "title": "What are Groundwork Coffee's  sustainability efforts?",
+              "desc": "<p>Being Organic is only a portion of our commitment to sustainability and producing better coffee for you and the environment. At our North Hollywood roastery, over 100 solar panels cover the structure’s roof, drawing enough energy to power the entire building. These Sunpower PV modules are the most efficient panels commercially available and will generate more than 52,000 kilowatts of clean solar energy each year and are designed to work efficiently even on cloudy days. In 2011, we installed a unique hybrid\/gas-electric coffee roaster that utilizes an ultra-low NOx power burner. This allows the roaster and catalytic oxidizer to be heated by electrical elements tied directly from the power generated by the solar panels. The result is Groundwork’s roaster has one of the smallest carbon footprints in the entire coffee industry.<\/p>",
+              "category": "sustainability"
+            }
+          },
+          "f9e73cc9-f6b4-49f8-9bed-183a831878a2": {
+            "type": "accordion",
+            "settings": {
+              "title": "What are Groundwork Coffee’s sustainability practices?",
+              "desc": "<p>Being Organic is only a portion of our commitment to sustainability and producing better coffee for you and the environment. At our North Hollywood roastery, over 100 solar panels cover the structure’s roof, drawing enough energy to power the entire building. These Sunpower PV modules are the most efficient panels commercially available and will generate more than 52,000 kilowatts of clean solar energy each year and are designed to work efficiently even on cloudy days. In 2011, we installed a unique hybrid\/gas-electric coffee roaster that utilizes an ultra-low NOx power burner. This allows the roaster and catalytic oxidizer to be heated by electrical elements tied directly from the power generated by the solar panels. The result is Groundwork’s roaster has one of the smallest carbon footprints in the entire coffee industry.<\/p>",
+              "category": "sustainability"
+            }
+          },
+          "d5987786-5a43-4c46-b153-a91078ec5b4e": {
+            "type": "accordion",
+            "settings": {
+              "title": "My order is wrong\/damaged\/missing!",
+              "desc": "<p>If you experience any issues with your order, we’d be happy to assist you. Send us an email at <a><span style=\"text-decoration:underline\">orders@groundworkcoffee.com<\/span><\/a> or give us a call at (818) 506-6020.<\/p>",
+              "category": "orders_returns"
+            }
+          },
+          "3d6082a2-a065-431e-a40a-61bc07d07efa": {
+            "type": "accordion",
+            "settings": {
+              "title": "Does Groundwork ship internationally?",
+              "desc": "<p>We currently ship throughout the United States.<\/p>",
+              "category": "orders_returns"
+            }
+          },
+          "08732a42-6f3f-4ada-ac8f-9063df4c0600": {
+            "type": "accordion",
+            "settings": {
+              "title": "Are you open on the weekends?",
+              "desc": "<p>We are actively shipping Monday-Friday, excluding major holidays.<\/p>",
+              "category": "orders_returns"
+            }
+          },
+          "b884f4ca-bf62-4a7f-a5ee-38adb7215995": {
+            "type": "accordion",
+            "settings": {
+              "title": "What decaffeination process do you use? Does it still have caffeine?",
+              "desc": "<p>Swiss Water is an innovative, 100% chemical free decaffeination process. The Swiss water process uses only water, temperature, and time to gently remove caffeine, while preserving all the coffee’s original characteristics. Coffee decaffeinated using the Swiss Water Process is 99.9% caffeine free.<\/p>",
+              "category": "our_products"
+            }
+          },
+          "2ebfbb7e-e235-430b-8fcd-e409387887f1": {
+            "type": "accordion",
+            "disabled": true,
+            "settings": {
+              "title": "Do you have samples?",
+              "desc": "<p>Ready to experience the finest Certified Organic, ethically sourced, fairly traded, and sustainably roasted coffee around? Try a 2oz sample of one of our favorite Signature Blends or Single Origin coffees today and experience the difference. <\/p><p>Use code ‘SAMPLE1990’ at checkout for your free 2oz bag. Just pay shipping. <\/p>",
+              "category": "our_products"
+            }
+          },
+          "d09345c6-c3be-4708-b298-96f954703c09": {
+            "type": "accordion",
+            "disabled": true,
+            "settings": {
+              "title": "Where can I find your products in store\/grocery?",
+              "desc": "",
+              "category": "our_products"
+            }
+          },
+          "2b145f56-7924-49a6-9bbd-dab72c99ee2c": {
+            "type": "accordion",
+            "settings": {
+              "title": "Why don’t you sell cold brew online?",
+              "desc": "<p>Our Cold Brew is pure, and unadulterated with no additives or preservatives. We don’t currently offer it online because of it’s perishable nature - we want only the freshest product shipped to you. Because so many of you love our Cold Brew, we are currently working on a sustainable, cold shipping option. <\/p>",
+              "category": "our_products"
+            }
+          },
+          "4de090e2-dbf2-45de-bcba-2b9f2e4a9513": {
+            "type": "accordion",
+            "disabled": true,
+            "settings": {
+              "title": "Where are product expiration dates?",
+              "desc": "<p>When purchasing our coffees online, you will see a “Roasted” date on the back of the bag. While coffee certainly doesn’t spoil after a few weeks, we consider our coffee to be at its best 5-10 days after the roasted date for espresso and 3-7 days after roast for filter\/drip coffee. After these “freshness windows,” the coffee will gradually lose some of what makes it so special. Once coffee has been roasted, it becomes sensitive to light, heat, air, and moisture. It’s best to keep coffee in whole-bean form in an air-tight, light-fast container to ensure freshness until you’re ready to brew.<\/p>",
+              "category": "our_products"
+            }
+          },
+          "884b1c3b-9a59-431d-8fdc-3cb9503bef6f": {
+            "type": "accordion",
+            "settings": {
+              "title": "Why is my coffee oily?",
+              "desc": "<p>The presence of oil on a darker roasted bean usually means that it has been recently roasted. The oils start to dry up if roasted coffee isn't used for a while.<\/p>",
+              "category": "our_products"
+            }
+          },
+          "7e4e4962-4e4d-4f73-b626-baede5252557": {
+            "type": "accordion",
+            "settings": {
+              "title": "How much caffeine is in cold brew?",
+              "desc": "<p>On average, a cup of cold brew coffee contains around 200 mg of caffeine per 16 ounces (473 mL)<\/p>",
+              "category": "our_products"
+            }
+          },
+          "1ad476eb-f21e-4aaf-88cc-b371c4dd0f72": {
+            "type": "accordion",
+            "settings": {
+              "title": "Where can I use your gift cards and E-cards?",
+              "desc": "<p>Gift cards and E-cards are a great way to treat a coffee lover in your life. Groundwork <a href=\"https:\/\/www.groundworkcoffee.com\/products\/gift-card\"><span style=\"text-decoration:underline\">E-gift cards<\/span><\/a> can be used in our <a href=\"https:\/\/www.groundworkcoffee.com\/collections\/all?sort_by=best-selling\" target=\"_blank\" title=\"Groundwork Coffee Store\"><span style=\"text-decoration:underline\">online store<\/span><\/a>, and our <a href=\"https:\/\/www.groundworkcoffee.com\/products\/gw-gift-card\"><span style=\"text-decoration:underline\">in-store gift cards<\/span><\/a> can be redeemed in our cafes.<\/p>",
+              "category": "our_products"
+            }
+          },
+          "58ee4b6f-85f4-41f4-9a14-6c38c07f2efc": {
+            "type": "accordion",
+            "settings": {
+              "title": "How do I work for Groundwork?",
+              "desc": "<p>Thank you for your interest in working at Groundwork Coffee! Click <a href=\"https:\/\/www.groundworkcoffee.com\/pages\/careers\" target=\"_blank\" title=\"Groundwork Careers\"><span style=\"text-decoration:underline\">here<\/span><\/a> to see our available positions.<\/p>",
+              "category": "our_company"
+            }
+          },
+          "86164d30-7d91-4f3b-94db-38be522a451e": {
+            "type": "accordion",
+            "settings": {
+              "title": "Why should you order directly from us?",
+              "desc": "<p>The best coffee comes from the source! Ordering directly from our website ensures your coffee is roasted to order.<\/p>",
+              "category": "our_company"
+            }
+          },
+          "07e03afb-04aa-42eb-945b-aa9f57e292e5": {
+            "type": "accordion",
+            "settings": {
+              "title": "How do I become a wholesaler?",
+              "desc": "<p>Thank you for your interest in serving Groundwork Coffee! Groundwork is one of the West Coast’s largest specialty coffee roasters and distributors, and we are humbled to see a growing interest in sustainable, certified organic, specialty coffee. We supply restaurants, hotels, cafés, and grocery stores in a growing number of states across the country. Check out our <a href=\"https:\/\/www.groundworkcoffee.com\/pages\/wholesale-info\" target=\"_blank\" title=\"Groundwork Coffee Wholesale\"><span style=\"text-decoration:underline\">Wholesale Page<\/span><\/a> and we’ll be in touch!<\/p>",
+              "category": "our_company"
+            }
+          },
+          "72f873a5-6f84-4d47-b01e-cf0c89278a2b": {
+            "type": "accordion",
+            "settings": {
+              "title": "How do I use a Chemex?",
+              "desc": "<p>Learn all about how to use a Chemex <a href=\"https:\/\/www.groundworkcoffee.com\/blogs\/brew-guides\/chemex\" target=\"_blank\" title=\"Chemex Brew Guide\"><span style=\"text-decoration:underline\">here<\/span><\/a>. Happy Brewing!<\/p>",
+              "category": "brew_better"
+            }
+          },
+          "0101e806-fd2d-47f0-ac34-1140d10bab36": {
+            "type": "accordion",
+            "settings": {
+              "title": "How do I use a V60?",
+              "desc": "<p>The Hario V60 allows for a simple hands-on brewing process that relies on the technique of the brewer. Learn how to perfect it <a href=\"https:\/\/www.groundworkcoffee.com\/blogs\/brew-guides\/hario-v60\" target=\"_blank\" title=\"Hario V60 Brew Guide\"><span style=\"text-decoration:underline\">here<\/span><\/a>.<\/p>",
+              "category": "brew_better"
+            }
+          },
+          "3300d97c-92b8-4283-be7d-ac0135bf931b": {
+            "type": "accordion",
+            "settings": {
+              "title": "How do I use a French Press?",
+              "desc": "<p>Perfect the French Press <a href=\"https:\/\/www.groundworkcoffee.com\/blogs\/brew-guides\/french-press\" target=\"_blank\" title=\"French Press Brew Guide\"><span style=\"text-decoration:underline\">here<\/span><\/a>.<\/p>",
+              "category": "brew_better"
+            }
+          },
+          "4455a1cb-0558-498f-99bf-13a9b29566ac": {
+            "type": "accordion",
+            "settings": {
+              "title": "How do I use an Aeropress?",
+              "desc": "<p>Check out our <a href=\"https:\/\/www.groundworkcoffee.com\/blogs\/brew-guides\/aeropress\" target=\"_blank\" title=\"Aeropress Brew Guide\"><span style=\"text-decoration:underline\">Brew Guide<\/span><\/a> for a step by step guide on how to use an Aeropress.<\/p>",
+              "category": "brew_better"
+            }
+          },
+          "30374bf8-fdc2-4278-a04e-ba65f47c65bf": {
+            "type": "accordion",
+            "settings": {
+              "title": "How do I brew loose leaf tea?",
+              "desc": "<p>Unlike coffee, there are no hard-and-fast rules to brewing tea. Most of it is based on personal preference. Still, there are a few basic <a href=\"https:\/\/groundwork-coffee-store.myshopify.com\/blogs\/brew-guides\/brewing-loose-leaf-tea\" target=\"_blank\" title=\"Loose Leaf Tea Brew Guide\">guidelines<\/a> that will help you brew your best cup.<\/p>",
+              "category": "brew_better"
+            }
+          },
+          "4327df37-9c3d-4bfa-addb-f1c0255ab1cc": {
+            "type": "accordion",
+            "settings": {
+              "title": "Will I receive decaf coffee in my subscription?",
+              "desc": "<p>Your subscription is completely customizable! If you prefer decaf coffees, you can modify your preferences in your customer account. If there is no preference added, Roaster’s Choice subscription will not include any decaf coffees.<\/p>",
+              "category": "subscriptions"
+            }
+          },
+          "e5e1af56-54b2-42ee-b1b1-6d442f8a2841": {
+            "type": "accordion",
+            "settings": {
+              "title": "How do I cancel my subscription?",
+              "desc": "<p>Change, modify, or cancel your subscription at any time by logging in to your customer account.<\/p>",
+              "category": "subscriptions"
+            }
+          },
+          "c9a25d0b-c540-4e2c-bc8b-008bc02a8b75": {
+            "type": "accordion",
+            "settings": {
+              "title": "How can I change my subscription preferences or shipping details?",
+              "desc": "<p>Change, modify, or cancel your subscription at any time by logging in to your customer account.<\/p>",
+              "category": "subscriptions"
+            }
+          },
+          "d67aa288-221f-491f-9e84-b45a15cf3a7e": {
+            "type": "accordion",
+            "settings": {
+              "title": "Can I buy a subscription as a gift?",
+              "desc": "<p>Yes! Check out out <a href=\"https:\/\/www.groundworkcoffee.com\/products\/greatest-gift\" target=\"_blank\" title=\"https:\/\/www.groundworkcoffee.com\/products\/greatest-gift\">Greatest Gift Subscription.<\/a><\/p>",
+              "category": "subscriptions"
+            }
+          },
+          "ef447267-d9df-4fce-80a9-d386b4a645dc": {
+            "type": "accordion",
+            "settings": {
+              "title": "Are your coffee bags and cans recyclable\/biodegradable?",
+              "desc": "<p>Thank you for thinking about your environmental impact! <\/p><p>Groundwork Coffee is proud to use Biotre™ technology to reduce the environmental impact of our coffee bags - contributing less waste to landfills. Biotre® bags are made from plant materials and 60% can break down in a relatively short period of time.<\/p><p><br\/>-The outer layer consists of cellulose from wood pulp. Natural Kraft paper on the outside makes up 60% of the material by weight and breaks down into healthy compost in 12 weeks.<\/p><p>-The inner layer consists of 100% plant-based, renewable resources (i.e. cane sugar).<\/p>",
+              "category": "sustainability"
+            }
+          },
+          "a3298f62-d9bb-45b6-a39f-6e3b0fd1bd97": {
+            "type": "accordion",
+            "settings": {
+              "title": "Can your cafe cups be recycled?",
+              "desc": "<p>Both our cafe cups (hot and cold) and lids are able to be recycled and composted (BPI certified). Thank you for doing your part!<\/p>",
+              "category": "sustainability"
+            }
+          },
+          "60a0ee2d-9f80-42e3-bf19-ef43e8e54451": {
+            "type": "accordion",
+            "settings": {
+              "title": "Where can I find Nutritional facts on cafe food items?",
+              "desc": "<p>All nutritional information for our cafe foods can be found in the Cafe’s Nutrition binders located in store. Take a peek at them during your next visit!<\/p>",
+              "category": "coffee_shops"
+            }
+          },
+          "df900476-781a-44f2-992d-9941458d4ac6": {
+            "type": "accordion",
+            "settings": {
+              "title": "Where do we get our eggs from?",
+              "desc": "<p>Chino Valley Farms - Check out their website for more information on their wonderful, <a href=\"https:\/\/www.chinovalleyranchers.com\/whats-an-organic-egg\/\"><span style=\"text-decoration:underline\">organic eggs<\/span><\/a>.<\/p>",
+              "category": "coffee_shops"
+            }
+          },
+          "7979f10a-fe89-4e2b-bdf7-7251fb34d44c": {
+            "type": "accordion",
+            "disabled": true,
+            "settings": {
+              "title": "How do we make our almond\/cashew milk?",
+              "desc": "",
+              "category": "coffee_shops"
+            }
+          },
+          "d935dc2e-4e88-4f41-beee-d81b6edaac16": {
+            "type": "accordion",
+            "settings": {
+              "title": "Our food nutritional facts",
+              "desc": "<p>All nutritional information for our cafe foods can be found in the Cafe’s Nutrition binders located in store. Take a peek at them during your next visit!<\/p>",
+              "category": "coffee_shops"
+            }
+          },
+          "20cce4ed-4807-4889-84f9-063d8ef99234": {
+            "type": "accordion",
+            "settings": {
+              "title": "Where do you get your eggs from?",
+              "desc": "<p>Chino Valley Farms - Check out their website for more information on their wonderful, <a href=\"https:\/\/www.chinovalleyranchers.com\/whats-an-organic-egg\/\"><span style=\"text-decoration:underline\">organic eggs<\/span><\/a>.<\/p>",
+              "category": "coffee_shops"
+            }
+          },
+          "c7993559-ba6e-460a-ac77-a265c5b3a53a": {
+            "type": "accordion",
+            "settings": {
+              "title": "How do you make your cashew milk?",
+              "desc": "<p>Our organic cashew milk is made fresh daily in the cafes with only 6 simple ingredients! <\/p>",
+              "category": "coffee_shops"
+            }
+          },
+          "bbab3527-a94b-4f74-a423-79ddc4609a20": {
+            "type": "accordion",
+            "settings": {
+              "title": "Are your bags compostable?",
+              "desc": "<p>Because sustainability is one of our core principles, you can now learn more about our eco-conscious approach on our bags.Additionally, we chose earth-friendly Biotrē™ bags to package our beans. These bags are made from 60% renewable plant-based resources by weight, which break down into a healthy compost.<\/p>",
+              "category": "sustainability"
+            }
+          }
+        },
+        "block_order": [
+          "4e091b7c-a885-4711-9e4a-8fe036d569a2",
+          "e5f4571f-b502-42e4-8074-efdfb86bf7a8",
+          "1be1c6ce-1be6-4fd1-a301-cb12feb495d9",
+          "238f3b7c-7d39-4e68-8f03-f3f477380434",
+          "bfda533d-3843-4d60-af86-09e7627f6c67",
+          "07ea245e-855c-423b-8377-c92a8d97eceb",
+          "4552ba10-eee8-4364-a452-acb03b828894",
+          "0bdc8efd-0805-4ab8-afa9-4f7da8adede7",
+          "f9e73cc9-f6b4-49f8-9bed-183a831878a2",
+          "d5987786-5a43-4c46-b153-a91078ec5b4e",
+          "3d6082a2-a065-431e-a40a-61bc07d07efa",
+          "08732a42-6f3f-4ada-ac8f-9063df4c0600",
+          "b884f4ca-bf62-4a7f-a5ee-38adb7215995",
+          "2ebfbb7e-e235-430b-8fcd-e409387887f1",
+          "d09345c6-c3be-4708-b298-96f954703c09",
+          "2b145f56-7924-49a6-9bbd-dab72c99ee2c",
+          "4de090e2-dbf2-45de-bcba-2b9f2e4a9513",
+          "884b1c3b-9a59-431d-8fdc-3cb9503bef6f",
+          "7e4e4962-4e4d-4f73-b626-baede5252557",
+          "1ad476eb-f21e-4aaf-88cc-b371c4dd0f72",
+          "58ee4b6f-85f4-41f4-9a14-6c38c07f2efc",
+          "86164d30-7d91-4f3b-94db-38be522a451e",
+          "07e03afb-04aa-42eb-945b-aa9f57e292e5",
+          "72f873a5-6f84-4d47-b01e-cf0c89278a2b",
+          "0101e806-fd2d-47f0-ac34-1140d10bab36",
+          "3300d97c-92b8-4283-be7d-ac0135bf931b",
+          "4455a1cb-0558-498f-99bf-13a9b29566ac",
+          "30374bf8-fdc2-4278-a04e-ba65f47c65bf",
+          "4327df37-9c3d-4bfa-addb-f1c0255ab1cc",
+          "e5e1af56-54b2-42ee-b1b1-6d442f8a2841",
+          "c9a25d0b-c540-4e2c-bc8b-008bc02a8b75",
+          "d67aa288-221f-491f-9e84-b45a15cf3a7e",
+          "ef447267-d9df-4fce-80a9-d386b4a645dc",
+          "a3298f62-d9bb-45b6-a39f-6e3b0fd1bd97",
+          "60a0ee2d-9f80-42e3-bf19-ef43e8e54451",
+          "df900476-781a-44f2-992d-9941458d4ac6",
+          "7979f10a-fe89-4e2b-bdf7-7251fb34d44c",
+          "d935dc2e-4e88-4f41-beee-d81b6edaac16",
+          "20cce4ed-4807-4889-84f9-063d8ef99234",
+          "c7993559-ba6e-460a-ac77-a265c5b3a53a",
+          "bbab3527-a94b-4f74-a423-79ddc4609a20"
+        ],
+        "settings": {
+          "title": "FAQ",
+          "desc": "<p>Frequently asked questions<\/p>",
+          "more_title": "Have more unanswered questions?",
+          "more_desc": "<p>We're here for ya!<\/p>",
+          "button_label": "CONTACT",
+          "button_link": "shopify:\/\/pages\/contact"
+        }
+      },
+      "page-story-heading": {
+        "type": "page-story-heading",
+        "settings": {
+          "title": "Our Story",
+          "subtitle": "Work hard. Be kind. Good things will happen.",
+          "desc": "<p>Our mission is to source and share exceptional, organic coffee that inspires people to work hard, dream big, and impact the world. <br\/><\/p>"
+        }
+      },
+      "page-story-content": {
+        "type": "page-story-content",
+        "blocks": {
+          "0bc07b1a-232e-4156-87d9-6d5e05adc38e": {
+            "type": "intro-section",
+            "settings": {
+              "title": "From the ground up.",
+              "desc": "<p>People always celebrate success at the finish line, but at Groundwork, we know good things come to those who put in the work. We understand the struggles, the effort, the failures, and the small wins and losses along the way. Because we live it every day. <br\/><br\/>Coffee is a constant through-line in all of our lives. It’s the reason an artist can pull all nighters painting into the night. It’s the reason students can wake up early in the morning to get a few more hours of foundation for the future—that little extra studying in. It’s the thing that emboldens our community to apply for jobs, to survive breakups, and to take care of their children through sleepless nights. It’s the push to work harder, to do better, and to get up and go each day. <\/p><p>When you love what you do, you don’t stop, no matter how hard it gets. People put in the work, and so do we. <\/p>"
+            }
+          },
+          "4eb7e88f-6413-478b-b24f-3a75ab09be60": {
+            "type": "img-txt-section",
+            "settings": {
+              "title": "Exceptional Care",
+              "desc": "<p>Above all else, our Certified Organic coffee must meet a rigorous standard of quality. We are deeply involved in the long process of getting coffee into your cup—from farms to co-ops to our local Groundwork community. We never settle for anything less than the best coffee possible.<\/p>",
+              "image": "shopify:\/\/shop_images\/DRjWCntA_2x_540x_ef1ceec6-fa68-424b-b06e-03bf2b0a96f4.jpg"
+            }
+          },
+          "9ef55fec-606d-4fa6-a7c0-99d31969c76b": {
+            "type": "img-txt-section",
+            "settings": {
+              "title": "Thriving Communities",
+              "desc": "<p>Coffee lies at the heart of good ideas, beautiful art, and creative thinking. It enables the kind of endurance that fuels vision and love. The Groundwork community represents a work ethic unlike anywhere else.<\/p>",
+              "image": "shopify:\/\/shop_images\/yRMna5ZQ_2x_540x_a6475186-13e4-4eea-9a0b-278ea346818f.jpg"
+            }
+          },
+          "72f3e308-fb13-4e9c-96e1-a05c6112a76b": {
+            "type": "img-txt-section",
+            "settings": {
+              "title": "Global Inspiration",
+              "desc": "<p>Choosing organic affects much more than what you put in your own body. Clean products mean clean environments for farmers at origin—from the land they live to the water they drink. We inspire people to choose better coffee, and inspire the industry to do better as a whole. <\/p>",
+              "image": "shopify:\/\/shop_images\/DSC01658-2.jpg"
+            }
+          },
+          "b41224e8-a192-4f08-97cf-d30831ef6eff": {
+            "type": "outro-section",
+            "settings": {
+              "title": "Our History",
+              "desc": "<p>The moment we opened the doors to our very first cafe in Venice Beach, we knew we had found our calling—and our people.<br\/><br\/>We had a humble goal to source and share with our local community the very best organic coffee we could find, but demand grew quickly, and we started roasting coffee 24\/7 out of our tiny café on Rose Avenue to keep up.<br\/><br\/>Now, nearly 30 years later, thanks to the neighbors and friends we’ve been fortunate enough to serve, we have new cafés opening all along the West Coast, a growing line of cold brew coffees, and two very busy roasteries in Los Angeles and Portland. We’ve also been profoundly lucky to see the development of dozens of new organic coffee farms around the world and are proud to continue sharing their exceptional coffees with you.<\/p>",
+              "image": "shopify:\/\/shop_images\/AESRK7rw_2x_1041x_d7fb79f0-dc8c-41e0-8340-38c072f2ce53.jpg",
+              "button_label": "WHY ORGANIC?",
+              "button_link": "shopify:\/\/pages\/why-organic-1"
+            }
+          }
+        },
+        "block_order": [
+          "0bc07b1a-232e-4156-87d9-6d5e05adc38e",
+          "4eb7e88f-6413-478b-b24f-3a75ab09be60",
+          "9ef55fec-606d-4fa6-a7c0-99d31969c76b",
+          "72f3e308-fb13-4e9c-96e1-a05c6112a76b",
+          "b41224e8-a192-4f08-97cf-d30831ef6eff"
+        ],
+        "settings": {}
+      },
+      "page-wholesale-heading": {
+        "type": "page-wholesale-heading",
+        "settings": {
+          "title": "WHOLESALE",
+          "subtitle": "Serve Certified Organic coffee and tea with Groundwork.",
+          "desc": "<p>Let us supply you with everything you need from product, equipment, training and beyond. <\/p>",
+          "form_title": "Contact Form",
+          "form_desc": "<p>you'll hear back from us within 48 hours<\/p>",
+          "call_us_title": "Call Us Directly",
+          "call_us_desc": "<p><strong>LOS ANGELES<\/strong>   818-506-6020<br\/><strong>PORTLAND<\/strong>   503-222-2302<br\/><\/p>",
+          "list_id": "WaZyTz",
+          "success": "Thank you for subscribing! Check your email for a confirmation message."
+        }
+      },
+      "page-wholesale-content": {
+        "type": "page-wholesale-content",
+        "blocks": {
+          "7049caa5-3576-4c19-b1a2-ed033098766a": {
+            "type": "icons",
+            "settings": {
+              "title": "SELECT WHOLESALE CLIENTS",
+              "image_1": "shopify:\/\/shop_images\/unnamed_360x_5c68080c-e760-4014-b7b5-c2fce47df9fa.png",
+              "external_link_1": "",
+              "image_2": "shopify:\/\/shop_images\/Jeni_s_Splendid_Ice_Creams_logo_360x_0950ed3c-71d0-4d70-9032-ac8dc5d302a0.png",
+              "external_link_2": "",
+              "image_3": "shopify:\/\/shop_images\/logo-1_300x_79483b78-e28d-4b9c-9eae-35066b3dbc25.png",
+              "external_link_3": "",
+              "external_link_4": "",
+              "external_link_5": "",
+              "external_link_6": "",
+              "bg_color": "#c9bfa2"
+            }
+          },
+          "aabe9af2-1688-4b76-b03c-1da3adc0c12a": {
+            "type": "image-slide",
+            "settings": {
+              "title": "Thank you for your interest in serving Groundwork Coffee.",
+              "desc": "<p>Groundwork is one of the West Coast’s largest specialty coffee roasters and distributors, and we are humbled to see a growing interest in sustainable, certified organic, specialty coffee. We supply restaurants, hotels, cafés, and grocery stores in a growing number of states across the country. With that, we bring a deep knowledge of coffee and tea to our wholesale customers, as well as a comprehensive knowledge of espresso machines and brewers.<\/p>",
+              "image": "shopify:\/\/shop_images\/Roastery_Resized.png",
+              "title_2": "",
+              "desc_2": "",
+              "title_3": "",
+              "desc_3": "",
+              "title_4": "Image Title",
+              "desc_4": "",
+              "title_5": "",
+              "desc_5": "",
+              "bg_color": "#f2eee9"
+            }
+          },
+          "d3859acf-68e4-42cb-8c01-5e082a9a2bcc": {
+            "type": "secondary-section",
+            "settings": {
+              "title": "",
+              "desc": "<p>As part of the Groundwork Coffee community, we are happy to offer guidance on all aspects of your coffee or tea service — from basic beverage preparation to consultations on your store layout, design, and equipment. We also provide comprehensive barista training to ensure that you and your staff maintain the highest levels of quality and consistency in your brewing and preparation methods. Whether you’re starting a new business or simply want to shift toward an organic, local, and\/or sustainable approach to your coffee and tea offerings, we can provide solutions to meet your needs.<\/p>"
+            }
+          },
+          "da670484-1596-4fa8-ae3a-0ca54cf0db5e": {
+            "type": "icons",
+            "settings": {
+              "title": "We service",
+              "image_1": "shopify:\/\/shop_images\/lm-logo-email_2x_360x_b5c91fa9-4104-43dc-9898-c6f058fd963a.png",
+              "external_link_1": "",
+              "image_2": "shopify:\/\/shop_images\/Mazzer_Logo_1200x1200_360x_feae7304-a582-4df3-8eb0-09d2fd8b6829.png",
+              "external_link_2": "",
+              "image_3": "shopify:\/\/shop_images\/Rancilio-Group-Vector-rancilio_2x-300x78.png",
+              "external_link_3": "",
+              "external_link_4": "",
+              "external_link_5": "",
+              "external_link_6": "",
+              "bg_color": "#8ea6ae"
+            }
+          },
+          "54ea0558-ebdf-4405-8f28-185059254e38": {
+            "type": "image-text-section",
+            "settings": {
+              "title": "Want to know what makes Groundwork so special?",
+              "desc": "<p>Above all else, our coffee must meet a rigorous standard of quality. We only make coffee that is Certified Organic, Directly Traded, and Ethically Sourced. Where we can, we purchase from farms certified sustainable by organizations like Rainforest Alliance and UTZ. We are deeply involved in the long process of getting coffee into your cup—from farms to co-ops to our local Groundwork community. We never settle for anything less than the best coffee possible. <\/p>",
+              "button_label": "",
+              "button_link": "",
+              "external": false,
+              "button_label_2": "",
+              "button_link_2": "",
+              "external_2": false,
+              "image": "shopify:\/\/shop_images\/b4XoJ-nY_2x_668x_6ce4db39-f7a6-4c38-87a7-66b09af8d547.png",
+              "bg_color": "#f2eee9"
+            }
+          }
+        },
+        "block_order": [
+          "7049caa5-3576-4c19-b1a2-ed033098766a",
+          "aabe9af2-1688-4b76-b03c-1da3adc0c12a",
+          "d3859acf-68e4-42cb-8c01-5e082a9a2bcc",
+          "da670484-1596-4fa8-ae3a-0ca54cf0db5e",
+          "54ea0558-ebdf-4405-8f28-185059254e38"
+        ],
+        "settings": {}
+      },
+      "page-organic-heading": {
+        "type": "page-organic-heading",
+        "settings": {
+          "title": "WHY ORGANIC",
+          "subtitle": "All organic. All the time.",
+          "desc": "<p>From our rigorous standards to the way we collaborate with farmers, we pride ourselves on producing only Certified Organic coffee, batch roasted daily.<\/p>"
+        }
+      },
+      "page-organic-content": {
+        "type": "page-organic-content",
+        "blocks": {
+          "9cee3b9a-4c2b-4dfe-9063-4ac0933321fd": {
+            "type": "intro-section",
+            "settings": {
+              "title": "High quality organic coffee is rarer than you might think.",
+              "desc": "<p>When it comes to pesticides, herbicides, and fungicides, coffee is one of the top sprayed agricultural crops globally. Because it’s such a delicate and time-consuming practice, most coffee farmers rely on these chemicals to make sure their farms yield bountiful coffee plants. Many have accepted this as the norm, but we’re here to inspire customers to choose better coffee, and inspire the industry to do better as a whole. <\/p><p>To be an all organic company, we work hard to develop long-term partnerships with farmers at origin—so we can participate in the efforts it takes to field organic plants. It’s extra work, less consistent, and often yields far less product. It’s a commitment far more complicated than many other industries, but it’s one we stand behind and urge others to do the same. <br\/><\/p>",
+              "image": "shopify:\/\/shop_images\/DSC01703-2.png",
+              "video_url": "",
+              "desc_2": ""
+            }
+          },
+          "2663885b-5dc5-4b68-8313-6966c8445357": {
+            "type": "image-slide",
+            "settings": {
+              "title": "A long-standing commitment to excellence.",
+              "desc": "<p>While you might have heard of fairly traded coffee, we use a specialized model called direct trade. This is a process in which roasters work directly with farmers to meet higher standards for coffee quality in exchange for a premium price. That way, the farmers get liveable wages, and Groundwork gets to give you the best coffee out there. <br\/><br\/>All of our coffee comes from smallholder farms, or half acre lots, meaning we focus on sourcing from family-owned farms that invest their livelihoods in sustainable practices that produce our incredible coffee. <\/p>",
+              "image": "shopify:\/\/shop_images\/DSC01703-2_ca019c97-2407-4e26-b075-045b81093a0e.jpg",
+              "title_2": "",
+              "desc_2": "",
+              "title_3": "",
+              "desc_3": "",
+              "title_4": "Image Title",
+              "desc_4": "",
+              "title_5": "Image Title",
+              "desc_5": "",
+              "bg_color": "#c9bfa2"
+            }
+          },
+          "08f269e0-639a-4d37-9217-144a05fa60f1": {
+            "type": "secondary-section",
+            "settings": {
+              "title": "A deep understanding of flavor.",
+              "desc": "<p>Once we have our beautiful organic beans in hand, we have to coax out their best characteristics. We roast at our 5,000-square-foot HQ in North Hollywood and at our 42,000-square-foot facility in Portland.<\/p>",
+              "image": "shopify:\/\/shop_images\/plh0HtiY_2x_459x_30348cd4-d36b-40f6-a3a4-3f895cc2253e.png",
+              "desc_2": "<p>Our Portland Roastery is located in the heart of Slabtown, and can produce more than 5,000 pounds of coffee on a single shift (that’s 1.3 million pounds a year). Our North Hollywood Roastery and HQ sits inconspicuously among the parking lots, loading docks, and near-constant truck traffic of North Hollywood’s Cleon Avenue. A closer look, however, tells a more colorful story. <br\/><\/p><p>Solar panels cover the structure’s roof, drawing enough energy to power the entire building. Pallets of freshly delivered green coffee appear briefly in the sunlight as they’re whisked into the building’s loading bay on the tines of whirring forklifts. Inside, steel racks filled with cases stretch to the ceiling. The cases hold every imaginable product necessary to stock a well-run coffeehouse. Along one long wall, a row of towering silos hold more than 25 varieties of green coffee beans. And in the middle, two massive coffee roasters function as the beating heart of the entire building. These 70-kilo, low-emission machines are a marvel of old and new technology — a fitting blend of the traditional and the innovative.<br\/><br\/>Coffee roasting can be a fairly violent process in which green coffee beans are exposed to temperatures approaching 500 degrees. There are flames, smoke, noise, a lot of sweat, and…you get the picture. But at Groundwork, the job is half the fun. The other half is drinking the fruit of our labor. Cheers. <br\/><\/p>"
+            }
+          },
+          "b2f4357d-1ba0-4af0-9ff8-83b9095d59b8": {
+            "type": "image-slide",
+            "settings": {
+              "title": "Certifiably amazing.",
+              "desc": "<p>Above all else, our coffee must meet a rigorous standard of quality. We only make coffee that is Certified Organic, Directly Traded, and Ethically Sourced. Where we can, we purchase from farms certified sustainable by organizations like Rainforest Alliance and UTZ. We are deeply involved in the long process of getting coffee into your cup—from farms to co-ops to our local Groundwork community. We never settle for anything less than the best coffee possible. <\/p>",
+              "image": "shopify:\/\/shop_images\/Natural_Coffees_Being_Processed_on_Raised_Beds_2_-2.jpg",
+              "title_2": "Image Title",
+              "desc_2": "<p>Description<\/p>",
+              "title_3": "",
+              "desc_3": "",
+              "title_4": "",
+              "desc_4": "",
+              "title_5": "",
+              "desc_5": "",
+              "bg_color": "#c9bfa2"
+            }
+          }
+        },
+        "block_order": [
+          "9cee3b9a-4c2b-4dfe-9063-4ac0933321fd",
+          "2663885b-5dc5-4b68-8313-6966c8445357",
+          "08f269e0-639a-4d37-9217-144a05fa60f1",
+          "b2f4357d-1ba0-4af0-9ff8-83b9095d59b8"
+        ],
+        "settings": {}
+      },
+      "page-blog-heading": {
+        "type": "page-blog-heading",
+        "settings": {
+          "title": "BLOG",
+          "subtitle": "Explore the world of Groundwork.",
+          "desc": "<p>From our rigorous standards to the way we collaborate with farmers, we pride ourselves on producing only Certified Organic coffee, batch roasted daily.<\/p>"
+        }
+      },
+      "page-blog-content": {
+        "type": "page-blog-content",
+        "blocks": {
+          "97c57a53-432c-4f16-9b79-d54246f7e58e": {
+            "type": "blogs",
+            "settings": {
+              "blog": "roasters-corner"
+            }
+          },
+          "af137c9f-ef96-41ce-b53e-7540ab516419": {
+            "type": "blogs",
+            "settings": {
+              "blog": "recipes"
+            }
+          },
+          "09fc2a64-a76e-4568-8493-8e315f8ad7b5": {
+            "type": "blogs",
+            "settings": {
+              "blog": "community-spotlight"
+            }
+          },
+          "51e25941-00f8-4789-a5db-53c0b42849ac": {
+            "type": "blogs",
+            "settings": {
+              "blog": "learn"
+            }
+          },
+          "ef8c1679-6737-47ee-9ca7-dd6b429fb4a1": {
+            "type": "blogs",
+            "settings": {
+              "blog": "news"
+            }
+          },
+          "9ac715ce-f811-4c26-b93b-a5d7ca5750ed": {
+            "type": "blogs",
+            "settings": {
+              "blog": "brew-guides"
+            }
+          },
+          "75821de6-ecf6-4e98-987a-f10e1b0d7d06": {
+            "type": "featured-article",
+            "disabled": true,
+            "settings": {
+              "article": "news\/a-refreshed-brand-to-match-our-best-in-class-coffee"
+            }
+          },
+          "61116f28-719d-4396-ad21-b9179440baa2": {
+            "type": "featured-article",
+            "disabled": true,
+            "settings": {
+              "article": "roasters-corner\/spotlight-ethiopia-heirloom-blend"
+            }
+          },
+          "afeb74b8-2b4b-4e8a-98c8-0f44065b5604": {
+            "type": "featured-article",
+            "disabled": true,
+            "settings": {
+              "article": "roasters-corner\/anaerobic-coffee-101-with-los-pinos-farm"
+            }
+          }
+        },
+        "block_order": [
+          "97c57a53-432c-4f16-9b79-d54246f7e58e",
+          "af137c9f-ef96-41ce-b53e-7540ab516419",
+          "09fc2a64-a76e-4568-8493-8e315f8ad7b5",
+          "51e25941-00f8-4789-a5db-53c0b42849ac",
+          "ef8c1679-6737-47ee-9ca7-dd6b429fb4a1",
+          "9ac715ce-f811-4c26-b93b-a5d7ca5750ed",
+          "75821de6-ecf6-4e98-987a-f10e1b0d7d06",
+          "61116f28-719d-4396-ad21-b9179440baa2",
+          "afeb74b8-2b4b-4e8a-98c8-0f44065b5604"
+        ],
+        "settings": {}
+      },
+      "popup": {
+        "type": "popup",
+        "settings": {
+          "enabled": false,
+          "list_id": "RQsWVe",
+          "success": "Thank you for subscribing! Use code WARMWELCOME20 for 20% off your next purchase.",
+          "delay": 9,
+          "dismiss": 30,
+          "layout": "left",
+          "heading": "Let’s be pals!",
+          "text": "<p>Sign up for our newsletter for 20% off your first purchase with us! <\/p>"
+        }
+      },
+      "product-default-rec": {
+        "type": "product-default-rec",
+        "settings": {}
+      },
+      "product": {
+        "type": "product",
+        "settings": {
+          "show_share_buttons": true
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {}
+      },
+      "1631713425052a9d2c": {
+        "type": "map",
+        "settings": {
+          "title": "Pick up at your local market.",
+          "sub_title": "FIND"
+        }
+      },
+      "map": {
+        "type": "map",
+        "settings": {
+          "title": "Pick up at your local market.",
+          "sub_title": ""
+        }
+      },
+      "16364030500533b8ae": {
+        "type": "design-award",
+        "settings": {
+          "title": "We're B Corp Certified!",
+          "desc": "<p>We believe in this certification just like we believe in organics. Cheers to better coffee and building a better world!<\/p>",
+          "image": "shopify:\/\/shop_images\/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.png",
+          "bg_color": "#e2d9be"
+        }
+      },
+      "custom-fields-pages": {
+        "type": "custom-fields-pages",
+        "blocks": {
+          "0cb6b783-696f-444c-8083-f4d3070d43ec": {
+            "type": "cf_w_pr",
+            "settings": {
+              "key": "cold_brew"
+            }
+          }
+        },
+        "block_order": [
+          "0cb6b783-696f-444c-8083-f4d3070d43ec"
+        ],
+        "settings": {}
+      },
+      "page-sell-sheet-heading": {
+        "type": "page-sell-sheet-heading",
+        "settings": {
+          "title": "WHOLESALE PRODUCT",
+          "subtitle": "Exceptional Organic Coffee.",
+          "desc": "<p>We've been pioneering organic, relationship-based, and sustainable coffee sourcing since the early '90s.<\/p>"
+        }
+      },
+      "page-sell-sheet-content": {
+        "type": "page-sell-sheet-content",
+        "blocks": {
+          "b5afb5f6-356d-4910-8f3d-5c5df4ccef22": {
+            "type": "collection",
+            "settings": {
+              "collection": "whole-bean-sell-sheet"
+            }
+          },
+          "4365ba1c-89b1-4223-90d4-7784d813e979": {
+            "type": "collection",
+            "settings": {
+              "collection": "cold-brew-sell-sheet"
+            }
+          },
+          "256a7edb-394f-4de2-9689-1db51eeaeb8e": {
+            "type": "collection",
+            "settings": {
+              "collection": "bulk-sell-sheet"
+            }
+          }
+        },
+        "block_order": [
+          "b5afb5f6-356d-4910-8f3d-5c5df4ccef22",
+          "4365ba1c-89b1-4223-90d4-7784d813e979",
+          "256a7edb-394f-4de2-9689-1db51eeaeb8e"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "page-press-heading": {
+        "type": "page-press-heading",
+        "settings": {
+          "title": "People are talking.",
+          "subtitle": "Groundwork Coffee Press",
+          "desc": "<p>Our mission is to source and share exceptional, organic coffee that inspires people to work hard, dream big, and impact the world.<\/p>"
+        }
+      },
+      "page-press-content": {
+        "type": "page-press-content",
+        "blocks": {
+          "c8803edf-6d59-41c4-b50c-ae4941649f71": {
+            "type": "press_item",
+            "settings": {
+              "title": "NyMag.com",
+              "ref": "What Ashley Benson Can’t Live Without",
+              "desc": "<p>I love kitschy things in my house, so I had to get Bitches Brew because of the name. And it’s actually a really nice roast. It blends well in the drinks I make, and it’s not too acidic.<\/p>",
+              "img": "shopify:\/\/shop_images\/Artboard_1-2_1000x_8751c49f-5330-46ba-8176-ec7534a82a92.png",
+              "logo": "shopify:\/\/shop_images\/strategist.png",
+              "url": "https:\/\/nymag.com\/strategist\/article\/ashley-benson-favorite-things.html"
+            }
+          },
+          "f43717cd-83dc-451e-8ceb-af7ae123c0fd": {
+            "type": "press_item",
+            "settings": {
+              "title": "Daily Coffee News",
+              "ref": "First Regenerative Organic Certified Coffee Hits US Market",
+              "desc": "<p>A farm-focused, third-party social and environmental certification scheme called Regenerative Organic Certified has moved into the coffee industry. <\/p>",
+              "img": "shopify:\/\/shop_images\/nic_press.png",
+              "logo": "shopify:\/\/shop_images\/Daily-Coffee-News-Logo.png",
+              "url": "https:\/\/dailycoffeenews.com\/2022\/08\/30\/first-regenerative-organic-certified-coffee-hits-us-market\/"
+            }
+          },
+          "7f280096-ab62-466b-b110-41990ad28494": {
+            "type": "press_item",
+            "settings": {
+              "title": "The Argonaut",
+              "ref": "Groundwork Coffee: Doing Good for People and the Planet",
+              "desc": "<p>The B Corp Certificate is awarded to companies that agree to meet high standards of performance, accountability and transparency throughout their entire business model. <\/p>",
+              "img": "shopify:\/\/shop_images\/resized_1.png",
+              "logo": "shopify:\/\/shop_images\/The-Argonaut-Logo-Press-and-Reviews-Avital-Tours-bandw-big.png",
+              "url": "https:\/\/www.argonautnews.com\/business\/doing-good-for-people-and-the-planet\/article_0f179d22-18fe-11ed-b59f-2b9552348ed9.html"
+            }
+          },
+          "c71b1238-7199-4e10-b8d5-dbf3e0dfff23": {
+            "type": "press_item",
+            "settings": {
+              "title": "BEVNET",
+              "ref": "Groundwork Coffee Receives B Corp Certification",
+              "desc": "<p>Groundwork Coffee, one of the leading organic coffee roasters in the U.S., is proud to share that their mission-driven ways are now supported by the distinguished B Corp certification.<\/p>",
+              "img": "shopify:\/\/shop_images\/Artboard_1-2.png",
+              "logo": "shopify:\/\/shop_images\/BevNET_logo_ee34bd3d-dc30-44d6-9764-36c7404bb70f.png",
+              "url": "https:\/\/www.bevnet.com\/news\/2022\/groundwork-coffee-receives-b-corp-certification"
+            }
+          },
+          "1aa69a8d-5da4-48b2-95e0-df4e5d78af15": {
+            "type": "press_item",
+            "settings": {
+              "title": "BEVNET",
+              "ref": "Los Angeles-based Organic Coffee Shop, Groundwork Coffee Co., Highlights Mission-Forward Vision With Brand Refresh",
+              "desc": "<p>The brand refresh captures the essence of Groundwork’s Southern California roots by representing the culture with updated designs and color palettes.<\/p>",
+              "img": "shopify:\/\/shop_images\/Artboard_1_3.png",
+              "logo": "shopify:\/\/shop_images\/BevNET_logo_ee34bd3d-dc30-44d6-9764-36c7404bb70f.png",
+              "url": "https:\/\/www.bevnet.com\/news\/2021\/los-angeles-based-organic-coffee-shop-groundwork-coffee-co-highlights-mission-forward-vision-with-brand-refresh"
+            }
+          },
+          "b50840ef-d1b6-4e14-aa3e-a25a99590388": {
+            "type": "press_item",
+            "settings": {
+              "title": "Bartalks.net",
+              "ref": "Organic Groundwork Coffee Shop Lays Out Updated Mission",
+              "desc": "<p>Although there are a lot of fairtrade coffee companies out there, the number of committed organic coffee companies is much smaller. The company website goes into quite a lot of detail about who they work with and why.<\/p>",
+              "img": "shopify:\/\/shop_images\/groundwork6-web-1024x619.jpg",
+              "logo": "shopify:\/\/shop_images\/bar_talks.png",
+              "url": "https:\/\/bartalks.net\/organic-groundwork-coffee-shop-lays-out-updated-mission\/"
+            }
+          },
+          "85148fbd-1762-4b22-bf31-acd323b451d0": {
+            "type": "press_item",
+            "settings": {
+              "title": "Brewbound.com",
+              "ref": "Santa Monica Brew Works Collabs with Groundwork Coffee to Release Breakfast Brew Golden Mocha Porter",
+              "desc": "<p>Santa Monica Brew Works announces the latest edition in its series of limited-release beers celebrating local businesses.<\/p>",
+              "img": "shopify:\/\/shop_images\/Artboard_2_1.png",
+              "logo": "shopify:\/\/shop_images\/Brewbound_logo2.png",
+              "url": "https:\/\/www.brewbound.com\/news\/santa-monica-brew-works-collabs-with-groundwork-coffee-to-release-breakfast-brew-golden-mocha-porter\/"
+            }
+          },
+          "f4264da1-1826-4599-a874-ad45f962d40d": {
+            "type": "press_item",
+            "settings": {
+              "title": "Santa Monica Daily Press",
+              "ref": "Community Coffee Institution Groundwork Celebrates 30 Years of Purpose-driven Roasting",
+              "desc": "<p>What started as a small family owned rare books store and coffee roastery tucked away on Rose Avenue, has now become a West Coast hallmark of sustainable and organic coffee.<\/p>",
+              "img": "shopify:\/\/shop_images\/Artboard_5.png",
+              "logo": "shopify:\/\/shop_images\/SMDP-new-logo-300x128.png",
+              "url": "https:\/\/www.smdp.com\/community-coffee-institution-groundwork-celebrates-30-years-of-purpose-driven-roasting\/208733"
+            }
+          },
+          "b31ea405-9f89-4c98-a213-36eb00dcbb9c": {
+            "type": "press_item",
+            "settings": {
+              "title": "Patch.com",
+              "ref": "Venice's Groundwork Coffee Drops a Fresh Rebrand",
+              "desc": "<p>Groundwork Coffee is celebrating 30 years of business in the community with a new design, website and remembering where it all started — at the original Venice shop.<\/p>",
+              "img": "shopify:\/\/shop_images\/Artboard_4_1.png",
+              "logo": "shopify:\/\/shop_images\/patch.com.png",
+              "url": "https:\/\/patch.com\/california\/venice\/venices-groundwork-coffee-co-drops-fresh-rebrand"
+            }
+          },
+          "98d88591-206d-4963-a4ac-c6f8ce317865": {
+            "type": "press_item",
+            "settings": {
+              "title": "Westside Current",
+              "ref": "Groundwork Grows From Rose Ave in Venice to West Coast Hallmark",
+              "desc": "<p>What started as a small family owned rare books store and coffee roastery tucked away on Rose Avenue, has now become a West Coast hallmark of sustainable and organic coffee.<\/p>",
+              "img": "shopify:\/\/shop_images\/Artboard_3_2.png",
+              "logo": "shopify:\/\/shop_images\/westside_current.png",
+              "url": "https:\/\/www.westsidecurrent.com\/eat\/groundworks-grows-from-rose-ave-in-venice-to-west-coast-hallmark\/article_8505079e-1d83-11ec-9327-37e7d6c3b675.html"
+            }
+          },
+          "69a5ee98-cc6d-428b-a119-b675d756c0ea": {
+            "type": "press_item",
+            "settings": {
+              "title": "Santa Monica Daily Press",
+              "ref": "Santa Monica Brew Works Teamed up with Organic Coffee Roasters Groundwork Coffee Co.",
+              "desc": "<p>The brewery teamed up with organic coffee roasters Groundwork Coffee Co. for their latest effort following partnerships with other local iconic places such as Bay Cities and Rip City Skates.<\/p>",
+              "img": "shopify:\/\/shop_images\/Artboard_1-1.png",
+              "logo": "shopify:\/\/shop_images\/SMDP-new-logo-300x128.png",
+              "url": "https:\/\/www.smdp.com\/santa-monica-brew-works-teamed-up-with-organic-coffee-roasters-groundwork-coffee-co\/208262"
+            }
+          },
+          "a0a1e8eb-df68-4948-bd84-762de3d95319": {
+            "type": "press_item",
+            "settings": {
+              "title": "Helena Coffee Processing & Export",
+              "ref": "5 Places to Buy Wholesale Coffee in LA",
+              "desc": "<p>In Venice, California, Groundwork Coffee roasters was established thirty years ago. Originally a modest roaster, they have grown to include cafés sprouting up all along the West Coast, a growing selection of cold brew coffees.<\/p>",
+              "img": "shopify:\/\/shop_images\/resized_2.png",
+              "logo": "shopify:\/\/shop_images\/resized2.png",
+              "url": "https:\/\/helenacoffee.vn\/5-places-to-buy-wholesale-coffee-beans-in-los-angeles\/#2_Groundwork"
+            }
+          }
+        },
+        "block_order": [
+          "c8803edf-6d59-41c4-b50c-ae4941649f71",
+          "f43717cd-83dc-451e-8ceb-af7ae123c0fd",
+          "7f280096-ab62-466b-b110-41990ad28494",
+          "c71b1238-7199-4e10-b8d5-dbf3e0dfff23",
+          "1aa69a8d-5da4-48b2-95e0-df4e5d78af15",
+          "b50840ef-d1b6-4e14-aa3e-a25a99590388",
+          "85148fbd-1762-4b22-bf31-acd323b451d0",
+          "f4264da1-1826-4599-a874-ad45f962d40d",
+          "b31ea405-9f89-4c98-a213-36eb00dcbb9c",
+          "98d88591-206d-4963-a4ac-c6f8ce317865",
+          "69a5ee98-cc6d-428b-a119-b675d756c0ea",
+          "a0a1e8eb-df68-4948-bd84-762de3d95319"
+        ],
+        "settings": {}
+      }
+    },
+    "content_for_index": [
+      "1622233552d8efa6f7",
+      "16222336297b5b35dc",
+      "16364030500533b8ae",
+      "162223412033a2fd6b",
+      "1622234191c2bf9a2c",
+      "1622234262199ae01c",
+      "16222342969785edde",
+      "1631713425052a9d2c"
+    ],
+    "blocks": {
+      "3acfba32-89f3-4377-ae20-cbb9abc48475": {
+        "type": "shopify:\/\/apps\/order-limits-minmaxify\/blocks\/app-embed-block\/3acfba32-89f3-4377-ae20-cbb9abc48475",
+        "disabled": false,
+        "settings": {
+          "async": false
+        }
+      }
+    }
+  }
+}

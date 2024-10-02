@@ -1,0 +1,160 @@
+<section id="footer-tree-section" class="footer-tree-section">
+  <div class="footer-tree-section__top-section">
+
+    
+    <div class="title-container">
+      {% include "page-title" with title: section.settings.title, subtitle: section.settings.subtitle  %}
+    </div>
+    
+
+    {% comment %} <div class="footer-tree-section__mobile-text">{{ section.settings.text }}</div> {% endcomment %}
+
+ 
+
+
+  </div>
+
+  <div class="footer-tree-section__trees desktop">
+    {% render 'trees-bg' %}
+  </div>
+
+  
+  <div class="footer-tree-section__bottom-section">
+    {% comment %} <div class="footer-tree-section__mobile-btn">
+      
+        <a href="{{ section.settings.btn_link }}" class="button ">
+          {{ section.settings.btn_text }}
+        </a>
+   
+      
+    </div> {% endcomment %}
+    <div class="footer-tree-section__content-section">
+      <div class="container">
+        <div class="footer-tree-section__content">
+          <div class="footer-tree-section__col">
+            <div class="footer-tree-section__img-container">
+              <img
+              srcset="{{ section.settings.image.src | image_url: width: 350 }}"
+              src="{{ section.settings.image.src | image_url: width: 350 }}"
+              alt="{{ section.settings.image.src.alt | escape }}"
+              class="motion-reduce"
+              loading="lazy"
+              width="350"
+              height="222">
+            </div>
+           
+          </div>
+          <div class="footer-tree-section__col">
+            <div class="footer-tree-section__text">
+              {{ section.settings.text }}
+              <div class="footer-tree-section__btn-container">
+              <a href="{{ section.settings.btn_link }}" class="button ">
+                {{ section.settings.btn_text }}
+              </a>
+            </div>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+{% comment %} <section class="footer-tree-section__mobile-icon-container">
+  <div class="container">
+    <div class="footer-tree-section__mobile-icon">
+      <img
+              srcset="{{ section.settings.image.src | image_url: width: 350 }}"
+              src="{{ section.settings.image.src | image_url: width: 350 }}"
+              alt="{{ section.settings.image.src.alt | escape }}"
+              class="motion-reduce"
+              loading="lazy"
+              width="350"
+              height="222">
+    </div>
+  </div>
+</section> {% endcomment %}
+
+<style>
+  #footer-tree-section {
+    background-color: {{ section.settings.background_color }};
+
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Footer Tree Section",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Content"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "image"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#F1EEEA"
+    },
+    {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding top",
+        "default": 50
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding bottom",
+        "default": 50
+      }
+  ],
+  "presets": [
+    {
+      "name": "Footer Tree Section",
+      "category": "Regen"
+    }
+  ]
+}
+{% endschema %}

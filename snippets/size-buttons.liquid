@@ -1,0 +1,188 @@
+{% for option in product.options %}
+
+    {% assign index = forloop.index0 %}
+    {% assign sizeList = '' %}
+    {% assign size = '' %}
+    {% assign availableList = '' %}
+
+    {% for variant in product.variants %}
+        {% capture size %}
+            {{ variant.options[index] }}
+        {% endcapture %}
+
+     
+
+        {% unless sizeList contains size %}
+            {% capture tempList %}
+                {{sizeList | append: size | append: '!..!'}}
+            {% endcapture %}
+            {% assign sizeList = tempList %}
+        {% endunless %}
+
+
+        {% unless availableList contains size %}
+            {% if variant.available %}
+                {% capture tempList %}
+                    {{availableList | append: size | append: '!..!'}}
+                {% endcapture %}
+                {% assign availableList = tempList %}
+            {% endif %}
+        {% endunless %}
+    {% endfor %}
+
+    {% assign sizeList = sizeList | split: "!..!" %}
+
+
+    {% if sizeList.size > 0 %}
+      <div class="js product_form--options-container">
+        <fieldset class="row" id="ProductSelect-option-{{ forloop.index0 }}" name="{{ option | handleize }}">
+            <legend class="col-4 product_form--label">
+              {% if option == 'Title' %}
+                Select
+              {% else %}
+               {{ option }}
+
+              {% endif %}
+              
+            </legend>
+            {% for item in sizeList %}
+              {%- if item != blank -%}
+                {%- if item.size > 5 -%}
+                  {% assign long = true %}
+                {%- else -%}
+                  {% assign long = false %}
+                {%- endif -%}
+              {%- endif -%}
+            {% endfor %}
+
+
+
+            <div class="col-6 {% unless long %} d-md-flex {% endunless %} ">
+
+  
+
+              {% for item in sizeList %}
+                {%- if item != blank -%}
+                  {% assign index1 = forloop.index0 %}
+                  {% assign size = item | strip %}
+                  {% assign available = "unavailable"  %}
+                  {% if availableList contains size %}
+                      {% assign available = "available"  %}
+                  {% endif %}
+                  {% if size %}
+
+
+
+                      {%render "size-button" with {
+                          size: size,
+                          productID:product.id,
+                          available:available,
+                          index: index,
+                          index1: index1,
+                          optionName: option,
+                          current_variant: current_variant
+                      }%}
+                  {% endif %}
+                {%- endif -%}
+              {% endfor %}
+            </div>
+            <div class="col">
+              {% if forloop.index0 == 0 %}
+                <div class="number-input-wrapper">
+                  <label class="label-hidden" for="Quantity">Quantity</label> 
+                  <input type="number" id="Quantity" name="quantity" value="1" min="1">
+                  <a href="#" class="subtract-one-prod" data-product-id="{{ product.variants.first.id }}" aria-label="Subtract Link" data-operation="subtract">-</a>
+                  <span class="qty-readout">1</span>
+                  <a href="#" class="add-one-prod" data-product-id="{{ product.variants.first.id }}" aria-label="Add Link" data-operation="add">+</a>
+                </div>
+              {% endif %}
+            </div>
+          </fieldset>
+        </div>
+    {% endif %}
+
+{% endfor %}
+
+
+
+
+<script type="text/javascript">
+
+  
+
+function getCurrentVariant(){
+  var size = '{{ size | strip }}';
+  var availableSizes = PRODUCT.variants
+        .filter(variant=>{
+            // make sure variant is available at all
+            return variant.available;
+        })
+        .map(variant=>{
+            // get all variant options
+            var allOptions = [variant.option1,variant.option2,variant.option3];
+            return allOptions.filter(opt=>opt);
+        })
+        .filter(options=>{
+            // Make sure one of the options is the size in question
+            return options.some(option=>option === size);
+        })
+        .map(options=>{
+            // Get all options that are not the size
+            return options.filter(option=>option !== size);
+        })
+        .map(getSizeFromOptions);
+
+
+
+}
+
+function handleChangedProductSize(productID,size,index){
+
+    var availableSizes = PRODUCT.variants
+        .filter(variant=>{
+            // make sure variant is available at all
+            return variant.available;
+        })
+        .map(variant=>{
+            // get all variant options
+            var allOptions = [variant.option1,variant.option2,variant.option3];
+            return allOptions.filter(opt=>opt);
+        })
+        .filter(options=>{
+            // Make sure one of the options is the size in question
+            return options.some(option=>option === size);
+        })
+        .map(options=>{
+            // Get all options that are not the size
+            return options.filter(option=>option !== size);
+        })
+        .map(getSizeFromOptions);
+
+      
+
+    var container = document.getElementById('product_form_' + productID);
+
+    
+
+    var sizeButtons = Array.from(container.querySelectorAll('.size-button:not(.size-button-'+index+')'));
+
+    // Make all sizes unavailable so we can toggle the valid ones back
+    sizeButtons.forEach(el=>{
+        el.classList.remove('available');
+    });
+    sizeButtons.filter(el=>{
+        var value = el.getAttribute("data-value");
+        return availableSizes.includes(value);
+    }).forEach(el=>{
+        el.classList.add('available');
+    })
+}
+  // TODO: improve this function in case they add more variant options in different orders
+  function getSizeFromOptions(options){
+      return options[0];
+  }
+
+  getCurrentVariant();
+
+
+</script>

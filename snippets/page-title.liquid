@@ -1,0 +1,33 @@
+<section class="page_title_container">
+  <div class="container">
+    {% if title != blank %}
+      {% if no_h1 %}
+        <h2 class="page_title_container--title">
+          {{ title }}
+        </h2>
+      {% else %} 
+        <h1 class="page_title_container--title">
+          {{ title }}
+        </h1>
+      {% endif %}
+      
+    {% endif %}
+    {% if subtitle != blank %}
+      {% if title == blank %}
+        {% if no_h1 %}
+          <h2 class="page_title_container--subtitle">{{ subtitle | strip_html }}</h2>
+
+        {% else %}
+          <h1 class="page_title_container--subtitle">{{ subtitle | strip_html }}</h1>
+        {% endif %}
+      {% else %}
+        <h2 class="page_title_container--subtitle">{{ subtitle | strip_html }}</h2>
+      {% endif %}
+    {% endif %}
+    {% if desc != blank %}
+      <div class="page_title_container--desc">
+        {{ desc }}
+      </div>
+    {% endif %}
+  </div>
+</section>
