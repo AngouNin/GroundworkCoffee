@@ -659,7 +659,7 @@
               "image": "shopify:\/\/shop_images\/PICO365_360x_ad823570-a614-48d5-b39f-09e256dec3fe.png",
               "button_label": "Order Ahead",
               "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-company-pico-2121-cloverfield-blvd",
-              "store_details": "<p><strong>Café Hours<\/strong><\/p><p>7:00 a.m. to 3:00 p.m.<\/p><p><\/p><p><strong>2121 Cloverfield Blvd.<br\/>Santa Monica, CA 90404<\/strong><\/p><p>424-216-3270<\/p><p>pico365@groundworkcoffee.com<\/p><p><\/p><p>We've gone back to our Westside roots with an awesome cafe at the <a href=\"https:\/\/www.365bywholefoods.com\/pages\/groundwork-coffee\" target=\"_blank\">Whole Foods Market 365<\/a> in Santa Monica. Not only are we serving up all of your favorite coffee, tea, and specialty drinks, but we're also offering a full line of house-made baked goods, grab & go items, and a full made-to-order menu.<\/p><p><\/p><p><\/p>",
+              "store_details": "<p><strong>Café Hours<\/strong><\/p><p>7:00 a.m. to 3:00 p.m.<\/p><p><\/p><p><strong>2121 Cloverfield Blvd.<br\/>Santa Monica, CA 90404<\/strong><\/p><p>424-216-3270<\/p><p>pico365@groundworkcoffee.com<\/p><p><\/p><p>We've gone back to our Westside roots with an awesome cafe at the <a href=\"https:\/\/www.wholefoodsmarket.com\/products\/brands\/groundwork-coffee\" target=\"_blank\">Whole Foods<\/a> in Santa Monica. Not only are we serving up all of your favorite coffee, tea, and specialty drinks, but we're also offering a full line of house-made baked goods, grab & go items, and a full made-to-order menu.<\/p><p><\/p><p><\/p>",
               "city": "los_angeles"
             }
           },
@@ -1351,7 +1351,7 @@
             "type": "accordion",
             "settings": {
               "title": "Where do we get our eggs from?",
-              "desc": "<p>Chino Valley Farms - Check out their website for more information on their wonderful, <a href=\"https:\/\/www.chinovalleyranchers.com\/whats-an-organic-egg\/\"><span style=\"text-decoration:underline\">organic eggs<\/span><\/a>.<\/p>",
+              "desc": "<p>Chino Valley Farms - Check out their website for more information on their wonderful, <a href=\"https:\/\/www.chinovalleyranchers.com\/what-is-a-soy-free-organic-egg\/\"><span style=\"text-decoration:underline\">organic eggs<\/span><\/a>.<\/p>",
               "category": "coffee_shops"
             }
           },
@@ -1369,14 +1369,6 @@
             "settings": {
               "title": "Our food nutritional facts",
               "desc": "<p>All nutritional information for our cafe foods can be found in the Cafe’s Nutrition binders located in store. Take a peek at them during your next visit!<\/p>",
-              "category": "coffee_shops"
-            }
-          },
-          "20cce4ed-4807-4889-84f9-063d8ef99234": {
-            "type": "accordion",
-            "settings": {
-              "title": "Where do you get your eggs from?",
-              "desc": "<p>Chino Valley Farms - Check out their website for more information on their wonderful, <a href=\"https:\/\/www.chinovalleyranchers.com\/whats-an-organic-egg\/\"><span style=\"text-decoration:underline\">organic eggs<\/span><\/a>.<\/p>",
               "category": "coffee_shops"
             }
           },
