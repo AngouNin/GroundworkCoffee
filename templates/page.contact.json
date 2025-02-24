@@ -1,0 +1,70 @@
+{
+  "sections": {
+    "page-contact": {
+      "type": "page-contact",
+      "settings": {
+        "title": "Say hi!"
+      }
+    },
+    "page-contact-content": {
+      "type": "page-contact-content",
+      "blocks": {
+        "f51ac369-85dd-4ae6-a796-f992e0cf0231": {
+          "type": "office",
+          "settings": {
+            "title": "Los Angeles Office",
+            "image": "shopify:\/\/shop_images\/groundwork_locations_Noho_Roasterpng-2.png",
+            "address": "<p>5457 Cleon Ave.<br\/>North Hollywood, CA 91601<\/p>",
+            "address_link": "https:\/\/www.google.com\/maps\/place\/5457+Cleon+Ave,+North+Hollywood,+CA+91601\/@34.1702188,-118.3710738,17z\/data=!3m1!4b1!4m5!3m4!1s0x80c29592af9635ef:0x51693872bf070b23!8m2!3d34.1702188!4d-118.3688851",
+            "phone": "(818) 506-6020",
+            "email": "orders@groundworkcoffee.com",
+            "hours": "9:30 AM - 4:00 PM (PST)"
+          }
+        },
+        "fe5c99d7-47e4-4697-adbc-34508c889073": {
+          "type": "office",
+          "settings": {
+            "title": "Portland Office",
+            "image": "shopify:\/\/shop_images\/PDX_1.png",
+            "address": "<p>539 SE Division Pl. <\/p><p>Portland, OR 97202<\/p>",
+            "address_link": "https:\/\/www.google.com\/maps?q=2355+NW+Vaughn+St.+Portland,+OR+97210&rlz=1C5CHFA_enUS941US941&um=1&ie=UTF-8&sa=X&ved=2ahUKEwi9z7v12tHxAhVQsZ4KHYSfDQwQ_AUoAXoECAEQAw",
+            "phone": "(503) 796-9363",
+            "email": "pdxorders@groundworkcoffee.com",
+            "hours": "8:30 AM - 4:30 PM (PST)"
+          }
+        }
+      },
+      "block_order": [
+        "f51ac369-85dd-4ae6-a796-f992e0cf0231",
+        "fe5c99d7-47e4-4697-adbc-34508c889073"
+      ],
+      "settings": {
+        "title": "Test",
+        "desc": "<p>See contact information for individual cafes on <a href=\"https:\/\/www.groundworkcoffee.com\/pages\/locations-1\" target=\"_blank\" title=\"Groundwork Cafe Locations\">our locations page<\/a><\/p><p>For large orders and wholesale accounts, visit <a href=\"https:\/\/www.groundworkcoffee.com\/pages\/wholesale-info\" target=\"_blank\" title=\"Groundwork Wholesale\">our wholesale page<\/a><\/p><p>Want to join this amazing team? Check out <a href=\"\/pages\/careers\" title=\"Careers\">our career page<\/a><\/p>"
+      }
+    },
+    "map": {
+      "type": "map",
+      "settings": {
+        "title": "Pick up at your local market.",
+        "sub_title": ""
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "section_title": "Subscribe to our newsletter",
+        "subheading": "A short sentence describing what someone will receive by subscribing",
+        "image": "shopify:\/\/shop_images\/computer_2x_831x_0c48d819-6e30-4bc3-8b6d-b1f25766e5d3.png",
+        "list_id": "",
+        "success": "Thank you for subscribing! Check your email for a confirmation message."
+      }
+    }
+  },
+  "order": [
+    "page-contact",
+    "page-contact-content",
+    "map",
+    "newsletter"
+  ]
+}

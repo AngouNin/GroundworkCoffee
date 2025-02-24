@@ -1,0 +1,45 @@
+{
+  "sections": {
+    "page-catering-heading": {
+      "type": "page-catering-heading",
+      "settings": {
+        "title": "Catering",
+        "subtitle": "Need hot, fresh, organic coffee and bites catered?",
+        "desc": "<p>We've opened up our catering & delivery service to offer drip coffee and quick bites for small scale events in the LA area.<\/p>"
+      }
+    },
+    "page-catering-content": {
+      "type": "page-catering-content",
+      "blocks": {
+        "4495d70c-837d-4c58-8a38-5747d2a12667": {
+          "type": "section-text",
+          "settings": {
+            "title": "Your favorite Groundwork items catered to you!",
+            "desc": "<p>Drip Coffee, hand-crafted food menu items, fresh baked goods, & small bites. <\/p><p>Delivery options available at select Groundwork Coffee locations.<\/p>",
+            "image": "shopify:\/\/shop_images\/About-Groundwork---Catering---Option-3---Iced-Coffee_2048x_23a05bf2-7b48-465a-aa5b-ddccd5d06d1f.jpg",
+            "button_label": "",
+            "button_link": "",
+            "bg_color": "#8ea6ae"
+          }
+        },
+        "155bf04b-4dfb-42d3-adb3-c8651f33c410": {
+          "type": "call_us",
+          "settings": {
+            "title": "For catering inquiries, contact your local Groundwork Cafe",
+            "desc": "<p><strong>Venice<\/strong> <br\/><a href=\"mailto:catering@groundworkcoffee.com\" title=\"mailto:rose@groundworkcoffee.com\">rose@groundworkcoffee.com<\/a><\/p><p><strong>-<\/strong><\/p><p><strong>North Hollywood<\/strong><\/p><p><a href=\"mailto:northhollywood@groundworkcoffee.com\" title=\"mailto:northhollywood@groundworkcoffee.com\">northhollywood@groundworkcoffee.com<\/a><\/p><p>-<\/p><p><strong>DTLA Arts District<\/strong><\/p><p><\/p><p><a href=\"mailto:traction@groundworkcoffee.com\" title=\"mailto:traction@groundworkcoffee.com\">traction@groundworkcoffee.com<\/a><\/p><p>-<\/p><p><strong>Larchmont Village<\/strong><\/p><p><a href=\"mailto:larchmont@groundworkcoffee.com\" title=\"mailto:larchmont@groundworkcoffee.com\">larchmont@groundworkcoffee.com<\/a><\/p><p>-<\/p><p><strong>Santa Monica<\/strong><\/p><p><a href=\"mailto:mainstreet@groundworkcoffee.com\" title=\"mailto:mainstreet@groundworkcoffee.com\">mainstreet@groundworkcoffee.com<\/a><\/p><p>-<\/p><p><strong>Hollywood<\/strong><\/p><p><a href=\"mailto:mainstreet@groundworkcoffee.com\" title=\"mailto:mainstreet@groundworkcoffee.com\">hollywood@groundworkcoffee.com<\/a><\/p><p>-<\/p><p><strong>Venice Boardwalk<\/strong><\/p><p><a href=\"mailto:annex@groundworkcoffee.com\" title=\"mailto:annex@groundworkcoffee.com\">annex@groundworkcoffee.com<\/a><\/p><p>-<\/p><p><strong>Beverly Grove<\/strong><\/p><p><a href=\"mailto:3rd@groundworkcoffee.com\" title=\"mailto:3rd@groundworkcoffee.com\">3rd@groundworkcoffee.com<\/a><\/p><p><\/p>",
+            "note": "<p>Note that we need a minimum of 48 hours before expected delivery.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "4495d70c-837d-4c58-8a38-5747d2a12667",
+        "155bf04b-4dfb-42d3-adb3-c8651f33c410"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "page-catering-heading",
+    "page-catering-content"
+  ]
+}

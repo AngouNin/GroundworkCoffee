@@ -1,0 +1,70 @@
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const priceButton = document.getElementById('price-button');
+  const variantPicker = document.querySelector('[name="id"]'); // Update this selector if you are using a custom variant picker
+
+  // Helper function to format money according to Shopify's settings
+  function formatMoney(cents) {
+    return Shopify.formatMoney(cents, Shopify.money_format);
+  }
+
+  // Function to update the price on the Add to Cart button
+  function updateAddToCartButtonPrice(variantId) {
+    if (!priceButton || !window.productVariants) return;
+
+    const selectedVariant = window.productVariants.find(v => v.id == variantId);
+    if (selectedVariant) {
+      priceButton.textContent = `- ${formatMoney(selectedVariant.price)}`;
+    }
+  }
+
+  // Event listener for changes on the variant picker
+  if (variantPicker) {
+    variantPicker.addEventListener('change', (event) => {
+      const variantId = event.target.value;
+      updateAddToCartButtonPrice(variantId);
+    });
+  }
+
+  // Initial setup to load the default variant price
+  if (variantPicker && variantPicker.value) {
+    updateAddToCartButtonPrice(variantPicker.value);
+  }
+});
+
+
+function handleChangedProductSize(productID, selectedSize) {
+  console.log(`Product ID: ${productID}, Selected Size: ${selectedSize}`);
+
+  // Select all product media items on the page
+  const productMediaItems = document.querySelectorAll('.product__media-item');
+
+  if (!productMediaItems) {
+    console.warn("No product media items found.");
+    return;
+  }
+
+  // Hide all media items initially
+  productMediaItems.forEach(item => {
+    item.style.display = 'none';
+  });
+
+  // Show media items that match the selected size
+  productMediaItems.forEach(item => {
+    if (item.dataset.size === selectedSize || item.dataset.size === 'all') {
+      item.style.display = 'block';
+    }
+  });
+
+  // Optionally, scroll to the first visible image (if needed)
+  const firstVisibleMedia = Array.from(productMediaItems).find(item => item.style.display === 'block');
+  if (firstVisibleMedia) {
+    firstVisibleMedia.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+}
+
+
+
+</script>

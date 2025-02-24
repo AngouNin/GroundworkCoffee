@@ -1,0 +1,39 @@
+{% if product.metafields.custom_fields["our_commitment"] != blank %}
+<section class="product_commitment rela {% if product.type == 'Organic Coffee'%} green {% else %} blue {% endif %} ">
+  <div class="container">
+
+      {% for item in product.metafields.custom_fields["our_commitment"] %}
+        <div class="row">
+          <div class="col-md">
+
+            {% if item["subtitle"] != blank %}
+              <h3 class="product_commitment--subtitle">
+                {{ item["subtitle"] }}
+              </h3>
+            {% endif %}
+
+            {% if item["title"] != blank %}
+              <h2 class="product_commitment--title">{{ item["title"] }}</h2>
+            {% endif %}
+
+            {% if item["description"] != blank %}
+              <div class="product_commitment--desc">
+                {{ item["description"] }}
+              </div>
+            {% endif %}
+          </div>
+          <div class="col-md">
+          </div>
+        </div>
+      {% endfor %}
+  </div>
+
+  <!-- {% include "icon-hand-flower" %} -->
+
+  <div class="product_commitment--hand-flower">
+    <!-- {% include "icon-hand-flower" %} -->
+    <img src="https://cdn.shopify.com/s/files/1/0549/3738/7174/files/Mask_Group_10_2x_d60e500b-e3f2-4e46-963d-54281ad4bd96.png?v=1621888444" alt="">
+  </div>
+</section>
+
+{% endif %}

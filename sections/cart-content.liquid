@@ -1,0 +1,217 @@
+     <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'featured-samples.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
+      <!--[if lt IE 9]><script src="{{ 'featured-samples.js' | asset_url }}"></script><![endif]-->
+
+  <link rel="stylesheet" href="{{ 'selectric.css' | asset_url }}">
+
+
+<section>
+  <div class="container">
+    {% if cart.item_count > 0 %}
+
+
+      <form action="/cart" method="post" novalidate>
+        <div class="row">
+          <div class="col-md-8">
+            <h1>{{ 'cart.general.title' | t }}</h1>
+            {% comment %} <div style="background:black; color: white; padding: 9px; text-align: center"><strong>Black Friday Sale thru Sunday</strong> <br/>ALL 10 oz, 12 oz, and 16 oz coffee<br/> Buy 3 Save 20% <br/> Buy 4+ Save 30% <br/>Plus FREE SHIPPING</div> {% endcomment %}
+
+            {% for item in cart.items %}
+              <div class="cart_item">
+                <div class="row">
+                  {% if item.image != blank %}
+                    <div class="cart_item--image col">
+                      <a href="{{ item.url | within: collections.all }}">
+                        {{ item | img_url: '240x240' | img_tag: item.title }}
+                      </a>
+                    </div>
+                  {% endif %}
+
+                  <div class="col-6 txt">
+                    {% unless item.product.has_only_default_variant %}
+                      <p class="cart_item--variant-title">{{ item.variant.title }}</p>
+                    {% endunless %}
+
+                    <a href="{{ item.url }}">
+                      <p class="cart_item--title">{{ item.product.title }}</p>
+                    </a>
+
+
+                    
+                    
+
+                    <div class="cart_item--number-input-wrapper">
+                      <input type="number" id="Quantity" name="quantity" value="{{ item.quantity }}" min="0" style="display:none;">
+                      <a href="#" class="subtract-one-prod" data-product-id="{{ item.id }}" data-operation="subtract">-</a>
+                      <span class="qty-readout">{{ item.quantity }}</span>
+
+                   
+                      {% assign quant = item.quantity  | times: 1 %}
+                      {% assign prop = item.properties | json %}
+                      {% assign prop = prop.size | times: 1 %}
+                   
+                      <script>
+                        console.log({{item.product | json}});
+
+                      </script>
+
+                      {% if item.product.type contains 'Subscription' %}
+                        {%- if quant < 2  -%}
+                        
+                        <a href="#" class="add-one-prod" data-product-id="{{ item.id }}" data-operation="add">+</a>  
+                      
+                        {%- endif -%}
+
+                        {%- else -%}
+                        <a href="#" class="add-one-prod" data-product-id="{{ item.id }}" data-operation="add">+</a>  
+
+                      {% endif %}
+                      
+
+                    </div>
+
+                      {% if item.selling_plan_allocation.selling_plan.id != blank %}
+                        <!-- <div class="cart_item--sub">
+                          {{ item.selling_plan_allocation.selling_plan.name }}
+                        </div> -->
+
+                        <script type="text/javascript">
+                        
+                        </script>
+
+                        {% assign index = forloop.index %}
+                        <div class="sub_selector d-flex">
+                          <label class="sub_selector--label d-flex align-items-center">
+                            <div class="outer-circle">
+                              <div class="circle"></div>
+
+                            </div>
+                            SUBSCRIPTION
+                          </label>
+                          <div class="sub_selector--options d-flex align-items-center">
+                            {% for selling_plan in item.product.selling_plan_groups[0].selling_plans %}
+                              {% assign active = '' %}
+                              {% if item.selling_plan_allocation.selling_plan.id == selling_plan.id %}
+                                {% assign active = 'active' %}
+                              {% endif  %}
+                              <div class="update_subscription {{ active }}" data-plan-id="{{ selling_plan.id }}"  data-qty="{{ item.quantity }}" data-index="{{ index }}" data-variant-id="{{ item.variant_id }}">
+                                {% if selling_plan.name == 'Delivery every 1 Week' %}
+                                  Weekly
+                                {% elsif selling_plan.name == 'Delivery every 2 Weeks' %}
+                                  Biweekly
+                                {% elsif selling_plan.name == 'Delivery every 4 Weeks' %}
+                                  Monthly
+                                {% endif %}
+                              </div>
+                            {% endfor %}
+                          </div>
+
+                        </div>
+
+                      {% endif %}
+                      
+                  </div>
+
+                  <div class="col d-flex flex-column align-items-end remove-price">
+                    <div class="cart_item--remove">
+                      <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0">
+                        {{ 'cart.general.remove' | t }}
+                      </a>
+                    </div>
+
+                    <div class="cart_item--price">
+                      {{ item.line_price | money }}
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            {% endfor %}
+
+
+            <div>
+              <div class="featured-samples-container">
+                {% include 'featured-samples' %}
+              </div>
+              <div class="donation-container">
+                {% include 'donation' %}
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4 reciept">
+            {% if settings.cart_notes_enable %}
+              <label for="CartSpecialInstructions">{{ 'cart.general.note' | t }}</label>
+              <textarea name="note" id="CartSpecialInstructions">{{ cart.note }}</textarea>
+            {% endif %}
+
+            <h2>Order Summary</h2>
+
+            <div class="reciept-container">
+              <div class="d-flex justify-content-between">
+                <label for="subtitle">{{ 'cart.general.subtotal' | t }}</label>
+                <p>{{ cart.total_price | money }}</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <label for="tax">Tax <span class="calculated">(calculated in checkout)</span></label>
+                <p>—</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <label for="shipping">Shipping <span class="calculated">(calculated in checkout)</span></label>
+                <p>—</p>
+              </div>
+
+
+              <div class="estimated-total d-flex justify-content-between">
+                <label for="subtitle">Estimated Total</label>
+                <p>{{ cart.total_price | money }}</p>
+              </div>
+
+              {% if cart.total_discounts > 0 %}
+                <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
+              {% endif %}
+            </div>
+
+
+
+            <button type="submit" name="checkout">{{ 'cart.general.checkout' | t }}</button>
+            <div class="" style="text-align: center; margin-top: 5px;">
+              <a href="/collections/all" style="text-decoration: underline;">Continue Shopping</a>
+            </div>
+          </div>
+        </div>
+
+
+
+      </form>
+    {% else %}
+      <div class="empty_cart">
+        <h1 class="empty_cart--title">{{ 'cart.general.title' | t }}</h1>
+
+        {% comment %}
+        Cart empty state
+        {% endcomment %}
+        <div class="supports-cookies">
+          <p class="empty_cart--empty">{{ 'cart.general.empty' | t }}</p>
+          <p class="empty_cart--continue">{{ 'cart.general.continue_browsing_html' | t }}</p>
+        </div>
+
+        {% comment %}
+        Cart no cookies state
+        ---------------------
+        Browser cookies are required to use the cart. If cookies aren't enabled in the
+        browser a message is displayed prompting the user to enable them.
+        {% endcomment %}
+        <div class="supports-no-cookies">
+          <p>{{ 'cart.general.cookies_required' | t }}</p>
+        </div>
+      </div>
+
+    {% endif %}
+  </div>
+  <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/WjkEo-Fdv3ozMqmdF7bw5Q" async></script>
+  <div class="yotpo-widget-instance" data-yotpo-instance-id="135243"></div>
+</section>
+
+{% include "ajax-cart" %}

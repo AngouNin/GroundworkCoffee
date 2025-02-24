@@ -13,7 +13,7 @@
                     <div class="col-md">
                       {% if block.settings.image %}
                         {% assign image = block.settings.image %}
-                        {% include 'responsive-image' with image: image, image_class: "css-class", wrapper_class: "wrapper-css-class", max_width: 700, max_height: 800 %}
+                        {% render 'responsive-image' with image: image, image_class: "css-class", wrapper_class: "wrapper-css-class", max_width: 700, max_height: 800 %}
                       {% endif %}
                     </div>
                   {% endif %}
@@ -69,19 +69,10 @@
               </div>
           {% endcase %}
         {% endfor %}
-
-
       </div>
-
-
-
-
     </div>
-
   </div>
 </section>
-
-
 {% schema %}
   {
     "name": "Image with text slider",

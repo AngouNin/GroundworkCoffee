@@ -1,39 +1,36 @@
 {
   "current": {
     "favicon": "shopify:\/\/shop_images\/flower-01.png",
+    "cart_type": "page",
     "sections": {
       "header": {
         "type": "header",
         "blocks": {
+          "announcement_YM3BBz": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "desc": "",
+              "class": "",
+              "announcement_bar_link": ""
+            }
+          },
           "announcement_weHGfU": {
             "type": "announcement",
             "disabled": true,
             "settings": {
-              "desc": "<p><strong>Happy National Coffee Day<\/strong>!  Take 20% Off All Coffees - Today Only! <strong>Use Code COFFEEDAY24 <\/strong>at checkout<\/p>",
-              "announcement_bar_link": ""
-            }
-          },
-          "announcement_TBmwqh": {
-            "type": "announcement",
-            "disabled": true,
-            "settings": {
-              "desc": "",
-              "announcement_bar_link": ""
-            }
-          },
-          "announcement_3TRBwt": {
-            "type": "announcement",
-            "disabled": true,
-            "settings": {
-              "desc": "",
+              "desc": "<p><strong>Limited Release and Seasonal Coffees 15% OFF<\/strong> Until 10\/20! Use Code<strong> SEASONAL15 <\/strong>at checkout. <a href=\"https:\/\/www.groundworkcoffee.com\/collections\/organic-coffee\/type-limited-seasonal\" title=\"Seasonal and Limited Coffees\"><strong>Shop Now<\/strong><\/a><strong>.<\/strong><\/p>",
+              "class": "",
               "announcement_bar_link": ""
             }
           },
           "09be9e14-15ac-4019-acc6-f8a9a3af0707": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
-              "desc": "<p><strong>Seasonal Select<\/strong> <strong>Supernatural is BACK!<\/strong> But not for long.<strong> <\/strong><a href=\"https:\/\/www.groundworkcoffee.com\/products\/seasonal-select-supernatural\" title=\"https:\/\/www.groundworkcoffee.com\/products\/seasonal-select-supernatural\"><strong>Shop Now.<\/strong><\/a><\/p>",
-              "announcement_bar_link": "https:\/\/www.groundworkcoffee.com\/products\/seasonal-select-supernatural"
+              "desc": "<p><strong>Warm Wishes is BACK!<\/strong> Cozy Up with our Holiday Seasonal Blend.<strong> <\/strong><a href=\"https:\/\/www.groundworkcoffee.com\/products\/seasonal-select-warm-wishes\" title=\"https:\/\/www.groundworkcoffee.com\/products\/seasonal-select-warm-wishes\"><strong>Shop Now.<\/strong><\/a><\/p>",
+              "class": "",
+              "announcement_bar_link": "https:\/\/www.groundworkcoffee.com\/products\/seasonal-select-warm-wishes"
             }
           },
           "announcement_bFF3mX": {
@@ -41,6 +38,7 @@
             "disabled": true,
             "settings": {
               "desc": "<p><strong>Stock Up for Back-to-School! <\/strong>Use code <strong>COOL4SCHOOL<\/strong> for 20% off. Valid until 8\/4.<\/p>",
+              "class": "",
               "announcement_bar_link": "shopify:\/\/collections\/organic-coffee"
             }
           },
@@ -48,6 +46,7 @@
             "type": "announcement",
             "settings": {
               "desc": "<p><strong>New coffees are here. <\/strong>Join the Regenerative Revolution with us.<strong> <\/strong><a href=\"https:\/\/www.groundworkcoffee.com\/pages\/regenerative-organic\" target=\"_blank\" title=\"https:\/\/www.groundworkcoffee.com\/pages\/regenerative-organic\"><strong>Shop ROC<\/strong>®<\/a><\/p>",
+              "class": "",
               "announcement_bar_link": "https:\/\/www.groundworkcoffee.com\/pages\/regenerative-organic"
             }
           },
@@ -56,21 +55,23 @@
             "disabled": true,
             "settings": {
               "desc": "<p><strong>BOGO Is BACK! <\/strong>Buy one, get one 50% off all 5lb bags. Use code <strong>BOGO5<\/strong> at checkout.<a href=\"https:\/\/www.groundworkcoffee.com\/collections\/organic-coffee\/size-5-lb\" title=\"https:\/\/www.groundworkcoffee.com\/collections\/organic-coffee\/size-5-lb\"> <strong>Shop Now.<\/strong><\/a><\/p>",
+              "class": "",
               "announcement_bar_link": "https:\/\/www.groundworkcoffee.com\/collections\/organic-coffee\/size-5-lb"
             }
           },
           "f33463c9-70d7-42da-af13-a46561cd7aea": {
             "type": "announcement",
             "settings": {
-              "desc": "<p>One and done.  <a href=\"https:\/\/www.groundworkcoffee.com\/collections\/subscriptions\" title=\"https:\/\/www.groundworkcoffee.com\/collections\/subscriptions\"><strong>Shop Subscriptions.<\/strong><\/a><\/p>",
+              "desc": "<p>One and done, free shipping on subscriptions.  <a href=\"https:\/\/www.groundworkcoffee.com\/collections\/subscriptions\" title=\"https:\/\/www.groundworkcoffee.com\/collections\/subscriptions\"><strong>Shop Subscriptions.<\/strong><\/a><\/p>",
+              "class": "",
               "announcement_bar_link": "https:\/\/www.groundworkcoffee.com\/collections\/subscriptions"
             }
           },
           "9ab742e7-35af-4283-b4de-d174e3c2e1f1": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "desc": "<p>We're so proud to announce the launch of the first<strong> Regenerative Organic Certified Coffee<\/strong>. <a href=\"https:\/\/www.groundworkcoffee.com\/products\/regenerative-organic-certified-nicaragua-cooperativa-sacacli\" target=\"_blank\" title=\"https:\/\/www.groundworkcoffee.com\/products\/regenerative-organic-certified-nicaragua\">Shop Now.<\/a><\/p>",
+              "class": "",
               "announcement_bar_link": "https:\/\/www.groundworkcoffee.com\/pages\/launch-of-regenerative-organic-certified-coffee"
             }
           },
@@ -78,6 +79,7 @@
             "type": "announcement",
             "settings": {
               "desc": "<p><strong>We're Certified B Corp!<\/strong> <a href=\"https:\/\/www.groundworkcoffee.com\/blogs\/learn\/groundwork-is-officially-a-certified-b-corp\" title=\"https:\/\/www.groundworkcoffee.com\/blogs\/learn\/groundwork-is-officially-a-certified-b-corp\">Learn More.<\/a><\/p>",
+              "class": "",
               "announcement_bar_link": "https:\/\/www.groundworkcoffee.com\/blogs\/learn\/groundwork-is-officially-a-certified-b-corp"
             }
           },
@@ -85,14 +87,14 @@
             "type": "announcement",
             "settings": {
               "desc": "<p><strong>Free Shipping on Orders over $50.<\/strong> <\/p>",
+              "class": "",
               "announcement_bar_link": "shopify:\/\/collections\/all"
             }
           }
         },
         "block_order": [
+          "announcement_YM3BBz",
           "announcement_weHGfU",
-          "announcement_TBmwqh",
-          "announcement_3TRBwt",
           "09be9e14-15ac-4019-acc6-f8a9a3af0707",
           "announcement_bFF3mX",
           "013feca9-5b63-4139-b061-6c1cbf524b0b",
@@ -131,9 +133,9 @@
           "5496f49c-f7a8-4133-b2e5-1fd10701f313": {
             "type": "slide",
             "settings": {
-              "title": "Halloween Fav: Witches Brew",
-              "desc": "<p>Just in time for Halloween! A spooky variation of our most popular blend. <br\/><br\/>Available for a limited time.<\/p>",
-              "image": "shopify:\/\/shop_images\/TDAVIS_Groundwork761_copy.jpg",
+              "title": "Witches Brew",
+              "desc": "<p>Just in time for Halloween! <br\/>A <em>spooky<\/em> variation of our most popular blend. <br\/><br\/><em>Available for a limited time.<\/em><\/p>",
+              "image": "shopify:\/\/shop_images\/IMG_3895.webp",
               "layout": "left",
               "button_label": "Shop Witches Brew",
               "button_link": "shopify:\/\/products\/witches-brew"
@@ -142,11 +144,11 @@
           "aa2d9f56-8fa9-4d17-a948-16c30622f451": {
             "type": "slide",
             "settings": {
-              "title": "New Regenerative Organic Coffees",
+              "title": "Regenerative Organic Certified Coffees",
               "desc": "<p>As a part of our commitment to the planet's long-term health, we have embarked on an exciting initiative to source new Regenerative Organic Certified® coffees.<\/p>",
               "image": "shopify:\/\/shop_images\/rocaquae.jpg",
               "layout": "left",
-              "button_label": "Shop Regen Coffees",
+              "button_label": "Shop ROC Coffees",
               "button_link": "https:\/\/www.groundworkcoffee.com\/collections\/organic-coffee\/type-Regenerative-Organic-Certified"
             }
           },
@@ -270,6 +272,7 @@
           },
           "1c25e952-f194-4d25-ac08-0210b776a3ee": {
             "type": "slide",
+            "disabled": true,
             "settings": {
               "title": "A gift that keeps on giving.",
               "desc": "<p>Be the best friend, family member, or coworker by giving a subscription to a pal. Choose the length of time, and we’ll make sure they love each Groundwork delivery.<\/p>",
@@ -282,7 +285,7 @@
           "c592af93-f580-4a9f-ba9c-de797076dc5d": {
             "type": "slide",
             "settings": {
-              "title": "We're Certified B Corp!",
+              "title": "We're a Certified B Corp!",
               "desc": "<p>B Corp™ Certification is a promise that a company is doing business in a way that meets rigorous standards of verified performance, transparency and accountability.<\/p>",
               "image": "shopify:\/\/shop_images\/Digital_2209_Social_Posts-2.jpg",
               "layout": "left",
@@ -443,7 +446,7 @@
         "settings": {
           "title": "Fresh roasts right to your door.",
           "sub_title": "SUBSCRIBE",
-          "floating_note": "Stay home. Stay safe!",
+          "floating_note": "",
           "collection": "home-page-subscriptions"
         }
       },
@@ -1764,8 +1767,8 @@
           "delay": 9,
           "dismiss": 30,
           "layout": "left",
-          "heading": "Let’s be pals!",
-          "text": "<p>Sign up for our newsletter for 20% off your first purchase with us! <\/p>"
+          "heading": "Stay in touch!",
+          "text": "<p>Sign up for our newsletter and receive 20% off your first purchase! <\/p>"
         }
       },
       "product-default-rec": {
@@ -1870,6 +1873,17 @@
       "page-press-content": {
         "type": "page-press-content",
         "blocks": {
+          "press_item_kaDmki": {
+            "type": "press_item",
+            "settings": {
+              "title": "Daily Grind",
+              "ref": "Soil health & regenerative agriculture – the latest trend in third wave coffee?",
+              "desc": "<p>In the wake of the climate crisis and declining profitability in coffee production, regenerative agriculture has emerged as a transformative solution. <\/p>",
+              "img": "shopify:\/\/shop_images\/Reg-ag-and-soil-health-header_78ea5475-331a-4340-a31d-0015aa7c6f94.jpg",
+              "logo": "shopify:\/\/shop_images\/PDG-Events-logo-Blue-2.png",
+              "url": "https:\/\/perfectdailygrind.com\/2024\/10\/soil-health-regenerative-agriculture-third-wave-coffee\/"
+            }
+          },
           "c8803edf-6d59-41c4-b50c-ae4941649f71": {
             "type": "press_item",
             "settings": {
@@ -2004,6 +2018,7 @@
           }
         },
         "block_order": [
+          "press_item_kaDmki",
           "c8803edf-6d59-41c4-b50c-ae4941649f71",
           "f43717cd-83dc-451e-8ceb-af7ae123c0fd",
           "7f280096-ab62-466b-b110-41990ad28494",
@@ -2031,12 +2046,26 @@
       "1631713425052a9d2c"
     ],
     "blocks": {
-      "3acfba32-89f3-4377-ae20-cbb9abc48475": {
-        "type": "shopify:\/\/apps\/order-limits-minmaxify\/blocks\/app-embed-block\/3acfba32-89f3-4377-ae20-cbb9abc48475",
+      "17151115064775110295": {
+        "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/recharge-theme\/371eed76-0b44-4869-9813-730372ea378e",
         "disabled": false,
         "settings": {
-          "async": false
+          "color_brand": "#467C99",
+          "contrast_color": "#FFFFFF",
+          "color_brand_secondary": "#467C99",
+          "corners": "8px",
+          "app_background": "#f9f8f4",
+          "app_container": 1200,
+          "app_vertical_padding": 32,
+          "images_aspect_ratio": "1",
+          "cards_background": "#FFFFFF",
+          "cards_border_color": "rgba(0,0,0,0)"
         }
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
       }
     }
   }

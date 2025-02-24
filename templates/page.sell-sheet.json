@@ -1,0 +1,47 @@
+{
+  "sections": {
+    "page-sell-sheet-heading": {
+      "type": "page-sell-sheet-heading",
+      "settings": {
+        "title": "WHOLESALE PRODUCT",
+        "subtitle": "Exceptional Organic Coffee.",
+        "desc": "<p>We've been pioneering organic, relationship-based, and sustainable coffee sourcing since the early '90s.<\/p>"
+      }
+    },
+    "page-sell-sheet-content": {
+      "type": "page-sell-sheet-content",
+      "blocks": {
+        "b5afb5f6-356d-4910-8f3d-5c5df4ccef22": {
+          "type": "collection",
+          "settings": {
+            "collection": "whole-bean-sell-sheet"
+          }
+        },
+        "4365ba1c-89b1-4223-90d4-7784d813e979": {
+          "type": "collection",
+          "settings": {
+            "collection": "cold-brew-sell-sheet"
+          }
+        },
+        "256a7edb-394f-4de2-9689-1db51eeaeb8e": {
+          "type": "collection",
+          "settings": {
+            "collection": "bulk-sell-sheet"
+          }
+        }
+      },
+      "block_order": [
+        "b5afb5f6-356d-4910-8f3d-5c5df4ccef22",
+        "4365ba1c-89b1-4223-90d4-7784d813e979",
+        "256a7edb-394f-4de2-9689-1db51eeaeb8e"
+      ],
+      "settings": {
+        "title": ""
+      }
+    }
+  },
+  "order": [
+    "page-sell-sheet-heading",
+    "page-sell-sheet-content"
+  ]
+}

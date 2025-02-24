@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "page-privacy-content": {
+      "type": "page-privacy-content",
+      "settings": {}
+    }
+  },
+  "order": [
+    "page-privacy-content"
+  ]
+}

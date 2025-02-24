@@ -1,0 +1,172 @@
+{%- assign new_comment = false -%}
+{%- assign number_of_comments = article.comments_count -%}
+
+{%- if comment and comment.created_at -%}
+  {%- assign new_comment = true -%}
+  {%- assign new_comment_id = comment.id -%}
+{%- endif -%}
+
+{%- if new_comment -%}
+  {%- comment -%}
+    When you refresh the page with submitted comment, the comment is duplicated
+    so we added a flag to avoid this situation.
+  {%- endcomment -%}
+  {%- assign duplicate_comment = false -%}
+  {%- for comment in article.comments -%}
+    {%- if comment.id == new_comment_id -%}
+      {%- assign duplicate_comment = true -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- unless duplicate_comment -%}
+    {%- assign number_of_comments = article.comments_count | plus: 1 -%}
+  {%- endunless -%}
+{%- endif -%}
+
+
+<article role="article">
+  <div class="container">
+
+    {% capture date %}{{ article.published_at | time_tag: format: 'month_day_year' }}{% endcapture %}
+
+    <section class="page_title_container">
+      <div class="container">
+        {% unless article.metafields.global.hidedate %}
+          <h2 class="page_title_container--title">
+            {{ date }}
+          </h2>
+        {%  endunless %}
+        <h1 class="page_title_container--subtitle">{{ article.title }}</h1>
+      </div>
+    </section>
+
+
+    {% if article.image %}
+    <figure class="image-section">
+      
+      <div class="hero-banner hero-banner--article lazyload" data-bgset="{% render 'responsive-bg-image', image: article.image %}"></div>
+      {% if article.image.alt %}
+        <figcaption>{{ article.image.alt }}</figcaption>
+      {% endif %}
+    </figure>
+
+      <noscript>
+        {%- assign image_size = article.image.width | append: 'x' -%}
+        <div class="hero-banner hero-banner--article" style="background-image: {{ article.image | img_url: image_size }}"></div>
+      </noscript>
+    {% endif %}
+
+
+
+    <div class="rte">
+      {{ article.content }}
+
+      {% if settings.social_sharing_blog %}
+        <section class="social-sharing-container">
+          {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+        </section>
+      {% endif %}
+    </div>
+  </div>
+
+  {% assign blogHandle = article.url | split: '/'  %}
+  {% assign blogHandle = blogHandle[2]  %}
+  
+
+
+
+  <section class="next_posts">
+    <div class="container">
+      {%- assign blog = blogs[blogHandle] -%}
+      <div class="row">
+        <aside class="col-md-2 rela">
+          <h2 class="rotated-title">NEXT</h2>
+        </aside>
+
+        <div class="col-md-10">
+          {% assign count = 0 %}
+          <div class="row">
+            {% for featured_article in blog.articles %}
+              {% if article.handle != featured_article.handle and count <= 2 %}
+                <div class="col-md article d-md-flex flex-column ">
+
+                  {% if featured_article.image %}
+                    <a href="{{ featured_article.url }}" aria-label="{{ featured_article.title }} Link">
+              
+                      <div class="lazyload featured_article--image" data-bgset="{% render 'responsive-bg-image', image: featured_article.image %}"></div>
+
+                    </a>
+                  {% else %}
+                     <a href="{{ featured_article.url }}"></a>
+                      <div class="featured_article--no-img d-flex justify-content-center align-items-center">
+                        {% include "icon-flower" %}
+                      </div>
+                    </a>
+                  {% endif %}
+                  <a href="{{ featured_article.url }}">
+                    <h2 class="featured_article--title">
+                      {{ featured_article.title }}
+                    </h2>
+                  </a>
+                </div>
+                {% assign count = count | plus: 1 %}
+
+              {% endif %}
+            {% endfor %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": "{{ article.content | strip_html }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ shop.url }}{{ page.url }}"
+  },
+  "headline": "{{ article.title }}",
+  {% if article.excerpt != blank %}
+    "description": "{{ article.excerpt | strip_html }}",
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      "https:{{ article | img_url: image_size }}"
+    ],
+  {% endif %}
+  "datePublished": "{{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' }}",
+  "dateCreated": "{{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ article.author }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if settings.share_image %}
+      {% assign image_size = settings.share_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": "{{ settings.share_image.height }}",
+        "url": "https:{{ settings.share_image | img_url: image_size }}",
+        "width": "{{ settings.share_image.width }}"
+      },
+    {% elsif article.image %}
+      {% assign image_size = article.image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": "{{ article.image.height }}",
+        "url": "https:{{ article.image | img_url: image_size }}",
+        "width": "{{ article.image.width }}"
+      },
+    {% endif %}
+    "name": "{{ shop.name }}"
+  }
+}
+</script>

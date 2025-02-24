@@ -1,0 +1,169 @@
+{
+  "sections": {
+    "page-careers-heading": {
+      "type": "page-careers-heading",
+      "settings": {
+        "title": "Careers",
+        "subtitle": "Be part of something groundbreaking",
+        "desc": "<p>We strive to be the best place our employees have ever worked, and to produce the best coffee our customers have ever sipped. As a part of our team, you'll be working with people who are down-to-earth, friendly, and passionate in a casual, caffeinated, and fun environment.<br\/><\/p>"
+      }
+    },
+    "page-careers-top": {
+      "type": "page-careers-top",
+      "settings": {
+        "title": "Coffee lovers unite",
+        "desc": "<p>We believe in sustainably sourced coffee and tea, are committed to green operational practices, and place a high value on strengthening our ties to the communities in which our stores exist.<br\/><br\/>We strive to provide a safe, effective, and inspiring training and working environment that will support our team members in their journey to develop their skills. The ideal candidate should exhibit intelligence, focus, passion, dedication, and a commitment to their craft. The ability to relate to others skillfully and with authenticity, kindness and warmth, are also crucial attributes we look for in our team members.<br\/><\/p>",
+        "image": "shopify:\/\/shop_images\/Career_page.jpg",
+        "bg_color": "#e2d9be"
+      }
+    },
+    "page-careers-perks": {
+      "type": "page-careers-perks",
+      "blocks": {
+        "d1958b34-e901-4009-96fa-f26223d06e5b": {
+          "type": "perk",
+          "settings": {
+            "title": "Free Coffee & Tea",
+            "image": "shopify:\/\/shop_images\/Path_757_2x_53x_ba75bb1f-6ef2-4bbe-8656-38d51c8daa72.png"
+          }
+        },
+        "c2bc1b7e-5635-498f-9e53-60410faeb3a5": {
+          "type": "perk",
+          "settings": {
+            "title": "Medical, Dental & Vision Insurance",
+            "image": "shopify:\/\/shop_images\/Path_756_2x_63x_988dcde5-2f04-4751-8f94-7533d121595f.png"
+          }
+        },
+        "df75cacb-1b40-46fb-97bf-f6930b76432d": {
+          "type": "perk",
+          "settings": {
+            "title": "Subsidized Metro Pass",
+            "image": "shopify:\/\/shop_images\/Group_790_2x_72x_1b32990a-202c-4058-9b8a-e7c1932b22bc.png"
+          }
+        }
+      },
+      "block_order": [
+        "d1958b34-e901-4009-96fa-f26223d06e5b",
+        "c2bc1b7e-5635-498f-9e53-60410faeb3a5",
+        "df75cacb-1b40-46fb-97bf-f6930b76432d"
+      ],
+      "settings": {
+        "title": "Fresh Perks",
+        "desc": "<p>Here are just a few of the benefits we offer.<br\/><br\/><\/p>"
+      }
+    },
+    "page-careers-values": {
+      "type": "page-careers-values",
+      "blocks": {
+        "38d84301-4462-477f-88d9-6d192618f0b3": {
+          "type": "values",
+          "settings": {
+            "title": "Strong Work Ethic"
+          }
+        },
+        "fb6d2319-566f-4d16-ba78-8594d3f4d341": {
+          "type": "values",
+          "settings": {
+            "title": "Trustworthy"
+          }
+        },
+        "cb7d7c7c-5e57-418a-b92c-658a5a69bcd8": {
+          "type": "values",
+          "settings": {
+            "title": "Growth Mindset"
+          }
+        },
+        "4a624721-94db-4857-85f6-59005862f87f": {
+          "type": "values",
+          "settings": {
+            "title": "Emotional Intelligence"
+          }
+        },
+        "75e1d308-f255-4caa-8af4-fbe8fb68e697": {
+          "type": "values",
+          "settings": {
+            "title": "Initiative"
+          }
+        },
+        "993a1f9e-f764-4c1b-9e5a-b7922ad68b92": {
+          "type": "values",
+          "disabled": true,
+          "settings": {
+            "title": "Core Value"
+          }
+        }
+      },
+      "block_order": [
+        "38d84301-4462-477f-88d9-6d192618f0b3",
+        "fb6d2319-566f-4d16-ba78-8594d3f4d341",
+        "cb7d7c7c-5e57-418a-b92c-658a5a69bcd8",
+        "4a624721-94db-4857-85f6-59005862f87f",
+        "75e1d308-f255-4caa-8af4-fbe8fb68e697",
+        "993a1f9e-f764-4c1b-9e5a-b7922ad68b92"
+      ],
+      "settings": {
+        "title": "Our core values",
+        "desc": "<p>These five core values embody our culture, spirit and dedication to doing what’s right.<\/p>"
+      }
+    },
+    "page-careers-employees": {
+      "type": "page-careers-employees",
+      "blocks": {
+        "1e4b8bb3-2144-47c0-b842-1131e3a3cb7d": {
+          "type": "employee",
+          "settings": {
+            "name": "Robby",
+            "title": "Foodservice Sales Manager",
+            "fun_fact": "<p><strong>Favorite Brew <\/strong>- AMUCC and Ethiopia<\/p><p><br\/><strong>Fun Fact<\/strong> - Robby has been skateboarding since he was 7 years old. He’s retired from the tricks but it still remains as his main creative outlet.<\/p>",
+            "quote": "<p>I’ve been working in coffee since I was 19 years old. Over the years, I’ve made amazing relationships through coffee - I met my wife working as a barista. Personally for me, I think skateboarding and coffee are very similar. Learning a new trick vs dialing in a new coffee requires a lot of patience and trial and error but when you nail it, it’s a great feeling that can’t be explained.<\/p>",
+            "image": "shopify:\/\/shop_images\/Rob.png"
+          }
+        },
+        "e6861a6c-7c83-4cfc-9b5b-03c91a106381": {
+          "type": "employee",
+          "settings": {
+            "name": "Su",
+            "title": "Content + Community Specialist",
+            "fun_fact": "<p><strong>Favorite Brew <\/strong>- Beehive Matcha Latte<\/p><p><br\/><strong>Fun Fact<\/strong> - Su loves nothing more than her dogs, spicy food, and staying up late- in that order. When not at work, she loves trying new restaurants, playing tennis, and drawing.<\/p>",
+            "quote": "<p>I've always loved coffee, tea, and the community aspect of cafes. Not until I started working for Groundwork is when I truly appreciated the difference organic product makes for the final cup I drink in the morning. I'm always visiting our cafes, if you see me, please don't hesitate to say hello! Love my Groundwork fam!<\/p>",
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2021-12-03_at_11.48.21_AM.png"
+          }
+        },
+        "a3abe10f-f126-4cb1-9977-380fccce2dda": {
+          "type": "employee",
+          "disabled": true,
+          "settings": {
+            "name": "John",
+            "title": "TITLE",
+            "fun_fact": "<p><strong>Lorem<\/strong> - ipsum dolor<br\/><strong>Lorem<\/strong> - ipsum dolor<\/p><p><br\/><br\/><\/p>",
+            "quote": "",
+            "image": "shopify:\/\/shop_images\/Mask_Group_14_2x_360x_360x_9ebd29bd-0306-41d0-9510-5c4d07be1e73.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "1e4b8bb3-2144-47c0-b842-1131e3a3cb7d",
+        "e6861a6c-7c83-4cfc-9b5b-03c91a106381",
+        "a3abe10f-f126-4cb1-9977-380fccce2dda"
+      ],
+      "settings": {
+        "title": "Employee Spotlights"
+      }
+    },
+    "page-careers-content": {
+      "type": "page-careers-content",
+      "settings": {
+        "blog": "now-hiring",
+        "post_limit": 3
+      }
+    }
+  },
+  "order": [
+    "page-careers-heading",
+    "page-careers-top",
+    "page-careers-perks",
+    "page-careers-values",
+    "page-careers-employees",
+    "page-careers-content"
+  ]
+}

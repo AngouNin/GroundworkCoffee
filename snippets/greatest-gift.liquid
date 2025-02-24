@@ -1,573 +1,248 @@
-<script>
-  var isGift = true;
-</script>
-
-
-{%- assign coffeeThree = all_products['greatest-gift-coffee-3-months'] -%}
-{%- assign coffeeSix = all_products['greatest-gift-coffee-6-months'] -%}
-{%- assign teaThree = all_products['greatest-gift-tea-3-months'] -%}
-{%- assign teaSix = all_products['greatest-gift-tea-6-months'] -%}
-
-
-<script>
-  
-  var subscriptions = {{ coffeeSix.metafields.subscriptions | json }}; 
-
-</script>
-
 <section class="product_subscription_form" id="sub-anchor">
-    <div class="container">
-    
-      {% if product.metafields.custom_fields["subscription_form_title"] != blank %}
-        <h2 class="product_subscription_form--title">{{ product.metafields.custom_fields["subscription_form_title"] }}</h2>
-      {% endif %}
-  
-      <div class="d-flex p-4 justify-content-center align-items-center flex-column store-json-{{ product.id }} size-{{ product.options_with_values.size }} " 
-        
-        data-coffee-3='{{ coffeeThree | json | escape }}' 
-        data-coffee-6='{{ coffeeSix | json | escape }}' 
-        data-tea-3='{{ teaThree | json | escape }}' 
-        data-tea-6='{{ teaSix | json | escape }}' 
-        data-coffee-3-meta='{{ coffeeThree.metafields.subscriptions | json | escape }}' 
-        data-coffee-6-meta='{{ coffeeSix.metafields.subscriptions | json | escape }}' 
-        data-tea-3-meta='{{ teaThree.metafields.subscriptions | json | escape }}' 
-        data-tea-6-meta='{{ teaSix.metafields.subscriptions | json | escape }}' 
-        >
+  <div class="container">
+    <h2 class="product_subscription_form--title">Let’s give the best gift ever.</h2>
 
-
-        <!-- KEEP JUST IN CASE, GOES HERE ^ -->
-        <!-- data-variants='{{ product.variants | json }}'  -->
-        
-
-
-        <div class="step-container step-type ">
-          <h2 class="product_subscription_form--option-name">First, are they a coffee person?</h2>
-          <div class="d-flex p-4 variant-select-container size-{{ product_option.values.size }} variant-select-container-1-{{ product.id }} " data-option-size="{{ product.options_with_values.size }}" data-position="1" >
-              <button class="product_content--quick-add-btn variant-select m-2 variant-select-position-1 variant-select-1 gift" aria-label="YES button" data-option-size="{{ coffeeThree.options_with_values.size }}" data-position="1" data-value="{{ value }}" data-product-id="{{ coffeeThree.id }}" data-index="1" data-og-product-id="{{ product.id }}" data-gift-type="coffee" type="button" name="button">YES</button>
-              <button class="product_content--quick-add-btn variant-select m-2 variant-select-position-1 variant-select-2 gift force-hide" aria-label="TEA button" data-option-size="{{ teaThree.options_with_values.size }}" data-position="2" data-value="{{ value }}" data-product-id="{{ teaThree.id }}" data-og-product-id="{{ product.id }}" data-gift-type="tea" data-index="1" type="button" name="button">TEA</button>   
-          </div>
-        </div>
-
-   
-
-     
-
-        {% if product.handle == 'greatest-gifsfdsdft' %}
-          {% include "greatest-gift" %}
-        {% else %}
-        
-        {%- assign product = coffeeThree -%}
-        <div class="buttons-container-gift button-container-{{ product.id }} hide">
-          {% for product_option in product.options_with_values %}
-            {% assign optionName = product_option.name %}
-            {% if optionName contains 'Grind' %}
-              {% assign optionName = 'How do they need their coffee beans?' %}
-            {% elsif optionName contains 'Roast Level' %}
-              {% assign optionName = 'Cool. What is their preferred roast level? If you choose Trust Us, our roasters will send them whatever is the most fresh.' %}
-            {% elsif optionName contains 'Caffeine' %}
-              {% assign optionName = 'We’re excited for you to try a variety of Groundwork favorites. Next thing we need to know,  are you a caffeine lover or not?' %}
-            {% elsif optionName contains 'Tea' %}
-              {% assign optionName = 'We’re so excited to share our specialty teas with you each month. Ready to trust our tea specialists?' %}
-            {% elsif optionName contains 'Size' %}
-                {% if product.handle == 'ground-level' %}
-                  {% assign optionName = 'Sounds good. Now, what’s your shirt size?' %}
-                {% else %}
-                  {% assign optionName = 'How many coffee drinkers are on your team?' %}
-                {% endif %}
-            {% endif %}
-            <div class="step-container step-variants step-{{ forloop.index0 }} {% if forloop.index0 != 0 %}hide{% endif %}">
-              <h2 class="product_subscription_form--option-name">{{ optionName }}</h2>
-              <div class="d-flex p-4 variant-select-container size-{{ product_option.values.size }} variant-select-container-{{ product_option.position }}-{{ product.id }} " data-option-size="{{ product.options_with_values.size }}" data-position="{{ product_option.position }}" >
-                {% for value in product_option.values %}
-                  
-                  {% if product.handle contains 'blenders' and value contains 'Actually' %}
-                   <a href="/collections/organic-teas" aria-label="{{ value }} button link">
-                  {% endif %}
-                  
-                  <button class="product_content--quick-add-btn {% if product.handle contains 'blenders' and value contains 'Actually' %}linked{% endif %} variant-select m-2 variant-select-position-{{ product_option.position }} variant-select-{{ forloop.index }}" 
-                    data-option-size="{{ product.options_with_values.size }}" 
-                    data-position="{{ product_option.position }}" 
-                    data-value="{{ value }}" 
-                    data-product-id="{{ product.id }}" 
-                    data-coffee-three-id="{{ coffeeThree.id }}" 
-                    data-coffee-six-id="{{ coffeeSix.id }}" 
-                    data-tea-three-id="{{ teaThree.id }}" 
-                    data-tea-six-id="{{ teaSix.id }}" 
-                    aria-label="{{ value }} button"
-                    data-index="{{ forloop.index }}" 
-                    type="button" 
-                    role="button" 
-                    name="button">{{ value }}</button>
-                  
-                  {% if product.handle contains 'blenders' and value contains 'Actually' %}
-                   </a>
-                  {% endif %}
-                {% endfor %}
-                  
-                {% if product.handle contains 'office' %}
-                 <button 
-                 class="product_content--quick-add-btn variant-select m-2 open-form"   
-                 data-product-id="{{ product.id }}"  
-                 aria-label="20+ People button"
-                 type="button" name="button">20+ People</button>
-                  
-                {% endif %}
-  
-              </div>
-              {% if product.handle == 'ground-level' and optionName == 'Sounds good. Now, what’s your shirt size?' %}
-                <p>Not every box will have a shirt, but when it does we want it to fit!</p>
-              {% endif %}
-            </div>
-            {% assign count = forloop.index0 %}
-          {% endfor %}
-  
-  
-          {% if product.metafields.subscriptions.shipping_interval_frequency %}
-              {% comment %}Subscriptions Powered by ReCharge Payments: Meta Fields{% endcomment %}
-              {% comment %}Widget settings{% endcomment %}
-              {% assign widget_settings = shop.metafields.subscriptions %}
-              {% if widget_settings.subscription_active == 'true' %}
-                {% assign subscription_active = true %}
-              {% else %}
-                {% assign subscription_active = false %}
-              {% endif %}
-              {% if widget_settings.select_subscription_first == 'false' %}
-                {% assign select_subscription_first = false %}
-              {% else %}
-                {% assign select_subscription_first = true %}
-              {% endif %}
-              {% if widget_settings.disable_duplicates == 'true' %}
-                {% assign disable_duplicates = true %}
-              {% else %}
-                {% assign disable_duplicates = false %}
-              {% endif %}
-              {% assign first_option = widget_settings.first_option | default: "onetime" %}
-              {% comment %}Subscription settings{% endcomment %}
-              {% assign subscription_product = product.metafields.subscriptions %}
-              {% assign shipping_interval_unit_type = subscription_product.shipping_interval_unit_type | default: 'Days' %}
-              {% if shipping_interval_unit_type == 'day' %}
-                {% assign shipping_interval_unit_type = 'Days' %}
-              {% elsif shipping_interval_unit_type == 'week' %}
-                {% assign shipping_interval_unit_type = 'Weeks' %}
-              {% elsif shipping_interval_unit_type == 'month' %}
-                {% assign shipping_interval_unit_type = 'Months' %}
-              {% endif %}
-            {% endif %}
-            {% assign shipping_interval_frequency = subscription_product.shipping_interval_frequency | split: ',' | default: 30 %}
-      {% assign product_tags = product.tags | remove: ' ' | downcase %}
-      {% if subscription_product.is_subscription_only == 'true' or product_tags contains 'subscriptiononly' %}
-        {% assign subscription_only = true %}
-      {% else %}
-        {% assign subscription_only = false %}
-      {% endif %}
-      {% comment %}Product settings{% endcomment %}
-      {% assign variant_map = subscription_product.original_to_hidden_variant_map | default: false %}
-      {% if variant_map %}
-        {% capture variant_to_duplicate %}{ {% for variant in variant_map %}{% if variant[1]['discount_variant_id'] %}{{ variant[0] }}:'{{ variant[1]['discount_variant_id'] }}',{% endif %}{% endfor %} }{% endcapture %}
-        {% capture variant_to_price %}{ {% for variant in product.variants %}{{ variant.id }}:'{{ variant.price }}',{% endfor %} }{% endcapture %}
-        {% capture duplicate_to_price %}{ {% for variant in variant_map %}{% if variant[1]['discount_variant_id'] %}{{ variant[1]['discount_variant_id'] }}:'{{ variant[1]['discount_variant_price'] | replace: ".", "" }}',{% endif %}{% endfor %} }{% endcapture %}
-      {% endif %}
-      {% comment %}Discount settings{% endcomment %}
-      {% assign discount_percentage = subscription_product.discount_percentage | round: 2 %}
-      {% assign discount_floor = subscription_product.discount_percentage | floor %}
-      {% if discount_percentage == discount_floor %}
-        {% assign discount_percentage = discount_floor %}
-      {% endif %}
-      {% comment %}Widget translation{% endcomment %}
-      {% assign label_onetime = widget_settings.onetime_message | default: "One-time purchase" %}
-      {% assign label_autodeliver = widget_settings.subscribe_message | default: "Subscribe &amp; save" %}
-      {% assign label_deliver_every = widget_settings.widget_deliver_every | default: "Deliver every" %}
-      {% assign label_unit_type_legacy = subscription_product.label_unit_type | default: shipping_interval_unit_type %}
-      {% if widget_settings.translations %}
-        {% if shipping_interval_unit_type == 'Days' %}
-          {% assign label_unit_type_singular = widget_settings.translations['day'] | default: "Day" %}
-          {% assign label_unit_type_plural = widget_settings.translations['days'] %}
-        {% elsif shipping_interval_unit_type == 'Weeks' %}
-          {% assign label_unit_type_singular = widget_settings.translations['week'] %}
-          {% assign label_unit_type_plural = widget_settings.translations['weeks'] %}
-        {% else %}
-          {% assign label_unit_type_singular = widget_settings.translations['month'] %}
-          {% assign label_unit_type_plural = widget_settings.translations['months'] %}
-        {% endif %}
-      {% endif %}
-      {% assign subscription_details_label = widget_settings.subscription_details_verbiage | default: "Subscription details" %}
-      {% assign how_it_works_text = widget_settings.how_it_works | default: "<strong>How subscriptions work</strong><br><br>Products are automatically delivered on your schedule. No obligation, modify or cancel your subscription anytime." %}
-      {% assign learnmore_link = widget_settings.learnmore_verbiage | default: "Learn more..." %}
-      {% comment %}Popup settings{% endcomment %}
-      {% if widget_settings.show_subscription_details == 'false' %}
-        {% assign show_widget = false %}
-      {% else %}
-        {% assign show_widget = true %}
-      {% endif %}
-      {% if widget_settings.show_subscription_details_icon == 'false' %}
-        {% assign show_widget_icon = false %}
-      {% else %}
-        {% assign show_widget_icon = true %}
-      {% endif %}
-      {% if widget_settings.show_learnmore == 'false' %}
-        {% assign show_learnmore = false %}
-      {% else %}
-        {% assign show_learnmore = true %}
-      {% endif %}
-      {% if widget_settings.show_poweredby == 'false' %}
-        {% assign show_poweredby = false %}
-      {% else %}
-        {% assign show_poweredby = true %}
-      {% endif %}
-      {% comment %}Custom styling{% endcomment %}
-      {% assign widget_label_color = widget_settings.font_color | default: "#000000" %}
-      {% assign widget_active_color = widget_settings.active_color | default: "#676767" %}
-      {% assign widget_active_bg = widget_settings.background_color | default: "#F8F8F8" %}
-      {% assign widget_icon = widget_settings.widget_icon | default: "black" %}
-      {% if widget_icon == "white" %}
-        {% assign widget_icon = "//static.rechargecdn.com/static/images/widget/rc_widget__icon__white@2x.png" %}
-      {% else %}
-        {% assign widget_icon = "//static.rechargecdn.com/static/images/widget/rc_widget__icon__black@2x.png" %}
-      {% endif %}
-      {% assign popup_zindex = widget_settings.popup_zindex | default: "56" %}
-      {% assign popup_background_color = widget_settings.popup_background_color | default: "#474747" %}
-      {% assign popup_text_color = widget_settings.popup_text_color | default: "#FFFFFF" %}
-      {% assign popup_link_color = widget_settings.popup_link_color | default: "#4DD6B7" %}
-      {% assign recharge_custom_css = widget_settings.custom_css | defalut: "" %}
-      {% comment %}Learn more link{% endcomment %}
-      {% if widget_settings.learnmore_url %}
-        {% if widget_settings.learnmore_url contains "rechargepayments.com/subscribe-with-recharge" %}
-          {% capture learnmore_url %}http://rechargepayments.com/subscribe-with-recharge?utm_source=shopify%20store&utm_medium=customer%20link&utm_campaign=Shopify%20store%20back%20link&shop_name={{ shop.name | url_param_escape }}&shop={{ shop.permanent_domain }}{% endcapture %}
-        {% else %}
-          {% assign learnmore_url = widget_settings.learnmore_url %}
-        {% endif %}
-      {% else %}
-        {% capture learnmore_url %}http://rechargepayments.com/subscribe-with-recharge?utm_source=shopify%20store&utm_medium=customer%20link&utm_campaign=Shopify%20store%20back%20link&shop_name={{ shop.name | url_param_escape }}&shop={{ shop.permanent_domain }}{% endcapture %}
-      {% endif %}
-      {% comment %}Powered by badge{% endcomment %}
-      {% if widget_settings.poweredby_url %}
-        {% if widget_settings.poweredby_url contains "rechargepayments.com/subscribe-with-recharge" %}
-          {% capture poweredby_url %}http://rechargepayments.com/subscribe-with-recharge?utm_source=shopify%20store&utm_medium=customer%20link&utm_campaign=Shopify%20store%20back%20link&shop_name={{ shop.name | url_param_escape }}&shop={{ shop.permanent_domain }}{% endcapture %}
-        {% else %}
-          {% assign poweredby_url = widget_settings.poweredby_url %}
-        {% endif %}
-      {% else %}
-        {% capture poweredby_url %}http://rechargepayments.com/subscribe-with-recharge?utm_source=shopify%20store&utm_medium=customer%20link&utm_campaign=Shopify%20store%20back%20link&shop_name={{ shop.name | url_param_escape }}&shop={{ shop.permanent_domain }}{% endcapture %}
-      {% endif %}
-
-
-
+    <div class="step-container step-1" data-step="1">
+      <h2 class="product_subscription_form--option-name">First, are they a coffee person?</h2>
+      <div class="d-flex p-4 variant-select-container">
+        <button class="product_content--quick-add-btn variant-select m-2" data-gift-type="coffee" type="button">YES</button>
+      </div>
     </div>
 
-
-
-    {%- assign product = teaThree -%}
-    <div class="buttons-container-gift button-container-{{ product.id }} hide">
-      {% for product_option in product.options_with_values %}
-        {% assign optionName = product_option.name %}
-        {% if optionName contains 'Grind' %}
-          {% assign optionName = 'First, how do you take your coffee beans?' %}
-        {% elsif optionName contains 'Roast Level' %}
-          {% assign optionName = 'Cool. What is your favorite roast level? If you choose Trust Us, our roasters will give you whatever is the most fresh.' %}
-        {% elsif optionName contains 'Caffeine' %}
-          {% assign optionName = 'We’re excited for you to try a variety of Groundwork favorites. Next thing we need to know,  are you a caffeine lover or not?' %}
-        {% elsif optionName contains 'Tea' %}
-          {% assign optionName = 'We’re so excited to share our specialty teas with you each month. Ready to trust our tea specialists?' %}
-        {% elsif optionName contains 'Size' %}
-            {% if product.handle == 'ground-level' %}
-              {% assign optionName = 'Sounds good. Now, what’s your shirt size?' %}
-            {% else %}
-              {% assign optionName = 'First, how many coffee drinkers are on your team?' %}
-            {% endif %}
-        {% endif %}
-        <div class="step-container step-{{ forloop.index0 }} {% if forloop.index0 != 0 %}hide{% endif %} {% if optionName contains 'Title' %} force-hide {% endif %} ">
-          <h2 class="product_subscription_form--option-name">{{ optionName }}</h2>
-          <div class="d-flex p-4 variant-select-container size-{{ product_option.values.size }} variant-select-container-{{ product_option.position }}-{{ product.id }} " data-option-size="{{ product.options_with_values.size }}" data-position="{{ product_option.position }}" >
-            {% for value in product_option.values %}
-              
-              {% if product.handle contains 'blenders' and value contains 'Actually' %}
-               <a href="/collections/organic-teas" aria-label="{{ value }} button link">
-              {% endif %}
-              
-              <button class="product_content--quick-add-btn selected {% if product.handle contains 'blenders' and value contains 'Actually' %}linked{% endif %} variant-select m-2 variant-select-position-{{ product_option.position }} variant-select-{{ forloop.index }}" 
-                data-option-size="{{ product.options_with_values.size }}" 
-                data-position="{{ product_option.position }}" 
-                data-value="{{ value }}" 
-                data-product-id="{{ product.id }}" 
-                data-coffee-three-id="{{ coffeeThree.id }}" 
-                data-coffee-six-id="{{ coffeeSix.id }}" 
-                data-tea-three-id="{{ teaThree.id }}" 
-                data-tea-six-id="{{ teaSix.id }}" 
-                aria-label="{{value}} button"
-                data-index="{{ forloop.index }}" 
-                type="button" 
-                name="button">{{ value }}</button>
-              
-              {% if product.handle contains 'blenders' and value contains 'Actually' %}
-               </a>
-              {% endif %}
-            {% endfor %}
-              
-            {% if product.handle contains 'office' %}
-             <button class="product_content--quick-add-btn variant-select m-2 open-form"  aria-label="{{ product.title }} button" data-product-id="{{ product.id }}"  type="button" name="button">20+ People</button>
-              
-            {% endif %}
-
-          </div>
-          {% if product.handle == 'ground-level' and optionName == 'Sounds good. Now, what’s your shirt size?' %}
-            <p>Not every box will have a shirt, but when it does we want it to fit!</p>
-          {% endif %}
-        </div>
-        {% assign count = forloop.index0 %}
-      {% endfor %}
-
-
-      {% if product.metafields.subscriptions.shipping_interval_frequency %}
-          {% comment %}Subscriptions Powered by ReCharge Payments: Meta Fields{% endcomment %}
-          {% comment %}Widget settings{% endcomment %}
-          {% assign widget_settings = shop.metafields.subscriptions %}
-          {% if widget_settings.subscription_active == 'true' %}
-            {% assign subscription_active = true %}
-          {% else %}
-            {% assign subscription_active = false %}
-          {% endif %}
-          {% if widget_settings.select_subscription_first == 'false' %}
-            {% assign select_subscription_first = false %}
-          {% else %}
-            {% assign select_subscription_first = true %}
-          {% endif %}
-          {% if widget_settings.disable_duplicates == 'true' %}
-            {% assign disable_duplicates = true %}
-          {% else %}
-            {% assign disable_duplicates = false %}
-          {% endif %}
-          {% assign first_option = widget_settings.first_option | default: "onetime" %}
-          {% comment %}Subscription settings{% endcomment %}
-          {% assign subscription_product = product.metafields.subscriptions %}
-          {% assign shipping_interval_unit_type = subscription_product.shipping_interval_unit_type | default: 'Days' %}
-          {% if shipping_interval_unit_type == 'day' %}
-            {% assign shipping_interval_unit_type = 'Days' %}
-          {% elsif shipping_interval_unit_type == 'week' %}
-            {% assign shipping_interval_unit_type = 'Weeks' %}
-          {% elsif shipping_interval_unit_type == 'month' %}
-            {% assign shipping_interval_unit_type = 'Months' %}
-          {% endif %}
-        {% endif %}
-        {% assign shipping_interval_frequency = subscription_product.shipping_interval_frequency | split: ',' | default: 30 %}
-  {% assign product_tags = product.tags | remove: ' ' | downcase %}
-  {% if subscription_product.is_subscription_only == 'true' or product_tags contains 'subscriptiononly' %}
-    {% assign subscription_only = true %}
-  {% else %}
-    {% assign subscription_only = false %}
-  {% endif %}
-  {% comment %}Product settings{% endcomment %}
-  {% assign variant_map = subscription_product.original_to_hidden_variant_map | default: false %}
-  {% if variant_map %}
-    {% capture variant_to_duplicate %}{ {% for variant in variant_map %}{% if variant[1]['discount_variant_id'] %}{{ variant[0] }}:'{{ variant[1]['discount_variant_id'] }}',{% endif %}{% endfor %} }{% endcapture %}
-    {% capture variant_to_price %}{ {% for variant in product.variants %}{{ variant.id }}:'{{ variant.price }}',{% endfor %} }{% endcapture %}
-    {% capture duplicate_to_price %}{ {% for variant in variant_map %}{% if variant[1]['discount_variant_id'] %}{{ variant[1]['discount_variant_id'] }}:'{{ variant[1]['discount_variant_price'] | replace: ".", "" }}',{% endif %}{% endfor %} }{% endcapture %}
-  {% endif %}
-  {% comment %}Discount settings{% endcomment %}
-  {% assign discount_percentage = subscription_product.discount_percentage | round: 2 %}
-  {% assign discount_floor = subscription_product.discount_percentage | floor %}
-  {% if discount_percentage == discount_floor %}
-    {% assign discount_percentage = discount_floor %}
-  {% endif %}
-  {% comment %}Widget translation{% endcomment %}
-  {% assign label_onetime = widget_settings.onetime_message | default: "One-time purchase" %}
-  {% assign label_autodeliver = widget_settings.subscribe_message | default: "Subscribe &amp; save" %}
-  {% assign label_deliver_every = widget_settings.widget_deliver_every | default: "Deliver every" %}
-  {% assign label_unit_type_legacy = subscription_product.label_unit_type | default: shipping_interval_unit_type %}
-  {% if widget_settings.translations %}
-    {% if shipping_interval_unit_type == 'Days' %}
-      {% assign label_unit_type_singular = widget_settings.translations['day'] | default: "Day" %}
-      {% assign label_unit_type_plural = widget_settings.translations['days'] %}
-    {% elsif shipping_interval_unit_type == 'Weeks' %}
-      {% assign label_unit_type_singular = widget_settings.translations['week'] %}
-      {% assign label_unit_type_plural = widget_settings.translations['weeks'] %}
-    {% else %}
-      {% assign label_unit_type_singular = widget_settings.translations['month'] %}
-      {% assign label_unit_type_plural = widget_settings.translations['months'] %}
-    {% endif %}
-  {% endif %}
-  {% assign subscription_details_label = widget_settings.subscription_details_verbiage | default: "Subscription details" %}
-  {% assign how_it_works_text = widget_settings.how_it_works | default: "<strong>How subscriptions work</strong><br><br>Products are automatically delivered on your schedule. No obligation, modify or cancel your subscription anytime." %}
-  {% assign learnmore_link = widget_settings.learnmore_verbiage | default: "Learn more..." %}
-  {% comment %}Popup settings{% endcomment %}
-  {% if widget_settings.show_subscription_details == 'false' %}
-    {% assign show_widget = false %}
-  {% else %}
-    {% assign show_widget = true %}
-  {% endif %}
-  {% if widget_settings.show_subscription_details_icon == 'false' %}
-    {% assign show_widget_icon = false %}
-  {% else %}
-    {% assign show_widget_icon = true %}
-  {% endif %}
-  {% if widget_settings.show_learnmore == 'false' %}
-    {% assign show_learnmore = false %}
-  {% else %}
-    {% assign show_learnmore = true %}
-  {% endif %}
-  {% if widget_settings.show_poweredby == 'false' %}
-    {% assign show_poweredby = false %}
-  {% else %}
-    {% assign show_poweredby = true %}
-  {% endif %}
-  {% comment %}Custom styling{% endcomment %}
-  {% assign widget_label_color = widget_settings.font_color | default: "#000000" %}
-  {% assign widget_active_color = widget_settings.active_color | default: "#676767" %}
-  {% assign widget_active_bg = widget_settings.background_color | default: "#F8F8F8" %}
-  {% assign widget_icon = widget_settings.widget_icon | default: "black" %}
-  {% if widget_icon == "white" %}
-    {% assign widget_icon = "//static.rechargecdn.com/static/images/widget/rc_widget__icon__white@2x.png" %}
-  {% else %}
-    {% assign widget_icon = "//static.rechargecdn.com/static/images/widget/rc_widget__icon__black@2x.png" %}
-  {% endif %}
-  {% assign popup_zindex = widget_settings.popup_zindex | default: "56" %}
-  {% assign popup_background_color = widget_settings.popup_background_color | default: "#474747" %}
-  {% assign popup_text_color = widget_settings.popup_text_color | default: "#FFFFFF" %}
-  {% assign popup_link_color = widget_settings.popup_link_color | default: "#4DD6B7" %}
-  {% assign recharge_custom_css = widget_settings.custom_css | defalut: "" %}
-  {% comment %}Learn more link{% endcomment %}
-  {% if widget_settings.learnmore_url %}
-    {% if widget_settings.learnmore_url contains "rechargepayments.com/subscribe-with-recharge" %}
-      {% capture learnmore_url %}http://rechargepayments.com/subscribe-with-recharge?utm_source=shopify%20store&utm_medium=customer%20link&utm_campaign=Shopify%20store%20back%20link&shop_name={{ shop.name | url_param_escape }}&shop={{ shop.permanent_domain }}{% endcapture %}
-    {% else %}
-      {% assign learnmore_url = widget_settings.learnmore_url %}
-    {% endif %}
-  {% else %}
-    {% capture learnmore_url %}http://rechargepayments.com/subscribe-with-recharge?utm_source=shopify%20store&utm_medium=customer%20link&utm_campaign=Shopify%20store%20back%20link&shop_name={{ shop.name | url_param_escape }}&shop={{ shop.permanent_domain }}{% endcapture %}
-  {% endif %}
-  {% comment %}Powered by badge{% endcomment %}
-  {% if widget_settings.poweredby_url %}
-    {% if widget_settings.poweredby_url contains "rechargepayments.com/subscribe-with-recharge" %}
-      {% capture poweredby_url %}http://rechargepayments.com/subscribe-with-recharge?utm_source=shopify%20store&utm_medium=customer%20link&utm_campaign=Shopify%20store%20back%20link&shop_name={{ shop.name | url_param_escape }}&shop={{ shop.permanent_domain }}{% endcapture %}
-    {% else %}
-      {% assign poweredby_url = widget_settings.poweredby_url %}
-    {% endif %}
-  {% else %}
-    {% capture poweredby_url %}http://rechargepayments.com/subscribe-with-recharge?utm_source=shopify%20store&utm_medium=customer%20link&utm_campaign=Shopify%20store%20back%20link&shop_name={{ shop.name | url_param_escape }}&shop={{ shop.permanent_domain }}{% endcapture %}
-  {% endif %}
-
-
-
-</div>
-
-
-
-
-  
-      {% assign count = count | plus: 1 %}
-      <div class="step-container step-sub hide force-hide">
-        <h2>Nice! What’s your ideal frequency?</h2>
-        <div class="d-flex p-4 variant-select-container size-{{ product_option.values.size }} variant-select-container-0-{{ product.id }}" >
-        
-        {% for frequency in shipping_interval_frequency %}
-          {% if frequency == "1" and label_unit_type_legacy != 'Days' %}
-              {% if label_unit_type_singular %}
-                {%- assign unit_type = label_unit_type_singular -%}
-              {% else %}
-                {%- assign unit_type = label_unit_type_legacy | remove: 's' -%}
-              {% endif %}
-            {% else %}
-              {% if label_unit_type_plural %}
-                {%- assign unit_type = label_unit_type_plural -%}
-              {% else %}
-                {%- assign unit_type = label_unit_type_legacy -%}
-              {% endif %}
-            {% endif %}
-            <button class="product_content--quick-add-btn m-2 subscription-btn" type="button" name="button" aria-label="{{ frequency }} {{ unit_type }} button" data-id="{{ selling_plan.id }}" data-frequency="{{ frequency }}" data-unit-type="{{ unit_type }}" data-product-id="{{ product.id }}" >
-              {{ frequency }}
-              {{ unit_type }}
-            </button>
-        {% endfor %}
-        </div>
+    <div class="step-container step-2 hide" data-step="2">
+      <h2 class="product_subscription_form--option-name">How do they need their coffee beans?</h2>
+      <div class="d-flex p-4 variant-select-container" id="coffee-bean-options">
+        <button class="product_content--quick-add-btn m-2" data-option="Whole">Whole</button>
+        <button class="product_content--quick-add-btn m-2" data-option="Coarse Grind">Coarse Grind</button>
+        <button class="product_content--quick-add-btn m-2" data-option="Medium Grind">Medium Grind</button>
+        <button class="product_content--quick-add-btn m-2" data-option="Fine Grind">Fine Grind</button>
       </div>
-
-
     </div>
-  
-  
-          {% if product.selling_plan_groups[0].selling_plans.size != blank %}
-            {% assign count = count | plus: 1 %}
-            <div class="step-container step-sub hide  force-hide">
-              <h2>Nice! What’s your ideal frequency?</h2>
-              <div class="d-flex p-4 variant-select-container size-{{ product_option.values.size }} variant-select-container-0-{{ product.id }}" data-option-size="{{ product.options_with_values.size }}" data-position="{{ product_option.position }}" >
-                {% for selling_plan in product.selling_plan_groups[0].selling_plans %}
-                  <button class="product_content--quick-add-btn m-2 subscription-btn" aria-label="{{selling_plan.name}} button" type="button" name="button" data-id="{{ selling_plan.id }}" data-product-id="{{ product.id }}" >
-                    {% if selling_plan.name == 'Delivery every 1 Week' %}
-                      Weekly
-                    {% elsif selling_plan.name == 'Delivery every 2 Weeks' %}
-                      Biweekly
-                    {% elsif selling_plan.name == 'Delivery every 4 Weeks' %}
-                      Monthly
-                    {% endif %}
-                  </button>
-                {% endfor %}
-              </div>
-            </div>
-          {% endif %}
-  
-  
-          {% assign count = count | plus: 1 %}
-  
-          <div class="step-container step-qty hide">
-            {% if product.handle contains 'roaster' %}
-              {%- assign type = 'bags' -%}
-            {% else %}  
-              {%- assign type = 'boxes' -%}
-            {% endif %}
 
-            <h2 class="qty-tea-title hide">Great! We’re so excited to share our specialty teas with them each month. How many boxes of tea would you like them to receive with each shipment?</h2>
-            <h2 class="qty-coffee-title hide">We’re excited for them to try a variety of Groundwork favorites. How many bags of coffee would you like them to receive each month?</h2>
-
-            <div class="d-flex p-4 variant-select-container size-{{ product_option.values.size }} variant-select-container-0-{{ product.id }}"  >
-                <button class="product_content--quick-add-btn m-2 qty-selector" aria-label="quanitity 1 button" type="button" name="button" data-qty="1" data-product-id="{{ product.id }}" >
-                  1
-                </button>
-                <button class="product_content--quick-add-btn m-2 qty-selector" aria-label="quanitity 2 button" type="button" name="button" data-qty="2" data-product-id="{{ product.id }}" >
-                  2
-                </button>
-            </div>
-          </div>
-          
-        {% endif %}
-
-
-
-      <div class="step-container step-end hide ">
-        <h2>How long do you want the gift to last?</h2>
-        <div class="d-flex p-4 variant-select-container size-{{ product_option.values.size }} variant-select-container-0-{{ product.id }}" >
-        
-    
-            <button class="product_content--quick-add-btn m-2 sub-length" aria-label="3 months button" type="button" name="button" data-id="{{ selling_plan.id }}" data-sub-length="3" data-product-id="{{ product.id }}" >
-              3 Months
-            </button>
-            
-            <button class="product_content--quick-add-btn m-2 sub-length" aria-label="6 months button" type="button" name="button" data-id="{{ selling_plan.id }}" data-sub-length="6" data-product-id="{{ product.id }}" >
-              6 Months
-            </button>
-
-        </div>
+    <div class="step-container step-3 hide" data-step="3">
+      <h2 class="product_subscription_form--option-name">Cool. What is their preferred roast level? If you choose Trust Us, our roasters will send them whatever is the most fresh.</h2>
+      <div class="d-flex p-4 variant-select-container" id="roast-level-options">
+        <button class="product_content--quick-add-btn m-2" data-option="Trust us!">Trust us!</button>
+        <button class="product_content--quick-add-btn m-2" data-option="On the lighter side">On the lighter side</button>
+        <button class="product_content--quick-add-btn m-2" data-option="On the darker side">On the darker side</button>
       </div>
+    </div>
+
+    <div class="step-container step-4 hide" data-step="4">
+      <h2 class="product_subscription_form--option-name">We’re excited for them to try a variety of Groundwork favorites. How many bags of coffee would you like them to receive each month?</h2>
+      <div class="d-flex p-4 variant-select-container" id="quantity-options">
+        <button class="product_content--quick-add-btn m-2" data-qty="1">1 Bag</button>
+        <button class="product_content--quick-add-btn m-2" data-qty="2">2 Bags</button>
+      </div>
+    </div>
+
+    <div class="step-container step-5 hide" data-step="5">
+      <h2 class="product_subscription_form--option-name">How long do you want the gift to last?</h2>
+      <div class="d-flex p-4 variant-select-container" id="duration-options">
+        <button class="product_content--quick-add-btn m-2" data-months="3" data-price="50" data-selling-plan-id="4435738774" data-product-id="7275093557398">3 Months</button>
+        <button class="product_content--quick-add-btn m-2" data-months="6" data-price="96" data-selling-plan-id="4434755734" data-product-id="7275094081686">6 Months</button>
+      </div>
+    </div>
+
+    <div class="step-container step-6 hide" data-step="6">
+      <h2>They're going to love this! Now, let’s review.</h2>
+      <div class="lets_review--readout"></div>
+      <button type="button" class="add-sub-to-cart m-5">ADD TO CART</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    let currentStep = 1;
+    const steps = document.querySelectorAll('.step-container');
+    let selectedOptions = {
+      giftType: null,
+      coffeeBean: null,
+      roastLevel: null,
+      quantity: null,
+      duration: null,
+      variantId: null,
+      sellingPlanId: null,
+      productId: null,
+      price: 0
+    };
+
+    function showStep(step) {
+      steps.forEach(s => {
+        if (parseInt(s.dataset.step) <= step) {
+          s.classList.remove('hide');
+        }
+      });
+    }
+
+    function updateReview() {
+      const reviewContainer = document.querySelector('.lets_review--readout');
+      reviewContainer.innerHTML = `
+        <ul><li class="qty-txt">${selectedOptions.giftType}</li>
+        ${selectedOptions.coffeeBean ? `<li class="option-0">${selectedOptions.coffeeBean}</li>` : ''}
+        ${selectedOptions.roastLevel ? `<li class="option-1">${selectedOptions.roastLevel}</li>` : ''}
+        ${selectedOptions.quantity ? `<li class="qty-txt">${selectedOptions.quantity} Bags</li>` : ''}
+        <li class="qty-txt">${selectedOptions.duration} Months</li></ul>
+      `;
+    }
+
+    function updatePrice() {
+      const totalPrice = selectedOptions.price * (selectedOptions.quantity || 1);
+      document.querySelector('.add-sub-to-cart').innerHTML = `ADD TO CART - $${totalPrice.toFixed(2)}`;
+    }
+
+    document.querySelectorAll('.variant-select-container button').forEach(button => {
+      button.addEventListener('click', function() {
+        const step = parseInt(this.closest('.step-container').dataset.step);
+        if (step === 1) {
+          selectedOptions.giftType = this.dataset.giftType;
+          currentStep = 2;
+        } else if (step === 2) {
+          selectedOptions.coffeeBean = this.dataset.option;
+          currentStep = 3;
+        } else if (step === 3) {
+          selectedOptions.roastLevel = this.dataset.option;
+          currentStep = 4;
+        } else if (step === 4) {
+          selectedOptions.quantity = parseInt(this.dataset.qty);
+          currentStep = 5;
+        } else if (step === 5) {
+          selectedOptions.duration = this.dataset.months;
+          selectedOptions.sellingPlanId = this.dataset.sellingPlanId;
+          selectedOptions.productId = this.dataset.productId;
+          selectedOptions.price = parseFloat(this.dataset.price);
+          currentStep = 6;
+        }
+
+        // Update variant ID based on selected duration and coffee bean type and roast level
+        if (selectedOptions.coffeeBean && selectedOptions.roastLevel && selectedOptions.duration) {
+          let variantId;
+          if (selectedOptions.duration === '3') {
+            if (selectedOptions.coffeeBean === 'Whole') {
+              variantId = selectedOptions.roastLevel === 'Trust us!' ? '41156472799382' :
+                         selectedOptions.roastLevel === 'On the lighter side' ? '41156472832150' :
+                         '41156472864918';
+            } else if (selectedOptions.coffeeBean === 'Coarse Grind') {
+              variantId = selectedOptions.roastLevel === 'Trust us!' ? '41156472897686' :
+                         selectedOptions.roastLevel === 'On the lighter side' ? '41156472930454' :
+                         '41156472963222';
+            } else if (selectedOptions.coffeeBean === 'Medium Grind') {
+              variantId = selectedOptions.roastLevel === 'Trust us!' ? '41156472995990' :
+                         selectedOptions.roastLevel === 'On the lighter side' ? '41156473028758' :
+                         '41156473061526';
+            } else if (selectedOptions.coffeeBean === 'Fine Grind') {
+              variantId = selectedOptions.roastLevel === 'Trust us!' ? '41156473094294' :
+                         selectedOptions.roastLevel === 'On the lighter side' ? '41156473127062' :
+                         '41156473159830';
+            }
+          } else if (selectedOptions.duration === '6') {
+            if (selectedOptions.coffeeBean === 'Whole') {
+              variantId = selectedOptions.roastLevel === 'Trust us!' ? '41156477976726' :
+                         selectedOptions.roastLevel === 'On the lighter side' ? '41156478009494' :
+                         '41156478042262';
+            } else if (selectedOptions.coffeeBean === 'Coarse Grind') {
+              variantId = selectedOptions.roastLevel === 'Trust us!' ? '41156478075030' :
+                         selectedOptions.roastLevel === 'On the lighter side' ? '41156478107798' :
+                         '41156478140566';
+            } else if (selectedOptions.coffeeBean === 'Medium Grind') {
+              variantId = selectedOptions.roastLevel === 'Trust us!' ? '41156478173334' :
+                         selectedOptions.roastLevel === 'On the lighter side' ? '41156478206102' :
+                         '41156478238870';
+            } else if (selectedOptions.coffeeBean === 'Fine Grind') {
+              variantId = selectedOptions.roastLevel === 'Trust us!' ? '41156478271638' :
+                         selectedOptions.roastLevel === 'On the lighter side' ? '41156478304406' :
+                         '41156478337174';
+            }
+          }
+          selectedOptions.variantId = variantId;
+        }
+
+        // Update button styles
+        this.parentElement.querySelectorAll('button').forEach(btn => {
+          btn.style.backgroundColor = '';
+          btn.style.color = '';
+        });
+        this.style.backgroundColor = 'black';
+        this.style.color = 'white';
+
+        // Show next step
+        showStep(currentStep);
+        updateReview();
+        updatePrice();
+      });
+    });
+
+    document.querySelector('.add-sub-to-cart').addEventListener('click', function() {
+      // Add to cart functionality
+      if (!selectedOptions.variantId || !selectedOptions.sellingPlanId || !selectedOptions.giftType || !selectedOptions.quantity || !selectedOptions.duration) {
+        alert('Please complete all selections before adding to cart.');
+        return;
+      }
       
-  
-  
-  
-  
-      <div class="lets_review hide d-flex p-4 step-container justify-content-center align-items-center flex-column">
-        {% if product.handle contains 'gift' %}
-            {%- assign who = "They're" -%}
-          {% else %}  
-            {%- assign who = "You're" -%}
-          {% endif %}
-        <h2>{{ who }} going to love this! Now, let’s review.</h2>
-        <div class="lets_review--readout"></div>
-      </div>
-  
-      <div class="d-flex p-4 justify-content-center align-items-center flex-column button-container hide">
-        <button type="button" name="button" aria-label="{{ product.title }} {{ product.price }} add to cart button" class="add-sub-to-cart">ADD TO CART <span class="price"></span></button>
-      </div>
-  
-      <div class="sold_out_error hide">
-        Sold Out
-      </div>
-  
-    </div>
-  </section>
+      const formData = {
+        items: [{
+          id: selectedOptions.variantId,
+          quantity: selectedOptions.quantity,
+          selling_plan: parseInt(selectedOptions.sellingPlanId)
+        }]
+      };
+
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status && data.status === 422) {
+          alert('Failed to add item to cart. Please try again.');
+        } else {
+          window.location.href = '/cart';
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+      });
+    });
+  });
+</script>
+
+<style>
+  .hide {
+    display: none;
+  }
+
+
+ 
+.lets_review--readout ul li {
+    margin: 0 15px;
+    font-family: GT Pressura, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+    font-size: 1.3rem;
+    line-height: 35px;
+    font-weight: 700;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    position: relative;
+}
+  .lets_review--readout ul {
+    list-style: none;
+    display: -ms-flexbox;
+    display: flex;
+}
+  .lets_review--readout ul li:before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    bottom: -1px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #efbb52;
+    transition: .2s;
+}
+</style>

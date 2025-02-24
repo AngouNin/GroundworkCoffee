@@ -1,3 +1,10 @@
+<script>
+    // TODO: TEST THIS TO MAKE SURE IT WORKS! I am using paginate to increase the limit of products above the default 50
+    var PRODUCT = {{ product | json }};
+</script>
+
+
+
 <section data-section-id="{{ section.id }}" data-section-type="product">
   <div class="container">
     {%- assign current_variant = product.selected_or_first_available_variant -%}
@@ -8,7 +15,7 @@
         {% include "product-detail-image" %}
       </div>
       <div class="col-md">
-        {% include "product-detail-form" %}
+        {% include "product-detail-form" with product as product %}
       </div>
     </div>
   </div>
@@ -43,6 +50,12 @@
   </div>
 </section>
 
+
+<script type="application/ld+json">
+{% liquid
+  render "product-json"
+%}
+</script>
 
 <script type="text/javascript">
 
@@ -91,6 +104,41 @@
         "label": "Show social sharing buttons",
         "default": true
       }
-    ]
-  }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "yotpo-type-head",
+      "name": "yotpo Type Head",
+      "limit": 1
+    },
+    {
+      "type": "title",
+      "name": "Title",
+      "limit": 1
+    },
+    {
+      "type": "variant-quantity",
+      "name": "Variant & Quantity",
+      "limit": 1
+    },
+    {
+      "type": "recharge",
+      "name": "Recharge Script",
+      "limit": 1
+    },
+    {
+      "type": "buy_buttons",
+      "name": "Buy buttons",
+      "limit": 1
+    },
+    {
+      "type": "description",
+      "name": "Description",
+      "limit": 1
+    }
+  ]
+}
 {% endschema %}

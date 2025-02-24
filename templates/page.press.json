@@ -1,0 +1,180 @@
+{
+  "sections": {
+    "page-press-heading": {
+      "type": "page-press-heading",
+      "settings": {
+        "title": "People are talking.",
+        "subtitle": "Groundwork Coffee Press",
+        "desc": "<p>Our mission is to source and share exceptional, organic coffee that inspires people to work hard, dream big, and impact the world.<\/p>"
+      }
+    },
+    "page-press-content": {
+      "type": "page-press-content",
+      "blocks": {
+        "press_item_kaDmki": {
+          "type": "press_item",
+          "settings": {
+            "title": "Daily Grind",
+            "ref": "Soil health & regenerative agriculture – the latest trend in third wave coffee?",
+            "desc": "<p>In the wake of the climate crisis and declining profitability in coffee production, regenerative agriculture has emerged as a transformative solution. <\/p>",
+            "img": "shopify:\/\/shop_images\/Reg-ag-and-soil-health-header_78ea5475-331a-4340-a31d-0015aa7c6f94.jpg",
+            "logo": "shopify:\/\/shop_images\/PDG-Events-logo-Blue-2.png",
+            "url": "https:\/\/perfectdailygrind.com\/2024\/10\/soil-health-regenerative-agriculture-third-wave-coffee\/"
+          }
+        },
+        "c8803edf-6d59-41c4-b50c-ae4941649f71": {
+          "type": "press_item",
+          "settings": {
+            "title": "NyMag.com",
+            "ref": "What Ashley Benson Can’t Live Without",
+            "desc": "<p>I love kitschy things in my house, so I had to get Bitches Brew because of the name. And it’s actually a really nice roast. It blends well in the drinks I make, and it’s not too acidic.<\/p>",
+            "img": "shopify:\/\/shop_images\/Artboard_1-2_1000x_8751c49f-5330-46ba-8176-ec7534a82a92.png",
+            "logo": "shopify:\/\/shop_images\/strategist.png",
+            "url": "https:\/\/nymag.com\/strategist\/article\/ashley-benson-favorite-things.html"
+          }
+        },
+        "f43717cd-83dc-451e-8ceb-af7ae123c0fd": {
+          "type": "press_item",
+          "settings": {
+            "title": "Daily Coffee News",
+            "ref": "First Regenerative Organic Certified Coffee Hits US Market",
+            "desc": "<p>A farm-focused, third-party social and environmental certification scheme called Regenerative Organic Certified has moved into the coffee industry. <\/p>",
+            "img": "shopify:\/\/shop_images\/nic_press.png",
+            "logo": "shopify:\/\/shop_images\/Daily-Coffee-News-Logo.png",
+            "url": "https:\/\/dailycoffeenews.com\/2022\/08\/30\/first-regenerative-organic-certified-coffee-hits-us-market\/"
+          }
+        },
+        "7f280096-ab62-466b-b110-41990ad28494": {
+          "type": "press_item",
+          "settings": {
+            "title": "The Argonaut",
+            "ref": "Groundwork Coffee: Doing Good for People and the Planet",
+            "desc": "<p>The B Corp Certificate is awarded to companies that agree to meet high standards of performance, accountability and transparency throughout their entire business model. <\/p>",
+            "img": "shopify:\/\/shop_images\/resized_1.png",
+            "logo": "shopify:\/\/shop_images\/The-Argonaut-Logo-Press-and-Reviews-Avital-Tours-bandw-big.png",
+            "url": "https:\/\/www.argonautnews.com\/business\/doing-good-for-people-and-the-planet\/article_0f179d22-18fe-11ed-b59f-2b9552348ed9.html"
+          }
+        },
+        "c71b1238-7199-4e10-b8d5-dbf3e0dfff23": {
+          "type": "press_item",
+          "settings": {
+            "title": "BEVNET",
+            "ref": "Groundwork Coffee Receives B Corp Certification",
+            "desc": "<p>Groundwork Coffee, one of the leading organic coffee roasters in the U.S., is proud to share that their mission-driven ways are now supported by the distinguished B Corp certification.<\/p>",
+            "img": "shopify:\/\/shop_images\/Artboard_1-2.png",
+            "logo": "shopify:\/\/shop_images\/BevNET_logo_ee34bd3d-dc30-44d6-9764-36c7404bb70f.png",
+            "url": "https:\/\/www.bevnet.com\/news\/2022\/groundwork-coffee-receives-b-corp-certification"
+          }
+        },
+        "1aa69a8d-5da4-48b2-95e0-df4e5d78af15": {
+          "type": "press_item",
+          "settings": {
+            "title": "BEVNET",
+            "ref": "Los Angeles-based Organic Coffee Shop, Groundwork Coffee Co., Highlights Mission-Forward Vision With Brand Refresh",
+            "desc": "<p>The brand refresh captures the essence of Groundwork’s Southern California roots by representing the culture with updated designs and color palettes.<\/p>",
+            "img": "shopify:\/\/shop_images\/Artboard_1_3.png",
+            "logo": "shopify:\/\/shop_images\/BevNET_logo_ee34bd3d-dc30-44d6-9764-36c7404bb70f.png",
+            "url": "https:\/\/www.bevnet.com\/news\/2021\/los-angeles-based-organic-coffee-shop-groundwork-coffee-co-highlights-mission-forward-vision-with-brand-refresh"
+          }
+        },
+        "b50840ef-d1b6-4e14-aa3e-a25a99590388": {
+          "type": "press_item",
+          "settings": {
+            "title": "Bartalks.net",
+            "ref": "Organic Groundwork Coffee Shop Lays Out Updated Mission",
+            "desc": "<p>Although there are a lot of fairtrade coffee companies out there, the number of committed organic coffee companies is much smaller. The company website goes into quite a lot of detail about who they work with and why.<\/p>",
+            "img": "shopify:\/\/shop_images\/groundwork6-web-1024x619.jpg",
+            "logo": "shopify:\/\/shop_images\/bar_talks.png",
+            "url": "https:\/\/bartalks.net\/organic-groundwork-coffee-shop-lays-out-updated-mission\/"
+          }
+        },
+        "85148fbd-1762-4b22-bf31-acd323b451d0": {
+          "type": "press_item",
+          "settings": {
+            "title": "Brewbound.com",
+            "ref": "Santa Monica Brew Works Collabs with Groundwork Coffee to Release Breakfast Brew Golden Mocha Porter",
+            "desc": "<p>Santa Monica Brew Works announces the latest edition in its series of limited-release beers celebrating local businesses.<\/p>",
+            "img": "shopify:\/\/shop_images\/Artboard_2_1.png",
+            "logo": "shopify:\/\/shop_images\/Brewbound_logo2.png",
+            "url": "https:\/\/www.brewbound.com\/news\/santa-monica-brew-works-collabs-with-groundwork-coffee-to-release-breakfast-brew-golden-mocha-porter\/"
+          }
+        },
+        "f4264da1-1826-4599-a874-ad45f962d40d": {
+          "type": "press_item",
+          "settings": {
+            "title": "Santa Monica Daily Press",
+            "ref": "Community Coffee Institution Groundwork Celebrates 30 Years of Purpose-driven Roasting",
+            "desc": "<p>What started as a small family owned rare books store and coffee roastery tucked away on Rose Avenue, has now become a West Coast hallmark of sustainable and organic coffee.<\/p>",
+            "img": "shopify:\/\/shop_images\/Artboard_5.png",
+            "logo": "shopify:\/\/shop_images\/SMDP-new-logo-300x128.png",
+            "url": "https:\/\/www.smdp.com\/community-coffee-institution-groundwork-celebrates-30-years-of-purpose-driven-roasting\/208733"
+          }
+        },
+        "b31ea405-9f89-4c98-a213-36eb00dcbb9c": {
+          "type": "press_item",
+          "settings": {
+            "title": "Patch.com",
+            "ref": "Venice's Groundwork Coffee Drops a Fresh Rebrand",
+            "desc": "<p>Groundwork Coffee is celebrating 30 years of business in the community with a new design, website and remembering where it all started — at the original Venice shop.<\/p>",
+            "img": "shopify:\/\/shop_images\/Artboard_4_1.png",
+            "logo": "shopify:\/\/shop_images\/patch.com.png",
+            "url": "https:\/\/patch.com\/california\/venice\/venices-groundwork-coffee-co-drops-fresh-rebrand"
+          }
+        },
+        "98d88591-206d-4963-a4ac-c6f8ce317865": {
+          "type": "press_item",
+          "settings": {
+            "title": "Westside Current",
+            "ref": "Groundwork Grows From Rose Ave in Venice to West Coast Hallmark",
+            "desc": "<p>What started as a small family owned rare books store and coffee roastery tucked away on Rose Avenue, has now become a West Coast hallmark of sustainable and organic coffee.<\/p>",
+            "img": "shopify:\/\/shop_images\/Artboard_3_2.png",
+            "logo": "shopify:\/\/shop_images\/westside_current.png",
+            "url": "https:\/\/www.westsidecurrent.com\/eat\/groundworks-grows-from-rose-ave-in-venice-to-west-coast-hallmark\/article_8505079e-1d83-11ec-9327-37e7d6c3b675.html"
+          }
+        },
+        "69a5ee98-cc6d-428b-a119-b675d756c0ea": {
+          "type": "press_item",
+          "settings": {
+            "title": "Santa Monica Daily Press",
+            "ref": "Santa Monica Brew Works Teamed up with Organic Coffee Roasters Groundwork Coffee Co.",
+            "desc": "<p>The brewery teamed up with organic coffee roasters Groundwork Coffee Co. for their latest effort following partnerships with other local iconic places such as Bay Cities and Rip City Skates.<\/p>",
+            "img": "shopify:\/\/shop_images\/Artboard_1-1.png",
+            "logo": "shopify:\/\/shop_images\/SMDP-new-logo-300x128.png",
+            "url": "https:\/\/www.smdp.com\/santa-monica-brew-works-teamed-up-with-organic-coffee-roasters-groundwork-coffee-co\/208262"
+          }
+        },
+        "a0a1e8eb-df68-4948-bd84-762de3d95319": {
+          "type": "press_item",
+          "settings": {
+            "title": "Helena Coffee Processing & Export",
+            "ref": "5 Places to Buy Wholesale Coffee in LA",
+            "desc": "<p>In Venice, California, Groundwork Coffee roasters was established thirty years ago. Originally a modest roaster, they have grown to include cafes sprouting up all along the West Coast, a growing selection of cold brew coffees.<\/p>",
+            "img": "shopify:\/\/shop_images\/resized_2.png",
+            "logo": "shopify:\/\/shop_images\/resized2.png",
+            "url": "https:\/\/helenacoffee.vn\/5-places-to-buy-wholesale-coffee-beans-in-los-angeles\/#2_Groundwork"
+          }
+        }
+      },
+      "block_order": [
+        "press_item_kaDmki",
+        "c8803edf-6d59-41c4-b50c-ae4941649f71",
+        "f43717cd-83dc-451e-8ceb-af7ae123c0fd",
+        "7f280096-ab62-466b-b110-41990ad28494",
+        "c71b1238-7199-4e10-b8d5-dbf3e0dfff23",
+        "1aa69a8d-5da4-48b2-95e0-df4e5d78af15",
+        "b50840ef-d1b6-4e14-aa3e-a25a99590388",
+        "85148fbd-1762-4b22-bf31-acd323b451d0",
+        "f4264da1-1826-4599-a874-ad45f962d40d",
+        "b31ea405-9f89-4c98-a213-36eb00dcbb9c",
+        "98d88591-206d-4963-a4ac-c6f8ce317865",
+        "69a5ee98-cc6d-428b-a119-b675d756c0ea",
+        "a0a1e8eb-df68-4948-bd84-762de3d95319"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "page-press-heading",
+    "page-press-content"
+  ]
+}

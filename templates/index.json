@@ -1,0 +1,446 @@
+{
+  "sections": {
+    "1622233552d8efa6f7": {
+      "type": "image-text-slider",
+      "blocks": {
+        "5496f49c-f7a8-4133-b2e5-1fd10701f313": {
+          "type": "slide",
+          "settings": {
+            "title": "Seasonal Select: Sundew",
+            "desc": "<p>Flowers are in bloom, the sun is out, and new Seasonal Select Sundew is the perfect ode to our favorite time of year! Bright, light, and full of fruit-forward sweetness, this is a coffee sure to please.<br\/><br\/><em>Available for a limited time.<\/em><\/p>",
+            "image": "shopify:\/\/shop_images\/Sundew.webp",
+            "layout": "left",
+            "button_label": "Shop Organic Sundew",
+            "button_link": "shopify:\/\/products\/seasonal-select-organic-sundew"
+          }
+        },
+        "slide_iHcGix": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "title": "Warm Wishes",
+            "desc": "<p>It's the Holiday season, give the gift of Warm Wishes. Featuring notes of Dark Chocolate and Pomegranate, our Seasonal Select has a juicy body and sweet lingering aftertaste. Let that special someone know how much they mean to you with Warm Wishes<br\/><br\/><em>Available for a limited time.<\/em><\/p>",
+            "image": "shopify:\/\/shop_images\/Warm_Wishes_2024_only.jpg",
+            "layout": "left",
+            "button_label": "Shop Warm Wishes",
+            "button_link": "shopify:\/\/products\/seasonal-select-warm-wishes"
+          }
+        },
+        "aa2d9f56-8fa9-4d17-a948-16c30622f451": {
+          "type": "slide",
+          "settings": {
+            "title": "Regenerative Organic Certified Coffees",
+            "desc": "<p>As a part of our commitment to the planet's long-term health, we have embarked on an exciting initiative to source new Regenerative Organic Certified® coffees.<\/p>",
+            "image": "shopify:\/\/shop_images\/rocaquae.jpg",
+            "layout": "left",
+            "button_label": "Shop ROC Coffees",
+            "button_link": "https:\/\/www.groundworkcoffee.com\/collections\/organic-coffee\/type-Regenerative-Organic-Certified"
+          }
+        },
+        "bd17f355-e8b3-4bcd-b947-a438a0e47ccc": {
+          "type": "slide",
+          "settings": {
+            "title": "Best-Sellers Coffee Bundle",
+            "desc": "<p>Finally- our first bundle that includes three of our best-selling, Certified Organic coffees at a discounted price.<\/p>",
+            "image": "shopify:\/\/shop_images\/TDAVIS_Groundwork_June606_copy_1_-2.jpg",
+            "layout": "left",
+            "button_label": "Shop Now",
+            "button_link": "https:\/\/www.groundworkcoffee.com\/products\/best-sellers-coffee-bundle"
+          }
+        },
+        "9ffb74bd-3190-460d-b2b6-a15786149d7d": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "title": "BOGO 50% off.",
+            "desc": "<p>Buy one, get one 50% off all 2lb bags! <\/p><p>Use promo code <strong>GWBOGO <\/strong>at checkout after adding two 2lb bags to your cart.<\/p><p>Valid until 8\/26.<\/p>",
+            "image": "shopify:\/\/shop_images\/Email_2310_BOGO_2LB_Bags-02.jpg",
+            "layout": "left",
+            "button_label": "Stock Up",
+            "button_link": "https:\/\/www.groundworkcoffee.com\/collections\/organic-coffee\/size-2-lb"
+          }
+        },
+        "ebc4a6c4-0da4-442d-8589-6041073f9bdb": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "title": "Brewing Bundles",
+            "desc": "<p>Your home coffee brewing journey starts here. <\/p><p>Our bundles include everything you need to make a perfect cup at home.<\/p>",
+            "image": "shopify:\/\/shop_images\/Untitled_design_7.png",
+            "layout": "left",
+            "button_label": "Shop Brewing Bundles",
+            "button_link": "https:\/\/www.groundworkcoffee.com\/collections\/good-goods\/type-bundles"
+          }
+        },
+        "6f9ee298-edcf-4018-b3d4-a4345651df45": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "title": "Free 2oz Coffee Sample",
+            "desc": "<p>Use code <strong>GWSAMPLE50<\/strong> to claim a free 2oz sample with every $50 purchase. Valid until 6\/27.<\/p><p>Cannot be combined with any other discounts.<\/p>",
+            "image": "shopify:\/\/shop_images\/sample_bags.jpg",
+            "layout": "left",
+            "button_label": "Explore Samples",
+            "button_link": "https:\/\/www.groundworkcoffee.com\/products\/2oz-coffee-sample"
+          }
+        },
+        "85dfa4c4-e67b-4a7a-a18e-de0256db7bde": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "title": "20% off sitewide.",
+            "desc": "<p>Shop our biggest sale yet. Take 20% off with promo code <strong>MONDAY20<\/strong> at checkout. <\/p><p>Valid only until 5\/27.<\/p>",
+            "image": "shopify:\/\/shop_images\/TDAVIS_Groundwork_June403_copy.png",
+            "layout": "left",
+            "button_label": "Stock up",
+            "button_link": "shopify:\/\/collections\/organic-coffee"
+          }
+        },
+        "a19df98b-4e77-4b14-81c7-9938c6de7698": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "title": "Golden Hour is here.",
+            "desc": "<p>Introducing Golden Hour, our Seasonal Select Coffee for summer. This medium roast boasts notes of brown sugar and white peach, delivering a refreshing taste that embodies the essence of the season. <\/p><p>Available while supplies last.<\/p>",
+            "image": "shopify:\/\/shop_images\/birthday_invitation-3.png",
+            "layout": "left",
+            "button_label": "Shop Golden Hour",
+            "button_link": "https:\/\/www.groundworkcoffee.com\/products\/seasonal-select-organic-golden-hour"
+          }
+        },
+        "faaa37a7-b161-4e95-a290-b5212df87495": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "title": "Quality Award Winners",
+            "desc": "<p>A delicious, chocolatey Colombian coffee that balances the sweet tartness of a spring strawberry with a soft and smooth, full bodied finish.<\/p><p>Online Exclusive. While supplies last.<\/p>",
+            "image": "shopify:\/\/shop_images\/Untitled_design-6.png",
+            "layout": "left",
+            "button_label": "Shop Dos Granjeras",
+            "button_link": "https:\/\/www.groundworkcoffee.com\/products\/dos-granjeras-1"
+          }
+        },
+        "f15841a7-e78f-464d-8f75-88e0c9631528": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "title": "Celebrating Women of AMUCC",
+            "desc": "<p>We're proud to announce our 2023 Quality Award Winning Dos Granjeras.<br\/><br\/>Available online only. While supplies last.<\/p>",
+            "image": "shopify:\/\/shop_images\/12OZ_SingleOrigin_Secondary_DosGranjeras_2.jpg",
+            "layout": "left",
+            "button_label": "Shop Dos Granjeras",
+            "button_link": "https:\/\/www.groundworkcoffee.com\/products\/dos-granjeras-1"
+          }
+        },
+        "c944cd3d-1cb9-4f11-8a46-48a30f816518": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "title": "Regenerative Organic Certified®",
+            "desc": "<p>Regenerative Organic Certified®, builds upon the legacy of the organic movement by promoting holistic agriculture practices in an all-encompassing certification.<\/p>",
+            "image": "shopify:\/\/shop_images\/Groundwork_EarthMonth.png",
+            "layout": "left",
+            "button_label": "Shop Regenerative Organic Certified®",
+            "button_link": "https:\/\/www.groundworkcoffee.com\/products\/regenerative-organic-certified-nicaragua-cooperativa-sacacli"
+          }
+        },
+        "50cb236f-34b4-41a5-87ee-9e20542f9847": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "title": "Limited Reserve Mexico",
+            "desc": "<p>Experience this year's crop of our most popular Limited Reserve Julia Ortega Carballo.<br\/>Available while supplies last.<\/p>",
+            "image": "shopify:\/\/shop_images\/TDAVIS_Groundworks724_copy-2.jpg",
+            "layout": "left",
+            "button_label": "Order Today",
+            "button_link": "https:\/\/www.groundworkcoffee.com\/products\/limited-reserve-organic-mexico-julia-ortega-carballo"
+          }
+        },
+        "1c25e952-f194-4d25-ac08-0210b776a3ee": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "title": "A gift that keeps on giving.",
+            "desc": "<p>Be the best friend, family member, or coworker by giving a subscription to a pal. Choose the length of time, and we’ll make sure they love each Groundwork delivery.<\/p>",
+            "image": "shopify:\/\/shop_images\/4.png",
+            "layout": "left",
+            "button_label": "Gift Subscription",
+            "button_link": "https:\/\/www.groundworkcoffee.com\/products\/greatest-gift"
+          }
+        },
+        "c592af93-f580-4a9f-ba9c-de797076dc5d": {
+          "type": "slide",
+          "settings": {
+            "title": "We're a Certified B Corp",
+            "desc": "<p>B Corp™ Certification is a promise that a company is doing business in a way that meets rigorous standards of verified performance, transparency and accountability.<\/p>",
+            "image": "shopify:\/\/shop_images\/Digital_2209_Social_Posts-2.jpg",
+            "layout": "left",
+            "button_label": "Learn More",
+            "button_link": "https:\/\/www.groundworkcoffee.com\/blogs\/learn\/groundwork-is-officially-a-certified-b-corp"
+          }
+        },
+        "017ef908-8d3f-4371-aa56-9c8b7501f091": {
+          "type": "slide",
+          "settings": {
+            "title": "Organic Matters",
+            "desc": "<p>Clean products mean clean environments for farmers at origin—from the land they live on to the water they drink.<\/p>",
+            "image": "shopify:\/\/shop_images\/5_23e7e5ab-0b09-4ade-9276-7c5f67999c86.png",
+            "layout": "left",
+            "button_label": "Why Organic",
+            "button_link": "https:\/\/www.groundworkcoffee.com\/blogs\/learn\/organic-matters"
+          }
+        },
+        "e44460ab-b126-47c7-94e5-46622ab763de": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "title": "Same great coffee. Brand new look.",
+            "desc": "<p>We’ve been working hard behind the scenes to bring you a whole new Groundwork experience that better reflects our Southern California roots, focus on sustainability, and commitment to community. <\/p>",
+            "image": "shopify:\/\/shop_images\/Groundwork_Bags1844-2.jpg",
+            "layout": "left",
+            "button_label": "More About Our Refresh",
+            "button_link": "shopify:\/\/blogs\/news\/a-refreshed-brand-to-match-our-best-in-class-coffee"
+          }
+        }
+      },
+      "block_order": [
+        "5496f49c-f7a8-4133-b2e5-1fd10701f313",
+        "slide_iHcGix",
+        "aa2d9f56-8fa9-4d17-a948-16c30622f451",
+        "bd17f355-e8b3-4bcd-b947-a438a0e47ccc",
+        "9ffb74bd-3190-460d-b2b6-a15786149d7d",
+        "ebc4a6c4-0da4-442d-8589-6041073f9bdb",
+        "6f9ee298-edcf-4018-b3d4-a4345651df45",
+        "85dfa4c4-e67b-4a7a-a18e-de0256db7bde",
+        "a19df98b-4e77-4b14-81c7-9938c6de7698",
+        "faaa37a7-b161-4e95-a290-b5212df87495",
+        "f15841a7-e78f-464d-8f75-88e0c9631528",
+        "c944cd3d-1cb9-4f11-8a46-48a30f816518",
+        "50cb236f-34b4-41a5-87ee-9e20542f9847",
+        "1c25e952-f194-4d25-ac08-0210b776a3ee",
+        "c592af93-f580-4a9f-ba9c-de797076dc5d",
+        "017ef908-8d3f-4371-aa56-9c8b7501f091",
+        "e44460ab-b126-47c7-94e5-46622ab763de"
+      ],
+      "settings": {}
+    },
+    "16222336297b5b35dc": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Certified Organic. Always and forever.",
+        "sub_title": "SIP",
+        "collection": "best-sellers",
+        "products_to_show": 6,
+        "custom_dark_bg": false
+      }
+    },
+    "16364030500533b8ae": {
+      "type": "design-award",
+      "settings": {
+        "title": "We're B Corp Certified!",
+        "desc": "<p>We believe in this certification just like we believe in organics. Cheers to better coffee and building a better world!<\/p>",
+        "image": "shopify:\/\/shop_images\/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.png",
+        "bg_color": "#e2d9be",
+        "button_link": "https:\/\/www.groundworkcoffee.com\/blogs\/learn\/groundwork-is-officially-a-certified-b-corp",
+        "button_label": "Learn More"
+      }
+    },
+    "162223412033a2fd6b": {
+      "type": "visit-groundwork",
+      "settings": {
+        "sub_title": "VISIT",
+        "title": "Stop by a  neighborhood shop.",
+        "desc": "",
+        "order_label": "ORDER AHEAD",
+        "order_link": "https:\/\/order.toasttab.com\/online\/locations\/9bdc91af-51dd-4e2c-a687-34a2f294dabc#!\/",
+        "find_label": "Find a Cafe Near you",
+        "find_link": "https:\/\/www.groundworkcoffee.com\/pages\/locations-1",
+        "image": "shopify:\/\/shop_images\/visit_2x_900x_900x_6f9d3cc2-6ce4-4416-bf36-b9d9c2bf42aa.png",
+        "image_label": "Our Rose Ave.  Venice location",
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1b2bbf3324f14a74bdde2ed2479c701e.mp4",
+        "floating_image": "shopify:\/\/shop_images\/GW-earth-graphic-loop-small.gif",
+        "rotating_txt": "talkin' 'bout the sea and the sky \/ and i'm talkin' bout' you and i \/ the sea, the sky \/ for you and i \/"
+      }
+    },
+    "1622234191c2bf9a2c": {
+      "type": "slide-with-scroll",
+      "blocks": {
+        "4c84c1c2-7e34-4463-8621-4a061d043405": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "article": "brew-guides\/chemex",
+            "product": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "1d078c44-a0b9-47be-9c94-bb4dd080aa22": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "article": "brew-guides\/hario-v60",
+            "product": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "bcc4db51-f13c-426d-a891-30472f80bbb4": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "article": "brew-guides\/cold-brew",
+            "product": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "0124f6c9-2cbd-4b68-b659-a37c9cf4cf4b": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "article": "brew-guides\/french-press",
+            "product": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "713eff54-22c7-467c-9e14-0860534f8d18": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "article": "brew-guides\/aeropress",
+            "product": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "9d50e26a-45e4-4454-857b-b4680aec7cf8": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "article": "brew-guides\/loose-leaf-tea",
+            "product": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "4c84c1c2-7e34-4463-8621-4a061d043405",
+        "1d078c44-a0b9-47be-9c94-bb4dd080aa22",
+        "bcc4db51-f13c-426d-a891-30472f80bbb4",
+        "0124f6c9-2cbd-4b68-b659-a37c9cf4cf4b",
+        "713eff54-22c7-467c-9e14-0860534f8d18",
+        "9d50e26a-45e4-4454-857b-b4680aec7cf8"
+      ],
+      "settings": {
+        "title": "We're here to help.",
+        "sub_title": "Brew Guide"
+      }
+    },
+    "1622234262199ae01c": {
+      "type": "featured-subscription",
+      "settings": {
+        "title": "Fresh roasts right to your door.",
+        "sub_title": "SUBSCRIBE",
+        "floating_note": "",
+        "collection": "home-page-subscriptions"
+      }
+    },
+    "16222342969785edde": {
+      "type": "slide-with-scroll",
+      "blocks": {
+        "f1e4b5a6-7dda-4b4a-b1b4-9b2a0c99ab8c": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "article": "",
+            "product": "bitches-brew",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "39df0468-e337-4cc4-9d69-a76943b60ead": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "article": "",
+            "product": "ethiopia-heirloom-blend-organic-single-origin-coffee",
+            "button_label": "",
+            "button_link": "https:\/\/www.groundworkcoffee.com\/products\/ethiopia-heirloom-blend-organic-single-origin-coffee"
+          }
+        },
+        "ea620a4d-9e22-40a7-bca8-3445766ae8fb": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "article": "",
+            "product": "black-gold",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "ce3cd1bf-6772-4009-b522-79d3b5afeb8c": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "article": "",
+            "product": "cold-brew-blend",
+            "button_label": "",
+            "button_link": "https:\/\/www.groundworkcoffee.com\/products\/cold-brew-blend"
+          }
+        },
+        "639f8c0e-247a-403d-9c9d-5acb028580f0": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "article": "",
+            "product": "angel-city",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "f1e4b5a6-7dda-4b4a-b1b4-9b2a0c99ab8c",
+        "39df0468-e337-4cc4-9d69-a76943b60ead",
+        "ea620a4d-9e22-40a7-bca8-3445766ae8fb",
+        "ce3cd1bf-6772-4009-b522-79d3b5afeb8c",
+        "639f8c0e-247a-403d-9c9d-5acb028580f0"
+      ],
+      "settings": {
+        "title": "Only the best",
+        "sub_title": "SHOP"
+      }
+    },
+    "1631713425052a9d2c": {
+      "type": "map",
+      "settings": {
+        "title": "Pick up at your local market.",
+        "sub_title": "FIND"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "section_title": "Subscribe to our newsletter",
+        "subheading": "Exclusive discounts, first access to seasonal selects, and more!",
+        "image": "shopify:\/\/shop_images\/computer_2x_831x_c7e2b324-ac40-431b-b17b-f3123f533b80.png",
+        "list_id": "",
+        "success": "Thank you for subscribing! Check your email for a confirmation message."
+      }
+    }
+  },
+  "order": [
+    "1622233552d8efa6f7",
+    "16222336297b5b35dc",
+    "16364030500533b8ae",
+    "162223412033a2fd6b",
+    "1622234191c2bf9a2c",
+    "1622234262199ae01c",
+    "16222342969785edde",
+    "1631713425052a9d2c",
+    "newsletter"
+  ]
+}

@@ -1,6 +1,5 @@
 <footer>
   <div class="container">
-
     <div class="footer-container d-flex justify-content-md-between">
       <nav class="footer_nav_left d-md-flex">
         {%- assign footer_linklist = section.settings.footer_linklist -%}
@@ -14,8 +13,6 @@
             {% endfor %}
         {% endif %}
       </nav>
-
-
       <nav class="footer_nav_right d-md-flex">
         {%- assign footer_linklist = section.settings.footer_linklist_right -%}
         {% if linklists[footer_linklist].links.size > 0 %}
@@ -34,18 +31,9 @@
         {% endif %}
       </nav>
     </div>
-
-
-
-    {%- include 'icon-footer' -%}
-
-    
-
-
+    {%- render 'icon-footer' -%}
   </div>
-  {%- include 'copyright' -%}
-
-
+  {%- render 'copyright' -%}
 </footer>
 
 {% schema %}

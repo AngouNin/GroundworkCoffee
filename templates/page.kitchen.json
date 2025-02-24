@@ -1,0 +1,76 @@
+{
+  "sections": {
+    "page-kitchen-heading": {
+      "type": "page-kitchen-heading",
+      "settings": {
+        "title": "OUR KITCHEN",
+        "subtitle": "A coffee shop that takes food seriously.",
+        "desc": "<p>Our kitchen offerings are made with love from local, quality ingredients.<\/p>"
+      }
+    },
+    "page-kitchen-content": {
+      "type": "page-kitchen-content",
+      "blocks": {
+        "bf438141-ee9b-4678-83fe-010880f64e1f": {
+          "type": "intro-section",
+          "settings": {
+            "title": "We start our days early.",
+            "desc": "<p>It’s our pleasure to serve fresh-baked, scratch-made offerings each morning. Groundwork began with a mission of sourcing and sharing the very best coffee in the world, so when we developed our food program, we knew we had to apply that same standard of quality and excellence in the kitchen as well.<\/p>",
+            "floating_image": "shopify:\/\/shop_images\/GW-bread-graphic-loop-small.gif",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ba29f4f0e2644137809310023b60eaed.mp4",
+            "rotating_txt": ""
+          }
+        },
+        "d53b6b6c-d8dd-4ab7-9907-5d30e0549347": {
+          "type": "image-slide",
+          "settings": {
+            "title": "Image Slides",
+            "image": "shopify:\/\/shop_images\/About_Groundwork_-_Our_Kitchen_-_Option_1_-_Commisary_Images.jpg",
+            "image_2": "shopify:\/\/shop_images\/Q0OvA69w.jpg",
+            "image_3": "shopify:\/\/shop_images\/poached_eggs_and_lox__june_2017_1.jpg",
+            "image_4": "shopify:\/\/shop_images\/Breakfast_Burrito_1.jpg",
+            "image_5": "shopify:\/\/shop_images\/pastry_2.jpg"
+          }
+        },
+        "85e71a62-77bc-4e04-b0bb-b84cc2c4d12f": {
+          "type": "secondary-section",
+          "settings": {
+            "title": "Quality ingredients. Sustainable practices.",
+            "desc": "<p>Our dedicated kitchen team not only prepares over 4,000 scratch-made pastries each week, they test new seasonal recipes and work to promote sustainability through food by using sustainable packaging and sourcing local ingredients whenever possible.<\/p><p>Our approach to food is holistic and that means every ingredient matters. That’s why we source only hormone- and antibiotic-free meats and organic, pasture-raised eggs. It’s also why we work hard to offer a variety of vegan, vegetarian, and gluten-free menu items.<\/p><p><a href=\"https:\/\/www.groundworkcoffee.com\/pages\/our-story-new\" target=\"_blank\" title=\"Our Story\">Learn more about our story here.<\/a><\/p>"
+          }
+        },
+        "f074a6bc-0d77-440b-a063-06279f074a91": {
+          "type": "image-text-section",
+          "settings": {
+            "title": "Stop in and say hey.",
+            "desc": "<p>Whether you’re grabbing a quick bite to go, or stopping in for a full meal, you can trust that your food was mindfully made by someone who believes that food should be both good and good for you. To explore our menu, check out our cafe pages and click the Order Ahead button to see what’s on the menu each day. <\/p>",
+            "button_label": "Explore LA Cafes",
+            "button_link": "https:\/\/www.groundworkcoffee.com\/pages\/locations-1",
+            "external": false,
+            "button_label_2": "Explore Portland Roastery",
+            "button_link_2": "https:\/\/www.groundworkcoffee.com\/pages\/locations-1?location=portland",
+            "external_2": false,
+            "image": "shopify:\/\/shop_images\/Group_774_2x_622x_d52d1e46-76b9-4407-917e-6a88ca3fc5be.png",
+            "bg_color": "#e2d9be"
+          }
+        }
+      },
+      "block_order": [
+        "bf438141-ee9b-4678-83fe-010880f64e1f",
+        "d53b6b6c-d8dd-4ab7-9907-5d30e0549347",
+        "85e71a62-77bc-4e04-b0bb-b84cc2c4d12f",
+        "f074a6bc-0d77-440b-a063-06279f074a91"
+      ],
+      "settings": {}
+    },
+    "custom-fields-pages": {
+      "type": "custom-fields-pages",
+      "settings": {}
+    }
+  },
+  "order": [
+    "page-kitchen-heading",
+    "page-kitchen-content",
+    "custom-fields-pages"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "smsbump": {
+      "type": "smsbump",
+      "settings": {}
+    }
+  },
+  "order": [
+    "smsbump"
+  ]
+}

@@ -1,3 +1,7 @@
+  <script>
+    window.theme.productType = 'subscription';
+  </script>
+
 {% if product.metafields.custom_fields["subscription_reference"] != blank %}
   {%- assign subRef = product.metafields.custom_fields["subscription_reference"] | escape -%}
 

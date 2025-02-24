@@ -1,0 +1,22 @@
+{
+  "sections": {
+    "product-subscription": {
+      "type": "product-subscription",
+      "settings": {}
+    },
+    "product-subscription-rec-products": {
+      "type": "product-subscription-rec-products",
+      "disabled": true,
+      "settings": {}
+    },
+    "product-subscription-branded-cta": {
+      "type": "product-subscription-branded-cta",
+      "settings": {}
+    }
+  },
+  "order": [
+    "product-subscription",
+    "product-subscription-rec-products",
+    "product-subscription-branded-cta"
+  ]
+}

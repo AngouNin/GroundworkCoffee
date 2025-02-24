@@ -18,6 +18,7 @@
       {% assign tagText = tagText | replace: '-', ' ' %}
       {% assign tagFilter = 'sub'  %}
       {% assign show = true %}
+      {% comment %}
       <li>
         <a href="/products/roasters-choice" aria-label="Roaster's Choice Link" data-collection="{{ handleClass }}" data-tag="{{ tagFilter }}" data-filter="{{ tagFilter }}" data-collection-handle="{{ filterCollection.handle }}" data-tag-handle="{{ taghandle }}" class=" links-{{ filterCollection.handle }}-{{ taghandle }} collection-filter-link {{ tagFilter }}-link linked" title="Remove tag {{ tag }}">
           Roaster's Choice
@@ -33,6 +34,8 @@
           Office Party
         </a>
       </li>
+      {% endcomment %}
+
       <li>
         <a href="/products/greatest-gift" aria-label="Greatest Gift Link" data-collection="{{ handleClass }}" data-tag="{{ tagFilter }}" data-filter="{{ tagFilter }}" data-collection-handle="{{ filterCollection.handle }}" data-tag-handle="{{ taghandle }}" class=" links-{{ filterCollection.handle }}-{{ taghandle }} collection-filter-link {{ tagFilter }}-link linked" title="Remove tag {{ tag }}">
           Greatest Gift

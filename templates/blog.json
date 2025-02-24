@@ -1,0 +1,90 @@
+{
+  "sections": {
+    "page-blog-heading": {
+      "type": "page-blog-heading",
+      "settings": {
+        "title": "BLOG",
+        "subtitle": "Explore the world of Groundwork.",
+        "desc": "<p>From our rigorous standards to the way we collaborate with farmers, we pride ourselves on producing only Certified Organic coffee, batch roasted daily.<\/p>"
+      }
+    },
+    "page-blog-content": {
+      "type": "page-blog-content",
+      "blocks": {
+        "97c57a53-432c-4f16-9b79-d54246f7e58e": {
+          "type": "blogs",
+          "settings": {
+            "blog": "roasters-corner"
+          }
+        },
+        "af137c9f-ef96-41ce-b53e-7540ab516419": {
+          "type": "blogs",
+          "settings": {
+            "blog": "recipes"
+          }
+        },
+        "09fc2a64-a76e-4568-8493-8e315f8ad7b5": {
+          "type": "blogs",
+          "settings": {
+            "blog": "community-spotlight"
+          }
+        },
+        "51e25941-00f8-4789-a5db-53c0b42849ac": {
+          "type": "blogs",
+          "settings": {
+            "blog": "learn"
+          }
+        },
+        "ef8c1679-6737-47ee-9ca7-dd6b429fb4a1": {
+          "type": "blogs",
+          "settings": {
+            "blog": "news"
+          }
+        },
+        "9ac715ce-f811-4c26-b93b-a5d7ca5750ed": {
+          "type": "blogs",
+          "settings": {
+            "blog": "brew-guides"
+          }
+        },
+        "75821de6-ecf6-4e98-987a-f10e1b0d7d06": {
+          "type": "featured-article",
+          "disabled": true,
+          "settings": {
+            "article": "news\/a-refreshed-brand-to-match-our-best-in-class-coffee"
+          }
+        },
+        "61116f28-719d-4396-ad21-b9179440baa2": {
+          "type": "featured-article",
+          "disabled": true,
+          "settings": {
+            "article": "roasters-corner\/spotlight-ethiopia-heirloom-blend"
+          }
+        },
+        "afeb74b8-2b4b-4e8a-98c8-0f44065b5604": {
+          "type": "featured-article",
+          "disabled": true,
+          "settings": {
+            "article": "roasters-corner\/anaerobic-coffee-101-with-los-pinos-farm"
+          }
+        }
+      },
+      "block_order": [
+        "97c57a53-432c-4f16-9b79-d54246f7e58e",
+        "af137c9f-ef96-41ce-b53e-7540ab516419",
+        "09fc2a64-a76e-4568-8493-8e315f8ad7b5",
+        "51e25941-00f8-4789-a5db-53c0b42849ac",
+        "ef8c1679-6737-47ee-9ca7-dd6b429fb4a1",
+        "9ac715ce-f811-4c26-b93b-a5d7ca5750ed",
+        "75821de6-ecf6-4e98-987a-f10e1b0d7d06",
+        "61116f28-719d-4396-ad21-b9179440baa2",
+        "afeb74b8-2b4b-4e8a-98c8-0f44065b5604"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "page-blog-heading",
+    "page-blog-content"
+  ]
+}

@@ -82,9 +82,12 @@
     tabindex="-1" 
     alt="{{ image.alt | escape }}" 
     {{ image_attributes }}
+    heigh=""
+    width=""
+    loading="lazy"
   >
 </div>
 
 <noscript>
-  <img class="{{ image_class }}" src="{{ image | img_url: '2048x2048' }}" alt="{{ image.alt | escape }}">
+  <img class="{{ image_class }}" src="{{ image | img_url: '2048x2048' }}" alt="{{ image.alt | escape }}" height="" width="" loading="lazy">
 </noscript>

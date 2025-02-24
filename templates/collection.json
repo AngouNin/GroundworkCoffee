@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "collections": {
+      "type": "collections",
+      "settings": {
+        "title": "All organic. All the time.",
+        "desc": "",
+        "sale_collection": "flash-sale"
+      }
+    }
+  },
+  "order": [
+    "collections"
+  ]
+}

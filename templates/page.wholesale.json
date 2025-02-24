@@ -1,0 +1,106 @@
+{
+  "sections": {
+    "page-wholesale-heading": {
+      "type": "page-wholesale-heading",
+      "settings": {
+        "title": "WHOLESALE",
+        "subtitle": "Serve Certified Organic coffee and tea with Groundwork.",
+        "desc": "<p>Let us supply you with everything you need from product, equipment, training and beyond. <\/p>",
+        "form_title": "Contact Form",
+        "form_desc": "<p>you'll hear back from us within 48 hours<\/p>",
+        "call_us_title": "Call Us Directly",
+        "call_us_desc": "<p><strong>LOS ANGELES<\/strong>   818-506-6020<br\/><strong>PORTLAND<\/strong>   503-222-2302<br\/><\/p>",
+        "list_id": "WaZyTz",
+        "success": "Thank you for subscribing! Check your email for a confirmation message."
+      }
+    },
+    "page-wholesale-content": {
+      "type": "page-wholesale-content",
+      "blocks": {
+        "7049caa5-3576-4c19-b1a2-ed033098766a": {
+          "type": "icons",
+          "settings": {
+            "title": "SELECT WHOLESALE CLIENTS",
+            "image_1": "shopify:\/\/shop_images\/unnamed_360x_5c68080c-e760-4014-b7b5-c2fce47df9fa.png",
+            "external_link_1": "",
+            "image_2": "shopify:\/\/shop_images\/Jeni_s_Splendid_Ice_Creams_logo_360x_0950ed3c-71d0-4d70-9032-ac8dc5d302a0.png",
+            "external_link_2": "",
+            "image_3": "shopify:\/\/shop_images\/logo-1_300x_79483b78-e28d-4b9c-9eae-35066b3dbc25.png",
+            "external_link_3": "",
+            "external_link_4": "",
+            "external_link_5": "",
+            "external_link_6": "",
+            "bg_color": "#c9bfa2"
+          }
+        },
+        "aabe9af2-1688-4b76-b03c-1da3adc0c12a": {
+          "type": "image-slide",
+          "settings": {
+            "title": "Thank you for your interest in serving Groundwork Coffee.",
+            "desc": "<p>Groundwork is one of the West Coast’s largest specialty coffee roasters and distributors, and we are humbled to see a growing interest in sustainable, certified organic, specialty coffee. We supply restaurants, hotels, cafes, and grocery stores in a growing number of states across the country. With that, we bring a deep knowledge of coffee and tea to our wholesale customers, as well as a comprehensive knowledge of espresso machines and brewers.<\/p>",
+            "image": "shopify:\/\/shop_images\/Roastery_Resized.png",
+            "title_2": "",
+            "desc_2": "",
+            "title_3": "",
+            "desc_3": "",
+            "title_4": "Image Title",
+            "desc_4": "",
+            "title_5": "",
+            "desc_5": "",
+            "bg_color": "#f2eee9"
+          }
+        },
+        "d3859acf-68e4-42cb-8c01-5e082a9a2bcc": {
+          "type": "secondary-section",
+          "settings": {
+            "title": "",
+            "desc": "<p>As part of the Groundwork Coffee community, we are happy to offer guidance on all aspects of your coffee or tea service — from basic beverage preparation to consultations on your store layout, design, and equipment. We also provide comprehensive barista training to ensure that you and your staff maintain the highest levels of quality and consistency in your brewing and preparation methods. Whether you’re starting a new business or simply want to shift toward an organic, local, and\/or sustainable approach to your coffee and tea offerings, we can provide solutions to meet your needs.<\/p>"
+          }
+        },
+        "da670484-1596-4fa8-ae3a-0ca54cf0db5e": {
+          "type": "icons",
+          "settings": {
+            "title": "We service",
+            "image_1": "shopify:\/\/shop_images\/lm-logo-email_2x_360x_b5c91fa9-4104-43dc-9898-c6f058fd963a.png",
+            "external_link_1": "",
+            "image_2": "shopify:\/\/shop_images\/Mazzer_Logo_1200x1200_360x_feae7304-a582-4df3-8eb0-09d2fd8b6829.png",
+            "external_link_2": "",
+            "image_3": "shopify:\/\/shop_images\/Rancilio-Group-Vector-rancilio_2x-300x78.png",
+            "external_link_3": "",
+            "external_link_4": "",
+            "external_link_5": "",
+            "external_link_6": "",
+            "bg_color": "#8ea6ae"
+          }
+        },
+        "54ea0558-ebdf-4405-8f28-185059254e38": {
+          "type": "image-text-section",
+          "settings": {
+            "title": "Want to know what makes Groundwork so special?",
+            "desc": "<p>Above all else, our coffee must meet a rigorous standard of quality. We only make coffee that is Certified Organic, Directly Traded, and Ethically Sourced. Where we can, we purchase from farms certified sustainable by organizations like Rainforest Alliance and UTZ. We are deeply involved in the long process of getting coffee into your cup—from farms to co-ops to our local Groundwork community. We never settle for anything less than the best coffee possible. <\/p>",
+            "button_label": "",
+            "button_link": "",
+            "external": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "external_2": false,
+            "image": "shopify:\/\/shop_images\/b4XoJ-nY_2x_668x_6ce4db39-f7a6-4c38-87a7-66b09af8d547.png",
+            "bg_color": "#f2eee9"
+          }
+        }
+      },
+      "block_order": [
+        "7049caa5-3576-4c19-b1a2-ed033098766a",
+        "aabe9af2-1688-4b76-b03c-1da3adc0c12a",
+        "d3859acf-68e4-42cb-8c01-5e082a9a2bcc",
+        "da670484-1596-4fa8-ae3a-0ca54cf0db5e",
+        "54ea0558-ebdf-4405-8f28-185059254e38"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "page-wholesale-heading",
+    "page-wholesale-content"
+  ]
+}

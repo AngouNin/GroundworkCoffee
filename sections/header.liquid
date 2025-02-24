@@ -15,13 +15,13 @@
 
   {%- if section.settings.announcement_bar_enabled -%}
     <div class="announcement-bar">
-      <div class="container">
         <div class="swiper-container swiper-container-announcement-bar">
           <div class="swiper-wrapper">
             {% for block in section.blocks %}
               {% case block.type %}
                 {% when 'announcement' %}
-                  <div class="swiper-slide">
+                  <div class="swiper-slide {{ block.settings.class }}">
+                    <div class="container">
                       {{ block.settings.desc }}
                       {%- comment -%}
                       {%- if block.settings.announcement_bar_link != blank -%}
@@ -32,11 +32,10 @@
                         {{ block.settings.desc }}
                       {%- endif -%}
                       {%- endcomment -%}
-                      
+                      </div>
                   </div>
               {% endcase %}
             {% endfor %}
-          </div>
         </div>
 
       </div>
@@ -113,7 +112,14 @@
     }
   </style>
 {% endif %}
-
+<style>
+  .swiper-slide {
+    padding:1rem 0
+  }
+  .swiper-slide.alt {
+    background-color:#efbb52 ;
+  }
+  </style>
 {% schema %}
   {
     "name": "Header",
@@ -167,6 +173,11 @@
             "type": "richtext",
             "id": "desc",
             "label": "Announcement Text Box"
+          },
+          {
+            "type": "text",
+            "id": "class",
+            "label": "Announcement CSS Class"
           },
           {
             "type": "url",

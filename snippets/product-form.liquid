@@ -1,0 +1,38 @@
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{% form 'product', product, id: id, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true', data-type: 'add-to-cart-form', data-test-id: "add-to-cart" %}
+  <input id="product-id" type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
+
+  <div class="sm:flex">
+    <div class="sm:w-7/12 lg:w-5/12">
+      <div class="product__row">
+        {% if current_variant.available %}
+          {%
+            render 'button',
+            element: 'button',
+            locales_text: 'products.product.add_to_cart',
+            data_attribute: 'data-submit-button',
+            class: 'w-100',
+            name: 'add',
+            other: 'name="add"',
+            type: 'submit'
+          %}
+        {% else %}
+          {%
+            render 'button',
+            element: 'button',
+            locales_text: 'products.product.sold_out',
+            data_attribute: 'data-submit-button',
+            class: 'w-100 disabled',
+            other: 'name="add" disabled',
+            type: 'submit'
+          %}
+        {% endif %}
+      </div>
+      {% if show_dynamic_button %}
+        <div class="product__row">
+          {{ form | payment_button }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endform %}

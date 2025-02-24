@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "page-content": {
+      "type": "page-content",
+      "settings": {}
+    },
+    "custom-fields-pages": {
+      "type": "custom-fields-pages",
+      "settings": {}
+    }
+  },
+  "order": [
+    "page-content",
+    "custom-fields-pages"
+  ]
+}

@@ -176,16 +176,26 @@
   max-width: 320px;
   margin: 0 auto;
 }
-.content-section h1, .content-section .h1, .content-section h1 *, .content-section .h1 * {
+.content-section h1,
+.content-section .h1,
+.content-section h1 *,
+.content-section .h1 * {
   font-size: 5rem;
   line-height: 1.2;
   margin-bottom: 2rem;
-  font-family: Champion, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+  font-family: Champion, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif;
 }
-.content-section h1 *, .content-section .h1 *, .content-section h1 * *, .content-section .h1 * * {
+.content-section h1 *,
+.content-section .h1 *,
+.content-section h1 * *,
+.content-section .h1 * * {
   margin: 0;
 }
-.content-section h1 p:nth-of-type(2), .content-section .h1 p:nth-of-type(2), .content-section h1 * p:nth-of-type(2), .content-section .h1 * p:nth-of-type(2) {
+.content-section h1 p:nth-of-type(2),
+.content-section .h1 p:nth-of-type(2),
+.content-section h1 * p:nth-of-type(2),
+.content-section .h1 * p:nth-of-type(2) {
   padding-left: 13%;
 }
 .content-section__txt {
@@ -207,7 +217,8 @@
 .content-columns__col h4 {
   text-transform: uppercase;
   font-size: 2rem;
-  font-family: GT Pressura, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+  font-family: GT Pressura, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif;
   letter-spacing: 0.1em;
   line-height: 29px;
   font-weight: 700;
@@ -241,21 +252,32 @@
 }
 
 .featured_collection.dark-bg {
-  background-color: #2A2A2B;
+  background-color: #2a2a2b;
   overflow: visible;
-  color: #EFEAE5 !important;
-  border-color: #EFEAE5 !important;
+  color: #efeae5 !important;
+  border-color: #efeae5 !important;
 }
-.featured_collection.dark-bg .rotated-title, .featured_collection.dark-bg .product_content--type, .featured_collection.dark-bg .product_content--title, .featured_collection.dark-bg .product_content--price, .featured_collection.dark-bg .product_content--description, .featured_collection.dark-bg .product_content--btn, .featured_collection.dark-bg .product_content--desc {
-  color: #EFEAE5 !important;
+.featured_collection.dark-bg .rotated-title,
+.featured_collection.dark-bg .product_content--type,
+.featured_collection.dark-bg .product_content--title,
+.featured_collection.dark-bg .product_content--price,
+.featured_collection.dark-bg .product_content--description,
+.featured_collection.dark-bg .product_content--btn,
+.featured_collection.dark-bg .product_content--desc {
+  color: #efeae5 !important;
 }
-.featured_collection.dark-bg .product_form--add-button-container a, .featured_collection.dark-bg button, .featured_collection.dark-bg a.button {
-  color: #EFEAE5 !important;
-  border-color: #EFEAE5 !important;
+.featured_collection.dark-bg .product_form--add-button-container a,
+.featured_collection.dark-bg button,
+.featured_collection.dark-bg a.button {
+  color: #efeae5 !important;
+  border-color: #efeae5 !important;
 }
-.featured_collection.dark-bg .product_form--add-button-container a:hover, .featured_collection.dark-bg .product_form--add-button-container a.button:hover, .featured_collection.dark-bg button:hover, .featured_collection.dark-bg a.button:hover {
-  background-color: #EFEAE5 !important;
-  color: #2A2A2A !important;
+.featured_collection.dark-bg .product_form--add-button-container a:hover,
+.featured_collection.dark-bg .product_form--add-button-container a.button:hover,
+.featured_collection.dark-bg button:hover,
+.featured_collection.dark-bg a.button:hover {
+  background-color: #efeae5 !important;
+  color: #2a2a2a !important;
 }
 
 .footer-tree-section {
@@ -279,7 +301,9 @@
   max-width: 420px;
   margin: auto;
 }
-.footer-tree-section__top-section .title-container .page_title_container--subtitle {
+.footer-tree-section__top-section
+  .title-container
+  .page_title_container--subtitle {
   font-size: 64px;
 }
 .footer-tree-section__bottom-section {
@@ -290,7 +314,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  color: #EFEAE5 !important;
+  color: #efeae5 !important;
 }
 .footer-tree-section__mobile-text {
   max-width: 70%;
@@ -309,13 +333,20 @@
   justify-content: center;
   align-items: center;
 }
-.footer-tree-section__mobile-btn .product_form--add-button-container a, .footer-tree-section__mobile-btn button, .footer-tree-section__mobile-btn a.button {
-  color: #EFEAE5 !important;
-  border-color: #EFEAE5 !important;
+.footer-tree-section__mobile-btn .product_form--add-button-container a,
+.footer-tree-section__mobile-btn button,
+.footer-tree-section__mobile-btn a.button {
+  color: #efeae5 !important;
+  border-color: #efeae5 !important;
 }
-.footer-tree-section__mobile-btn .product_form--add-button-container a:hover, .footer-tree-section__mobile-btn .product_form--add-button-container a.button:hover, .footer-tree-section__mobile-btn button:hover, .footer-tree-section__mobile-btn a.button:hover {
-  background-color: #EFEAE5 !important;
-  color: #2A2A2A !important;
+.footer-tree-section__mobile-btn .product_form--add-button-container a:hover,
+.footer-tree-section__mobile-btn
+  .product_form--add-button-container
+  a.button:hover,
+.footer-tree-section__mobile-btn button:hover,
+.footer-tree-section__mobile-btn a.button:hover {
+  background-color: #efeae5 !important;
+  color: #2a2a2a !important;
 }
 .footer-tree-section__content-section {
   height: 100%;
@@ -332,13 +363,18 @@
   flex: 1 1;
   margin: 0 auto;
 }
-.footer-tree-section__col .product_form--add-button-container a, .footer-tree-section__col button, .footer-tree-section__col a.button {
-  color: #EFEAE5 !important;
-  border-color: #EFEAE5 !important;
+.footer-tree-section__col .product_form--add-button-container a,
+.footer-tree-section__col button,
+.footer-tree-section__col a.button {
+  color: #efeae5 !important;
+  border-color: #efeae5 !important;
 }
-.footer-tree-section__col .product_form--add-button-container a:hover, .footer-tree-section__col .product_form--add-button-container a.button:hover, .footer-tree-section__col button:hover, .footer-tree-section__col a.button:hover {
-  background-color: #EFEAE5 !important;
-  color: #2A2A2A !important;
+.footer-tree-section__col .product_form--add-button-container a:hover,
+.footer-tree-section__col .product_form--add-button-container a.button:hover,
+.footer-tree-section__col button:hover,
+.footer-tree-section__col a.button:hover {
+  background-color: #efeae5 !important;
+  color: #2a2a2a !important;
 }
 .footer-tree-section__img-container {
   height: 100%;
@@ -379,6 +415,27 @@
   margin: auto;
   text-align: center;
 }
+.rc-widget {
+  --rc-active-background-color: transparent;
+}
+.rc-selling-plans {
+  padding-left: 0 !important;
+}
+select.rc-selling-plans-dropdown__select {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+.rc-widget .rc-template__radio label.rc-radio {
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 0 !important;
+  margin-left: 0 !important;
+  margin-bottom: 10px;
+}
+.rc-subscription-details {
+  display: none !important;
+}
 @media screen and (max-width: 768px) {
   .regen-heading {
     padding: 0rem 0rem 5rem !important;
@@ -404,11 +461,17 @@
   .content-section {
     padding: 2rem 0rem !important;
   }
-  .content-section h1, .content-section .h1, .content-section h1 *, .content-section .h1 * {
+  .content-section h1,
+  .content-section .h1,
+  .content-section h1 *,
+  .content-section .h1 * {
     font-size: 35px;
     line-height: 40px;
   }
-  .content-section h1 p:nth-of-type(2), .content-section .h1 p:nth-of-type(2), .content-section h1 * p:nth-of-type(2), .content-section .h1 * p:nth-of-type(2) {
+  .content-section h1 p:nth-of-type(2),
+  .content-section .h1 p:nth-of-type(2),
+  .content-section h1 * p:nth-of-type(2),
+  .content-section .h1 * p:nth-of-type(2) {
     padding-left: 4rem;
   }
   .content-section__txt-container {
@@ -459,26 +522,40 @@
   .featured_collection.dark-bg {
     padding-bottom: 5rem;
   }
-  .footer-tree-section__top-section .title-container .page_title_container--subtitle {
+  .footer-tree-section__top-section
+    .title-container
+    .page_title_container--subtitle {
     font-size: 32px;
     line-height: 35px;
   }
   .footer-tree-section__bottom-section {
     margin-top: -10rem;
   }
-  .footer-tree-section__mobile-btn .product_form--add-button-container a, .footer-tree-section__mobile-btn button, .footer-tree-section__mobile-btn a.button {
+  .footer-tree-section__mobile-btn .product_form--add-button-container a,
+  .footer-tree-section__mobile-btn button,
+  .footer-tree-section__mobile-btn a.button {
     padding: 1.5rem 1.2rem;
     font-size: 13px;
   }
-  .footer-tree-section__mobile-btn .product_form--add-button-container a:hover, .footer-tree-section__mobile-btn .product_form--add-button-container a.button:hover, .footer-tree-section__mobile-btn button:hover, .footer-tree-section__mobile-btn a.button:hover {
+  .footer-tree-section__mobile-btn .product_form--add-button-container a:hover,
+  .footer-tree-section__mobile-btn
+    .product_form--add-button-container
+    a.button:hover,
+  .footer-tree-section__mobile-btn button:hover,
+  .footer-tree-section__mobile-btn a.button:hover {
     padding: 1.5rem 1.2rem;
     font-size: 13px;
   }
-  .footer-tree-section__col .product_form--add-button-container a, .footer-tree-section__col button, .footer-tree-section__col a.button {
+  .footer-tree-section__col .product_form--add-button-container a,
+  .footer-tree-section__col button,
+  .footer-tree-section__col a.button {
     padding: 1.5rem 1.2rem;
     font-size: 13px;
   }
-  .footer-tree-section__col .product_form--add-button-container a:hover, .footer-tree-section__col .product_form--add-button-container a.button:hover, .footer-tree-section__col button:hover, .footer-tree-section__col a.button:hover {
+  .footer-tree-section__col .product_form--add-button-container a:hover,
+  .footer-tree-section__col .product_form--add-button-container a.button:hover,
+  .footer-tree-section__col button:hover,
+  .footer-tree-section__col a.button:hover {
     padding: 1.5rem 1.2rem;
     font-size: 13px;
   }
@@ -486,6 +563,7 @@
     flex-direction: column;
   }
 }
+
 @media screen and (min-width: 768px) {
   .regen-heading__content {
     display: flex;
@@ -508,7 +586,10 @@
   }
 }
 @media screen and (max-width: 1200px) {
-  .content-section h1, .content-section .h1, .content-section h1 *, .content-section .h1 * {
+  .content-section h1,
+  .content-section .h1,
+  .content-section h1 *,
+  .content-section .h1 * {
     font-size: 40px;
     letter-spacing: 0.03em;
     line-height: 43px;
@@ -561,10 +642,15 @@
   }
 }
 @media screen and (max-width: 500px) {
-  .footer-tree-section__col .product_form--add-button-container a, .footer-tree-section__col button, .footer-tree-section__col a.button {
+  .footer-tree-section__col .product_form--add-button-container a,
+  .footer-tree-section__col button,
+  .footer-tree-section__col a.button {
     font-size: 11px;
   }
-  .footer-tree-section__col .product_form--add-button-container a:hover, .footer-tree-section__col .product_form--add-button-container a.button:hover, .footer-tree-section__col button:hover, .footer-tree-section__col a.button:hover {
+  .footer-tree-section__col .product_form--add-button-container a:hover,
+  .footer-tree-section__col .product_form--add-button-container a.button:hover,
+  .footer-tree-section__col button:hover,
+  .footer-tree-section__col a.button:hover {
     font-size: 11px;
   }
 }

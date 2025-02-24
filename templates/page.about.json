@@ -1,0 +1,87 @@
+{
+  "sections": {
+    "page-organic-heading": {
+      "type": "page-organic-heading",
+      "settings": {
+        "title": "WHY ORGANIC",
+        "subtitle": "All organic. All the time.",
+        "desc": "<p>From our rigorous standards to the way we collaborate with farmers, we pride ourselves on producing only Certified Organic coffee, batch roasted daily.<\/p>"
+      }
+    },
+    "page-organic-content": {
+      "type": "page-organic-content",
+      "blocks": {
+        "9cee3b9a-4c2b-4dfe-9063-4ac0933321fd": {
+          "type": "intro-section",
+          "settings": {
+            "title": "High quality organic coffee is rarer than you might think.",
+            "desc": "<p>When it comes to pesticides, herbicides, and fungicides, coffee is one of the top sprayed agricultural crops globally. Because it’s such a delicate and time-consuming practice, most coffee farmers rely on these chemicals to make sure their farms yield bountiful coffee plants. Many have accepted this as the norm, but we’re here to inspire customers to choose better coffee, and inspire the industry to do better as a whole. <\/p><p>To be an all organic company, we work hard to develop long-term partnerships with farmers at origin—so we can participate in the efforts it takes to field organic plants. It’s extra work, less consistent, and often yields far less product. It’s a commitment far more complicated than many other industries, but it’s one we stand behind and urge others to do the same. <br\/><\/p>",
+            "image": "shopify:\/\/shop_images\/DSC01703-2.png",
+            "video_url": "",
+            "desc_2": ""
+          }
+        },
+        "2663885b-5dc5-4b68-8313-6966c8445357": {
+          "type": "image-slide",
+          "settings": {
+            "title": "A long-standing commitment to excellence.",
+            "desc": "<p>While you might have heard of fairly traded coffee, we use a specialized model called direct trade. This is a process in which roasters work directly with farmers to meet higher standards for coffee quality in exchange for a premium price. That way, the farmers get liveable wages, and Groundwork gets to give you the best coffee out there. <br\/><br\/>All of our coffee comes from smallholder farms, or half acre lots, meaning we focus on sourcing from family-owned farms that invest their livelihoods in sustainable practices that produce our incredible coffee. <\/p>",
+            "image": "shopify:\/\/shop_images\/DSC01703-2_ca019c97-2407-4e26-b075-045b81093a0e.jpg",
+            "title_2": "",
+            "desc_2": "",
+            "title_3": "",
+            "desc_3": "",
+            "title_4": "Image Title",
+            "desc_4": "",
+            "title_5": "Image Title",
+            "desc_5": "",
+            "bg_color": "#c9bfa2"
+          }
+        },
+        "08f269e0-639a-4d37-9217-144a05fa60f1": {
+          "type": "secondary-section",
+          "settings": {
+            "title": "A deep understanding of flavor.",
+            "desc": "<p>Once we have our beautiful organic beans in hand, we have to coax out their best characteristics. We roast at our 5,000-square-foot HQ in North Hollywood and at our 42,000-square-foot facility in&nbsp;Portland.<\/p>",
+            "image": "shopify:\/\/shop_images\/plh0HtiY_2x_459x_30348cd4-d36b-40f6-a3a4-3f895cc2253e.png",
+            "desc_2": "<p>Our Portland Roastery is located in the heart of Slabtown, and can produce more than 5,000 pounds of coffee on a single shift (that’s 1.3 million pounds a year). Our North Hollywood Roastery and HQ sits inconspicuously among the parking lots, loading docks, and near-constant truck traffic of North Hollywood’s Cleon Avenue. A closer look, however, tells a more colorful story. <br\/><\/p><p>Solar panels cover the structure’s roof, drawing enough energy to power the entire building. Pallets of freshly delivered green coffee appear briefly in the sunlight as they’re whisked into the building’s loading bay on the tines of whirring forklifts. Inside, steel racks filled with cases stretch to the ceiling. The cases hold every imaginable product necessary to stock a well-run coffeehouse. Along one long wall, a row of towering silos hold more than 25 varieties of green coffee beans. And in the middle, two massive coffee roasters function as the beating heart of the entire building. These 70-kilo, low-emission machines are a marvel of old and new technology — a fitting blend of the traditional and the innovative.<br\/><br\/>Coffee roasting can be a fairly violent process in which green coffee beans are exposed to temperatures approaching 500 degrees. There are flames, smoke, noise, a lot of sweat, and…you get the picture. But at Groundwork, the job is half the fun. The other half is drinking the fruit of our labor. Cheers. <br\/><\/p>"
+          }
+        },
+        "b2f4357d-1ba0-4af0-9ff8-83b9095d59b8": {
+          "type": "image-slide",
+          "settings": {
+            "title": "Certifiably amazing.",
+            "desc": "<p>Above all else, our coffee must meet a rigorous standard of quality. We only make coffee that is Certified Organic, Directly Traded, and Ethically Sourced. Where we can, we purchase from farms certified sustainable by organizations like Rainforest Alliance and UTZ. We are deeply involved in the long process of getting coffee into your cup—from farms to co-ops to our local Groundwork community. We never settle for anything less than the best coffee possible. <\/p>",
+            "image": "shopify:\/\/shop_images\/Natural_Coffees_Being_Processed_on_Raised_Beds_2_-2.jpg",
+            "title_2": "Image Title",
+            "desc_2": "<p>Description<\/p>",
+            "title_3": "",
+            "desc_3": "",
+            "title_4": "",
+            "desc_4": "",
+            "title_5": "",
+            "desc_5": "",
+            "bg_color": "#c9bfa2"
+          }
+        }
+      },
+      "block_order": [
+        "9cee3b9a-4c2b-4dfe-9063-4ac0933321fd",
+        "2663885b-5dc5-4b68-8313-6966c8445357",
+        "08f269e0-639a-4d37-9217-144a05fa60f1",
+        "b2f4357d-1ba0-4af0-9ff8-83b9095d59b8"
+      ],
+      "settings": {}
+    },
+    "product-default-rec": {
+      "type": "product-default-rec",
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "page-organic-heading",
+    "page-organic-content",
+    "product-default-rec"
+  ]
+}

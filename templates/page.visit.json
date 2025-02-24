@@ -1,0 +1,247 @@
+{
+  "sections": {
+    "page-locations-heading": {
+      "type": "page-locations-heading",
+      "settings": {
+        "title": "LOCATIONS",
+        "subtitle": "Energizing the neighborhood.",
+        "desc": "<p>Stop by and experience the Groundwork difference IRL. <\/p><p><a href=\"https:\/\/www.groundworkcoffee.com\/pages\/catering\" target=\"_blank\" title=\"https:\/\/www.groundworkcoffee.com\/pages\/catering\">Need catering? <\/a>Groundwork has got you covered. <\/p>"
+      }
+    },
+    "page-locations-content": {
+      "type": "page-locations-content",
+      "blocks": {
+        "48dc3a3b-8036-4d97-916d-03966caefc34": {
+          "type": "location",
+          "settings": {
+            "title": "Venice",
+            "service": "BRUNCH + PASTRIES",
+            "flagship": true,
+            "image": "shopify:\/\/shop_images\/venice.png",
+            "button_label": "ORDER AHEAD",
+            "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-company-rose-671-rose-ave-ca",
+            "store_details": "<p><strong>Cafe Hours<\/strong><\/p><p>Mon - Fri: 6:00 a.m. - 4:00 p.m.<\/p><p>Sat - Sun: 6:00 a.m. - 5:00 p.m.<\/p><p><br\/><strong>Kitchen Hours<\/strong><\/p><p>Mon - Fri: 6:00 a.m. - 3:00 p.m.<\/p><p>Sat - Sun: 6:00 a.m. - 4:00 p.m.<\/p><p><strong>671 Rose Ave.<br\/>Venice, CA 90291<\/strong><br\/>(310) 664-8830<br\/>rose@groundworkcoffee.com<br\/><br\/>Legend has it that this turn-of-the-century brick building was constructed with a horse stable to accommodate L.A.'s thriving carriage trade. In the ’50s, the Wolff family purchased the property and started a catering business. In 1991, Groundwork leased the building and installed its first coffee roaster under an old oven hood. For the next ten years, we continued to roast coffee in the space.<br\/><br\/><\/p>",
+            "city": "los_angeles"
+          }
+        },
+        "858e196e-c487-476b-89e5-63437a001f04": {
+          "type": "location",
+          "settings": {
+            "title": "Noho Historic train depot",
+            "service": "BRUNCH + PASTRIES",
+            "flagship": false,
+            "image": "shopify:\/\/shop_images\/NOHO_360x_16b76fcc-ea36-4b7e-8fbb-f01e3e7c528a.png",
+            "button_label": "ORDER AHEAD",
+            "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-company-noho\/",
+            "store_details": "<p><strong>Cafe Hours<\/strong><\/p><p>6:30 a.m. - 4:00 p.m.<\/p><p><br\/><strong>Kitchen Hours<\/strong><\/p><p>7:00 a.m. - 2:00 p.m.<\/p><p><\/p><p><strong>11275 Chandler Blvd.,<br\/>North Hollywood, CA 91601<\/strong><br\/>(818) 423-2626<br\/>northhollywood@groundworkcoffee.com<br\/><br\/>Built into the North Hollywood Historic Train Depot as part of the restoration of this registered State Historic Landmark Building, this cafe brings back to life a longtime hub of the neighborhood. Built in the early 1890s, the depot is situated at the intersection of the Red Line and Orange Bus Line — two of the city’s most-traveled public transportation routes. It’s a warm, welcoming venue where residents and commuters can enjoy one of life’s simple pleasures: a delicious cup of coffee and good company.<br\/><br\/><\/p>",
+            "city": "los_angeles"
+          }
+        },
+        "6ac43df7-843b-4a51-a2d8-8d472b232217": {
+          "type": "location",
+          "settings": {
+            "title": "DTLA Arts District",
+            "service": "BRUNCH + PASTRIES",
+            "flagship": false,
+            "image": "shopify:\/\/shop_images\/TRACTION_360x_f73996a9-ff84-4bbb-bbf7-9ecc313d93ae.png",
+            "button_label": "Order Ahead",
+            "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-company-traction-811-traction-ave",
+            "store_details": "<p><strong>Cafe Hours<\/strong><\/p><p>6:00 a.m. - 3:00 p.m.<\/p><p><br\/><strong>Kitchen Hours<\/strong><\/p><p>7:00 a.m. - 3:00 p.m.<\/p><p><\/p><p><\/p><p><strong>811 Traction Ave.<br\/>Los Angeles, CA 90013<\/strong><br\/>(213) 626-6060<\/p><p>traction@groundworkcoffee.com<br\/><br\/>Groundwork is proud to be a part of the vibrant Downtown Arts District. Our Traction Ave. cafe offers all of your favorite handcrafted organic coffee drinks, plus an expanded food menu featuring wholesome and delicious house-made baked goods, salads, sandwiches, and more. Just as importantly, it’s within walking distance of the Metro Gold Line’s Little Tokyo\/Arts District stop and pretty much anything you’d want to do with your day or night.<br\/><br\/><\/p>",
+            "city": "los_angeles"
+          }
+        },
+        "493571eb-d00d-4eb7-b981-122dae0892ee": {
+          "type": "location",
+          "settings": {
+            "title": "Larchmont Village",
+            "service": "BRUNCH + PASTRIES",
+            "flagship": false,
+            "image": "shopify:\/\/shop_images\/larchmont_360x_6c53c6ae-9b34-45ed-bf29-08f0df68847f.png",
+            "button_label": "Order ahead",
+            "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-company-larchmont-150-n-larchmont-blvd\/v3",
+            "store_details": "<p><strong>Cafe Hours<\/strong><\/p><p>6:30 a.m. - 5:00 p.m.<br\/><\/p><p><strong>Kitchen Hours<\/strong><\/p><p>6:30 a.m. - 3:00 p.m.<\/p><p><\/p><p><\/p><p><strong>150 N Larchmont Blvd.<br\/>Los Angeles, CA 90004<\/strong><\/p><p>(323) 843-4920<\/p><p>larchmont@groundworkcoffee.com<\/p><p><\/p><p>Groundwork is proudly pouring coffee in one of L.A.'s most iconic neighborhoods, Larchmont Village. In addition to offering all of the handcrafted organic coffee drinks you've come to know and love, we're serving delicious house-made baked goods, nutritious grab & go items, plus a full made-to-order menu (Bitches Brew Hash, anyone?). When you're shopping and strolling your way through the area, stop by and treat yourself to an L.A. classic.<\/p><p><\/p><p><\/p>",
+            "city": "los_angeles"
+          }
+        },
+        "a408ca3b-24de-4ace-a68e-7b7d25afda8d": {
+          "type": "location",
+          "settings": {
+            "title": "Santa Monica",
+            "service": "Quick Bites",
+            "flagship": false,
+            "image": "shopify:\/\/shop_images\/MAIN-v2_360x_000735d6-6cd6-4a68-9bdd-9f15328ba17a.png",
+            "button_label": "Order Ahead",
+            "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-company-main-street-2908-main-street",
+            "store_details": "<p><strong>Cafe Hours<\/strong><\/p><p>6:30 a.m. - 4:00 p.m.<\/p><p><strong>Kitchen Hours<\/strong><\/p><p>Mon-Fri: 6:30 a.m. - 3:30 p.m.<\/p><p><strong>2908 Main St.<br\/>Santa Monica, CA 90405<\/strong><\/p><p>(310) 452-8925<\/p><p>mainstreet@groundworkcoffee.com<\/p><p><\/p><p>Measuring in at a mere 8 feet wide x 35 feet long, this improbable space is home to one of Groundwork’s most interesting coffeehouses — short on size, but big on charm. We packed every square-inch with organic coffees, teas, and house-made baked goods. Check out the art wall — you can’t help but get a close look.<\/p><p><\/p>",
+            "city": "los_angeles"
+          }
+        },
+        "0404d21f-f2c6-489c-8774-1469879b9c0f": {
+          "type": "location",
+          "settings": {
+            "title": "Hollywood",
+            "service": "BRUNCH + PASTRIES",
+            "flagship": false,
+            "image": "shopify:\/\/shop_images\/HOLLYWOOD_360x_b085eebb-c547-4699-b323-be20a3737580.png",
+            "button_label": "Order Ahead",
+            "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-company-hollywood-1501-n-cahuenga-blvd",
+            "store_details": "<p><strong>Cafe Hours<\/strong><\/p><p>7:00 a.m. - 4:00 p.m.<\/p><p><strong>Kitchen Hours<\/strong><\/p><p>7:30 a.m. - 3:00 p.m.<\/p><p><\/p><p><strong>1501 North Cahuenga Blvd.<br\/>Hollywood, CA 90028<\/strong><\/p><p>(323) 871-0143<\/p><p>hollywood@groundworkcoffee.com<\/p><p><\/p><p>Originally built for Wells Fargo Bank, this location is one of the oldest multistory buildings in Hollywood. At one time or another, it saw use as a hair salon, drugstore, and advertising agency, prior to its latest incarnation as a Groundwork coffeehouse. (Yes, we’re still looking for the vault. If you have any information, please contact us.)<\/p>",
+            "city": "los_angeles"
+          }
+        },
+        "f083538d-51ca-414e-b317-5f07aab528e6": {
+          "type": "location",
+          "settings": {
+            "title": "Venice Boardwalk",
+            "service": "Quick Bites",
+            "flagship": false,
+            "image": "shopify:\/\/shop_images\/ANNEX_360x_f63dbe14-b4cb-4c8a-bc32-4e2e0a0d77c7.png",
+            "button_label": "Order Ahead",
+            "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-annex-westminster-3-westminster",
+            "store_details": "<p><strong>Cafe Hours<\/strong><\/p><p>Mon - Sun: 7:00 a.m. - 4:00 p.m.<\/p><p><\/p><p><strong>3 Westminster Ave.<br\/>Venice, CA 90291<\/strong><\/p><p>(310) 450-4540<\/p><p>annex@groundworkcoffee.com<\/p><p><\/p><p>Fascinating tidbit: This historic structure houses one of the earliest elevators installed west of the Mississippi. The sliding-cage contraption is still in operation and carries tenants all the way up to three rooftop apartments, which offer incredible views of the beach and boardwalk.<\/p>",
+            "city": "los_angeles"
+          }
+        },
+        "b0abf02b-6bfc-49dd-ac8e-aa715ee2ba33": {
+          "type": "location",
+          "settings": {
+            "title": "Beverly Grove on 3rd",
+            "service": "Quick Bites",
+            "flagship": false,
+            "image": "shopify:\/\/shop_images\/groundwork_locations_photofilter.png",
+            "button_label": "Order Ahead",
+            "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-3rd-street-8121-w-3rd-street",
+            "store_details": "<p><strong>Cafe Hours<\/strong><\/p><p>Mon - Sun: 7:00 a.m. - 3:00 p.m.<\/p><p><\/p><p><strong>8121 W 3rd St.<\/strong><br\/><strong>Los Angeles, CA 90048<\/strong><\/p><p>(323) 892-0587<\/p><p>3rd@groundworkcoffee.com<\/p><p><\/p><p>We’re no strangers to the Beverly Grove area, but this time we’re not just serving up your favorite coffees and tea – we’re also offering our full made-to-order brunch menu every day of the week. Whether you’re cruising 3rd to do some shopping or Groundwork is your new daily coffee spot, we can’t wait for you to stop by.<\/p>",
+            "city": "los_angeles"
+          }
+        },
+        "334cf554-b891-49e8-bc33-b9843a4e3bfe": {
+          "type": "location",
+          "disabled": true,
+          "settings": {
+            "title": "North Hollywood Roastery",
+            "service": "Roastery",
+            "flagship": false,
+            "image": "shopify:\/\/shop_images\/groundwork_locations_Noho_Roasterpng.png",
+            "button_label": "",
+            "button_link": "",
+            "store_details": "<p><strong>Hours<\/strong><\/p><p>Mon - Fri: 9:30 a.m. - 4:00 p.m.<\/p><p>Sat - Sun: Closed<\/p><p><\/p><p><strong>5457 Cleon Ave.<\/strong><br\/><strong>North Hollywood, CA 91601<\/strong><\/p><p>(818) 506-6020<\/p><p>orders@groundworkcoffee.com<\/p><p><\/p><p>Our 5,000-square-foot headquarters sits inconspicuously among the parking lots, loading docks, and near-constant truck traffic of North Hollywood’s Cleon Avenue. A closer look, however, tells a more colorful story. Solar panels cover the structure’s roof, drawing enough energy to power the entire building. Pallets of freshly delivered green coffee appear briefly in the sunlight as they’re whisked into the building’s loading bay on the tines of whirring forklifts.<\/p><p>Inside, steel racks filled with cases stretch to the ceiling. The cases hold every imaginable product necessary to stock a well-run coffeehouse. Along one long wall, a row of towering silos hold more than 25 varieties of green coffee beans. And in the middle, two massive coffee roasters function as the beating heart of the entire building. These 70-kilo, low-emission machines are a marvel of old and new technology — a fitting blend of the traditional and the innovative.<\/p><p>This is the Groundwork Roastery, where every day a battalion of employees makes use of the building’s every conceivable nook and cranny to produce, pack, and ship coffee and tea for our customers. The cupping room does triple-duty as a training center and lunchroom. The tearoom presents a dizzying array of colors, scents, and textures as fragrant teas, herbs, and spices are blended by hand.<\/p><p>Coffee roasting can be a fairly violent process in which green coffee beans are exposed to temperatures approaching 500 degrees. There are flames and smoke, and noise, and a lot of sweat and, well . . . you get the picture. But at Groundwork the job is half the fun. The other half is drinking the fruit of our labor.<br\/><br\/>Please note the roastery does not have a cafe.<\/p>",
+            "city": "los_angeles"
+          }
+        },
+        "64dd1c37-2c55-4163-906a-1de56102dc46": {
+          "type": "location",
+          "settings": {
+            "title": "Whole Foods Market 365 Santa Monica",
+            "service": "CLOSED",
+            "flagship": false,
+            "image": "shopify:\/\/shop_images\/PICO365_360x_ad823570-a614-48d5-b39f-09e256dec3fe.png",
+            "button_label": "",
+            "button_link": "",
+            "store_details": "<p>CLOSED PERMANENTLY<\/p><p><strong>2121 Cloverfield Blvd.<br\/>Santa Monica, CA 90404<\/strong><\/p><p><\/p><p><\/p><p><\/p>",
+            "city": "los_angeles"
+          }
+        },
+        "3d1902e0-236b-46e8-a939-04fd38a57889": {
+          "type": "location",
+          "settings": {
+            "title": "Portland Roastery",
+            "service": "Roastery",
+            "flagship": false,
+            "image": "shopify:\/\/shop_images\/PDX_1.png",
+            "button_label": "",
+            "button_link": "",
+            "store_details": "<p><strong>539 SE Division Place<br\/>Portland, OR 97202<\/strong><\/p><p><br\/>Office: (503) 222-2302<\/p><p><br\/>pdxorders@groundworkcoffee.com<\/p><p><\/p><p>In 2016 Groundwork acquired Kobos Coffee, Portland’s original micro-roaster. We have since moved to a new 12,000-square-foot facility, located in the heart of Hosford Abernethy, can produce more than 5,000 pounds of coffee on a single shift (that’s 1.3 million pounds a year).<\/p>",
+            "city": "portland"
+          }
+        },
+        "e093cdd8-7387-48ff-be80-4491cf7f1694": {
+          "type": "location",
+          "disabled": true,
+          "settings": {
+            "title": "The Grove",
+            "service": "Limited Offerings",
+            "flagship": false,
+            "image": "shopify:\/\/shop_images\/GROVE_360x_3300432f-f9ce-41bc-90b6-2be49efeff6b.png",
+            "button_label": "Order Ahead",
+            "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-company-the-grove-189-the-grove-suite-c100\/v3\/",
+            "store_details": "<p><strong>Cafe Hours<\/strong><\/p><p>Sun - Thurs: 9:30 a.m. - 7:00 p.m.<\/p><p>Fri - Sat: 9:30 a.m. - 8:00 p.m.<\/p><p><\/p><p><\/p><p><strong>189 The Grove Dr.<br\/>Los Angeles, CA 90036<\/strong><br\/>(310)486-6645<\/p><p>thegrove@groundworkcoffee.com<br\/><br\/>Groundwork is thrilled to be at L.A.’s premier shopping destination, The Grove. Our kiosk, located right behind the park, serves up certified organic teas and delicious handcrafted drinks, which pair perfectly with foods and baked goods delivered daily from our kitchen in Venice. Come by, grab a cup of your favorite, and get busy shopping!<\/p>",
+            "city": "los_angeles"
+          }
+        },
+        "24071a8e-ebbc-4ade-95bb-a821880eae64": {
+          "type": "location",
+          "disabled": true,
+          "settings": {
+            "title": "Montgomery Park",
+            "service": "Quick Bites",
+            "flagship": false,
+            "image": "shopify:\/\/shop_images\/portland_cafe.png",
+            "button_label": "",
+            "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-company-vaughn-st-2355-nw-vaughn-st",
+            "store_details": "<p><strong>Cafe & Kitchen Hours<\/strong><\/p><p>Mon - Fri: 7:00 a.m. - 2:00 p.m.<\/p><p>Sat - Sun: CLOSED<\/p><p><\/p><p><strong>2701 NW Vaughn St. 2nd floor,<\/strong><\/p><p><strong>Portland, OR 97210<\/strong><\/p><p>Cafe: (503) 222-2181<\/p>",
+            "city": "portland"
+          }
+        }
+      },
+      "block_order": [
+        "48dc3a3b-8036-4d97-916d-03966caefc34",
+        "858e196e-c487-476b-89e5-63437a001f04",
+        "6ac43df7-843b-4a51-a2d8-8d472b232217",
+        "493571eb-d00d-4eb7-b981-122dae0892ee",
+        "a408ca3b-24de-4ace-a68e-7b7d25afda8d",
+        "0404d21f-f2c6-489c-8774-1469879b9c0f",
+        "f083538d-51ca-414e-b317-5f07aab528e6",
+        "b0abf02b-6bfc-49dd-ac8e-aa715ee2ba33",
+        "334cf554-b891-49e8-bc33-b9843a4e3bfe",
+        "64dd1c37-2c55-4163-906a-1de56102dc46",
+        "3d1902e0-236b-46e8-a939-04fd38a57889",
+        "e093cdd8-7387-48ff-be80-4491cf7f1694",
+        "24071a8e-ebbc-4ade-95bb-a821880eae64"
+      ],
+      "settings": {}
+    },
+    "page-locations-bottom-content": {
+      "type": "page-locations-bottom-content",
+      "blocks": {
+        "2a50674c-df59-435a-8e07-f10fff081414": {
+          "type": "kitchen-section",
+          "settings": {
+            "title": "Kitchen",
+            "subtitle": "Fresh-baked, scratch-made offerings just for&nbsp;you.",
+            "desc": "<p>Our dedicated kitchen team not only specializes in scratch-made pastries,  they also test new seasonal recipes and work with vendors to source local ingredients.<\/p>",
+            "image": "shopify:\/\/shop_images\/brKuzDpA_2x_540x_82b8cfe0-b489-454a-831d-277fe55785a1.jpg",
+            "button_label": "get the details",
+            "button_link": "https:\/\/www.groundworkcoffee.com\/pages\/our-kitchen-new",
+            "bg_color": "#e2d9be"
+          }
+        },
+        "25a53d88-c0fa-4cad-9db7-697d92ea1be0": {
+          "type": "image-text-section",
+          "settings": {
+            "title": "Need hot, fresh, organic&nbsp;coffee and bites catered?",
+            "desc": "<p>We've opened up our catering & delivery service to offer drip coffee and quick bites for small scale events in the LA area. <\/p>",
+            "button_label": "Catering",
+            "button_link": "shopify:\/\/pages\/catering",
+            "external": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "external_2": false,
+            "image": "shopify:\/\/shop_images\/HandNEWNEWNEWNEW.png",
+            "bg_color": "#b08574"
+          }
+        }
+      },
+      "block_order": [
+        "2a50674c-df59-435a-8e07-f10fff081414",
+        "25a53d88-c0fa-4cad-9db7-697d92ea1be0"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "page-locations-heading",
+    "page-locations-content",
+    "page-locations-bottom-content"
+  ]
+}

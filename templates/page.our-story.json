@@ -1,0 +1,75 @@
+{
+  "sections": {
+    "page-story-heading": {
+      "type": "page-story-heading",
+      "settings": {
+        "title": "Our Story",
+        "subtitle": "Work hard. Be kind. Good things will happen.",
+        "desc": "<p>Our mission is to source and share exceptional, organic coffee that inspires people to work hard, dream big, and impact the world. <br\/><\/p>"
+      }
+    },
+    "page-story-content": {
+      "type": "page-story-content",
+      "blocks": {
+        "0bc07b1a-232e-4156-87d9-6d5e05adc38e": {
+          "type": "intro-section",
+          "settings": {
+            "title": "From the ground up.",
+            "desc": "<p>People always celebrate success at the finish line, but at Groundwork, we know good things come to those who put in the work. We understand the struggles, the effort, the failures, and the small wins and losses along the way. Because we live it every day. <br\/><br\/>Coffee is a constant through-line in all of our lives. It’s the reason an artist can pull all nighters painting into the night. It’s the reason students can wake up early in the morning to get a few more hours of foundation for the future—that little extra studying in. It’s the thing that emboldens our community to apply for jobs, to survive breakups, and to take care of their children through sleepless nights. It’s the push to work harder, to do better, and to get up and go each day. <\/p><p>When you love what you do, you don’t stop, no matter how hard it gets. People put in the work, and so do we. <\/p>"
+          }
+        },
+        "4eb7e88f-6413-478b-b24f-3a75ab09be60": {
+          "type": "img-txt-section",
+          "settings": {
+            "title": "Exceptional Care",
+            "desc": "<p>Above all else, our Certified Organic coffee must meet a rigorous standard of quality. We are deeply involved in the long process of getting coffee into your cup—from farms to co-ops to our local Groundwork community. We never settle for anything less than the best coffee possible.<\/p>",
+            "image": "shopify:\/\/shop_images\/DRjWCntA_2x_540x_ef1ceec6-fa68-424b-b06e-03bf2b0a96f4.jpg"
+          }
+        },
+        "9ef55fec-606d-4fa6-a7c0-99d31969c76b": {
+          "type": "img-txt-section",
+          "settings": {
+            "title": "Thriving Communities",
+            "desc": "<p>Coffee lies at the heart of good ideas, beautiful art, and creative thinking. It enables the kind of endurance that fuels vision and love. The Groundwork community represents a work ethic unlike anywhere else.<\/p>",
+            "image": "shopify:\/\/shop_images\/yRMna5ZQ_2x_540x_a6475186-13e4-4eea-9a0b-278ea346818f.jpg"
+          }
+        },
+        "72f3e308-fb13-4e9c-96e1-a05c6112a76b": {
+          "type": "img-txt-section",
+          "settings": {
+            "title": "Global Inspiration",
+            "desc": "<p>Choosing organic affects much more than what you put in your own body. Clean products mean clean environments for farmers at origin—from the land they live to the water they drink. We inspire people to choose better coffee, and inspire the industry to do better as a whole. <\/p>",
+            "image": "shopify:\/\/shop_images\/DSC01658-2.jpg"
+          }
+        },
+        "b41224e8-a192-4f08-97cf-d30831ef6eff": {
+          "type": "outro-section",
+          "settings": {
+            "title": "Our History",
+            "desc": "<p>The moment we opened the doors to our very first cafe in Venice Beach, we knew we had found our calling—and our people.<br\/><br\/>We had a humble goal to source and share with our local community the very best organic coffee we could find, but demand grew quickly, and we started roasting coffee 24\/7 out of our tiny cafe on Rose Avenue to keep up.<br\/><br\/>Now, nearly 30 years later, thanks to the neighbors and friends we’ve been fortunate enough to serve, we have new cafes opening all along the West Coast, a growing line of cold brew coffees, and two very busy roasteries in Los Angeles and Portland. We’ve also been profoundly lucky to see the development of dozens of new organic coffee farms around the world and are proud to continue sharing their exceptional coffees with you.<\/p>",
+            "image": "shopify:\/\/shop_images\/AESRK7rw_2x_1041x_d7fb79f0-dc8c-41e0-8340-38c072f2ce53.jpg",
+            "button_label": "WHY ORGANIC?",
+            "button_link": "shopify:\/\/pages\/why-organic-1"
+          }
+        }
+      },
+      "block_order": [
+        "0bc07b1a-232e-4156-87d9-6d5e05adc38e",
+        "4eb7e88f-6413-478b-b24f-3a75ab09be60",
+        "9ef55fec-606d-4fa6-a7c0-99d31969c76b",
+        "72f3e308-fb13-4e9c-96e1-a05c6112a76b",
+        "b41224e8-a192-4f08-97cf-d30831ef6eff"
+      ],
+      "settings": {}
+    },
+    "product-default-rec": {
+      "type": "product-default-rec",
+      "settings": {}
+    }
+  },
+  "order": [
+    "page-story-heading",
+    "page-story-content",
+    "product-default-rec"
+  ]
+}

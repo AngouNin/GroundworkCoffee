@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "custom-liquid": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<h1 aria-label=\"Rewards\"><\/h1>\n<script src=\"https:\/\/cdn-widgetsrepository.yotpo.com\/v1\/loader\/WjkEo-Fdv3ozMqmdF7bw5Q\" async><\/script>\n<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"135239\"><\/div>"
+      }
+    }
+  },
+  "order": [
+    "custom-liquid"
+  ]
+}

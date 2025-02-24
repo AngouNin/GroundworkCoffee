@@ -1,21 +1,19 @@
-
 {%- assign p = product.description | split: '<!-- split -->' | first -%}
 <div class="{{ class }} {% if request.page_type == 'collection' %} {% else %}col-md{% endif %} {% for tag in product.tags %}{% assign tagFilter = tag | replace: "&", "and"  %} {{ tagFilter }} {% endfor %} product_content">
   <div class="product_content--tags">
     {% if product.tags contains 'type-best-sellers' %}
       <div class="product_content--best-seller">
-        {% include "icon-best-seller" %}
+        {% include 'icon-best-seller' %}
       </div>
     {% endif %}
 
     {%- comment -%}
-    {% if product.tags contains 'decaf-avail' or product.tags contains 'Decaf Available'%}
-      <div class="product_content--decaf-avail">
-        {% include "icon-decaf-avail" %}
-      </div>
-    {% endif %}
+      {% if product.tags contains 'decaf-avail' or product.tags contains 'Decaf Available'%}
+        <div class="product_content--decaf-avail">
+          {% include "icon-decaf-avail" %}
+        </div>
+      {% endif %}
     {%- endcomment -%}
-    
   </div>
 
   {% if collection.handle contains 'bulk-sell-sheet' %}
@@ -26,7 +24,7 @@
         <script>
           console.log( {{ variant | json }} );
         </script>
-        
+
         {% if product.featured_image != blank %}
           {% assign main_img = variant.featured_image %}
           {% assign position = variant.featured_image.position | plus: 0 %}
@@ -40,39 +38,39 @@
       {%- assign hover_img = product.images[1] -%}
     {% endif %}
   {% endif %}
-  
-  
 
-  <a href="{{ product.url }}" aria-label="{{ product.type | escape }} | {{ product.title }} | {{ p | strip_html | escape }}  link"> 
+  <a
+    href="{{ product.url }}"
+    aria-label="{{ product.type | escape }} | {{ product.title }} | {{ p | strip_html | escape }}  link"
+  >
     <div class="product_content--img-hover">
       {% if main_img != blank %}
         {% include 'responsive-image' with image: main_img, image_class: "product_content--image", wrapper_class: "product_content--image-wrapper", max_width: 700, max_height: 800 %}
       {% endif %}
 
-      {% if product.metafields.custom_fields["hide_hover_photo"] != blank %}
-          {% unless product.metafields.custom_fields["hide_hover_photo"] == 1 %}
-            {% if hover_img != blank %}
-              {% include 'responsive-image' with image: hover_img, image_class: "product_content--hover-image", wrapper_class: "product_content--hover-image-wrapper", max_width: 700, max_height: 800 %}
-            {% endif %}
-          {% endunless %}
+      {% if product.metafields.custom_fields.hide_hover_photo != blank %}
+        {% unless product.metafields.custom_fields.hide_hover_photo == 1 %}
+          {% if hover_img != blank %}
+            {% include 'responsive-image' with image: hover_img, image_class: "product_content--hover-image", wrapper_class: "product_content--hover-image-wrapper", max_width: 700, max_height: 800 %}
+          {% endif %}
+        {% endunless %}
       {% else %}
         {% if hover_img != blank %}
-            {% include 'responsive-image' with image: hover_img, image_class: "product_content--hover-image", wrapper_class: "product_content--hover-image-wrapper", max_width: 700, max_height: 800 %}
+          {% include 'responsive-image' with image: hover_img, image_class: "product_content--hover-image", wrapper_class: "product_content--hover-image-wrapper", max_width: 700, max_height: 800 %}
         {% endif %}
-
       {% endif %}
-      
     </div>
   </a>
-  <a href="{{ product.url }}" aria-label="{{ product.type | escape }} | {{ product.title }} | {{ p | strip_html | escape }}  link">
-
+  <a
+    href="{{ product.url }}"
+    aria-label="{{ product.type | escape }} | {{ product.title }} | {{ p | strip_html | escape }}  link"
+  >
     <div class="product_content--detail">
-
       {% if sell_sheet %}
-        {% if product.metafields.custom_fields["sell_sheet_type"] != blank %}
-          <h4 class="product_content--type">{{ product.metafields.custom_fields["sell_sheet_type"] }}</h4>   
+        {% if product.metafields.custom_fields.sell_sheet_type != blank %}
+          <h4 class="product_content--type">{{ product.metafields.custom_fields.sell_sheet_type }}</h4>
         {% elsif product.type != blank %}
-          <h4 class="product_content--type">{{ product.type | escape }}</h4>   
+          <h4 class="product_content--type">{{ product.type | escape }}</h4>
         {% endif %}
       {% else %}
         {% if product.type != blank %}
@@ -80,39 +78,31 @@
         {% endif %}
       {% endif %}
 
-      
-
-     
-     
-      
-    
       {% if product.title != blank %}
-        <h2 class="product_content--title">{{ product.title | escape }}</h2>
+        <h2 class="product_content--title">{{ product.title | escape | replace: '®', '<sup>®</sup>' }}</h2>
       {% endif %}
 
-        <div class="product_content--desc">
-          {% if product.description != empty %}
-            {% if product.description contains '<!-- split -->' %}
-              {%- assign p = product.description | split: '<!-- split -->' | first -%}
-              {{ p | strip_html }}
-      
-            {% else %}
-              {{ product.description | strip_html | truncate: 60 }}
-              
-            {% endif %}
-            
-            {%- comment -%}
+      <div class="product_content--desc">
+        {% if product.description != empty %}
+          {% if product.description contains '<!-- split -->' %}
+            {%- assign p = product.description | split: '<!-- split -->' | first -%}
+            {{ p | strip_html }}
+
+          {% else %}
+            {{ product.description | strip_html | truncate: 60 }}
+          {% endif %}
+
+          {%- comment -%}
             {%- assign product_desc = product.description  -%}
             {{ product.description | split: '<!-- split -->' | first }}
-            {%- endcomment -%}
-            
+          {%- endcomment -%}
+        {% endif %}
+        {% if sell_sheet %}
+          {% if product.metafields.custom_fields.sell_sheet_pricing != blank %}
+            <div>{{ product.metafields.custom_fields.sell_sheet_pricing }}</div>
           {% endif %}
-          {% if sell_sheet %}
-            {% if product.metafields.custom_fields["sell_sheet_pricing"] != blank %}
-                <div>{{ product.metafields.custom_fields["sell_sheet_pricing"] }}</div>
-            {% endif %}
-          {% endif %}
-        </div>
+        {% endif %}
+      </div>
     </div>
   </a>
 
@@ -120,93 +110,130 @@
     var product{{ product.id }} = {{ product | json }};
   </script>
 
-
-
-    <div class="product_content--button-container">
-      {%- unless hide_buttons -%}
-    
-      {% if product.metafields.custom_fields["external_buttons"] == blank  %}
+  <div class="product_content--button-container">
+    {%- unless hide_buttons -%}
       <div class="button-container-{{ product.id }}">
-        <div class="d-flex variant-select-container variant-select-container-start-{{ product.id }}">
-          <button class="product_content--quick-add-btn quick-add {% if product.variants.size == 1 or product.metafields.custom_fields["subscription_reference"] == blank %}w-100{% endif %}" type="button" name="button" data-size="{{product.variants.size}}" aria-label="QUICK ADD {{ product.title }} Button" data-variant-id="{{ product.variants[0].id }}" data-product-id="{{ product.id }}">
-            QUICK ADD
-          </button>
-          {% if product.metafields.custom_fields["subscription_reference"] != blank %}
-              <a href="{{ product.url }}" class="button product_content--subscribe-btn linked" aria-label="SUBSCRIBE to {{ product.title }} link">
-                  SUBSCRIBE
+        {% if product.metafields.custom_fields.external_buttons == blank %}
+          <div class="d-flex variant-select-container variant-select-container-start-{{ product.id }}">
+            <button
+              class="product_content--quick-add-btn quick-add {% if product.selling_plan_groups.size == 0 %}w-100{% endif %}"
+              type="button"
+              name="button"
+              data-size="{{product.variants.size}}"
+              aria-label="QUICK ADD {{ product.title }} Button"
+              data-variant-id="{{ product.variants[0].id }}"
+              data-product-id="{{ product.id }}"
+            >
+              QUICK ADD
+            </button>
+            {% if product.selling_plan_groups.size != 0 %}
+              <a
+                href="{{ product.url }}"
+                class="button product_content--subscribe-btn linked"
+                aria-label="SUBSCRIBE to {{ product.title }} link"
+              >
+                SUBSCRIBE
               </a>
-          {% endif %} 
-        </div>
-
-        {% if product.selling_plan_groups[0].selling_plans.size != blank %}
-          <div class="size-{{ product.options_with_values.size }} " data-variants='{{ product.variants | json }}' >
-            <div class="d-flex variant-select-container size-{{ product.selling_plan_groups[0].selling_plans.size }} variant-select-container-0-{{ product.id }} hide" data-option-size="{{ product.options_with_values.size }}" data-position="{{ product_option.position }}" >
-              {% for selling_plan in product.selling_plan_groups[0].selling_plans %}
-                <button class="product_content--quick-add-btn variant-select subscribe"  aria-label="{{ selling_plan.name }} button" type="button" name="button" data-id="{{ selling_plan.id }}" data-product-id="{{ product.id }}" >
-                  {% if selling_plan.name == 'Delivery every 1 Week' %}
-                    Weekly
-                  {% elsif selling_plan.name == 'Delivery every 2 Weeks' %}
-                    Biweekly
-                  {% elsif selling_plan.name == 'Delivery every 4 Weeks' %}
-                    Monthly
-                  {% endif %}
-                </button>
-              {% endfor %}
-            </div>
+            {% endif %}
           </div>
-        {% endif %}
 
-        {% if product.variants.size > 1 %}
-          <div class="store-json-{{ product.id }} size-{{ product.options_with_values.size }}">
-      
+          {% if product.selling_plan_groups[0].selling_plans.size != blank %}
+            <div class="size-{{ product.options_with_values.size }} " data-variants="{{ product.variants | json }}">
+              <div
+                class="d-flex variant-select-container size-{{ product.selling_plan_groups[0].selling_plans.size }} variant-select-container-0-{{ product.id }} hide"
+                data-option-size="{{ product.options_with_values.size }}"
+                data-position="{{ product_option.position }}"
+              >
+                {% for selling_plan in product.selling_plan_groups[0].selling_plans %}
+                  <button
+                    class="product_content--quick-add-btn variant-select subscribe"
+                    aria-label="{{ selling_plan.name }} button"
+                    type="button"
+                    name="button"
+                    data-id="{{ selling_plan.id }}"
+                    data-product-id="{{ product.id }}"
+                  >
+                    {% if selling_plan.name == 'Delivery every 1 Week' %}
+                      Weekly
+                    {% elsif selling_plan.name == 'Delivery every 2 Weeks' %}
+                      Biweekly
+                    {% elsif selling_plan.name == 'Delivery every 4 Weeks' %}
+                      Monthly
+                    {% endif %}
+                  </button>
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
 
-          <!-- KEEP HERE JUST IN CASE ^ -->
-        
+          {% if product.variants.size > 1 %}
+            <div class="store-json-{{ product.id }} size-{{ product.options_with_values.size }}">
+              <!-- KEEP HERE JUST IN CASE ^ -->
 
-            {% for product_option in product.options_with_values %}
-              {% assign optionName = product_option.name %}
-                <div class="variant-select-container variant-select-container-{{ product_option.position }}-{{ product.id }}  hide" data-option-size="{{ product.options_with_values.size }}" data-position="{{ product_option.position }}" >
-                  <label for="{{ product.id }}-{{ product_option.position }}-{{ class }}" >Select {{ optionName }}:</label>
-                  <div id="{{ product.id }}-{{ product_option.position }}-{{ class }}" class="d-flex type-{{ optionName | downcase }} size-{{ product_option.values.size }}" aria-label="Button Container" title="Button Container" data-option-size="{{ product.options_with_values.size }}" data-position="{{ product_option.position }}">
+              {% for product_option in product.options_with_values %}
+                {% assign option_name = product_option.name %}
+                <div
+                  class="variant-select-container variant-select-container-{{ product_option.position }}-{{ product.id }}  hide"
+                  data-option-size="{{ product.options_with_values.size }}"
+                  data-position="{{ product_option.position }}"
+                >
+                  <label for="{{ product.id }}-{{ product_option.position }}-{{ class }}"
+                    >Select {{ option_name }}:</label
+                  >
+                  <div
+                    id="{{ product.id }}-{{ product_option.position }}-{{ class }}"
+                    class="d-flex type-{{ option_name | downcase }} size-{{ product_option.values.size }}"
+                    aria-label="Button Container"
+                    title="Button Container"
+                    data-option-size="{{ product.options_with_values.size }}"
+                    data-position="{{ product_option.position }}"
+                  >
                     {% for value in product_option.values %}
-                      <button class="product_content--quick-add-btn variant-select variant-select-position-{{ product_option.position }} variant-select-{{ forloop.index }}" 
-                      data-option-size="{{ product.options_with_values.size }}" data-position="{{ product_option.position }}" data-value="{{ value }}" data-product-id="{{ product.id }}" 
-                      data-index="{{ forloop.index }}" 
-                      type="button" 
-                      aria-label="{{ value }} button "
-                      name="button">{{ value }}</button>
+                      <button
+                        class="product_content--quick-add-btn variant-select variant-select-position-{{ product_option.position }} variant-select-{{ forloop.index }}"
+                        data-option-size="{{ product.options_with_values.size }}"
+                        data-position="{{ product_option.position }}"
+                        data-value="{{ value }}"
+                        data-product-id="{{ product.id }}"
+                        data-index="{{ forloop.index }}"
+                        type="button"
+                        aria-label="{{ value }} button "
+                        name="button"
+                      >
+                        {{ value }}
+                      </button>
                     {% endfor %}
                   </div>
                 </div>
-            {% endfor %}
-            <script type="text/javascript">
-              var json = {{ product | json }};
-              json = encodeURIComponent(JSON.stringify(json));
-              $('.store-json-{{ product.id }}').attr('data-obj', json);
-            </script>
-          </div>
-        {% endif %}
-      </div>
+              {% endfor %}
+              <script type="text/javascript">
+                var json = {{ product | json }};
+                json = encodeURIComponent(JSON.stringify(json));
+                $('.store-json-{{ product.id }}').attr('data-obj', json);
+              </script>
+            </div>
+          {% endif %}
       {% else %}
-        
+        <div class="d-flex variant-select-container variant-select-container-start-{{ product.id }}">
+          <a
+            href="{{ product.url }}"
+            class="button linked w-100"
+            aria-label="View {{ product.title }} link"
+          >
+            VIEW
+          </a>
+        </div>
+
       {% endif %}
-      {%- endunless -%}
-
-
-      
-
-
-      <div class="">
-        <button class="button_success success-{{ product.id }} hide" aria-label="Added! success button" disabled>
-          Added!
-        </button>
-
-        <button class="sold_out_error error-{{ product.id }} hide" aria-label="Sold Out button" disabled>
-          Sold Out
-        </button>
       </div>
+    {%- endunless -%}
 
+    <div class="">
+      <button class="button_success success-{{ product.id }} hide" aria-label="Added! success button" disabled>
+        Added!
+      </button>
 
+      <button class="sold_out_error error-{{ product.id }} hide" aria-label="Sold Out button" disabled>Sold Out</button>
     </div>
-  
+  </div>
 </div>

@@ -1,163 +1,107 @@
 <!doctype html>
-<html class="no-js supports-no-cookies" lang="{{ shop.locale }}">
-<head>
-                
-{% render 'orbislabs_sitemap_noindex' %}
-
-  <script type="text/javascript">(function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/NrtKAUoyMz2UyVfGdvXAWJhFfdqQbccMKQC9spP2/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();</script>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="{{ settings.color_accent }}">
-  <link rel="canonical" href="{{ canonical_url }}">
-  <meta name="google-site-verification" content="IV7BPLESttSpBdxSWN1s4zlr4HIcuHkGQYmE3wLG59w" />
-  <meta name="google-site-verification" content="EEJOBMvpwGSySxaciIIrj27iKTUCH6Deg8R_lR8Yby0" />
-  {% if handle contains 'sell-sheet' %}<meta name="robots" content="noindex">{% endif %}
-  {%- if settings.favicon != blank -%}
-    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
-  {%- endif -%}
-
-  {%- capture seo_title -%}
-    {{ page_title }}
-    {%- if current_tags -%}
-      {%- assign meta_tags = current_tags | join: ', ' -%} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+<html class="no-js supports-no-cookies" lang="{{ request.locale.iso_code }}">
+  <head>
+    {% render 'orbislabs_sitemap_noindex' %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="{{ settings.color_accent }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <meta name="google-site-verification" content="IV7BPLESttSpBdxSWN1s4zlr4HIcuHkGQYmE3wLG59w">
+    <meta name="google-site-verification" content="EEJOBMvpwGSySxaciIIrj27iKTUCH6Deg8R_lR8Yby0">
+    <meta name="google-site-verification" content="wLyYf7hB0Mr_0rGVIHaw30G2Vb6qZbaX6PyEUFbA8cA">
+    {% if handle contains 'sell-sheet' %}
+      <meta name="robots" content="noindex">
+    {% endif %}
+    {%- if settings.favicon != blank -%}
+      <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
     {%- endif -%}
-    {%- if current_page != 1 -%}
-      &ndash; {{ 'general.meta.page' | t: page: current_page }}
-    {%- endif -%}
-    {%- assign escaped_page_title = page_title | escape -%}
-    {%- unless escaped_page_title contains shop.name -%}
-      &ndash; {{ shop.name }}
-    {%- endunless -%}
-  {%- endcapture -%}
-  <title>{{ seo_title | strip }}</title>
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+    {% if page.handle contains 'wholesale' %}
+      <link rel="stylesheet" href="{{ 'selectric.css' | asset_url }}">
+    {% endif %}
+    {% liquid
+      render 'social-meta-tags'
+      render 'style-tags'
+      render 'css-variables'
+    %}
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', '');
+      window.theme = {
+        strings: {
+          addToCart: {{ 'products.product.add_to_cart' | t | json }},
+          soldOut: {{ 'products.product.sold_out' | t | json }},
+          unavailable: {{ 'products.product.unavailable' | t | json }}
+        },
+        moneyFormat: {{ shop.money_format | json }},
+        template: {{ template | json }},
+        productType: 'default',
+        articles: [],
+      };
+      var isGift = false;
+    </script>
+    {% render 'script-tags' %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
+    <!-- CART JS -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/shopify-cartjs/1.0.1/rivets-cart.min.js"
+    ></script>
+    {% comment %}
+      [if (gt IE 9)|!(IE)]>
+        <script src="{{ rivets.min.js' | asset_url }}" defer="defer"></script>
+      [if lt IE 9]><script src="{{ rivets.min.js' | asset_url }}"></script><![endif]
+    {% endcomment %}
+    <script src="{{ 'jquery.selectric.min.js' | asset_url }}" defer="defer"></script>
+    {% comment %}[if lt IE 9]><script src="{{ 'jquery.selectric.min.js' | asset_url }}"></script><![endif]{% endcomment %}
+    {{ 'option_selection.js' | shopify_asset_url | script_tag }}
+    {{ 'custom-style.css' | asset_url | stylesheet_tag }}
+    {{ content_for_header }}
+    {{ 'custom-fields.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'custom-fields-widgets.js' | asset_url }}" defer="defer"></script>
+  </head>
 
-  {%- if page_description -%}
-    <meta name="description" content="{{ page_description | escape }}">
-  {%- endif -%}
+  <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }} suffix-{{ template.suffix }} ">
+    <a class="in-page-link visually-hidden skip-link" href="#MainContent">
+      {{- 'general.accessibility.skip_to_content' | t -}}
+    </a>
+    {% section 'header' %}
+    {% section 'popup' %}
+    <main role="main" id="MainContent">
+      {{ content_for_layout }}
+    </main>
+    {% section 'template-footer' %}
+    <div class="nav-overlay"></div>
 
+    <script type="text/javascript">
+      var cart = {{ cart | json }};
+      jQuery(function() {
+        CartJS.init(cart, {
+          "currency": "{{ shop.currency }}",
+            "moneyFormat": "{{ shop.money_format }}",
+            "moneyWithCurrencyFormat": "{{ shop.money_with_currency_format }}"
 
-
-
-  {% if page.handle contains 'wholesale' or template == 'cart' %}
-    <link rel="stylesheet" href="{{ 'selectric.css' | asset_url }}">
-  {% endif %}
-
-  {% include 'social-meta-tags' %}
-  {% include 'style-tags', layout: 'theme' %}
-  {% include 'css-variables' %}
-
-  <script>
-  
-    document.documentElement.className = document.documentElement.className.replace('no-js', '');
-
-    window.theme = {
-      strings: {
-        addToCart: {{ 'products.product.add_to_cart' | t | json }},
-        soldOut: {{ 'products.product.sold_out' | t | json }},
-        unavailable: {{ 'products.product.unavailable' | t | json }}
-      },
-      moneyFormat: {{ shop.money_format | json }},
-      template: {{ template | json }},
-      productType: 'default',
-      articles: [],
-    };
-
-
-    var isGift = false;
-
-  </script>
-
-  {% include 'script-tags', layout: 'theme' %}
-  <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
-
-  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" /> -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
-
-  <!-- CART JS -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/shopify-cartjs/1.0.1/rivets-cart.min.js"></script>
-
-  <!--[if (gt IE 9)|!(IE)]><!-->
-    <!-- <script src="{{ rivets.min.js' | asset_url }}" defer="defer"></script> -->
-    <!--<![endif]-->
-  <!--[if lt IE 9]><script src="{{ rivets.min.js' | asset_url }}"></script><![endif]-->
-
-  <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'jquery.selectric.min.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
-  <!--[if lt IE 9]><script src="{{ 'jquery.selectric.min.js' | asset_url }}"></script><![endif]-->
-
-{{ 'option_selection.js' | shopify_asset_url | script_tag }}
-
-{{ 'custom-style.css' | asset_url | stylesheet_tag }}
-
-  {{ content_for_header }}
-
-{{ 'custom-fields.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'custom-fields-widgets.js' | asset_url }}" defer="defer"></script>
-</head>
-
-
-
-<body id="{{ page_title | handle }}" class="template-{{ template.name | handle }} suffix-{{ template.suffix }} ">
- 
-  <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
-
-  {% section 'header' %}
-  {% section 'popup' %}
-
-  <main role="main" id="MainContent">
-    {{ content_for_layout }}
-  </main>
-
-  {% section 'template-footer' %}
-  <!-- <script>
-    // self executing function here
-    (function() {
-       // your page initialization code here
-       // the DOM will be available here
-       CartJS.init({{ cart | json }});
-    })();
-  </script> -->
-  <div class="nav-overlay"></div>
-  <script type="text/javascript">
-    var cart = {{ cart | json }};
-    jQuery(function() {
-      CartJS.init(cart, {
-        "currency": "{{ shop.currency }}",
-          "moneyFormat": "{{ shop.money_format }}",
-          "moneyWithCurrencyFormat": "{{ shop.money_with_currency_format }}"
-
-        });
-
-
-        rivets.formatters.currency = function(value) {
-            return '$' + (value / 100).toFixed(2);
-        }
-    });
-  </script>
-
-  <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'sell-sheet.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
-  <!--[if lt IE 9]><script src="{{ 'sell-sheet.js' | asset_url }}"></script><![endif]-->
-
-  {%- if template == 'cart' -%}
-     <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'featured-samples.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
-      <!--[if lt IE 9]><script src="{{ 'featured-samples.js' | asset_url }}"></script><![endif]-->
-  {%- endif -%}
-
-  
-    <script>(function(){ var s = document.createElement('script'), e = ! document.body ? document.querySelector('head') : document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function(){ acsbJS.init({ statementLink : '', footerHtml : '', hideMobile : false, hideTrigger : false, language : 'en', position : 'right', leadColor : '#2a2a2a', triggerColor : '#2a2a2a', triggerRadius : '50%', triggerPositionX : 'right', triggerPositionY : 'center', triggerIcon : 'people', triggerSize : 'medium', triggerOffsetX : 20, triggerOffsetY : 20, mobile : { triggerSize : 'small', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerOffsetX : 10, triggerOffsetY : 10, triggerRadius : '50%' } }); }; e.appendChild(s);}());</script>
-  {% include 'pixel' %}
- {%- style -%}
-    .yotpo-submit {
-        color: #2A2A2A !important;
-    }
-
-{%- endstyle -%}
-</body>
-  </html>
-<script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/WjkEo-Fdv3ozMqmdF7bw5Q" async></script>
+          });
+          rivets.formatters.currency = function(value) {
+              return '$' + (value / 100).toFixed(2);
+          }
+      });
+    </script>
+    {% comment %}
+      <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'sell-sheet.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
+      <!--[if lt IE 9]><script src="{{ 'sell-sheet.js' | asset_url }}"></script><![endif]-->
+    {% endcomment %}
+    {% include 'pixel' %}
+  </body>
+</html>

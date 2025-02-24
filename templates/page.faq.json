@@ -1,0 +1,389 @@
+{
+  "sections": {
+    "page-faq-content": {
+      "type": "page-faq-content",
+      "blocks": {
+        "4e091b7c-a885-4711-9e4a-8fe036d569a2": {
+          "type": "accordion",
+          "settings": {
+            "title": "How long will it take to receive my order?",
+            "desc": "<p>Thank you for your purchase! You can expect your Groundwork Coffee order to arrive typically within 3-6 business days.<\/p>",
+            "category": "orders_returns"
+          }
+        },
+        "e5f4571f-b502-42e4-8074-efdfb86bf7a8": {
+          "type": "accordion",
+          "settings": {
+            "title": "Where are your products shipped from?",
+            "desc": "<p>All of our organic coffee, tea, and merchandise is shipped directly from our roasting facility in North Hollywood, CA.<\/p>",
+            "category": "our_products"
+          }
+        },
+        "1be1c6ce-1be6-4fd1-a301-cb12feb495d9": {
+          "type": "accordion",
+          "settings": {
+            "title": "Where can I see my order status?",
+            "desc": "<p>Once your order is placed, we send out a confirmation email which includes a link to track your order, and also the ability to receive order updates by text. It won’t be long until you’re reunited with your favorite coffee or tea!<br\/><\/p><p>Didn’t get a confirmation email? Contact us at <a><span style=\"text-decoration:underline\">orders@groundworkcoffee.com<\/span><\/a>, and we’ll make sure it gets sent out!<\/p>",
+            "category": "orders_returns"
+          }
+        },
+        "238f3b7c-7d39-4e68-8f03-f3f477380434": {
+          "type": "accordion",
+          "settings": {
+            "title": "What is Certified Organic?",
+            "desc": "<p>Organic is at the forefront of all we do at Groundwork Coffee, from buying only certified organic (i.e. pesticide-, herbicide-, fungicide-free) coffees to roasting those same coffees using our industry-leading, solar-powered technology. As one of the first Certified Organic coffee roasters in Southern California, we've been pioneering organic, relationship-based, and sustainable coffee sourcing since the early '90s. When it comes to pesticides, herbicides, and fungicides, coffee is the third-most sprayed agricultural crop in the world. Most major coffee producers coat their crops with a witches’ brew of toxic chemicals to fight intruders and increase crop yields. That said, the question is not whether these chemicals make their way into your morning cup. At peak temperatures above 450 degrees, the roasting process will most likely burn off any residual chemicals. The real question is, what do these chemicals do to the environment and communities where they are sprayed? The data is clear; the effects on groundwater, nearby crops, and people’s health are well documented. <\/p><p>In addition to being better for those growing our coffee, we believe that a commitment to organic simply produces better coffee. Without the advantage of herbicides, pesticides, and fungicides, coffee farmers have to take better care of their trees to experience the same quality and crop yields per tree as their non-organic competitors. Organic farmers have to choose viable soil and water sources in order to avoid adding synthetic nutrients later. They have to grow their coffee at higher altitudes, which dissuades many insects and parasitic plants, resulting in a slower-developing, more complex-flavored coffee bean. Organic farmers have to accept a trade-off of lower overall yield in exchange for a more biodiverse habitat. In return, coffee roasters and their customers pay them a premium to continue the practice. We think it’s money well spent..<\/p>",
+            "category": "our_products"
+          }
+        },
+        "bfda533d-3843-4d60-af86-09e7627f6c67": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "title": "How often can my Groundwork Coffee be delivered?",
+            "desc": "<p>blah blah<\/p>",
+            "category": "subscriptions"
+          }
+        },
+        "07ea245e-855c-423b-8377-c92a8d97eceb": {
+          "type": "accordion",
+          "settings": {
+            "title": "What’s Groundwork Coffee’s Return Policy?",
+            "desc": "<p>Returns are handled on a case-by-case basis with the goal of making our customers happy and meeting their needs.<\/p><p><strong>Return Policy: Coffee and Tea<\/strong><br\/>We do not accept returns on coffee and tea due to its perishable nature. However, we are quite willing to resolve problems as they arise. If you have any issues with your coffee, or if there are errors in your order, please contact us at <a href=\"mailto:orders@groundworkcoffee.com\" target=\"_blank\" title=\"mailto:orders@groundworkcoffee.com\">orders@groundworkcoffee.com<\/a> or 818-506-6020 within two days of receiving your order. We will do our best to ensure that you are satisfied.<\/p><p><strong>Return Policy: Merchandise<\/strong> (non-coffee items)<br\/>We would like you to be satisfied with your purchase. All Returns or Exchanges on merchandise (non-coffee) items must be done within 30 days of the purchase date. Items purchased online can be returned only to our Headquarters; they can’t be returned to our cafe locations. Please email your order number, name, reason for a Return\/Exchange, and the item and quantity you wish to Return\/Exchange to <a href=\"mailto:orders@groundworkcoffee.com\" target=\"_blank\" title=\"mailto:orders@groundworkcoffee.com\">orders@groundworkcoffee.com<\/a> (or call us at 818-506-6020). We will contact you with information on how your return will be processed. We will not refund the price of shipping.<\/p><p><strong>All returns should be sent to:<\/strong><br\/>Groundwork Coffee Roasters<br\/>Attn: Customer Service<br\/>5457 Cleon Ave<br\/>North Hollywood, CA<br\/>91601<br\/>USA<\/p>",
+            "category": "orders_returns"
+          }
+        },
+        "4552ba10-eee8-4364-a452-acb03b828894": {
+          "type": "accordion",
+          "settings": {
+            "title": "What is the recommended form of brewing?",
+            "desc": "<p>Brewing a great cup of coffee is a craft that takes time and patience to learn, but no matter what brew method you choose, we have some <a href=\"https:\/\/www.groundworkcoffee.com\/blogs\/brew-guides\/brewing-coffee-101\" target=\"_blank\" title=\"Coffee Brewing 101\"><span style=\"text-decoration:underline\">tips that will help you<\/span> on your way to becoming a coffee expert.<\/a><\/p>",
+            "category": "brew_better"
+          }
+        },
+        "0bdc8efd-0805-4ab8-afa9-4f7da8adede7": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "title": "What are Groundwork Coffee's  sustainability efforts?",
+            "desc": "<p>Being Organic is only a portion of our commitment to sustainability and producing better coffee for you and the environment. At our North Hollywood roastery, over 100 solar panels cover the structure’s roof, drawing enough energy to power the entire building. These Sunpower PV modules are the most efficient panels commercially available and will generate more than 52,000 kilowatts of clean solar energy each year and are designed to work efficiently even on cloudy days. In 2011, we installed a unique hybrid\/gas-electric coffee roaster that utilizes an ultra-low NOx power burner. This allows the roaster and catalytic oxidizer to be heated by electrical elements tied directly from the power generated by the solar panels. The result is Groundwork’s roaster has one of the smallest carbon footprints in the entire coffee industry.<\/p>",
+            "category": "sustainability"
+          }
+        },
+        "f9e73cc9-f6b4-49f8-9bed-183a831878a2": {
+          "type": "accordion",
+          "settings": {
+            "title": "What are Groundwork Coffee’s sustainability practices?",
+            "desc": "<p>Being Organic is only a portion of our commitment to sustainability and producing better coffee for you and the environment. At our North Hollywood roastery, over 100 solar panels cover the structure’s roof, drawing enough energy to power the entire building. These Sunpower PV modules are the most efficient panels commercially available and will generate more than 52,000 kilowatts of clean solar energy each year and are designed to work efficiently even on cloudy days. In 2011, we installed a unique hybrid\/gas-electric coffee roaster that utilizes an ultra-low NOx power burner. This allows the roaster and catalytic oxidizer to be heated by electrical elements tied directly from the power generated by the solar panels. The result is Groundwork’s roaster has one of the smallest carbon footprints in the entire coffee industry.<\/p>",
+            "category": "sustainability"
+          }
+        },
+        "d5987786-5a43-4c46-b153-a91078ec5b4e": {
+          "type": "accordion",
+          "settings": {
+            "title": "My order is wrong\/damaged\/missing!",
+            "desc": "<p>If you experience any issues with your order, we’d be happy to assist you. Send us an email at <a><span style=\"text-decoration:underline\">orders@groundworkcoffee.com<\/span><\/a> or give us a call at (818) 506-6020.<\/p>",
+            "category": "orders_returns"
+          }
+        },
+        "3d6082a2-a065-431e-a40a-61bc07d07efa": {
+          "type": "accordion",
+          "settings": {
+            "title": "Does Groundwork ship internationally?",
+            "desc": "<p>We currently ship throughout the United States.<\/p>",
+            "category": "orders_returns"
+          }
+        },
+        "08732a42-6f3f-4ada-ac8f-9063df4c0600": {
+          "type": "accordion",
+          "settings": {
+            "title": "Are you open on the weekends?",
+            "desc": "<p>We are actively shipping Monday-Friday, excluding major holidays.<\/p>",
+            "category": "orders_returns"
+          }
+        },
+        "b884f4ca-bf62-4a7f-a5ee-38adb7215995": {
+          "type": "accordion",
+          "settings": {
+            "title": "What decaffeination process do you use? Does it still have caffeine?",
+            "desc": "<p>Swiss Water is an innovative, 100% chemical free decaffeination process. The Swiss water process uses only water, temperature, and time to gently remove caffeine, while preserving all the coffee’s original characteristics. Coffee decaffeinated using the Swiss Water Process is 99.9% caffeine free.<\/p>",
+            "category": "our_products"
+          }
+        },
+        "2ebfbb7e-e235-430b-8fcd-e409387887f1": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "title": "Do you have samples?",
+            "desc": "<p>Ready to experience the finest Certified Organic, ethically sourced, fairly traded, and sustainably roasted coffee around? Try a 2oz sample of one of our favorite Signature Blends or Single Origin coffees today and experience the difference. <\/p><p>Use code ‘SAMPLE1990’ at checkout for your free 2oz bag. Just pay shipping. <\/p>",
+            "category": "our_products"
+          }
+        },
+        "d09345c6-c3be-4708-b298-96f954703c09": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "title": "Where can I find your products in store\/grocery?",
+            "desc": "",
+            "category": "our_products"
+          }
+        },
+        "2b145f56-7924-49a6-9bbd-dab72c99ee2c": {
+          "type": "accordion",
+          "settings": {
+            "title": "Why don’t you sell cold brew online?",
+            "desc": "<p>Our Cold Brew is pure, and unadulterated with no additives or preservatives. We don’t currently offer it online because of it’s perishable nature - we want only the freshest product shipped to you. Because so many of you love our Cold Brew, we are currently working on a sustainable, cold shipping option. <\/p>",
+            "category": "our_products"
+          }
+        },
+        "4de090e2-dbf2-45de-bcba-2b9f2e4a9513": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "title": "Where are product expiration dates?",
+            "desc": "<p>When purchasing our coffees online, you will see a “Roasted” date on the back of the bag. While coffee certainly doesn’t spoil after a few weeks, we consider our coffee to be at its best 5-10 days after the roasted date for espresso and 3-7 days after roast for filter\/drip coffee. After these “freshness windows,” the coffee will gradually lose some of what makes it so special. Once coffee has been roasted, it becomes sensitive to light, heat, air, and moisture. It’s best to keep coffee in whole-bean form in an air-tight, light-fast container to ensure freshness until you’re ready to brew.<\/p>",
+            "category": "our_products"
+          }
+        },
+        "884b1c3b-9a59-431d-8fdc-3cb9503bef6f": {
+          "type": "accordion",
+          "settings": {
+            "title": "Why is my coffee oily?",
+            "desc": "<p>The presence of oil on a darker roasted bean usually means that it has been recently roasted. The oils start to dry up if roasted coffee isn't used for a while.<\/p>",
+            "category": "our_products"
+          }
+        },
+        "7e4e4962-4e4d-4f73-b626-baede5252557": {
+          "type": "accordion",
+          "settings": {
+            "title": "How much caffeine is in cold brew?",
+            "desc": "<p>On average, a cup of cold brew coffee contains around 200 mg of caffeine per 16 ounces (473 mL)<\/p>",
+            "category": "our_products"
+          }
+        },
+        "1ad476eb-f21e-4aaf-88cc-b371c4dd0f72": {
+          "type": "accordion",
+          "settings": {
+            "title": "Where can I use your gift cards and E-cards?",
+            "desc": "<p>Gift cards and E-cards are a great way to treat a coffee lover in your life. Groundwork <a href=\"https:\/\/www.groundworkcoffee.com\/products\/gift-card\"><span style=\"text-decoration:underline\">E-gift cards<\/span><\/a> can be used in our <a href=\"https:\/\/www.groundworkcoffee.com\/collections\/all?sort_by=best-selling\" target=\"_blank\" title=\"Groundwork Coffee Store\"><span style=\"text-decoration:underline\">online store<\/span><\/a>, and our <a href=\"https:\/\/www.groundworkcoffee.com\/products\/gw-gift-card\"><span style=\"text-decoration:underline\">in-store gift cards<\/span><\/a> can be redeemed in our cafes.<\/p>",
+            "category": "our_products"
+          }
+        },
+        "58ee4b6f-85f4-41f4-9a14-6c38c07f2efc": {
+          "type": "accordion",
+          "settings": {
+            "title": "How do I work for Groundwork?",
+            "desc": "<p>Thank you for your interest in working at Groundwork Coffee! Click <a href=\"https:\/\/www.groundworkcoffee.com\/pages\/careers\" target=\"_blank\" title=\"Groundwork Careers\"><span style=\"text-decoration:underline\">here<\/span><\/a> to see our available positions.<\/p>",
+            "category": "our_company"
+          }
+        },
+        "86164d30-7d91-4f3b-94db-38be522a451e": {
+          "type": "accordion",
+          "settings": {
+            "title": "Why should you order directly from us?",
+            "desc": "<p>The best coffee comes from the source! Ordering directly from our website ensures your coffee is roasted to order.<\/p>",
+            "category": "our_company"
+          }
+        },
+        "07e03afb-04aa-42eb-945b-aa9f57e292e5": {
+          "type": "accordion",
+          "settings": {
+            "title": "How do I become a wholesaler?",
+            "desc": "<p>Thank you for your interest in serving Groundwork Coffee! Groundwork is one of the West Coast’s largest specialty coffee roasters and distributors, and we are humbled to see a growing interest in sustainable, certified organic, specialty coffee. We supply restaurants, hotels, cafes, and grocery stores in a growing number of states across the country. Check out our <a href=\"https:\/\/www.groundworkcoffee.com\/pages\/wholesale-info\" target=\"_blank\" title=\"Groundwork Coffee Wholesale\"><span style=\"text-decoration:underline\">Wholesale Page<\/span><\/a> and we’ll be in touch!<\/p>",
+            "category": "our_company"
+          }
+        },
+        "72f873a5-6f84-4d47-b01e-cf0c89278a2b": {
+          "type": "accordion",
+          "settings": {
+            "title": "How do I use a Chemex?",
+            "desc": "<p>Learn all about how to use a Chemex <a href=\"https:\/\/www.groundworkcoffee.com\/blogs\/brew-guides\/chemex\" target=\"_blank\" title=\"Chemex Brew Guide\"><span style=\"text-decoration:underline\">here<\/span><\/a>. Happy Brewing!<\/p>",
+            "category": "brew_better"
+          }
+        },
+        "0101e806-fd2d-47f0-ac34-1140d10bab36": {
+          "type": "accordion",
+          "settings": {
+            "title": "How do I use a V60?",
+            "desc": "<p>The Hario V60 allows for a simple hands-on brewing process that relies on the technique of the brewer. Learn how to perfect it <a href=\"https:\/\/www.groundworkcoffee.com\/blogs\/brew-guides\/hario-v60\" target=\"_blank\" title=\"Hario V60 Brew Guide\"><span style=\"text-decoration:underline\">here<\/span><\/a>.<\/p>",
+            "category": "brew_better"
+          }
+        },
+        "3300d97c-92b8-4283-be7d-ac0135bf931b": {
+          "type": "accordion",
+          "settings": {
+            "title": "How do I use a French Press?",
+            "desc": "<p>Perfect the French Press <a href=\"https:\/\/www.groundworkcoffee.com\/blogs\/brew-guides\/french-press\" target=\"_blank\" title=\"French Press Brew Guide\"><span style=\"text-decoration:underline\">here<\/span><\/a>.<\/p>",
+            "category": "brew_better"
+          }
+        },
+        "4455a1cb-0558-498f-99bf-13a9b29566ac": {
+          "type": "accordion",
+          "settings": {
+            "title": "How do I use an Aeropress?",
+            "desc": "<p>Check out our <a href=\"https:\/\/www.groundworkcoffee.com\/blogs\/brew-guides\/aeropress\" target=\"_blank\" title=\"Aeropress Brew Guide\"><span style=\"text-decoration:underline\">Brew Guide<\/span><\/a> for a step by step guide on how to use an Aeropress.<\/p>",
+            "category": "brew_better"
+          }
+        },
+        "30374bf8-fdc2-4278-a04e-ba65f47c65bf": {
+          "type": "accordion",
+          "settings": {
+            "title": "How do I brew loose leaf tea?",
+            "desc": "<p>Unlike coffee, there are no hard-and-fast rules to brewing tea. Most of it is based on personal preference. Still, there are a few basic <a href=\"https:\/\/groundwork-coffee-store.myshopify.com\/blogs\/brew-guides\/brewing-loose-leaf-tea\" target=\"_blank\" title=\"Loose Leaf Tea Brew Guide\">guidelines<\/a> that will help you brew your best cup.<\/p>",
+            "category": "brew_better"
+          }
+        },
+        "4327df37-9c3d-4bfa-addb-f1c0255ab1cc": {
+          "type": "accordion",
+          "settings": {
+            "title": "Will I receive decaf coffee in my subscription?",
+            "desc": "<p>Your subscription is completely customizable! If you prefer decaf coffees, you can modify your preferences in your customer account. If there is no preference added, Roaster’s Choice subscription will not include any decaf coffees.<\/p>",
+            "category": "subscriptions"
+          }
+        },
+        "e5e1af56-54b2-42ee-b1b1-6d442f8a2841": {
+          "type": "accordion",
+          "settings": {
+            "title": "How do I cancel my subscription?",
+            "desc": "<p>Change, modify, or cancel your subscription at any time by logging in to your customer account.<\/p>",
+            "category": "subscriptions"
+          }
+        },
+        "c9a25d0b-c540-4e2c-bc8b-008bc02a8b75": {
+          "type": "accordion",
+          "settings": {
+            "title": "How can I change my subscription preferences or shipping details?",
+            "desc": "<p>Change, modify, or cancel your subscription at any time by logging in to your customer account.<\/p>",
+            "category": "subscriptions"
+          }
+        },
+        "d67aa288-221f-491f-9e84-b45a15cf3a7e": {
+          "type": "accordion",
+          "settings": {
+            "title": "Can I buy a subscription as a gift?",
+            "desc": "<p>Yes! Check out out <a href=\"https:\/\/www.groundworkcoffee.com\/products\/greatest-gift\" target=\"_blank\" title=\"https:\/\/www.groundworkcoffee.com\/products\/greatest-gift\">Greatest Gift Subscription.<\/a><\/p>",
+            "category": "subscriptions"
+          }
+        },
+        "ef447267-d9df-4fce-80a9-d386b4a645dc": {
+          "type": "accordion",
+          "settings": {
+            "title": "Are your bottles and cans recyclable?",
+            "desc": "<p>Thank you for thinking about your environmental impact! <\/p><p>Yes, our cold brew cans and bottles are recyclable. We encourage recycling.<\/p>",
+            "category": "sustainability"
+          }
+        },
+        "a3298f62-d9bb-45b6-a39f-6e3b0fd1bd97": {
+          "type": "accordion",
+          "settings": {
+            "title": "Can your cafe cups be recycled?",
+            "desc": "<p>Both our cafe cups (hot and cold) and lids are able to be recycled and composted (BPI certified). Thank you for doing your part!<\/p>",
+            "category": "sustainability"
+          }
+        },
+        "60a0ee2d-9f80-42e3-bf19-ef43e8e54451": {
+          "type": "accordion",
+          "settings": {
+            "title": "Where can I find Nutritional facts on cafe food items?",
+            "desc": "<p>All nutritional information for our cafe foods can be found in the Cafe’s Nutrition binders located in store. Take a peek at them during your next visit!<\/p>",
+            "category": "coffee_shops"
+          }
+        },
+        "df900476-781a-44f2-992d-9941458d4ac6": {
+          "type": "accordion",
+          "settings": {
+            "title": "Where do we get our eggs from?",
+            "desc": "<p>Chino Valley Farms - Check out their website for more information on their wonderful, <a href=\"https:\/\/www.chinovalleyranchers.com\/what-is-a-soy-free-organic-egg\/\"><span style=\"text-decoration:underline\">organic eggs<\/span><\/a>.<\/p>",
+            "category": "coffee_shops"
+          }
+        },
+        "7979f10a-fe89-4e2b-bdf7-7251fb34d44c": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "title": "How do we make our almond\/cashew milk?",
+            "desc": "",
+            "category": "coffee_shops"
+          }
+        },
+        "d935dc2e-4e88-4f41-beee-d81b6edaac16": {
+          "type": "accordion",
+          "settings": {
+            "title": "Our food nutritional facts",
+            "desc": "<p>All nutritional information for our cafe foods can be found in the Cafe’s Nutrition binders located in store. Take a peek at them during your next visit!<\/p>",
+            "category": "coffee_shops"
+          }
+        },
+        "c7993559-ba6e-460a-ac77-a265c5b3a53a": {
+          "type": "accordion",
+          "settings": {
+            "title": "How do you make your cashew milk?",
+            "desc": "<p>Our organic cashew milk is made fresh daily in the cafes with only 6 simple ingredients! <\/p>",
+            "category": "coffee_shops"
+          }
+        },
+        "bbab3527-a94b-4f74-a423-79ddc4609a20": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "title": "Are your bags compostable?",
+            "desc": "<p>Because sustainability is one of our core principles, you can now learn more about our eco-conscious approach on our bags.Additionally, we chose earth-friendly Biotrē™ bags to package our beans. These bags are made from 60% renewable plant-based resources by weight, which break down into a healthy compost.<\/p>",
+            "category": "sustainability"
+          }
+        }
+      },
+      "block_order": [
+        "4e091b7c-a885-4711-9e4a-8fe036d569a2",
+        "e5f4571f-b502-42e4-8074-efdfb86bf7a8",
+        "1be1c6ce-1be6-4fd1-a301-cb12feb495d9",
+        "238f3b7c-7d39-4e68-8f03-f3f477380434",
+        "bfda533d-3843-4d60-af86-09e7627f6c67",
+        "07ea245e-855c-423b-8377-c92a8d97eceb",
+        "4552ba10-eee8-4364-a452-acb03b828894",
+        "0bdc8efd-0805-4ab8-afa9-4f7da8adede7",
+        "f9e73cc9-f6b4-49f8-9bed-183a831878a2",
+        "d5987786-5a43-4c46-b153-a91078ec5b4e",
+        "3d6082a2-a065-431e-a40a-61bc07d07efa",
+        "08732a42-6f3f-4ada-ac8f-9063df4c0600",
+        "b884f4ca-bf62-4a7f-a5ee-38adb7215995",
+        "2ebfbb7e-e235-430b-8fcd-e409387887f1",
+        "d09345c6-c3be-4708-b298-96f954703c09",
+        "2b145f56-7924-49a6-9bbd-dab72c99ee2c",
+        "4de090e2-dbf2-45de-bcba-2b9f2e4a9513",
+        "884b1c3b-9a59-431d-8fdc-3cb9503bef6f",
+        "7e4e4962-4e4d-4f73-b626-baede5252557",
+        "1ad476eb-f21e-4aaf-88cc-b371c4dd0f72",
+        "58ee4b6f-85f4-41f4-9a14-6c38c07f2efc",
+        "86164d30-7d91-4f3b-94db-38be522a451e",
+        "07e03afb-04aa-42eb-945b-aa9f57e292e5",
+        "72f873a5-6f84-4d47-b01e-cf0c89278a2b",
+        "0101e806-fd2d-47f0-ac34-1140d10bab36",
+        "3300d97c-92b8-4283-be7d-ac0135bf931b",
+        "4455a1cb-0558-498f-99bf-13a9b29566ac",
+        "30374bf8-fdc2-4278-a04e-ba65f47c65bf",
+        "4327df37-9c3d-4bfa-addb-f1c0255ab1cc",
+        "e5e1af56-54b2-42ee-b1b1-6d442f8a2841",
+        "c9a25d0b-c540-4e2c-bc8b-008bc02a8b75",
+        "d67aa288-221f-491f-9e84-b45a15cf3a7e",
+        "ef447267-d9df-4fce-80a9-d386b4a645dc",
+        "a3298f62-d9bb-45b6-a39f-6e3b0fd1bd97",
+        "60a0ee2d-9f80-42e3-bf19-ef43e8e54451",
+        "df900476-781a-44f2-992d-9941458d4ac6",
+        "7979f10a-fe89-4e2b-bdf7-7251fb34d44c",
+        "d935dc2e-4e88-4f41-beee-d81b6edaac16",
+        "c7993559-ba6e-460a-ac77-a265c5b3a53a",
+        "bbab3527-a94b-4f74-a423-79ddc4609a20"
+      ],
+      "settings": {
+        "title": "FAQ",
+        "desc": "<p>Frequently asked questions<\/p>",
+        "more_title": "Have more unanswered questions?",
+        "more_desc": "<p>We're here for ya!<\/p>",
+        "button_label": "CONTACT",
+        "button_link": "shopify:\/\/pages\/contact"
+      }
+    }
+  },
+  "order": [
+    "page-faq-content"
+  ]
+}
