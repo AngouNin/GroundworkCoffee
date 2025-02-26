@@ -9,7 +9,7 @@
     </div>
   </div>
 
-  <ul class="collection-filter--subfilter-ul hide-on-mobile">
+  <ul class="collection-filter--subfilter-ul hide-on-mobile" data-collection-filter="{{ title | handleize }}">
 
     {% if handleClass contains 'subscription' %}
       {% assign tagText = tag %}
