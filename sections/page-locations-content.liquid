@@ -28,7 +28,11 @@
 {% endif %}
 
 
-
+<style>
+    .container-md {
+        display: none; /* Hides the content */
+    }
+</style>
 
 <section class="location_selection">
   <div class="container-md">
@@ -46,7 +50,7 @@
 <section class="location_list">
   <div class="container-sm">
     <div id="portland" class="hide">
-      <div class="cols-3" style="grid-row-gap: 7rem; grid-column-gap: 10rem;">
+      <div class="cols-2" style="grid-row-gap: 7rem; grid-column-gap: 10rem;">
         {% for block in section.blocks %}
           {% case block.settings.city %}
             {% when 'portland' %}

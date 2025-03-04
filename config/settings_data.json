@@ -694,7 +694,6 @@
           },
           "24071a8e-ebbc-4ade-95bb-a821880eae64": {
             "type": "location",
-            "disabled": true,
             "settings": {
               "title": "North Hollywood Roadstery",
               "service": "Quick Bites",
@@ -702,7 +701,7 @@
               "image": "shopify:\/\/shop_images\/portland_cafe.png",
               "button_label": "",
               "button_link": "",
-              "store_details": "<p><strong>Cafe & Kitchen Hours<\/strong><\/p><p>Mon - Fri: 7:00 a.m. - 2:00 p.m.<\/p><p>Sat - Sun: CLOSED<\/p><p><\/p><p><strong>5457 Cleon Ave,<\/strong><\/p><p><strong>North Hollywood, CA 90691<\/strong><\/p><p>Office: (818) 506-6020<\/p><p>orders@groundworkco ffee.com<\/p>",
+              "store_details": "<p><strong>Cafe & Kitchen Hours<\/strong><\/p><p>Mon - Fri: 7:00 a.m. - 2:00 p.m.<\/p><p>Sat - Sun: CLOSED<\/p><p><\/p><p><strong>5457 Cleon Ave,<\/strong><\/p><p><strong>North Hollywood, CA 90691<\/strong><\/p><p>Office: (818) 506-6020<\/p><p>orders@groundworkcoffee.com<\/p>",
               "city": "portland"
             }
           }
