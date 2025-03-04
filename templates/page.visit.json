@@ -173,13 +173,13 @@
           "type": "location",
           "disabled": true,
           "settings": {
-            "title": "Montgomery Park",
+            "title": "North Hollywood Roadstery",
             "service": "Quick Bites",
             "flagship": false,
             "image": "shopify:\/\/shop_images\/portland_cafe.png",
             "button_label": "",
             "button_link": "https:\/\/www.toasttab.com\/groundwork-coffee-company-vaughn-st-2355-nw-vaughn-st",
-            "store_details": "<p><strong>Cafe & Kitchen Hours<\/strong><\/p><p>Mon - Fri: 7:00 a.m. - 2:00 p.m.<\/p><p>Sat - Sun: CLOSED<\/p><p><\/p><p><strong>2701 NW Vaughn St. 2nd floor,<\/strong><\/p><p><strong>Portland, OR 97210<\/strong><\/p><p>Cafe: (503) 222-2181<\/p>",
+            "store_details": "<p><strong>Cafe & Kitchen Hours<\/strong><\/p><p>Mon - Fri: 7:00 a.m. - 2:00 p.m.<\/p><p>Sat - Sun: CLOSED<\/p><p><\/p><p><strong>5457 Cleon Ave,<\/strong><\/p><p><strong>North Hollywood, CA 90691<\/strong><\/p><p>Office: (818) 506-6020<\/p><p>orders@groundworkco ffee.com<\/p>",
             "city": "portland"
           }
         }
