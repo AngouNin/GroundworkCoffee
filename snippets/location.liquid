@@ -37,51 +37,10 @@
       {% if store_details != blank %}
         <div class="store_details">
           <div class="store_details--container">
-            <div class="store_details--icon-close-container">
-              <div class="store_details--icon-close">
-                {% include "icon-close" %}
-              </div>
-            </div>
-            <div class="store_details--upper-title">
-              {% if service != blank %}
-                <h4 class="store_details--service">{{ service }}</h4>
-              {% endif %}
-              {% if flagship %}
-                <span class="store_details--flagship">{{ flagship }}</span>
-              {% endif %}
-            </div>
-            <div class="store_details--bottom-title">
-              {% if title != blank %}
-                <h3 class="store_details--title">{{ title }}</h3>
-              {% endif %}
-            </div>
             <div class="store_details--details">
               {{ store_details }}
             </div>
           </div>
-        </div>
-      {% endif %}
-
-    </div>
-
-    <div class="location--btn-container d-flex align-items-center">
-      <div class="location--btn-order">
-        {% if button_link != blank %}
-          <a href="{{ button_link }}" class="button" aria-label="{{ button_label }} link">
-            <!-- <button type="button" name="button" aria-label="Order Ahead"> -->
-              {% if button_label != blank %}
-                {{ button_label }}
-              {% else %}
-                ORDER AHEAD
-              {% endif %}
-            <!-- </button> -->
-          </a>
-        {% endif %}
-      </div>
-
-      {% if store_details != blank %}
-        <div class="location--btn-details underlined">
-          <a href="#" class="open-store-details" aria-label="Open Store Details">STORE DETAILS</a>
         </div>
       {% endif %}
 
