@@ -20,26 +20,23 @@
    replace:'%20',' ' |
    replace:'\u0026','&'
 -%}
-
-{% assign active = 'LA' %}
-
-{% if pageUrl contains 'los_angeles' %}
-  {% assign active = 'LA' %}
-{% elsif pageUrl contains 'portland' %}
+ 
+{% assign active = 'PORTLAND' %}
+ 
+{% if pageUrl contains 'portland' %}
   {% assign active = 'PORTLAND' %}
 {% endif %}
 
 
-
+<style>
+    .container-md {
+        display: none; /* Hides the content */
+    }
+</style>
 
 <section class="location_selection">
   <div class="container-md">
     <div class="d-flex align-items-center justify-content-center location_selection--options">
-      <div class="location_selection--option location-select" data-location="los_angeles">
-        <a href="/pages/locations-1" class="" aria-label="Los Angeles Link">
-          Los Angeles
-        </a>
-      </div>
       <div class="location_selection--option location-select" data-location="portland">
         <a href="/pages/locations-1?location=portland" aria-label="Portland Link">
           Portland
@@ -52,21 +49,8 @@
 
 <section class="location_list">
   <div class="container-sm">
-    <div id="los_angeles" class="hide">
-      <div class="cols-3" style="grid-row-gap: 7rem; grid-column-gap: 10rem;">
-        {% for block in section.blocks %}
-          {% case block.settings.city %}
-            {% when 'los_angeles' %}
-            {% assign location = 'Los Angeles' %}
-              {% include "location" %}
-          {% endcase %}
-        {% endfor %}
-      </div>
-    </div>
-
-
     <div id="portland" class="hide">
-      <div class="cols-3" style="grid-row-gap: 7rem; grid-column-gap: 10rem;">
+      <div class="cols-2" style="grid-row-gap: 7rem; grid-column-gap: 10rem;">
         {% for block in section.blocks %}
           {% case block.settings.city %}
             {% when 'portland' %}
@@ -84,21 +68,17 @@
 <script>
   var search = window.location.search;
   var substr = '?location=';
-  var la = '?location=los_angeles';
   var portland = '?location=portland';
   // var location;
 
   if(search.indexOf(substr) !== -1) {
-    if(search == la) {
-      $('.location-select[data-location="los_angeles"]').addClass('active');
-      $('#los_angeles').removeClass('hide');
-    } else {
+    if(search == portland) {
       $('.location-select[data-location="portland"]').addClass('active');
       $('#portland').removeClass('hide');
     }
   } else {
-    $('.location-select[data-location="los_angeles"]').addClass('active');
-      $('#los_angeles').removeClass('hide');
+    $('.location-select[data-location="portland"]').addClass('active');
+      $('#portland').removeClass('hide');
   }
 
 
@@ -154,11 +134,7 @@
              "type": "select",
              "id": "city",
              "label": "City",
-             "options": [
-               {
-                 "value": "los_angeles",
-                 "label": "Los Angeles"
-               },
+             "options": [ 
                {
                  "value": "portland",
                  "label": "Portland"
